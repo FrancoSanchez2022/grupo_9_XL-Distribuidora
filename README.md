@@ -3,22 +3,17 @@
 ## `integrantes del proyecto:`
 
 ### [Mauricio Romero](https://github.com/Romero713):
-●"Edad"
-●"Estudios y/o oficio" 
+●**Edad:** "XX". **Estudios y/o oficio** "text"
 
 ### [Franco Sanchez](https://github.com/FrancoSanchez2022):
-●"Edad"
-●"Estudios y/o oficio"
+●**Edad:** "XX". **Estudios y/o oficio:** "text"
 
 ### [Facundo Olave](https://github.com/Facuu18):
-● 19 años
-● Estudios: -Técnico Químico.
-            -Operador de informática para la administración y gestión.
-            -Estudiando Programación Web Full Stack en Digital House.
+● **Edad:** 19 años. **Estudios:** -Técnico Químico. -Operador de informática para la administración y gestión. -Programación Web Full Stack en Digital House.
 
-[LOGO](design/Logo%20distribuidora%20de%20esencias.jpeg "LOGO") 
+![LOGO](design/Logo%20distribuidora%20de%20esencias.jpeg "LOGO") 
 
-# *`¡BIENVENIDOS A NUESTRA DISTRIBUIDORA DE ESENCIAS!`*
+## *`¡BIENVENIDOS A NUESTRA DISTRIBUIDORA DE ESENCIAS!`*
 
 ## **TEMATICA DEL MARKETPLACE:**
 
