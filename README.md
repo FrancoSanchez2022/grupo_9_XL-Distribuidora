@@ -35,17 +35,17 @@ Contamos con una gran variedad de nuestro producto de la mejor calidad y al mejo
 
 Estos son algunos de los sitios web que hemos tomado como referencia para nuestro e-commerce:
 
-1. Elejimos este sitio web por el uso del header y del footer ["Dione Quimica"]("https://www.dionequimica.com.ar/")
+1. Elejimos este sitio web por el uso del header y del footer [Dione Quimica](https://www.dionequimica.com.ar/)
 
 
-2. Elejimos este sitio web por la presentacion del home ["Alfredo Francioni SA"]("https://www.alfredofrancioni.com.ar/")
+2. Elejimos este sitio web por la presentacion del home [Alfredo Francioni SA](https://www.alfredofrancioni.com.ar/)
 
 
-3. Elejimos este sitio web por su login y register ["LeFormule"]("https://www.leformule.com/")
+3. Elejimos este sitio web por su login y register [LeFormule](https://www.leformule.com/)
 
 
-4. Elejimos este sitio web por su detalle del producto y su carrito de compras ["Bell Fragancias"]("https://www.bellfragancias.com.ar/")
+4. Elejimos este sitio web por su detalle del producto y su carrito de compras [Bell Fragancias](https://www.bellfragancias.com.ar/)
 
 
-5. Elejimos este sitio web por su pag de contacto ["Rommanella Perfumes"]("https://rommanellafragancias.ar/")
+5. Elejimos este sitio web por su pag de contacto [Rommanella Perfumes](https://rommanellafragancias.ar/)
 
