@@ -3,7 +3,7 @@
 ## `integrantes del proyecto:`
 
 ### [Mauricio Romero](https://github.com/Romero713):
-●**Edad:** "XX". **Estudios y/o oficio** "text"
+●**Edad:** "21". **Estudios y/o oficio** "text"
 
 ### [Franco Sanchez](https://github.com/FrancoSanchez2022):
 ●**Edad:** "27". **Estudios y/o oficio:** "-Sereno de buques. -Técnico Químico. -Programador Web Full Stack en Digital House"
@@ -24,28 +24,28 @@ Contamos con una gran variedad de nuestro producto de la mejor calidad y al mejo
 
 ### **¿¿Quién será nuestra audiencia objetivo??**
 
-"respuesta"
+"Nuestros productos estan direccionados hacia al sector de la limpieza y tambien mercado de velas aromaticas "
 
 ### **¿Cómo ajustaremos nuestra oferta a ese público?**
 
-"respuesta"
+"Mirando los productos que tenemos hacemos una investigacion en el mercado comparando los precios  y reajustando los nuestros para poder mostrar un produto calidad-precio. Ademas hacemos ventas de los productos en publico mayorista y minorista"
 
 
 ## **Sitios web de referencia**
 
 Estos son algunos de los sitios web que hemos tomado como referencia para nuestro e-commerce:
 
-1. Elejimos este sitio web por "motivo"
-["Sitio web de referencia"]("link del sitio web")
+1. Elejimos este sitio web por el uso del header y del footer
+["Dione Quimica"]("https://www.dionequimica.com.ar/")
 
-2. Elejimos este sitio web por "motivo"
-["Sitio web de referencia"]("link del sitio web")
+2. Elejimos este sitio web por la presentacion del home
+["Alfredo Francioni SA"]("https://www.alfredofrancioni.com.ar/")
 
-3. Elejimos este sitio web por "motivo"
-["Sitio web de referencia"]("link del sitio web")
+3. Elejimos este sitio web por su login y register
+["LeFormule"]("https://www.leformule.com/")
 
-4. Elejimos este sitio web por "motivo"
-["Sitio web de referencia"]("link del sitio web")
+4. Elejimos este sitio web por su detalle del producto y su carrito de compras
+["Bell Fragancias"]("https://www.bellfragancias.com.ar/")
 
-5. Elejimos este sitio web por "motivo"
-["Sitio web de referencia"]("link del sitio web")
+5. Elejimos este sitio web por su pag de contacto
+["Rommanella Perfumes"]("https://rommanellafragancias.ar/")
