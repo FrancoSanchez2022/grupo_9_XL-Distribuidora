@@ -3,7 +3,7 @@
 ## `integrantes del proyecto:`
 
 ### [Mauricio Romero](https://github.com/Romero713):
-●**Edad:** "21". **Estudios y/o oficio** "text"
+●**Edad:** "21". **Estudios y/o oficio:** "__________"
 
 ### [Franco Sanchez](https://github.com/FrancoSanchez2022):
 ●**Edad:** "27". **Estudios y/o oficio:** "-Sereno de buques. -Técnico Químico. -Programador Web Full Stack en Digital House"
@@ -11,7 +11,7 @@
 ### [Facundo Olave](https://github.com/Facuu18):
 ● **Edad:** 19 años. **Estudios:** -Técnico Químico. -Operador de informática para la administración y gestión. -Programación Web Full Stack en Digital House.
 
-![LOGO](design/Logo%20distribuidora%20de%20esencias.jpeg "LOGO") 
+![LOGO](public/design/Logo%20distribuidora%20de%20esencias.jpeg "LOGO") 
 
 ## *`¡BIENVENIDOS A NUESTRA DISTRIBUIDORA DE ESENCIAS!`*
 
