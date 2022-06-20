@@ -11,7 +11,7 @@
 ### [Facundo Olave](https://github.com/Facuu18):
 ● **Edad:** 19 años. **Estudios:** -Técnico Químico. -Operador de informática para la administración y gestión. -Programación Web Full Stack en Digital House.
 
-![LOGO](public/design/Logo%20distribuidora%20de%20esencias.jpeg "LOGO") 
+![LOGO](Public/design/Logo%20distribuidora%20de%20esencias.jpeg "LOGO") 
 
 ## *`¡BIENVENIDOS A NUESTRA DISTRIBUIDORA DE ESENCIAS!`*
 
