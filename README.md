@@ -1,4 +1,4 @@
-#XL-Distribuidora
+## XL-Distribuidora
 
 ## `integrantes del proyecto:`
 
