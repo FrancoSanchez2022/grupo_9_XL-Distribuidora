@@ -3,10 +3,10 @@
 ## `integrantes del proyecto:`
 
 ### [Mauricio Romero](https://github.com/Romero713):
-●**Edad:** "21". **Estudios y/o oficio:** "Profesorado de Folclore argentino. Coordinador en una remiseria"
+●**Edad:** 21 años. **Estudios y/o oficio:** "Profesorado de Folclore argentino. Coordinador en una remiseria"
 
 ### [Franco Sanchez](https://github.com/FrancoSanchez2022):
-●**Edad:** "27". **Estudios y/o oficio:** -Programador FullStack "-Técnico Químico. -Programador Web Full Stack en Digital House"
+●**Edad:** 27 años. **Estudios y/o oficio:** -Programador FullStack "-Técnico Químico. -Programador Web Full Stack en Digital House"
 
 ### [Facundo Olave](https://github.com/Facuu18):
 ● **Edad:** 19 años. **Estudios:** -Técnico Químico. -Operador de informática para la administración y gestión. -Programación Web Full Stack en Digital House.
