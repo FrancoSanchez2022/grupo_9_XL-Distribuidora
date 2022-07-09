@@ -11,7 +11,7 @@
 ### [Facundo Olave](https://github.com/Facuu18):
 ● **Edad:** 19 años. **Estudios:** -Técnico Químico. -Operador de informática para la administración y gestión. -Programación Web Full Stack en Digital House.
 
-![LOGO](Public/design/Logo%20distribuidora%20de%20esencias.jpeg "LOGO") 
+![LOGO](design/Logo%20distribuidora%20de%20esencias.jpeg "LOGO") 
 
 ## *`¡BIENVENIDOS A NUESTRA DISTRIBUIDORA DE ESENCIAS!`*
 
@@ -49,3 +49,5 @@ Estos son algunos de los sitios web que hemos tomado como referencia para nuestr
 
 5. Elejimos este sitio web por su pag de contacto [Rommanella Perfumes](https://rommanellafragancias.ar/)
 
+## Link al tablero de trello
+![Trello](https://trello.com/b/WdMMsdcO/proyecto-integrador-grupo-9-xl)
