@@ -1,9 +1,15 @@
 /* Fuente a utilizar */
 @import url();
 
-:root{
+:root {
     /* Colores */
-    --colorPrincipal:#eee; 
 
-    /* Fuentes */
+    --colorLetraPrincipal:#332D2F;
+    --colorletraSecundaria:#60575A;
+    --colorHeader:#6E464D;
+    --colorButton:#99898C;
+    --colorBase:#BCBBC1;
+    --colorProfundidad:#EED9D3;
+
+    /*Tamaños de fuente */
 }

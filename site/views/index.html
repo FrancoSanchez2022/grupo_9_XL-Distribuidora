@@ -1,16 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/23d98b8a55.js" crossorigin="anonymous"></script>
+
     <title>Home</title>
 </head>
-<body>
-    <header></header>
 
-    <main></main>
-    
-    <footer></footer>
+<body>
+    <header>
+        <div class="searchBar">
+            <input type="text" maxlength="100" placeholder="buscar productos,marcas"> <i class="fas fa-search"></i>
+        </div>
+        <div class="top">
+            <div class="Logo"><img src="img/Logo-distribuidora-de-esencias.jpeg" alt="logo XL Distribuidora"></div>
+        </div>
+        <div class="burger">
+            <input type="checkbox" name="burger" id="burger" checked>
+            <label for="burger"><i class="fas fa-bars"></i></label>
+            <nav>
+                <ul class="menu">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/productDetail">Nuestros Productos</a></li>
+                    <li><a href="">Quienes Somos</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+                <ul class="user">
+                    <li><a href="/login">Inicia Sesion</a></li>
+                    <li><a href="/register">Registrate</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="carrito"><a href="/productCart.html"><i class="fas fa-shopping-cart"></i></a></div>
+    </header>
+
+    <main>
+        <section class="carrucelDestacados">
+            <h1>Producos Destacados</h1>
+            <article>
+                <div class="producto"><img src="" alt=""></div>
+                <h2 class="nombreP"> Nombre del Producto</h2>
+                <h3 class="precio">$---</h3>
+                <div class="sumar-carrito">
+                    <div class="restar">-</div>
+                    <input type="number">
+                    <div class="agregar">+</div>
+                </div>
+            </article>
+            <article>
+                <div class="producto"><img src="" alt=""></div>
+                <h2 class="nombreP"> Nombre del Producto</h2>
+                <h3 class="precio">$---</h3>
+                <div class="sumar-carrito">
+                    <div class="restar">-</div>
+                    <input type="number">
+                    <div class="agregar">+</div>
+                </div>
+            </article>
+            <article>
+                <div class="producto"><img src="" alt=""></div>
+                <h2 class="nombreP"> Nombre del Producto</h2>
+                <h3 class="precio">$---</h3>
+                <div class="sumar-carrito">
+                    <div class="restar">-</div>
+                    <input type="number">
+                    <div class="agregar">+</div>
+                </div>
+            </article>
+            <article>
+                <div class="producto"><img src="" alt=""></div>
+                <h2 class="nombreP"> Nombre del Producto</h2>
+                <h3 class="precio">$---</h3>
+                <div class="sumar-carrito">
+                    <div class="restar">-</div>
+                    <input type="number">
+                    <div class="agregar">+</div>
+                </div>
+            </article>
+        </section>
+        <section class="infoeEmpresa">
+            <article class="info">
+                <h2 class="XL">la empresa XL:
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut illum ea debitis et fuga aut
+                    doloremque, eius tempora cum eveniet blanditiis assumenda totam obcaecati alias perferendis beatae
+                    corporis laboriosam dicta.
+                </h2>
+            </article>
+        </section>
+        <section>
+            <div class="video"><iframe width="790" height="444" src="https://www.youtube.com/embed/a4_qWzISsOc"
+                    title="Cómo hacer un perfume - Amazing Perfume Factory | How Perfume Is Made In Factory ➤#1 "
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+        </section>
+        <section class="empresas">
+            <article>
+                <div class="empresa"><img src="" alt=""></div>
+                <h3 class="nomreEmpresa"></h3>
+            </article>
+            <article>
+                <div class="empresa"><img src="" alt=""></div>
+                <h3 class="nomreEmpresa"></h3>
+            </article>
+            <article>
+                <div class="empresa"><img src="" alt=""></div>
+                <h3 class="nomreEmpresa"></h3>
+            </article>
+        </section>
+        <section class="carrucelOfertas">
+            <section class="carrucelDestacados">
+                <h1>Producos Destacados</h1>
+                <article>
+                    <div class="producto"><img src="" alt=""></div>
+                    <h2 class="nombreP"> Nombre del Producto</h2>
+                    <h3 class="precio">$---</h3>
+                    <p class="descuento">10%</p>
+                    <div class="sumar-carrito">
+                    <div class="restar">-</div>
+                    <input type="number">
+                    <div class="agregar">+</div>
+                </div>
+                </article>
+                <article>
+                    <div class="producto"><img src="" alt=""></div>
+                    <h2 class="nombreP"> Nombre del Producto</h2>
+                    <h3 class="precio">$---</h3>
+                    <p class="descuento">15%</p>
+                    <div class="sumar-carrito">
+                    <div class="restar">-</div>
+                    <input type="number">
+                    <div class="agregar">+</div>
+                </div>
+                </article>
+                <article>
+                    <div class="producto"><img src="" alt=""></div>
+                    <h2 class="nombreP"> Nombre del Producto</h2>
+                    <h3 class="precio">$---</h3>
+                    <p class="descuento">25%</p>
+                    <div class="sumar-carrito">
+                    <div class="restar">-</div>
+                    <input type="number">
+                    <div class="agregar">+</div>
+                </div>
+                </article>
+                <article>
+                    <div class="producto"><img src="" alt=""></div>
+                    <h2 class="nombreP"> Nombre del Producto</h2>
+                    <h3 class="precio">$---</h3>
+                    <p class="descuento">5%</p>
+                    <div class="sumar-carrito">
+                    <div class="restar">-</div>
+                    <input type="number">
+                    <div class="agregar">+</div>
+                </div>
+                </article>
+            </section>
+
+    </main>
+
+    <footer>
+        <div class="mapa"><iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.0580002735587!2d-58.119871973046905!3d-35.00525319999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2c4a3bb9757a7%3A0x81f213eda6568b50!2sParque%20Industrial%20La%20Plata!5e0!3m2!1ses-419!2sar!4v1657887702221!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="logoFooter"><img src="img/Logo-distribuidora-de-esencias.jpeg" alt="logo XL Distribuidora"></div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Nuestros Productos</a></li>
+                <li><a href="">Quienes Somos</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </footer>
 </body>
+
 </html>
