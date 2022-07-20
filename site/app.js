@@ -23,6 +23,7 @@ app.get('/productDetail',(req,res)=>res.sendFile(path.resolve(__dirname,'views',
 app.get('/productCart',(req,res)=>res.sendFile(path.resolve(__dirname,'views','productCart.html')))
 app.get('/register',(req,res)=>res.sendFile(path.resolve(__dirname,'views','register.html')))
 app.get('/login',(req,res)=>res.sendFile(path.resolve(__dirname,'views','login.html')))
+app.get('/resetPassword',(req,res)=>res.sendFile(path.resolve(__dirname,'views','resetPassword.html')))
 
 /* Funcion de actualizacion del servidor */
 liveReloadServer.server.once("connection", () => {
