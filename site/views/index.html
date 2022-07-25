@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/Logo-XL-sinFondo.png" tipe="image/x-icon" rel="shortcut icon">
     <!-- css -->
     <link rel="stylesheet" href="/css/styles.css">
     <!-- Font awesome -->
@@ -77,7 +78,7 @@
             </article>
         </section>
         <section>
-            <div class="video"><iframe width="790" height="444" src="https://www.youtube.com/embed/a4_qWzISsOc"
+            <div class="video"><iframe width="100%" src="https://www.youtube.com/embed/a4_qWzISsOc"
                     title="Cómo hacer un perfume - Amazing Perfume Factory | How Perfume Is Made In Factory ➤#1 "
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -109,7 +110,9 @@
                     <button><a href="/productDetail">ver mas</a></button>
                 </article>
             </section>
-            <section id="contacto" class="contacto">
+        </section>
+        <section class="contacto" id="contacto">
+            <article>
                 <h2>contacto</h2>
                 <form action="" method="get">
                     <div class="container bottom">
@@ -121,35 +124,43 @@
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="Ingresa tu email">
                         <small>Debe ingresar su email</small>
-                        <div class="container bottom">
+                    </div>
+                    <div class="container bottom">
                         <label for="telefono">Telefono</label>
                         <input type="number" name="telefono" placeholder="Ingresa tu numero de telefono">
                         <small>Debe ingresar su numero de telefono</small>
-                        <div class="container bottom">
-                            <textarea class="bottom" name="comentarios" id="comentarios" cols="30" rows="10"
-                                 placeholder="Escribi tu consulta"></textarea>
-                        </div>
-                        <div><img src="img/envioATodoElPais-removebg-preview.png" alt=""></div>
-            </section>
+                    </div>
+                    <div class="container bottom">
+                        <textarea class="bottom" name="comentarios" id="comentarios" cols="30" rows="10"
+                            placeholder="Escribi tu consulta"></textarea>
+                    </div>
+                    <button type="submit">enviar</button>
+                    <div class="envio"><img src="img/envioATodoElPais-removebg-preview.png" alt=""></div>
+        </section>
 
     </main>
 
     <footer>
-        <div class="mapa"><iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.0580002735587!2d-58.119871973046905!3d-35.00525319999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2c4a3bb9757a7%3A0x81f213eda6568b50!2sParque%20Industrial%20La%20Plata!5e0!3m2!1ses-419!2sar!4v1657887702221!5m2!1ses-419!2sar"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        <div class="logoFooter"><img src="img/Logo-distribuidora-de-esencias.jpeg" alt="logo XL Distribuidora"></div>
+        <section class="final">
+            <div class="mapa"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.0580002735587!2d-58.119871973046905!3d-35.00525319999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2c4a3bb9757a7%3A0x81f213eda6568b50!2sParque%20Industrial%20La%20Plata!5e0!3m2!1ses-419!2sar!4v1657887702221!5m2!1ses-419!2sar"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="ulfinal">
+                <div class="logoFooter"><img src="img/Logo-distribuidora-de-esencias.jpeg" alt="logo XL Distribuidora">
+                </div>
 
-        <nav>
-            <ul class="menu">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/productDetail">Nuestros Productos</a></li>
-                <li><a href="#somos">Quienes Somos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/productDetail">Nuestros Productos</a></li>
+                        <li><a href="#somos">Quienes Somos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
 
+        </section>
     </footer>
 </body>
 

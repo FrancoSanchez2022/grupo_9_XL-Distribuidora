@@ -1,7 +1,15 @@
-
-
-
-
 main section .producto img{
+    width: 100%;
+}
+main section article{
+    width: 95%;
+    margin: 15px auto;
+    padding: 5px;
+    border: 1px solid var(--colorHeader);
+}
+main section .contacto{
+    background-image: url(../img/background-img.jpg);
+}
+main section article .envio img{
     width: 100%;
 }

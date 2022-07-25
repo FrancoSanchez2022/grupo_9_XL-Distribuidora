@@ -1,0 +1,44 @@
+footer {
+    background: var(--colorLetraPrincipal);
+    padding: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+footer .final{
+    display: flex;
+    width:100%;
+}
+footer .final .mapa{
+    display: flex;
+    width:40% ;
+}
+footer .final .ulfinal{
+    display: flex;
+    flex-direction: row-reverse;
+    width:60% ;
+}
+footer .final .ulfinal .menu{
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 1px 0;
+    margin: 5px;
+}
+footer .final .ulfinal .menu li{
+    margin: 10px 0;
+    border: 1px solid var(--colorProfundidad);
+    border-radius: 10px;
+    padding: 5px;
+}
+footer .final .ulfinal .menu li a{
+    color: var(--colorProfundidad);
+}
+footer .final .ulfinal img{
+    width: 100%;
+    height: 250px;
+}
+@media (min-width: 426px) {
+    
+}
