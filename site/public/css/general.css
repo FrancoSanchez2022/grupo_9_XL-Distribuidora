@@ -1,9 +1,14 @@
-ul li a{
-    text-decoration: none;
-    color: var(--colorLetraPrincipal);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: var(--colorBase);
     display: block;
     margin: 2px;
+}
+ul li a{
+    text-decoration: none;
+    color: var(--colorLetraPrincipal);
 }

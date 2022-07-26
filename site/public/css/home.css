@@ -1,15 +1,15 @@
-main section .producto img{
+.home main section .producto img{
     width: 100%;
 }
-main section article{
+.home main section article{
     width: 95%;
     margin: 15px auto;
     padding: 5px;
     border: 1px solid var(--colorHeader);
 }
-main section .contacto{
+.home main .contacto{
     background-image: url(../img/background-img.jpg);
 }
-main section article .envio img{
+.home main section article .envio img{
     width: 100%;
 }
