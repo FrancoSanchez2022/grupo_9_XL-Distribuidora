@@ -1,0 +1,57 @@
+.login {
+    background-color: var(--profundidad2);
+  }
+
+  .login main h1 {
+    text-align: center;
+    font-weight: 500;
+    margin: 40px 20px 20px;
+    font-size: 35px;
+  }
+  
+  .login main h2{
+    font-weight: 400;
+    font-size: 22.5px;
+    margin: 10px 10px;
+  }
+  
+  .login main .breadcrumbs {
+    padding: 0.5rem 0;
+    border-top: 1px solid #4d4d4d;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .login main .breadcrumbs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login main .breadcrumbs ul li {
+    display: inline-block;
+    color: var(--grisClaro);
+  }
+  
+  .login main .breadcrumbs ul li a {
+    color: var(--grisOscuro);
+    display: block;
+    text-decoration: none;
+  }
+  
+  .login main .breadcrumbs ul li a:hover {
+    text-decoration: underline;
+    color: var(--black);
+  
+  }
+
+  .login main .card {
+    background-color: var(--colorBase);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .login main .card .card-body .container {
+    display: flex;
+    flex-direction: column;
+  }

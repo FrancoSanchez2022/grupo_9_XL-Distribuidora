@@ -1,1 +1,119 @@
+.register {
+  background-color: var(--profundidad2);
+}
 
+.register main h1 {
+  text-align: center;
+  font-weight: 500;
+  margin: 40px 20px 20px;
+  font-size: 35px;
+}
+
+.register main h2{
+  font-weight: 400;
+  font-size: 22.5px;
+  margin: 10px 10px;
+}
+
+.register main .breadcrumbs {
+  padding: 0.5rem 0;
+  border-top: 1px solid #4d4d4d;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.register main .breadcrumbs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.register main .breadcrumbs ul li {
+  display: inline-block;
+  color: var(--grisClaro);
+}
+
+.register main .breadcrumbs ul li a {
+  color: var(--grisOscuro);
+  display: block;
+  text-decoration: none;
+}
+
+.register main .breadcrumbs ul li a:hover {
+  text-decoration: underline;
+  color: var(--black);
+
+}
+
+
+.register main .card {
+  background-color: var(--colorBase);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.register main .card .card-body .container , .iti.iti--allow-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.register main .card .card-body .container .btn {
+  width: 65px;
+}
+
+
+
+
+
+/*   .container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+  
+  #phone, .btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    color: #ffffff;
+    background-color: #428BCA;
+    border-color: #357EBD;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .btn:focus, .btn:hover {
+    background-color: #3276B1;
+    border-color: #285E8E;
+  }
+  
+  .btn:active {
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  }
+  
+  .alert {
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  
+  .alert-info {
+    border-color: #bce8f1;
+    color: #31708f;
+    background-color: #d9edf7;
+  }
+  
+  .alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  } */
