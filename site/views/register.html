@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2a4118584d.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- International telephone input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <title>XL-Distribuidor de esencias</title>
+</head>
+
+<body class="register">
+    <header></header>
+    <main>
+        <h1>Registrate</h1>
+        <nav class="breadcrumbs">
+            <ul>
+                <li class="crumb"><a href="/">Home</a></li>
+                <li class="divider"> > </li>
+                <li class="crumb-active" aria-current="page">Registrate</li>
+            </ul>
+        </nav>
+        <div class="card">
+            <div class="card-body">
+                <h2>Crear cuenta</h2>
+                <p>Registrate en nuestra web, es muy fácil y sólo te llevará unos minutos!</p>
+                <p>Compra más rápido y lleva el control de tus pedidos en un sólo lugar!</p>
+                <p>Cualquier duda, consulta o problema consultarlo en el formulario de <a href="/">Contacto</a>.</p>
+
+                <!-- <form action="" method="post"> -->
+                <form id="register" onsubmit="process(event)">
+                    <div class="container bottom">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" placeholder="Ingresa tu nombre">
+                        <small>Debe ingresar su nombre</small>
+                    </div>
+                    <div class="container bottom">
+                        <label for="lastname">Apellido</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Ingresa tu apellido">
+                        <small>Debe ingresar su apellido</small>
+                    </div>
+                    <div class="container bottom">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                        <small>Debe ingresar un email válido</small>
+                    </div>
+                    <div class="container bottom">
+                        <label for="phone">Teléfono (opcional)</label>
+                        <input type="tel" name="phone" id="phone">
+                        <input type="submit" class="btn" value="Verificar">
+                        <small>Debe ingresar un número de teléfono válido</small>
+                        <div class="alert alert-info" style="display: none;"></div>
+                    </div>
+
+                    <div class="container bottom">
+                        <label for="pass">Clave</label>
+                        <input type="password" name="pass" id="pass" placeholder="password">
+                        <small>Debe ingresar una clave</small>
+                    </div>
+                    <div class="container bottom">
+                        <label for="pass2">Repetir Clave</label>
+                        <input type="password" name="pass2" id="pass2" placeholder="password">
+                        <small>Las claves no coinciden</small>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+            <div class="register-button">
+                <button type="submit"><i class="fas fa-user-plus"></i> ¡Registrarme!</button>
+            </div>
+            <div class="inicia-sesión">
+                <p>¿Ya estás registrado?
+                    <a href="/login">Inicia sesión aquí</a>
+                </p>
+            </div>
+        </d>
+        </div>
+    </main>
+    <footer></footer>
+
+</body>
+
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        preferredCountries: ["ar", "cl", "uy", "ec", "co", "ce", "pe", "py", "bo", "br", "ve", "mx", "us", "ca", "es"],
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+    const info = document.querySelector(".alert-info");
+
+    function process(event) {
+        event.preventDefault();
+
+        const phoneNumber = phoneInput.getNumber();
+
+        info.style.display = "";
+        info.innerHTML = `Su número de teléfono es: <strong>${phoneNumber}</strong>`;
+    }
+</script>
+
+</html>
