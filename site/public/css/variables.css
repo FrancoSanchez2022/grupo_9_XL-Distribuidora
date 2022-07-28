@@ -1,9 +1,15 @@
 /* Fuente a utilizar */
-@import url();
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 :root{
     /* Colores */
-    --colorPrincipal:#eee; 
+    --marronOscuro:#332d2f;
+    --marron: #60575a;
+    --bordo:#6e464d;
+    --marronClaro:#99898c;
+    --plateado: #bcbbc1;
+    --rosa: #eed9d3; 
 
     /* Fuentes */
+    --fuente: 'Merriweather', serf;
 }
