@@ -6,7 +6,9 @@
 body{
     background-color: var(--colorBase);
     display: block;
-    margin: 2px;
+    margin:auto ;
+    max-width: 1080px;
+
 }
 ul li a{
     text-decoration: none;

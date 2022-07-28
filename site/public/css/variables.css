@@ -12,9 +12,12 @@
     --colorProfundidad:#EED9D3;
 
     /*Tamaños de fuente */
-    --fTitulos:24px;
-    --fSubtitulos:18px;
-    --fParrafos:14px;
+    --fTitulos:30px;
+    --fSubtitulos:24px;
+    --fParrafos:18px;
     --fDescuentos:16px;
     --fPrecio:20px;
+    
+    /* Fuente */
+    --fuente: url
 }

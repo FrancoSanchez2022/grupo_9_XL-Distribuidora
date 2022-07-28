@@ -1,15 +1,139 @@
-.home main section .producto img{
+.home main{
+    width: 95%;
+    margin: 0 auto;
+}
+.home main section .producto img {
     width: 100%;
 }
-.home main section article{
+
+.home main section article {
     width: 95%;
     margin: 15px auto;
-    padding: 5px;
+    padding: 15px;
     border: 1px solid var(--colorHeader);
+    border-radius: 15px;
 }
-.home main .contacto{
-    background-image: url(../img/background-img.jpg);
+
+.home main section .video iframe {
+    width: 415px;
+    height: 234px;
 }
-.home main section article .envio img{
+
+
+.home main section article .envio img {
     width: 100%;
+}
+
+.home main h1 {
+    width: 100%;
+    text-align: center;
+    font-size: var(--fTitulos);
+    color: var(--colorLetraPrincipal);
+}
+
+.home main section article .nombreP h2 {
+    font-size: var(--fSubtitulos);
+    color: var(--colorLetraSecundaria);
+}
+
+.home main h3 {
+    font-size: var(--fPrecio);
+}
+
+.home main p {
+    font-size: var(--fParrafos);
+}
+
+.home main section article .descuento {
+    color: green;
+}
+
+.home main .contacto {
+    background-image: url(../img/background-img2.jpg);
+    padding: 5px;
+
+}
+.home main section article.contact{
+    margin-top: 5px;
+    background-color: #f0f8ff8c;
+    font-size: var(--fSubtitulos);
+}
+.home main textarea{
+    width: 100%;
+    resize: none;
+}
+.home main section .envio img{
+    width: 100%;
+}
+
+
+/* Tablet */
+@media (min-width:426px) {
+    
+    .home main .detacado h1 {
+         position: absolute;
+         right: 122px;
+    }
+
+    .home main section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .home main section article {
+        margin: 20px;
+        width: 46%;
+    }
+
+    .home main section article p {
+        font-size: small;
+    }
+    .home main section article.contact{
+        background-color: #f0f8ff8c;
+        font-size: var(--fSubtitulos);
+    }
+    .home main section article.contact input {
+        width: 100%;
+    }
+    .home main textarea{
+        width: 100%;
+        resize: none;
+    }
+    .home main section .envio{
+        display: flex;
+        align-items: center;
+        width: 48% ;
+    }
+    .home main section .envio img{
+        width: 100%;
+    }
+    .home main section article.contact{
+        background-color: #f0f8ff8c;
+        font-size: var(--fSubtitulos);
+    }
+
+}
+
+/* Desktop */
+@media (min-width:769px) {
+    .home main {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .home main .products_cards {
+        width: 74%;
+    }
+    .home main section article.contact{
+        background-color: #f0f8ff8c;
+        font-size: var(--fSubtitulos);
+    }
+    .home main textarea{
+        width: 100%;
+        resize: none;
+    }
 }
