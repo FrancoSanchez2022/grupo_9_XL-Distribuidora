@@ -40,5 +40,19 @@ footer .final .ulfinal img{
     height: 250px;
 }
 @media (min-width: 426px) {
-    
+    footer .final .ulfinal .menu {
+        list-style: none;
+        font-size: 20px;
+        text-align: center;
+        padding: 1px 0;
+        margin: 15px;
+    }
+}
+@media (min-width: 769px) {
+    footer .final .ulfinal .menu {
+        list-style: none;
+        font-size: 20px;
+        text-align: center;
+        margin: 25px 90px;
+    }
 }

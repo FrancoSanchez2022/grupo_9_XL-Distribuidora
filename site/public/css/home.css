@@ -1,7 +1,12 @@
-.home main{
+.home main {
     width: 95%;
     margin: 0 auto;
 }
+
+.home main .banner img {
+    width: 100%;
+}
+
 .home main section .producto img {
     width: 100%;
 }
@@ -12,6 +17,16 @@
     padding: 15px;
     border: 1px solid var(--colorHeader);
     border-radius: 15px;
+}
+.home main section article button{
+    width: 100%;
+    background-color: var(--colorButton);
+    padding: 5px;
+    
+}
+.home main section article a{
+    text-decoration: none;
+    color: var(--colorLetraPrincipal)
 }
 
 .home main section .video iframe {
@@ -48,31 +63,42 @@
     color: green;
 }
 
+
+
 .home main .contacto {
     background-image: url(../img/background-img2.jpg);
     padding: 5px;
 
 }
-.home main section article.contact{
+
+.home main section article.contact {
     margin-top: 5px;
     background-color: #f0f8ff8c;
     font-size: var(--fSubtitulos);
 }
-.home main textarea{
+
+.home main textarea {
     width: 100%;
     resize: none;
 }
-.home main section .envio img{
+.home main section article.contact button{
+    width: 100%;
+    background-color: var(--colorButtonContacto);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.home main section .envio img {
     width: 100%;
 }
 
 
 /* Tablet */
 @media (min-width:426px) {
-    
+
     .home main .detacado h1 {
-         position: absolute;
-         right: 122px;
+        position: absolute;
+        right: 122px;
     }
 
     .home main section {
@@ -83,33 +109,45 @@
     }
 
     .home main section article {
-        margin: 20px;
-        width: 46%;
+        margin: 10px;
+        width: 44%;
     }
+
+    .home main section .video iframe {
+        width: 362px;
+        height: 200px;
+    }
+
 
     .home main section article p {
         font-size: small;
     }
-    .home main section article.contact{
+
+    .home main section article.contact {
         background-color: #f0f8ff8c;
         font-size: var(--fSubtitulos);
     }
+
     .home main section article.contact input {
         width: 100%;
     }
-    .home main textarea{
+
+    .home main textarea {
         width: 100%;
         resize: none;
     }
-    .home main section .envio{
+
+    .home main section .envio {
         display: flex;
         align-items: center;
-        width: 48% ;
+        width: 48%;
     }
-    .home main section .envio img{
+
+    .home main section .envio img {
         width: 100%;
     }
-    .home main section article.contact{
+
+    .home main section article.contact {
         background-color: #f0f8ff8c;
         font-size: var(--fSubtitulos);
     }
@@ -128,11 +166,21 @@
     .home main .products_cards {
         width: 74%;
     }
-    .home main section article.contact{
+    .home main section .video{
+        width: 50%;
+    }
+    .home main section .video iframe{
+        width: 98%;
+    }
+
+
+
+    .home main section article.contact {
         background-color: #f0f8ff8c;
         font-size: var(--fSubtitulos);
     }
-    .home main textarea{
+
+    .home main textarea {
         width: 100%;
         resize: none;
     }
