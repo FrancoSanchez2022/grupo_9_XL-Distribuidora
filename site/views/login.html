@@ -13,7 +13,30 @@
 </head>
 
 <body class="login">
-    <header></header>
+    <header>
+        <div class="top">
+            <div class="Logo"><img src="img/Logo-XL-sinFondo.png" alt="logo XL Distribuidora"></div>
+            <input type="text" maxlength="100" placeholder="buscar productos,marcas"> <i class="fas fa-search"></i>
+        </div>
+
+        <div class="burger">
+            <input type="checkbox" name="burger" id="burger" checked>
+            <label for="burger"><i class="fas fa-bars"></i></label>
+            <nav>
+                <ul class="menu">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/productDetail">Nuestros Productos</a></li>
+                    <li><a href="#somos">Quienes Somos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <ul class="user">
+                    <li><a href="/login">Inicia Sesion</a></li>
+                    <li><a href="/register">Registrate</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="carrito"><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></div>
+    </header>
     <main>
         <h1>Inicia sesión</h1>
         <nav class="breadcrumbs">
@@ -23,43 +46,66 @@
                 <li class="crumb-active" aria-current="page">Inicia Sesión</li>
             </ul>
         </nav>
-        <div class="card">
-            <section class="header-card">
-                <h2>¡Bienvenid@!</h2>
-            </section>
-            <section class="body-card">
-                <form action="" method="post">
+        <section class="card">
+            <form class="form-login" action="" method="post">
+                <section class="card-header">
+                    <h2>¡Bienvenid@!</h2>
+                </section>
+                <section class="card-body">
                     <div class="container bottom">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="email">
+                        <input type="email" name="email" id="email" placeholder="Email">
                         <small>Debe ingresar un email válido</small>
                     </div>
                     <div class="container bottom">
                         <label for="name">Clave</label>
-                        <input type="password" name="" id="password" placeholder="password">
+                        <input type="password" name="" id="password" placeholder="Password">
                         <small>Debe ingresar su clave</small>
+                        <div class="recordarme bottom">
+                            <label for="recordarme">
+                                <input type="checkbox" name="recordarme" id="recordarme">
+                                <span>Recordar clave</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="recordarme bottom">
-                        <input type="checkbox" name="recordarme" id="recordarme">
-                        <label for="recordarme">Recordar clave</label>
-                    </div>
-                    <div class="I-forgot-my-password"><a href="/resetPassword"><i
-                                class="fas fa-exclamation-triangle"></i>
-                            Olvidé mi contraseña</a></div>
                     <div class="login-button">
                         <button type="submit"><i class="fa fa-sign-in"></i> Iniciar sesión</button>
-
                     </div>
+                    <span class="I-forgot-my-password"><a href="/resetPassword"><i
+                                class="fas fa-exclamation-triangle"></i>
+                            Olvidé mi contraseña</a>
+                    </span>
+                </section>
+                <section class="card-footer">
                     <h4>¿Aún no te has registrado?</h4>
                     <p>¡Completa el siguiente formulario y disfruta de todos nuestros productos!</p>
-                </form>
-            </section>
-            <section class="footer-card">
-                <a href="/register" class="button-register"> <i class="fas fa-user-plus"></i> ¡Registrarme!</a>
-            </section>
-        </div>
+                    <a href="/register" class="button-register"> <i class="fas fa-user-plus"></i> ¡Registrarme!</a>
+                </section>
+            </form>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <section class="final">
+            <div class="mapa"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.0580002735587!2d-58.119871973046905!3d-35.00525319999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2c4a3bb9757a7%3A0x81f213eda6568b50!2sParque%20Industrial%20La%20Plata!5e0!3m2!1ses-419!2sar!4v1657887702221!5m2!1ses-419!2sar"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="ulfinal">
+                <div class="logoFooter"><img src="img/Logo-distribuidora-de-esencias.jpeg" alt="logo XL Distribuidora">
+                </div>
+
+                <nav>
+                    <ul class="menu">
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/productDetail">Nuestros Productos</a></li>
+                        <li><a href="#somos">Quienes Somos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </section>
+    </footer>
 </body>
 
 </html>
