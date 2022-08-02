@@ -3,10 +3,6 @@
   line-height: 1.5;
 }
 
-.register header {
-  height: 100%;
-}
-
 .register main h1 {
   text-align: center;
   font-weight: 500;
@@ -257,14 +253,14 @@
   .register main .card .form-register .card-footer .register-button button {
     padding: 5.5px 10px;
   }
+
+  .register main .card .form-register .card-body .container .form-group input {
+    padding: 10px 10px 8px;
+    font-size: 15px;
+  }
 }
 
 @media (min-width:1024px) {
-
-  .register main .card .form-register .card-body .container .form-group input {
-    padding: 10px;
-    font-size: 16px;
-  }
 
   .register main .card .form-register .card-body .container .form-group .verify .alert-info {
     font-size: 13px;
