@@ -40,7 +40,6 @@ header .burger label {
 }
 
 header .carrito {
-    background-color: var(--colorHeader);
     position: absolute;
     right: 73px;
     top: 37px;
@@ -51,7 +50,6 @@ header .carrito {
 
 header .carrito i {
     color: var(--colorButton);
-/*     color: white */
 }
 
 
@@ -97,7 +95,6 @@ header .burger nav ul li {
 
 header .burger nav a {
     color: var(--colorLetraPrincipal);
-/*     color:white; */
     text-transform: uppercase;
     font-size: 18px;
     text-decoration: none;
@@ -120,7 +117,6 @@ header .burger nav a {
         border: 1.5px solid var(--colorProfundidad);
         padding: 5px;
         border-radius: 5px;
-        background-color: var(--colorHeader);
     }
 
     header .top img {

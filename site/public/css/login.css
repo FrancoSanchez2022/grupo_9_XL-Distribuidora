@@ -105,6 +105,28 @@ margin-bottom: 15px;
   text-decoration: underline; 
 }
 
+.login main .card .form-login .button-register{
+  background-color: #4d4d4d;
+  color: var(--white);
+  border:  1px solid var(--black);
+  font-size: 12px;
+  padding: 2px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .login main .card .form-login .button-register:hover{
+    background-color: var(--profundidad2);
+    color: var(--black)
+  }
+  
+  .login main .card .form-login .button-register:active {
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  }
+
 .login main .card .form-login .card-body {
   padding: 1rem;
   background-color: var(--white);
