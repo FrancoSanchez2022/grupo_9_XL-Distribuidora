@@ -124,7 +124,7 @@
 
 
 
-@media (min-width:769px) {
+@media (min-width:461px) {
     .cart .producto table thead tr th {
         font-size: 24px;
 
@@ -136,4 +136,18 @@
     }
 }
 
-@media(min-width:1024px) {}
+@media(min-width:769px) {
+    .cart .producto table tbody tr td{
+        font-size: 15px;
+    }
+
+    .cart .producto table .precio{
+        font-size: 15px;
+    }
+    .cart section.precios{
+        font-size: 15px;
+    }
+    .cart section.relacionado article img{
+        width: 80%;
+    }
+}
