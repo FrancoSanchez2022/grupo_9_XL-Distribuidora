@@ -1,8 +1,8 @@
 .detalle{
-    background-color: var(--bordo);
+    background-color: var(--colorHeader);
 }
 .detalle .mainDetalle{
-    background-color: var(--bordo);
+    background-color: var(--colorHeader);
     width: 90%;
     margin: 0 auto;
 }
@@ -108,7 +108,7 @@
 .detalle .mainDetalle .relacionado .cajaRelacionada article .subprecio{
     font-size: 25px;
     margin: 10px 0;
-    color: var(--bordo);
+    color: var(--colorHeader);
 }
 
 .detalle .mainDetalle .relacionado .cajaRelacionada article .subcarritos{
@@ -146,13 +146,13 @@
     .detalle .mainDetalle .relacionado .cajaRelacionada article .subprecio{
         font-size: 25px;
         margin: 10px 0;
-        color: var(--bordo);
+        color: var(--colorHeader);
     }
     
     .detalle .mainDetalle .relacionado .cajaRelacionada article .subcarritos{
         font-size: 15px;
         color: white;
-        background-color: var(--marronClaro);
+        background-color: var(--colorButton);
         border: none;
     }
 }

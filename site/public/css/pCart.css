@@ -1,22 +1,22 @@
 .cart {
-    background-color: var(--bordo);
+    background-color: var(--colorHeader);
 }
 
 .cart .producto {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .cart .producto table {
     width: 100%;
-    background-color: var(--rosa);
+    background-color: var(--colorProfundidad);
     border-collapse: collapse;
     border: none;
 }
 
 .cart .producto table thead tr {
     border: none;
-    background-color: var(--marron);
+    background-color: var(--colorletraSecundaria);
 }
 
 .cart .producto table thead tr th {
@@ -38,7 +38,7 @@
 }
 
 .cart .producto table tbody tr td .boton2 button {
-    background-color: var(--marron);
+    background-color: var(--colorletraSecundaria);
     color: white;
     border: none;
     width: 10%;
@@ -51,7 +51,7 @@
 }
 
 .cart .producto table tbody tr {
-    border-bottom: solid 2px var(--marron);
+    border-bottom: solid 2px var(--colorletraSecundaria);
 }
 
 .cart .producto .Compra{
@@ -108,7 +108,7 @@
 .cart section.relacionado article p{
     font-size: 25px;
     margin: 10px 0;
-    color: var(--bordo);
+    color: var(--colorHeader);
 }
 
 .cart section.relacionado article button{
@@ -117,7 +117,7 @@
     width: 80%;
     margin: 30px;
     color: white;
-    background-color: var(--marronClaro);
+    background-color: var(--colorButton);
     border: none;
 }
 
@@ -137,6 +137,10 @@
 }
 
 @media(min-width:769px) {
+    .cart .producto{
+        width: 100%;
+    }
+    
     .cart .producto table tbody tr td{
         font-size: 15px;
     }
@@ -147,7 +151,13 @@
     .cart section.precios{
         font-size: 15px;
     }
-    .cart section.relacionado article img{
-        width: 80%;
+    .cart .relacionado .cajaRelacionada{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .cart .relacionado .cajaRelacionada .imagenRelacionada{
+        width: 50%;
+        align-items: center;
     }
 }

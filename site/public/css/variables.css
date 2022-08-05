@@ -3,12 +3,12 @@
 
 :root{
     /* Colores */
-    --marronOscuro:#332d2f;
-    --marron: #60575a;
-    --bordo:#6e464d;
-    --marronClaro:#99898c;
-    --plateado: #bcbbc1;
-    --rosa: #eed9d3; 
+    --colorLetraPrincipal:#332d2f;
+    --colorletraSecundaria: #60575a;
+    --colorHeader:#6e464d;
+    --colorButton:#99898c;
+    --colorBase: #bcbbc1;
+    --colorProfundidad: #eed9d3; 
 
     /* Fuentes */
     --fuente: 'Merriweather', serf;
