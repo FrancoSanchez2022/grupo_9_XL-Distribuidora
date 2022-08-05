@@ -1,0 +1,178 @@
+.detalle{
+    background-color: var(--colorHeader);
+}
+.detalle .mainDetalle{
+    background-color: var(--colorHeader);
+    width: 90%;
+    margin: 0 auto;
+}
+.detalle .mainDetalle .producto{
+    margin-bottom: 10px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+}
+.detalle .mainDetalle .producto .bloqueDetalle{
+    text-align: center;
+}
+.detalle .mainDetalle .producto .imagen{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.detalle .mainDetalle .producto .imagen img{
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.detalle .mainDetalle .producto .titular{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.detalle .mainDetalle .producto .precio{
+    font-size: 35px;
+    color: #65BAA4;
+    text-align: center;
+}
+
+.detalle .mainDetalle .producto .descripcion{
+    display: block;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+}
+
+.detalle .mainDetalle .producto .boton{
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.detalle .mainDetalle .producto .boton input{
+    background-color: var(--marronClaro);
+    border: none;
+    color: white;
+
+}
+.detalle .mainDetalle .producto .boton .medio{
+    width: 100px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.detalle .mainDetalle .producto .subcarrito{
+    font-size: 25px;
+    padding: 10px;
+    width: 80%;
+    margin: 30px;
+}
+.detalle .mainDetalle .producto .comprando{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.detalle .mainDetalle .producto .comprando a{
+    color: #65BAA4;
+}
+
+.detalle .mainDetalle .relacionado{
+    margin-top: 20px;
+}
+.detalle .mainDetalle .relacionado .cajaRelacionada article{
+    margin-bottom: 20px;
+    width: 90%;
+    margin: 15px auto;
+    background-color: white;
+    text-align: center;
+}
+
+.detalle .mainDetalle .relacionado .tituloRelacionado{
+    color: white;
+    font-size: 30px;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.detalle .mainDetalle .relacionado .cajaRelacionada div{
+    width: 100%;
+}
+
+.detalle .mainDetalle .relacionado .cajaRelacionada div img{
+    width: 100%;
+
+}
+
+.detalle .mainDetalle .relacionado .cajaRelacionada article .subprecio{
+    font-size: 25px;
+    margin: 10px 0;
+    color: var(--colorHeader);
+}
+
+.detalle .mainDetalle .relacionado .cajaRelacionada article .subcarritos{
+    font-size: 25px;
+    padding: 10px;
+    width: 80%;
+    margin: 30px;
+    color: white;
+    background-color: var(--marronClaro);
+    border: none;
+}
+
+@media (min-width:461px){
+    .detalle .mainDetalle .relacionado .cajaRelacionada{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .detalle .mainDetalle .relacionado .cajaRelacionada article{
+        width: 45%;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .detalle .mainDetalle .relacionado .cajaRelacionada article .subcarritos{
+        text-align: center;
+        margin: 0 auto;
+        left: 0;
+        bottom: 10px;
+        right: 0;
+    }
+    .detalle .mainDetalle .relacionado .cajaRelacionada article .subprecio{
+        font-size: 25px;
+        margin: 10px 0;
+        color: var(--colorHeader);
+    }
+    
+    .detalle .mainDetalle .relacionado .cajaRelacionada article .subcarritos{
+        font-size: 15px;
+        color: white;
+        background-color: var(--colorButton);
+        border: none;
+    }
+}
+
+
+@media(min-width:769px) {
+    .detalle .mainDetalle .producto{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .detalle .mainDetalle .producto .imagen{
+        width: 50%;
+    }
+
+    .detalle .mainDetalle .producto .bloqueDetalle{
+        width: 50%;
+    }
+    .detalle .mainDetalle .relacionado .cajaRelacionada article{
+        width: 23%;
+    }
+}

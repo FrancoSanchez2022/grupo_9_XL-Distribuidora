@@ -1,0 +1,163 @@
+.cart {
+    background-color: var(--colorHeader);
+}
+
+.cart .producto {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cart .producto table {
+    width: 100%;
+    background-color: var(--colorProfundidad);
+    border-collapse: collapse;
+    border: none;
+}
+
+.cart .producto table thead tr {
+    border: none;
+    background-color: var(--colorletraSecundaria);
+}
+
+.cart .producto table thead tr th {
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: var(--fuente);
+}
+
+.cart .producto table tbody tr td .imagen img {
+    width: 50px;
+}
+
+.cart .producto table tbody tr td {
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.cart .producto table tbody tr td .boton2 button {
+    background-color: var(--colorletraSecundaria);
+    color: white;
+    border: none;
+    width: 10%;
+    ;
+}
+
+.cart .producto table tbody tr td .boton2 input {
+    width: 30%;
+    text-align: center;
+}
+
+.cart .producto table tbody tr {
+    border-bottom: solid 2px var(--colorletraSecundaria);
+}
+
+.cart .producto .Compra{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    
+}
+.cart .producto .Compra a{
+    color: #65BAA4;
+}
+
+.cart section.precios{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    
+}
+.cart section.precios button.compraa{
+    font-size: 25px;
+    padding: 10px;
+    width: 80%;
+    margin: 30px;
+}
+.cart section.precios h3,
+.cart section.precios p{
+    text-align: end;
+    color: white;
+}
+.cart section.precios p.precioFinal{
+    font-size: 30px;
+    color: #65BAA4;
+}
+
+.cart section.relacionado h5{
+    color: white;
+    font-size: 30px;
+    margin: 10px 10px;
+    text-align: center;
+
+}
+
+.cart section.relacionado article{
+    width: 90%;
+    margin: 15px auto;
+    background-color: white;
+    text-align: center;
+}
+
+.cart section.relacionado article img {
+    width: 100%;
+}
+
+.cart section.relacionado article p{
+    font-size: 25px;
+    margin: 10px 0;
+    color: var(--colorHeader);
+}
+
+.cart section.relacionado article button{
+    font-size: 25px;
+    padding: 10px;
+    width: 80%;
+    margin: 30px;
+    color: white;
+    background-color: var(--colorButton);
+    border: none;
+}
+
+
+
+
+@media (min-width:461px) {
+    .cart .producto table thead tr th {
+        font-size: 24px;
+
+    }
+
+    .cart .producto table tbody tr td .boton2 input {
+        width: 30px;
+        text-align: center;
+    }
+}
+
+@media(min-width:769px) {
+    .cart .producto{
+        width: 100%;
+    }
+    
+    .cart .producto table tbody tr td{
+        font-size: 15px;
+    }
+
+    .cart .producto table .precio{
+        font-size: 15px;
+    }
+    .cart section.precios{
+        font-size: 15px;
+    }
+    .cart .relacionado .cajaRelacionada{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .cart .relacionado .cajaRelacionada .imagenRelacionada{
+        width: 50%;
+        align-items: center;
+    }
+}

@@ -1,8 +1,11 @@
 /* Fuente a utilizar */
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
 
 :root {
     /* Colores */
+
 
     --colorLetraPrincipal:#332D2F;
     --colorletraSecundaria:#60575A;
@@ -12,6 +15,14 @@
     --colorProfundidad:#EED9D3;
     --colorButtonContacto:#c24484;
 
+    --profundidad2: #FFD6D6;
+    --breadcrumbsBackground: #ececec80;
+    --grisOscuro: #4A4A4A;
+    --grisClaro: #6C6C6C;
+    --gray: #DEE2E6;
+    --black: #000000;
+    --white: #FFFFFF;
+
     /*Tamaños de fuente */
     --fTitulos:30px;
     --fSubtitulos:24px;
@@ -19,6 +30,8 @@
     --fDescuentos:16px;
     --fPrecio:20px;
     
-    /* Fuente */
-    --fuente: 
+
+    /* Fuentes */
+    --fuente: 'Merriweather', serf;
 }
+
