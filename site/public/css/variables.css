@@ -1,8 +1,11 @@
 /* Fuente a utilizar */
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
 
 :root {
     /* Colores */
+
 
     --colorLetraPrincipal:#332D2F;
     --colorletraSecundaria:#60575A;
@@ -21,4 +24,7 @@
 
     /*Tamaños de fuente */
 
+    /* Fuentes */
+    --fuente: 'Merriweather', serf;
 }
+
