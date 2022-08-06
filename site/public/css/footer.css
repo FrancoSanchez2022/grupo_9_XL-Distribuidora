@@ -50,6 +50,7 @@ footer .final .ulfinal img{
 }
 @media (min-width: 769px) {
     footer .final .ulfinal .menu {
+        
         list-style: none;
         font-size: 20px;
         text-align: center;

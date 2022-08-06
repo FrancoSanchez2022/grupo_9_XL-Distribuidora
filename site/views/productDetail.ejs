@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de producto</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://kit.fontawesome.com/255d30c95a.js" crossorigin="anonymous"></script>
-</head>
+<%- include('./partials/head',{title:'Detalle de producto'}) %>
 
 
 <body class="detalle">
+    <%- include('./partials/header') %>
     <main class="mainDetalle">
         <section class="producto">
             <div class="imagen">
@@ -78,13 +71,10 @@
                     <span class="subtitular">Desinfectante de ambientes aroma lavanda</span>
                     <p class="subprecio">$221.50</p>
                     <button class="subcarritos">Agregar al carrito</button>
-
                 </article>
-
             </div>
         </section>
     </main>
-
+    <%- include('./partials/footer') %>
 </body>
-
 </html>

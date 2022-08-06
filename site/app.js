@@ -6,10 +6,15 @@ const liveReloadServer = livereload.createServer();
 const express = require("express");
 const connectLivereload = require('connect-livereload')
 const path = require("path");
-const { link } = require('fs');
 
 const app = express();
 const port = 3000;
+
+/* Requerir las rutas */
+let indexRouter = require('./routes/index')
+let administradorRouter = require('./routes/administrador')
+let productosRouter = require('./routes/productos')
+let usuariosRouter = require('./routes/usuarios')
 
 /* Archivos estaticos */
 app.use(express.static(path.join(__dirname,'public')));
@@ -18,13 +23,19 @@ app.use(express.static(path.join(__dirname,'public')));
 liveReloadServer.watch(path.join(__dirname, 'public'));
 app.use(connectLivereload());
 
-/* Rutas */
-app.get('/',(req,res)=>res.sendFile(path.resolve(__dirname,'views','index.html')))
-app.get('/productDetail',(req,res)=>res.sendFile(path.resolve(__dirname,'views','productDetail.html')))
-app.get('/productCart',(req,res)=>res.sendFile(path.resolve(__dirname,'views','productCart.html')))
-app.get('/register',(req,res)=>res.sendFile(path.resolve(__dirname,'views','register.html')))
-app.get('/login',(req,res)=>res.sendFile(path.resolve(__dirname,'views','login.html')))
-app.get('/resetPassword',(req,res)=>res.sendFile(path.resolve(__dirname,'views','resetPassword.html')))
+/*View engine setup*/
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs')
+
+/*Middlewares */
+app.use(express.json());
+app.use(express.static(path.resolve(__dirname,'public')));
+
+/*Rutas */
+app.use('/', indexRouter);
+app.use('/users', usuariosRouter);
+app.use('/productos', productosRouter);
+app.use('/administrador', administradorRouter);
 
 /* Funcion de actualizacion del servidor */
 liveReloadServer.server.once("connection", () => {
