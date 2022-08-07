@@ -54,7 +54,6 @@
 .register main .breadcrumbs ul li a:hover {
   text-decoration: underline;
   color: var(--black);
-
 }
 
 .register main .card {
@@ -281,7 +280,7 @@
 
   .register main .card .form-register .card-body .container .form-group .verify .btn {
     width: 20%;
-    padding: 2.75px 5.5px;
+    padding: 3.75px 5.5px 1.5px;
   }
 
   .register main .card .form-register .card-footer .register-button button {
