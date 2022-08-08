@@ -1,8 +1,8 @@
 .detalle{
-    background-color: var(--colorHeader);
+    background-color: var(--profundidad2);
 }
 .detalle .mainDetalle{
-    background-color: var(--colorHeader);
+    background-color: var(--profundidad2);
     width: 90%;
     margin: 0 auto;
 }
@@ -27,7 +27,7 @@
 
 .detalle .mainDetalle .producto .titular{
     font-size: 25px;
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -40,7 +40,7 @@
 .detalle .mainDetalle .producto .descripcion{
     display: block;
     font-size: 22px;
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -52,7 +52,7 @@
 .detalle .mainDetalle .producto .boton input{
     background-color: var(--marronClaro);
     border: none;
-    color: white;
+    color: black;
 
 }
 .detalle .mainDetalle .producto .boton .medio{

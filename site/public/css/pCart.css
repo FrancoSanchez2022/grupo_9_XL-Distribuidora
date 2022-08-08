@@ -1,5 +1,5 @@
 .cart {
-    background-color: var(--colorHeader);
+    background-color: var(--profundidad2);
 }
 
 .cart .producto {
@@ -151,13 +151,12 @@
     .cart section.precios{
         font-size: 15px;
     }
+    .cart .relacionado article{
+        width: 30%;
+    }
     .cart .relacionado .cajaRelacionada{
-        width: 50%;
         display: flex;
         flex-wrap: wrap;
     }
-    .cart .relacionado .cajaRelacionada .imagenRelacionada{
-        width: 50%;
-        align-items: center;
-    }
+
 }
