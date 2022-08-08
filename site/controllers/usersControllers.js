@@ -4,6 +4,8 @@ module.exports ={
     },
     register: (req,res) =>{
         return res.render('register')
+    },
+    resetPassword: (req,res) =>{
+        return res.render('resetPassword')
     }
-
 }
