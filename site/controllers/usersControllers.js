@@ -6,6 +6,6 @@ module.exports ={
         return res.render('register')
     },
     resetPassword: (req,res) =>{
-        return res.render('resetPassword')
+        return res.render('resetPass')
     }
 }

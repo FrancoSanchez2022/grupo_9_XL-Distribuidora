@@ -51,3 +51,6 @@ Estos son algunos de los sitios web que hemos tomado como referencia para nuestr
 
 ## Link al tablero de trello
 [Trello](https://trello.com/b/WdMMsdcO/proyecto-integrador-grupo-9-xl)
+
+## Retrospectiva
+[Retro](/extras/RETRO.md)

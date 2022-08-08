@@ -1,8 +1,10 @@
 const express = require ('express')
 const router = express.Router()
-let { create,edit,list } = require('../controllers/adminController')
-router.get('/listar',list)
-router.get('/editar', edit)
-router.get('/crear', create)
+const { create,edit,list } = require('../controllers/adminController')
 
-module.exports = router
+/* GET admin page. */
+router.get('/list',list)
+router.get('/create', create)
+router.get('/edit/:id', edit)
+
+module.exports = router 

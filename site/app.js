@@ -34,8 +34,8 @@ app.use(express.static(path.resolve(__dirname,'public')));
 /*Rutas */
 app.use('/', indexRouter);
 app.use('/users', usuariosRouter);
-app.use('/productos', productosRouter);
-app.use('/administrador', administradorRouter);
+app.use('/products', productosRouter);
+app.use('/admin', administradorRouter);
 
 /* Funcion de actualizacion del servidor */
 liveReloadServer.server.once("connection", () => {
