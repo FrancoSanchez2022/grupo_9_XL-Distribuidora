@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head',{title:'Login'}) %>
+<%- include('./partials/head',{title:'XL - Inicia Sesión'}) %>
 
-<body class="login">
-    <%- include('./partials/header') %>
-    <main>
-        <h1>Inicia sesión</h1>
-    <%- include('./partials/breadcrumbs',{página:'Login'}) %> 
-        <section class="card">
-            <form class="form-login" action="" method="post">
-                <section class="card-header">
-                    <h2>¡Bienvenid@!</h2>
-                </section>
-                <section class="card-body">
-                    <div class="container bottom">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <small>Debe ingresar un email válido</small>
-                    </div>
-                    <div class="container bottom">
-                        <label for="name">Clave</label>
-                        <input type="password" name="" id="password" placeholder="Password" required>
-                        <small>Debe ingresar su clave</small>
-                        <div class="recordarme bottom">
-                            <label for="recordarme">
-                                <input type="checkbox" name="recordarme" id="recordarme" required>
-                                <span>Recordar clave</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="login-button">
-                        <button type="submit"><i class="fa fa-sign-in"></i> Iniciar sesión</button>
-                    </div>
-                    <span class="I-forgot-my-password"><a href="/users/reset"><i
-                                class="fas fa-exclamation-triangle"></i>
-                            Olvidé mi contraseña</a>
-                    </span>
-                </section>
-                <section class="card-footer">
-                    <h4>¿Aún no te has registrado?</h4>
-                    <p>¡Completa el siguiente formulario y disfruta de todos nuestros productos!</p>
-                    <a href="/users/register" class="button-register"> <i class="fas fa-user-plus"></i> ¡Registrarme!</a>
-                </section>
-            </form>
-        </section>
-    </main>
-    <%- include('./partials/footer') %>
-</body>
+
+    <body class="login">
+        <%- include('./partials/header') %>
+            <main>
+                <h1>Inicia sesión</h1>
+                <%- include('./partials/breadcrumbs',{página:'Login'}) %>
+                    <section class="card">
+                        <form class="form-login" action="" method="post">
+                            <section class="card-header">
+                                <h2>¡Bienvenid@!</h2>
+                            </section>
+                            <section class="card-body">
+                                <div class="container bottom">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Email">
+                                    <small>Debe ingresar un email válido</small>
+                                </div>
+                                <div class="container bottom">
+                                    <label for="name">Clave</label>
+                                    <input type="password" name="" id="password" placeholder="Password" required>
+                                    <small>Debe ingresar su clave</small>
+                                    <div class="recordarme bottom">
+                                        <label for="recordarme">
+                                            <input type="checkbox" name="recordarme" id="recordarme" required>
+                                            <span>Recordar clave</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="login-button">
+                                    <button type="submit"><i class="fa fa-sign-in"></i> Iniciar sesión</button>
+                                </div>
+                                <span class="I-forgot-my-password"><a href="/users/reset"><i
+                                            class="fas fa-exclamation-triangle"></i>
+                                        Olvidé mi contraseña</a>
+                                </span>
+                            </section>
+                            <section class="card-footer">
+                                <h4>¿Aún no te has registrado?</h4>
+                                <p>¡Completa el siguiente formulario y disfruta de todos nuestros productos!</p>
+                                <a href="/users/register" class="button-register"> <i class="fas fa-user-plus"></i>
+                                    ¡Registrarme!</a>
+                            </section>
+                        </form>
+                    </section>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
 
 </html>

@@ -3,110 +3,106 @@
 
     <%- include('./partials/head',{title:'Home'}) %>
 
-<body class="home">
-    <%- include('./partials/header') %>
+    <body class="home">
 
-    <main>
-        <div class="banner"><img src="img/XL-distribuidora.png" alt="perfume.png"></div>
-        <section class="carrucelDestacados">
-            <h1 class="destacado">Productos Destacados</h1>
-            <article>
-                <div class="producto"><img src="img/Glade1CF.jpeg" alt="Glade1CF"></div>
-                <h2 class="nombreP"> Aromatizante de ambientes en aerosol </h2>
-                <h3 class="precio">$316.10</h3>
-                <button><a href="/productDetail">ver mas</a></button>
-            </article>
-            <article>
-                <div class="producto"><img src="img/SaphirusCF.jpeg" alt="SaphirusCF"></div>
-                <h2 class="nombreP"> Difusor automático (de velitas) </h2>
-                <h3 class="precio">$216.00</h3>
-                <button><a href="/productDetail">ver mas</a></button>
-            </article>
-            <article>
-                <div class="producto"><img src="img/Glade2CF.jpeg" alt="Glade2CF"></div>
-                <h2 class="nombreP"> Aromatizante de autos </h2>
-                <h3 class="precio">$450.00</h3>
-                <button><a href="/productDetail">ver mas</a></button>
-            </article>
-            <article>
-                <div class="producto"><img src="img/Glade3CF.jpeg" alt="Glade3CF"></div>
-                <h2 class="nombreP">Aromatizante en barra </h2>
-                <h3 class="precio">$350</h3>
-                <button><a href="/productDetail">ver mas</a></button>
-            </article>
-        </section>
-        <section class="infoempresa">
-            <article id="somos" class="info">
+        <%- include('./partials/header') %>
+            <main>
+                <div class="banner"><img src="img/XL-distribuidora.png" alt="perfume.png"></div>
+                <section class="carrucelDestacados">
+                    <h1 class="destacado">Productos Destacados</h1>
+                    <article>
+                        <div class="producto"><img src="img/Glade1CF.jpeg" alt="Glade1CF"></div>
+                        <h2 class="nombreP"> Aromatizante de ambientes en aerosol </h2>
+                        <h3 class="precio">$316.10</h3>
+                        <button><a href="/productDetail">ver mas</a></button>
+                    </article>
+                    <article>
+                        <div class="producto"><img src="img/SaphirusCF.jpeg" alt="SaphirusCF"></div>
+                        <h2 class="nombreP"> Difusor automático (de velitas) </h2>
+                        <h3 class="precio">$216.00</h3>
+                        <button><a href="/productDetail">ver mas</a></button>
+                    </article>
+                    <article>
+                        <div class="producto"><img src="img/Glade2CF.jpeg" alt="Glade2CF"></div>
+                        <h2 class="nombreP"> Aromatizante de autos </h2>
+                        <h3 class="precio">$450.00</h3>
+                        <button><a href="/productDetail">ver mas</a></button>
+                    </article>
+                    <article>
+                        <div class="producto"><img src="img/Glade3CF.jpeg" alt="Glade3CF"></div>
+                        <h2 class="nombreP">Aromatizante en barra </h2>
+                        <h3 class="precio">$350</h3>
+                        <button><a href="/productDetail">ver mas</a></button>
+                    </article>
+                </section>
+                <section class="infoempresa">
+                    <article id="somos" class="info">
 
-                <h3 class="XL">La empresa XL:</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut illum ea debitis et fuga aut
-                    doloremque, eius tempora cum eveniet blanditiis assumenda totam obcaecati alias perferendis beatae
-                    corporis laboriosam dicta. </p>
+                        <h3 class="XL">la empresa XL:</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut illum ea debitis et fuga aut
+                            doloremque, eius tempora cum eveniet blanditiis assumenda totam obcaecati alias perferendis
+                            beatae
+                            corporis laboriosam dicta. </p>
+                    </article>
+                    <div class="video"><iframe width="100%" src="https://www.youtube.com/embed/a4_qWzISsOc"
+                            title="Cómo hacer un perfume - Amazing Perfume Factory | How Perfume Is Made In Factory ➤#1 "
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></div>
+                </section>
+                <section class="carrucelOfertas">
+                    <section class="carrucelDestacados">
+                        <h1 class="oferta">Productos En Oferta</h1>
+                        <article>
+                            <div class="producto"><img src="img/XL-Esencia.jpeg" alt="Esecia.png"></div>
+                            <h2 class="nombreP"> Esencia Pura por 50ml</h2>
+                            <h3 class="precio">$1500</h3>
+                            <p class="descuento">10%</p>
+                            <button><a href="/productDetail">ver mas</a></button>
+                        </article>
+                        <article>
+                            <div class="producto"><img src="img/XL.jpeg" alt="difusor.jpeg"></div>
+                            <h2 class="nombreP"> Difusor automático (de velitas)</h2>
+                            <h3 class="precio">$150</h3>
+                            <p class="descuento">25%</p>
+                            <button><a href="/productDetail">ver mas</a></button>
+                        </article>
+                    </section>
+                </section>
+                <section class="contacto" id="contacto">
+                    <article class="contact">
 
+                        <h2>contacto</h2>
+                        <form action="" method="get">
+                            <div class="container bottom">
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
+                                <small>Debe ingresar su nombre</small>
+                            </div>
+                            <div class="container bottom">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                                <small>Debe ingresar su email</small>
+                            </div>
+                            <div class="container bottom">
+                                <label for="telefono">Telefono</label>
+                                <input type="number" name="telefono" placeholder="Ingresa tu numero de telefono">
+                                <small>Debe ingresar su numero de telefono</small>
+                            </div>
+                            <div class="container bottom">
+                                <textarea class="bottom" name="comentarios" id="comentarios" cols="30" rows="10"
+                                    placeholder="Escribi tu consulta"></textarea>
+                            </div>
 
-            </article>
-            <div class="video"><iframe width="100%" src="https://www.youtube.com/embed/a4_qWzISsOc"
-                    title="Cómo hacer un perfume - Amazing Perfume Factory | How Perfume Is Made In Factory ➤#1 "
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe></div>
-        </section>
+                            <button type="submit">enviar</button>
+                    </article>
+                    <div class="envio"><img src="img/envioATodoElPais-removebg-preview.png" alt=""></div>
 
+                </section>
 
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
 
-        <section class="carrucelOfertas">
-            <section class="carrucelDestacados">
-                <h1 class="oferta">Productos En Oferta</h1>
-                <article>
-                    <div class="producto"><img src="img/XL-Esencia.jpeg" alt="Esecia.png"></div>
-                    <h2 class="nombreP"> Esencia Pura por 50ml</h2>
-                    <h3 class="precio">$1500</h3>
-                    <p class="descuento">10%</p>
-                    <button><a href="/productDetail">ver mas</a></button>
-                </article>
-                <article>
-                    <div class="producto"><img src="img/XL.jpeg" alt="difusor.jpeg"></div>
-                    <h2 class="nombreP"> Difusor automático (de velitas)</h2>
-                    <h3 class="precio">$150</h3>
-                    <p class="descuento">25%</p>
-                    <button><a href="/productDetail">ver mas</a></button>
-                </article>
-            </section>
-        </section>
-        <section class="contacto" id="contacto">
-            <article class="contact">
-
-                <h2>contacto</h2>
-                <form action="" method="get">
-                    <div class="container bottom">
-                        <label for="name">Nombre</label>
-                        <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
-                        <small>Debe ingresar su nombre</small>
-                    </div>
-                    <div class="container bottom">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Ingresa tu email">
-                        <small>Debe ingresar su email</small>
-                    </div>
-                    <div class="container bottom">
-                        <label for="telefono">Telefono</label>
-                        <input type="number" name="telefono" placeholder="Ingresa tu numero de telefono">
-                        <small>Debe ingresar su numero de telefono</small>
-                    </div>
-                    <div class="container bottom">
-                        <textarea class="bottom" name="comentarios" id="comentarios" cols="30" rows="10"
-                            placeholder="Escribi tu consulta"></textarea>
-                    </div>
-
-                    <button type="submit">enviar</button>
-            </article>
-            <div class="envio"><img src="img/envioATodoElPais-removebg-preview.png" alt=""></div>
-
-        </section>
-
-    </main>
-
-    <%- include('./partials/header') %>
-</body>
 
 </html>

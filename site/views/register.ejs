@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head',{title:'Register'}) %>
+<%- include('./partials/head',{title:'XL - Registro'}) %>
 
-<body class="register">
-    <%- include('./partials/header') %>
-    <main>
-        <h1>Registrate</h1>
-        <%- include('./partials/breadcrumbs',{página:'Registrate'}) %> 
-        <section class="card">
-            <form class="form-register" action="" method="post" onsubmit="process(event)">
-                <section class="card-header">
-                    <h2>¡Sé parte de nuestra web y podrás disfrutar de todos nuestros productos!</h2>
-                    <p>¡Es muy fácil y sólo te llevará unos minutos!</p>
-                    <p>Cualquier duda, consulta o problema consultarlo en el formulario de <a href="/#contacto">Contacto</a>.</p>
-                </section>
 
-                <section class="card-body">
-                    <section class="container bottom">
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
-                            <small>Debe ingresar su nombre</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname">Apellido</label>
-                            <input type="text" name="lastname" id="lastname" placeholder="Ingresa tu apellido" required>
-                            <small>Debe ingresar su apellido</small>
-                        </div>
+    <body class="register">
+        <%- include('./partials/header') %>
+            <main>
+                <h1>Registrate</h1>
+                <%- include('./partials/breadcrumbs',{página:'Registrate'}) %>
+                    <section class="card">
+                        <form class="form-register" action="" method="post" onsubmit="process(event)">
+                            <section class="card-header">
+                                <h2>¡Sé parte de nuestra web y podrás disfrutar de todos nuestros productos!</h2>
+                                <p>¡Es muy fácil y sólo te llevará unos minutos!</p>
+                                <p>Cualquier duda, consulta o problema consultarlo en el formulario de <a
+                                        href="/#contacto">Contacto</a>.</p>
+                            </section>
+
+                            <section class="card-body">
+                                <section class="container bottom">
+                                    <div class="form-group">
+                                        <label for="name">Nombre</label>
+                                        <input type="text" name="name" id="name" placeholder="Ingresa tu nombre"
+                                            required>
+                                        <small>Debe ingresar su nombre</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname">Apellido</label>
+                                        <input type="text" name="lastname" id="lastname"
+                                            placeholder="Ingresa tu apellido" required>
+                                        <small>Debe ingresar su apellido</small>
+                                    </div>
+                                </section>
+
+                                <section class="container bottom">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email" id="email" placeholder="Ingresa tu email"
+                                            required>
+                                        <small>Debe ingresar un email válido</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Teléfono</label>
+                                        <input type="tel" name="phone" id="phone" required>
+                                        <div class="verify">
+                                            <!-- <input type="submit" class="btn" value="Verificar"> -->
+                                            <button type="submit" class="btn">Verificar</button>
+                                            <div class="alert alert-info" style="display: none;"></div>
+                                            <small>Debe ingresar un número de teléfono válido</small>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="container bottom">
+                                    <div class="form-group">
+                                        <label for="pass">Clave</label>
+                                        <input type="password" name="pass" id="pass" placeholder="Password" required>
+                                        <small>Debe ingresar una clave</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass2">Repetir Clave</label>
+                                        <input type="password" name="pass2" id="pass2" placeholder="Password" required>
+                                        <small>Las claves no coinciden</small>
+                                    </div>
+                                </section>
+
+                            </section>
+                            <section class="card-footer">
+                                <div class="register-button">
+                                    <button type="submit"><i class="fas fa-user-plus"></i> ¡Registrarme!</button>
+                                </div>
+                                <div class="inicia-sesión">
+                                    <h4>¿Ya estás registrado?
+                                        <a href="/users/login">Inicia sesión aquí</a>
+                                    </h4>
+                                </div>
+                            </section>
+                        </form>
                     </section>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
 
-                    <section class="container bottom">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Ingresa tu email" required>
-                            <small>Debe ingresar un email válido</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" name="phone" id="phone" required>
-                            <div class="verify">
-                                <!-- <input type="submit" class="btn" value="Verificar"> -->
-                                <button type="submit" class="btn">Verificar</button>
-                                <div class="alert alert-info" style="display: none;"></div>
-                                <small>Debe ingresar un número de teléfono válido</small>
-                            </div>
-                        </div>
-                    </section>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            preferredCountries: ["ar", "cl", "uy", "ec", "co", "ce", "pe", "py", "bo", "br", "ve", "mx", "us", "ca", "es"],
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+        const info = document.querySelector(".alert-info");
 
-                    <section class="container bottom">
-                        <div class="form-group">
-                            <label for="pass">Clave</label>
-                            <input type="password" name="pass" id="pass" placeholder="Password" required>
-                            <small>Debe ingresar una clave</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="pass2">Repetir Clave</label>
-                            <input type="password" name="pass2" id="pass2" placeholder="Password" required>
-                            <small>Las claves no coinciden</small>
-                        </div>
-                    </section>
+        function process(event) {
+            event.preventDefault();
 
-                </section>
-                <section class="card-footer">
-                    <div class="register-button">
-                        <button type="submit"><i class="fas fa-user-plus"></i> ¡Registrarme!</button>
-                    </div>
-                    <div class="inicia-sesión">
-                        <h4>¿Ya estás registrado?
-                            <a href="/users/login">Inicia sesión aquí</a>
-                        </h4>
-                    </div>
-                </section>
-            </form>
-        </section>
-    </main>
-    <%- include('./partials/footer') %>
+            const phoneNumber = phoneInput.getNumber();
 
-</body>
-
-<script>
-    const phoneInputField = document.querySelector("#phone");
-    const phoneInput = window.intlTelInput(phoneInputField, {
-        preferredCountries: ["ar", "cl", "uy", "ec", "co", "ce", "pe", "py", "bo", "br", "ve", "mx", "us", "ca", "es"],
-        utilsScript:
-            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-    });
-    const info = document.querySelector(".alert-info");
-
-    function process(event) {
-        event.preventDefault();
-
-        const phoneNumber = phoneInput.getNumber();
-
-        info.style.display = "";
-        info.innerHTML = `Su número de teléfono es: <strong>${phoneNumber}</strong>`;
-    }
-</script>
+            info.style.display = "";
+            info.innerHTML = `Su número de teléfono es: <strong>${phoneNumber}</strong>`;
+        }
+    </script>
 
 </html>
