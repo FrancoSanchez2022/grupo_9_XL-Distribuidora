@@ -34,7 +34,7 @@ app.use(express.static(path.resolve(__dirname,'public')));
 /*Rutas */
 app.use('/', indexRouter);
 app.use('/users', usuariosRouter);
-app.use('/productos', productosRouter);
+app.use('/products', productosRouter);
 app.use('/administrador', administradorRouter);
 
 /* Funcion de actualizacion del servidor */

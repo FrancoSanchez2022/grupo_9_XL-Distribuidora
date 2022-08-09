@@ -33,8 +33,15 @@
 
 .detalle .mainDetalle .producto .precio{
     font-size: 35px;
-    color: #65BAA4;
+    color: black;
     text-align: center;
+}
+
+.detalle .mainDetalle .producto .bloqueDetalle .boton2{
+    background-color: var(--colorletraSecundaria);
+    color: white;
+    border: none;
+    width: 10%;
 }
 
 .detalle .mainDetalle .producto .descripcion{
@@ -68,14 +75,19 @@
     width: 80%;
     margin: 30px;
 }
-.detalle .mainDetalle .producto .comprando{
+.detalle .mainDetalle .relacionado .comprando{
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
 }
 
-.detalle .mainDetalle .producto .comprando a{
-    color: #65BAA4;
+.detalle .mainDetalle .relacionado .comprando a{
+    color: black;
+    text-decoration: none;
+}
+.detalle .mainDetalle .relacionado .comprando a:hover{
+    color: var(--colorButtonContacto);
 }
 
 .detalle .mainDetalle .relacionado{
@@ -90,7 +102,7 @@
 }
 
 .detalle .mainDetalle .relacionado .tituloRelacionado{
-    color: white;
+    color: black;
     font-size: 30px;
     margin: 10px 10px;
     text-align: center;
@@ -166,7 +178,7 @@
     }
 
     .detalle .mainDetalle .producto .imagen{
-        width: 50%;
+        width: 30%;
     }
 
     .detalle .mainDetalle .producto .bloqueDetalle{

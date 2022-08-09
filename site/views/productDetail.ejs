@@ -3,78 +3,54 @@
 <%- include('./partials/head',{title:'Detalle de producto'}) %>
 
 
-<body class="detalle">
-    <%- include('./partials/header') %>
-    <main class="mainDetalle">
-        <section class="producto">
-            <div class="imagen">
-                <img src="/img/producto glade.webp" alt="producto glade">
-            </div>
-            <div class="bloqueDetalle">
-                <h3 class="titular">Aromatizante de ambientes en aerosol</h3>
-                <p class="precio">$326.10</p>
-                <div class="boton">
-                    <input type="button" value="-">
-                    <input class="medio" type="number" value="1" min="1" step="1">
-                    <input type="button" value="+">
-                </div>
-                <button class="subcarrito">Agregar al carrito</button>
-                <span class="descripcion">Aroma de placer floral y frutos rojos.
-                    Modo mas práctico de perfumar tu hogar de forma continúa.
-                    Beneficios: Cuenta con un contenedor ajustable simplemente gira para controlar la intensidad de
-                    fragancia de acuerdo a su preferencia o tamaño de tu habitación.
-                </span>
-            </div>
-        </section>
-        <section class="relacionado">
-            <div class="comprando">
-                <a href=""><i class="fas fa-ban"></i></a>
-                <a href="">Seguir comprando</a>
-            </div>
-            <h3 class="tituloRelacionado">Productos relacionados</h3>
-            <div class="cajaRelacionada">
-                <article>
-                    <div class="contenedorRelacionado">
-                        <img src="/img/difusor.webp" alt="">
+    <body class="detalle">
+        <%- include('./partials/header') %>
+            <main class="mainDetalle">
+                <%- include('./partials/breadcrumbs',{página:'Detail'}) %> 
+                <section class="producto">
+                    <div class="imagen">
+                        <img src="/img/producto glade.webp" alt="producto glade">
                     </div>
-                    <h4 class="subproductos">Difusor automatico</h4>
-                    <span class="subtitular">Aromatizante de ambientes con fragancia bebe</span>
-                    <p class="subprecio">$216.00</p>
-                    <button class="subcarritos">Agregar al carrito</button>
+                    <div class="bloqueDetalle">
+                        <h3 class="titular">Aromatizante de ambientes en aerosol</h3>
+                        <p class="precio">$326.10</p>
+                        <div class="boton">
+                            <input type="button" value="-">
+                            <input class="medio" type="number" value="1" min="1" step="1">
+                            <input type="button" value="+">
+                        </div>
+                        <button class="subcarrito">Agregar al carrito</button>
+                        <span class="descripcion">Aroma de placer floral y frutos rojos.
+                            Modo mas práctico de perfumar tu hogar de forma continúa.
+                            Beneficios: Cuenta con un contenedor ajustable simplemente gira para controlar la intensidad
+                            de
+                            fragancia de acuerdo a su preferencia o tamaño de tu habitación.
+                        </span>
+                    </div>
+                </section>
+                <section class="relacionado">
+                    <div class="comprando">
+                        <a href=""><i class="fas fa-ban"></i></a>
+                        <a href="">Seguir comprando</a>
+                    </div>
+                    <h3 class="tituloRelacionado">Productos relacionados</h3>
+                    <div class="cajaRelacionada">
+                        <% aside.forEach(element => { %>
+                            <article>
+                                <div class="contenedorRelacionado">
+                                    <img src="/img/<%= element.imagen %> " alt="">
+                                </div>
+                                <h4 class="subproductos"><%= element.titulo %> </h4>
+                                <span class="subtitular">Aromatizante de ambientes con fragancia bebe</span>
+                                <p class="subprecio">$216.00</p>
+                                <button class="subcarritos">Agregar al carrito</button>
+    
+                            </article>
+                        <% }) %>
+                    </div>
+                </section>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
 
-                </article>
-                <article>
-                    <div class="contenedorRelacionado">
-                        <img src="/img/aqua fresh auto sport.jpg" alt="">
-                    </div>
-                    <h4 class="subproductos">Aromatizante de auto</h4>
-                    <span class="subtitular">Aromatizante automatico de autos fragancia acqua</span>
-                    <p class="subprecio">$450.00</p>
-                    <button class="subcarritos">Agregar al carrito</button>
-
-                </article>
-                <article>
-                    <div class="contenedorRelacionado">
-                        <img src="/img/Aromatizante en barra.webp" alt="">
-                    </div>
-                    <h4 class="subproductos">Aromatizante en barra</h4>
-                    <span class="subtitular">Aromatizante con aroma floral </span>
-                    <p class="subprecio">$350.00</p>
-                    <button class="subcarritos">Agregar al carrito</button>
-
-                </article>
-                <article>
-                    <div class="contenedorRelacionado">
-                        <img src="/img/lisoform.jpg" alt="lisoform">
-                    </div>
-                    <h4 class="subproductos">Lisoform</h4>
-                    <span class="subtitular">Desinfectante de ambientes aroma lavanda</span>
-                    <p class="subprecio">$221.50</p>
-                    <button class="subcarritos">Agregar al carrito</button>
-                </article>
-            </div>
-        </section>
-    </main>
-    <%- include('./partials/footer') %>
-</body>
 </html>
