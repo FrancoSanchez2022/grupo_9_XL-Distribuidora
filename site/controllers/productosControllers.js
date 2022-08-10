@@ -1,11 +1,11 @@
 let aside = [
     {
         imagen:"difusor.webp",
-        titulo:"Difusor automatico"
+        titulo:"Difusor automatico",
     },
     {
         imagen:"aqua fresh auto sport.jpg",
-        titulo:"Aromatizante de auto"
+        titulo:"Aromatizante de auto",
     },
     {
         imagen:"Aromatizante en barra.webp",
