@@ -17,10 +17,10 @@ let productosRouter = require('./routes/productos')
 let usuariosRouter = require('./routes/usuarios')
 
 /* Archivos estaticos */
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'..', 'public')));
 
 /* Archivos estaticos monitoreados */
-liveReloadServer.watch(path.join(__dirname, 'public'));
+liveReloadServer.watch(path.join(__dirname,'..', 'public'));
 app.use(connectLivereload());
 
 /*View engine setup*/
@@ -29,7 +29,7 @@ app.set('view engine', 'ejs')
 
 /*Middlewares */
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname,'public')));
+app.use(express.static(path.resolve(__dirname,'..', 'public')));
 
 /*Rutas */
 app.use('/', indexRouter);
