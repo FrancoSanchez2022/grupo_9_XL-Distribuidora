@@ -1,1 +1,13 @@
-[]
+[
+    {
+        "id": 1,
+        "marca": "XL",
+        "titulo": "esencia de 50ml",
+        "categoria": "esencia",
+        "precio": 1500,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 5,
+        "imagenes":["XL-Esencia.jpg"]
+    }
+]
