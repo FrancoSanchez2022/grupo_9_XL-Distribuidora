@@ -129,13 +129,13 @@
   margin-top: 2.5px;
 }
 
-.register main .card .form-register .card-body .container .form-group .verify .btn {
+.register main .card .form-register .card-body .container .form-group .verify .button {
   width: 20%;
   padding: 1.75px 3.5px 1px;
   font-size: 13px;
 }
 
-.register main .card .form-register .card-body .container .form-group .verify .alert-info {
+.register main .card .form-register .card-body .container .form-group .verify .alert-msg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,7 +197,7 @@
     font-size: 15px;
   }
 
-  .register main .card .form-register .card-body .container .form-group .verify .btn {
+  .register main .card .form-register .card-body .container .form-group .verify .button {
     padding: 4px 5px 1.25px;
   }
 
@@ -246,11 +246,11 @@
     justify-content: space-between;
   }
 
-  .register main .card .form-register .card-body .container .form-group .verify .alert-info {
+  .register main .card .form-register .card-body .container .form-group .verify .alert-msg {
     width: 78.25%;
   }
 
-  .register main .card .form-register .card-body .container .form-group .verify .btn {
+  .register main .card .form-register .card-body .container .form-group .verify .button {
     padding: 2.5px 2.5px 1.5px;
     font-size: 12.5px;
     width: 21%;
@@ -268,7 +268,7 @@
 
 @media (min-width:1024px) {
 
-  .register main .card .form-register .card-body .container .form-group .verify .alert-info {
+  .register main .card .form-register .card-body .container .form-group .verify .alert-msg {
     font-size: 13px;
     width: 79.25%;
   }
@@ -277,7 +277,7 @@
     font-size: 12.5px;
   }
 
-  .register main .card .form-register .card-body .container .form-group .verify .btn {
+  .register main .card .form-register .card-body .container .form-group .verify .button {
     width: 20%;
     padding: 3.75px 5.5px 1.5px;
   }
