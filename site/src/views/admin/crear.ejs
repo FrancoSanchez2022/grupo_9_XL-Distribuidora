@@ -10,7 +10,57 @@
                 <h1>Crear un nuevo producto</h1>
 
                 <form action="" method="post">
- 
+                    <section>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="marca" placeholder="Marca">
+                            <label for="marca">Marca</label>
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="Titulo" placeholder="Titulo">
+                            <label for="Titulo">Titulo</label>
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                              <option selected hidden>Selecciona una opcion</option>
+                              <option value="Perfumes">Perfumes</option>
+                              <option value="Aromatizantes">Aromatizantes</option>
+                            </select>
+                            <label for="floatingSelect">Categoria</label>
+                            <small>Obligatorio</small>
+                          </div>
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="Precio" placeholder="Precio">
+                            <label for="Precio">Precio</label>
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="Descuento" value="0" placeholder="Descuento">
+                            <label for="Descuento">Descuento</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="Stock" placeholder="Stock">
+                            <label for="Stock" value="1">Stock</label>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Por favor inserte la descripcion del producto"
+                                id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea">Descripcion</label>
+                            <small>Obligatorio</small>
+                        </div>
+        
+                        <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Subir imagenes del producto</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                            <small>Obligatorio</small>
+                        </div>
+                        
+                        <div class="button">
+                            <button type="button" class="btn btn-outline-success" type="submit">Crear Producto</button>
+                        </div>
+                        
+                    </section>
                 </form>
 
             </main>
