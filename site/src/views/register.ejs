@@ -46,8 +46,8 @@
                                         <input type="tel" name="phone" id="phone" required>
                                         <div class="verify">
                                             <!-- <input type="submit" class="btn" value="Verificar"> -->
-                                            <button type="submit" class="btn">Verificar</button>
-                                            <div class="alert alert-info" style="display: none;"></div>
+                                            <button type="submit" class="button">Verificar</button>
+                                            <div class="alert-msg" style="display: none;"></div>
                                             <small>Debe ingresar un número de teléfono válido</small>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@
             utilsScript:
                 "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
         });
-        const info = document.querySelector(".alert-info");
+        const info = document.querySelector(".alert-msg");
 
         function process(event) {
             event.preventDefault();
