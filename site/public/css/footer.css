@@ -8,16 +8,16 @@ footer {
 }
 footer .final{
     display: flex;
-    width:100%;
+    width: 100%;
+    flex-direction: column;
 }
 footer .final .mapa{
     display: flex;
-    width:40% ;
+    
 }
 footer .final .ulfinal{
     display: flex;
-    flex-direction: row-reverse;
-    width:60% ;
+    flex-direction: column-reverse;
 }
 footer .final .ulfinal .menu{
     list-style: none;
@@ -40,6 +40,19 @@ footer .final .ulfinal img{
     height: 250px;
 }
 @media (min-width: 426px) {
+    footer .final{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+    }
+    footer .final .mapa{
+        display: flex;
+        
+    }
+    footer .final .ulfinal{
+        display: flex;
+        flex-direction: row-reverse;
+    }
     footer .final .ulfinal .menu {
         list-style: none;
         font-size: 20px;
@@ -49,6 +62,20 @@ footer .final .ulfinal img{
     }
 }
 @media (min-width: 769px) {
+    footer .final{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+    }
+    footer .final .mapa{
+        display: flex;
+        width: 40%;
+    }
+    footer .final .ulfinal{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 60%;
+    }
     footer .final .ulfinal .menu {
         
         list-style: none;
