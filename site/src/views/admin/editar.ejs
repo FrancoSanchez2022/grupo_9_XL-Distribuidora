@@ -22,9 +22,7 @@
                     </div>
                     <div class="form-floating m-2">
                         <select class="form-select" name="Categoria" id="floatingSelect" aria-label="Floating label select example">
-                          <% categorias.forEach(categoria => { %>
-                            <option value="<%= categoria %>" <%= producto.categorias.toLowerCase() === categoria.toLowerCase() ? 'selected' : null %> ><%= categoria %></option>
-                          <% }) %>
+
                         </select>
                         <label for="floatingSelect">Categoria</label>
                         <small>Obligatorio</small>
