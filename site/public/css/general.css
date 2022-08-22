@@ -1,20 +1,57 @@
-
-body {
-    font-family: Merriweather;
-  }
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 body{
+  font-family: Merriweather ;
     background-color: var(--profundidad2);
     display: block;
     margin:auto ;
     max-width: 2560px;
-
 }
+
+body::-webkit-scrollbar{
+width: 12px;
+height: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: linear-gradient(
+    to bottom,
+    #FFD6D6,
+    #FF3474B9);
+     border-radius: 10px;
+     outline: 1px solid rgba(112, 128, 144, 0);
+}
+
+body::-webkit-scrollbar-track{
+  background: darkgrey;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+ main h1 {
+  font-weight: 500;
+  font-size: 35px;
+}
+
+ main h2 {
+  font-weight: 440;
+  font-size: 22.5px;
+}
+
+ main h4 {
+  font-weight: 420;
+  font-size: 16px;
+}
+
+ main p {
+  font-weight: 320;
+  font-size: 13px;
+}
+
 ul li a{
     text-decoration: none;
     color: var(--colorLetraPrincipal);

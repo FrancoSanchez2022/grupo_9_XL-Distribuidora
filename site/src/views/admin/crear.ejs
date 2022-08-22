@@ -6,15 +6,169 @@
     <body>
         <%- include('../partials/header') %>
             <main>
-                
-                <h1>Creando un producto nuevo</h1>
 
-                <form action="" method="post">
-                    <section></section>
+                <h1>Crear un nuevo producto</h1>
+
+                <!-- Formulario -->
+                <form action="" method="POST" enctype="multipart/form-data">
+
+                    <!-- Contenedor de imagenes y Principales -->
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+
+                            <!-- Principales -->
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" name="titulo"
+                                        placeholder="Nombre del producto" id="name" placeholder="name@example.com">
+                                    <label for="name">Nombre del producto</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="text" name="marca"
+                                        placeholder="Marca del Producto" id="brand">
+                                    <label class="form-label" for="brand">Marca del Producto</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="number" name="precio"
+                                        placeholder="Precio del producto" id="price">
+                                    <label class="form-label" for="price">Precio del producto</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="number" name="descuento"
+                                        placeholder="Descuento del producto" id="discount">
+                                    <label class="form-label" for="discount">Descuento del producto</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="text" name="stock"
+                                        placeholder="Stock con el que cuenta el producto" id="stock">
+                                    <label class="form-label" for="stock">Stock con el que cuenta el producto</label>
+                                </div>
+                            </div>
+
+                            <!-- Imagenes -->
+                            <div class="col col-lg-7 col-md-12 col-sm-12">
+                                <section class="img-product">
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <!-- Imagen 1 -->
+                                            <div class="col col-5">
+                                                <label class="selectImg" for="product-img">
+                                                    <img id="img-preview"
+                                                        class="img-fluid img-thumbnail imagen-height rounded"
+                                                        src="/img/default-image.png" alt="">
+                                                    <div class="imgHover">
+                                                        <p class="text-center">Selecionar Imagen 1</p>
+                                                    </div>
+                                                </label>
+                                                <div class="form-admin__box inactivo">
+                                                    <input class="d-none" id="product-img" type="file" name="imagen"
+                                                        placeholder="Imagen del Producto" accept="image/*" multiple>
+                                                </div>
+                                            </div>
+
+                                            <!-- Imagen 2 -->
+                                            <div class="col col-5">
+                                                <label class="selectImg" for="product-sub-img-1">
+                                                    <img id="sub-img-preview-1"
+                                                        class="img-fluid img-thumbnail  imagen-height rounded"
+                                                        src="/img/default-image.png" alt="">
+                                                    <div class="imgHover">
+                                                        <p class="text-center">Selecionar Imagen 2</p>
+                                                    </div>
+                                                </label>
+                                                <div class="form_desciption__box inactivo">
+                                                    <input class="d-none" id="product-sub-img-1" type="file"
+                                                        name="imagen" placeholder="Imagen del Producto">
+                                                </div>
+                                            </div>
+
+                                            <!-- Imagen 3 -->
+                                            <div class="col col-5">
+                                                <label class="selectImg" for="product-sub-img-2">
+                                                    <img id="sub-img-preview-2"
+                                                        class="img-fluid img-thumbnail imagen-height rounded"
+                                                        src="/img/default-image.png" height="auto" alt="">
+                                                    <div class="imgHover">
+                                                        <p class="text-center">Selecionar Imagen 3</p>
+                                                    </div>
+                                                </label>
+                                                <div class="form_desciption__box inactivo">
+                                                    <input class="d-none " id="product-sub-img-2" type="file"
+                                                        name="imagen" placeholder="Imagen del Producto">
+                                                </div>
+                                            </div>
+
+                                            <!-- Imagen 4 -->
+                                            <div class="col col-5">
+                                                <label class="selectImg" for="product-sub-img-3">
+                                                    <img id="sub-img-preview-3"
+                                                        class="img-fluid img-thumbnail imagen-height rounded"
+                                                        src="/img/default-image.png" alt="">
+                                                    <div class="imgHover">
+                                                        <p class="text-center">Selecionar Imagen 4</p>
+                                                    </div>
+                                                </label>
+                                                <div class="form_desciption__box inactivo">
+                                                    <input class="d-none" id="product-sub-img-3" type="file"
+                                                        name="imagen" placeholder="Imagen del Producto">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+
+                            <!-- Selects  -->
+                            <div class="container m-3">
+                                <div class="row justify-content-around align-items-center">
+                                    <div class="col col-4">
+                                        <h3 class="text-center">Categorias</h3>
+                                        <select class="form-select" name="categoria" id="floatingSelect"
+                                            aria-label="Floating label select example">
+                                            <option selected hidden>Selecciona una opción</option>
+                                            <option value="Perfumes">Perfumes</option>
+                                            <option value="Aromatizantes">Aromatizantes</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="container m-3">
+                                <div class="row">
+                                    <div class="col col-12">
+                                        <div class="form-floating">
+                                            <textarea name="descripcion" id="description" cols="300" rows="300"
+                                                class="form-control" placeholder="Leave a comment here"
+                                                style="resize: none;"></textarea>
+                                            <label for="description">Descripción del producto</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="create-button text-center mt-5 pb-5">
+                        <button class="btn btn-primary" type="submit">Crear producto</button>
+                    </div>
                 </form>
 
             </main>
             <%- include('../partials/footer') %>
     </body>
+
+    <script src="/js/images.js"></script>
 
 </html>

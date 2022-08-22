@@ -17,7 +17,13 @@
     padding: 15px;
     border: 1px solid var(--colorHeader);
     border-radius: 15px;
+    background-color: var(--gray);
 }
+
+/*  .home main .carrucelDestacados article{
+  width: 20%;
+} */   
+
 .home main section article button{
     width: 100%;
     background-color: var(--colorButton);

@@ -47,3 +47,22 @@
 - Comunicación constante de como venimos.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+# Retro Sprint 3    
+
+## Empezar a hacer:
+- Mayor comunicación entre el equipo.
+- Diagramar tareas de forma equitativa.
+
+## Dejar de hacer:
+- Desorganización en el trabajo en equipo.
+
+## Hacer menos:
+- 
+
+## Seguir haciendo:
+- Aplicar días para las daily meeting.
+
+## Hacer más:
+- Mantener sitio de comunicación activo.
+- Comunicación constante de como venimos y qué hacemos.
