@@ -19,6 +19,12 @@ module.exports = {
         return res.render('admin/crear')
     },
     store:(req,res) => {
+        return res.send(req.body)
+
+/*         let img = req.files.map(imagen => {
+            return imagen.filename
+        })
+
         let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
         
         let productoNuevo = {
@@ -30,18 +36,16 @@ module.exports = {
             descuento:+Descuento,
             stock:+Stock,
             descripcion:Descripcion,
-            imagenes: [
-                
-            ],
+            imagenes: req.files ? img : 'default-image.png' ,
         }
 
         productos.push(productoNuevo)
         guardar(productos)
-
+ */
         /* Redirecciona a la lista de productos */
-        return res.redirect('/admin/list')
+        /*return res.redirect('/admin/list')
         /* Redirecciona al detalle del producto recien creado */
-        /* res.redirect(`/products/detail/${productoNuevo.id}`) */
+        /* res.redirect(`/products/detail/${productoNuevo.id}`)*/
     },
     edit:(req,res) => {
         let categorias = ['Smartphones','Tablets','Notebooks']
@@ -94,5 +98,28 @@ module.exports = {
             productos: historial,
             redirection: "list"
         })
-    }
+    },
+    restore : (req, res) => {
+        idParams = +req.params.id
+    
+        let productoParaRestaurar = historial.find((elemento) => {
+            return elemento.id == idParams
+        })
+
+        productos.push(productoParaRestaurar)
+        guardar(productos)
+
+        let historialModificado = historial.filter(producto => producto.id !== idParams)
+        guardarHistorial(historialModificado)
+
+        return res.redirect('admin/list')
+    },
+    crash: (req,res) => {
+        idParams = +req.params.id
+        
+        let historialModificado = historial.filter(producto => producto.id !== idParams)
+        guardarHistorial (historialModificado)
+
+        return res.redirect('/admin/list')
+    },
 }

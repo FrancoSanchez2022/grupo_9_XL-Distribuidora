@@ -10,13 +10,14 @@
                 <h1>Crear un nuevo producto</h1>
 
                 <!-- Formulario -->
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="/admin/create" method="POST" enctype="multipart/form-data">
 
                     <!-- Contenedor de imagenes y Principales -->
                     <div class="container">
                         <div class="row justify-content-between align-items-center">
 
                             <!-- Principales -->
+                            <form action="/admin/crear" method="post" enctype="multipart/form-data"></form>
                             <div class="col col-lg-4 col-md-12 col-sm-12">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" name="titulo"
@@ -42,6 +43,11 @@
                                     <input class="form-control" type="text" name="stock"
                                         placeholder="Stock con el que cuenta el producto" id="stock">
                                     <label class="form-label" for="stock">Stock con el que cuenta el producto</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="text" name="descripcion"
+                                        placeholder="Stock con el que cuenta el producto" id="stock">
+                                    <label class="form-label" for="stock">Descripción del producto</label>
                                 </div>
                             </div>
 

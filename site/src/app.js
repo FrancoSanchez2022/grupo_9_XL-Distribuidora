@@ -27,8 +27,11 @@ app.use(connectLivereload());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
 
-/*Middlewares */
+/*Trabajar con metodos HTTP (post) */
+app.use(express.urlencoded({extended: false }))
 app.use(express.json());
+
+/*Middlewares */
 app.use(express.static(path.resolve(__dirname,'..', 'public')));
 
 /*Rutas */
