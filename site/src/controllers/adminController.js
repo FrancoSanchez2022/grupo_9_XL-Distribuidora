@@ -4,22 +4,28 @@ const productos = require('../data/productos.json')
 const historial = require('../data/historial.json')
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
-,JSON.stringify(dato,null,4),'utf-8')
+    , JSON.stringify(dato, null, 4), 'utf-8')
 const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
-,JSON.stringify(dato,null,4),'utf-8')
+    , JSON.stringify(dato, null, 4), 'utf-8')
 
 module.exports = {
-    list: (req,res) => {
-        return res.render('admin/listar',{
+    list: (req, res) => {
+        return res.render('admin/listar', {
             productos,
             redirection: "history"
         })
     },
-    create:(req,res) => {
+    create: (req, res) => {
         return res.render('admin/crear')
     },
-    store:(req,res) => {
-        let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
+    store: (req, res) => {
+
+        let img = req.files.map(imagen => {
+            return imagen.filename
+        })
+        return res.send(img)
+
+        /*let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
         
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
@@ -30,34 +36,32 @@ module.exports = {
             descuento:+Descuento,
             stock:+Stock,
             descripcion:Descripcion,
-            imagenes: [
-                
-            ],
+            imagenes: req.files ? img : 'default-image.png' ,
         }
 
         productos.push(productoNuevo)
         guardar(productos)
-
+ */
         /* Redirecciona a la lista de productos */
-        return res.redirect('/admin/list')
+        /*return res.redirect('/admin/list')
         /* Redirecciona al detalle del producto recien creado */
-        /* res.redirect(`/products/detail/${productoNuevo.id}`) */
+        /* res.redirect(`/products/detail/${productoNuevo.id}`)*/
     },
-    edit:(req,res) => {
-        let categorias = ['Smartphones','Tablets','Notebooks']
+    edit: (req, res) => {
+        let categorias = ['Smartphones', 'Tablets', 'Notebooks']
         id = +req.params.id
         let producto = productos.find((elemento) => {
             return elemento.id == id
         })
         /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
-        return res.render('admin/editar',{
+        return res.render('admin/editar', {
             producto,
             categorias
         })
     },
-    update:(req,res) => {
+    update: (req, res) => {
         idParams = +req.params.id
-        let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
+        let { Marca, Titulo, Categoria, Precio, Descuento, Stock, Descripcion } = req.body
 
         productos.forEach(producto => {
             if (producto.id === idParams) {
@@ -73,7 +77,7 @@ module.exports = {
         guardar(productos)
         return res.redirect('/admin/list')
     },
-    destroy:(req,res) => {
+    destroy: (req, res) => {
         idParams = +req.params.id
 
         let productoParaEliminar = productos.find((elemento) => {
@@ -88,11 +92,34 @@ module.exports = {
 
         return res.redirect('/admin/history')
     },
-    history : (req,res) => {
+    history: (req, res) => {
 
-        return res.render('admin/listaProductos',{
+        return res.render('admin/listaProductos', {
             productos: historial,
             redirection: "list"
         })
-    }
+    },
+    restore: (req, res) => {
+        idParams = +req.params.id
+
+        let productoParaRestaurar = historial.find((elemento) => {
+            return elemento.id == idParams
+        })
+
+        productos.push(productoParaRestaurar)
+        guardar(productos)
+
+        let historialModificado = historial.filter(producto => producto.id !== idParams)
+        guardarHistorial(historialModificado)
+
+        return res.redirect('admin/list')
+    },
+    crash: (req, res) => {
+        idParams = +req.params.id
+
+        let historialModificado = historial.filter(producto => producto.id !== idParams)
+        guardarHistorial(historialModificado)
+
+        return res.redirect('/admin/list')
+    },
 }

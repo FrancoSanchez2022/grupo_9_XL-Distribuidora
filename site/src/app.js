@@ -37,7 +37,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'))
 
 /*Middlewares */
-app.use(express.json());
 app.use(express.static(path.resolve(__dirname,'..', 'public')));
 
 /*Rutas */
