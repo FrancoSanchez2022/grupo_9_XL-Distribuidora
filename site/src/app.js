@@ -7,6 +7,8 @@ const express = require("express");
 const connectLivereload = require('connect-livereload')
 const path = require("path");
 
+const methodOverride = require('method-override')
+
 const app = express();
 const port = 3000;
 
@@ -26,6 +28,13 @@ app.use(connectLivereload());
 /*View engine setup*/
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
+
+/* Trabajar con metodos HTTP (post) */
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+/* Trabajar con put y delete */
+app.use(methodOverride('_method'))
 
 /*Middlewares */
 app.use(express.json());
