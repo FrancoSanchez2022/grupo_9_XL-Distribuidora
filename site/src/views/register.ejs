@@ -45,7 +45,6 @@
                                         <label for="phone">Teléfono</label>
                                         <input type="tel" name="phone" id="phone" required>
                                         <div class="verify">
-                                            <!-- <input type="submit" class="btn" value="Verificar"> -->
                                             <button type="submit" class="button">Verificar</button>
                                             <div class="alert-msg" style="display: none;"></div>
                                             <small>Debe ingresar un número de teléfono válido</small>
@@ -87,8 +86,7 @@
         const phoneInputField = document.querySelector("#phone");
         const phoneInput = window.intlTelInput(phoneInputField, {
             preferredCountries: ["ar", "cl", "uy", "ec", "co", "ce", "pe", "py", "bo", "br", "ve", "mx", "us", "ca", "es"],
-            utilsScript:
-                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.18/js/utils.js"
         });
         const info = document.querySelector(".alert-msg");
 

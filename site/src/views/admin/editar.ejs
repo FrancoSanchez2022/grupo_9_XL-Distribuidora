@@ -8,42 +8,43 @@
         <main>
             <h1>Editando el producto</h1>
     
-            <form action="/admin/edit/" method=PUT method="post">
+            <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="post">
                 <section>
                     <div class="form-floating m-2">
-                        <input type="text" name="Marca" class="form-control" id="marca" placeholder="Marca" >
+                        <input type="text" name="Marca" class="form-control" id="marca" placeholder="Marca" value="<%= producto.marca %> ">
                         <label for="marca">Marca</label>
                         <small>Obligatorio</small>
                     </div>
                     <div class="form-floating m-2">
-                        <input type="text" name="Titulo" class="form-control" id="Titulo" placeholder="Titulo" >
+                        <input type="text" name="Titulo" class="form-control" id="Titulo" placeholder="Titulo" value="<%= producto.titulo %> ">
                         <label for="Titulo">Titulo</label>
                         <small>Obligatorio</small>
                     </div>
                     <div class="form-floating m-2">
                         <select class="form-select" name="Categoria" id="floatingSelect" aria-label="Floating label select example">
+
                         </select>
                         <label for="floatingSelect">Categoria</label>
                         <small>Obligatorio</small>
                       </div>
                     <div class="form-floating m-2">
-                        <input type="number" name="Precio" class="form-control" id="Precio" placeholder="Precio" >
+                        <input type="number" name="Precio" class="form-control" id="Precio" placeholder="Precio" value="<%=producto.precio%>">
                         <label for="Precio m-2">Precio</label>
                         <small>Obligatorio</small>
                     </div>
                     <div class="form-floating m-2">
-                        <input type="number" name="Descuento" class="form-control" id="Descuento" placeholder="Descuento" >
+                        <input type="number" name="Descuento" class="form-control" id="Descuento" placeholder="Descuento" value="<%=producto.descuento%>">
                         <label for="Descuento">Descuento</label>
                     </div>
                     <div class="form-floating m-2">
-                        <input type="number" name="Stock" class="form-control" id="Stock" placeholder="Stock" >
+                        <input type="number" name="Stock" class="form-control" id="Stock" placeholder="Stock" value="<%=producto.stock%>">
                         <label for="Stock">Stock</label>
                     </div>
                     
                     <div class="form-floating m-2">
                         <textarea class="form-control h-100" name="Descripcion" placeholder="Por favor inserte la descripcion del producto"
-                            id="floatingTextarea"></textarea>
-                        <label for="floatingTextarea">Descripción</label>
+                            id="floatingTextarea"><%= producto.descripcion %></textarea>
+                        <label for="floatingTextarea">Descripcion</label>
                         <small>Obligatorio</small>
                     </div>
     
