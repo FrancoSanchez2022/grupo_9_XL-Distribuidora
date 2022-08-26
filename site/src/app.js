@@ -49,5 +49,3 @@ liveReloadServer.server.once("connection", () => {
   
 /* Levantamos el servidor con app listen */
 app.listen(port,() => console.log(`Se ha levantado con éxito el servidor en http://localhost:${port}`));
-
-
