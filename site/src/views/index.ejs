@@ -13,7 +13,7 @@
                     <% productos.forEach(producto => { %>
                         <article>
                             <a href="/products/detail/<%=producto.id%>">
-                                <div class="producto"><img src="<%=producto.imagenes%>" alt="Esecia.png"></div>
+                                <div class="producto"><img src="/img/productos/<%=producto.imagenes[0]%>" alt="Esencia.png"></div>
                             <h2 class="nombreP"> Esencia Pura por 50ml</h2>
                                 <h2 class="nombreP"> <%=producto.titulo%> </h2>
                                 <h3 class="precio"><%=producto.precio%></h3>
