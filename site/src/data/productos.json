@@ -388,5 +388,18 @@
         "imagenes": [
             "imagen30.webp"
         ]
+    },
+    {
+        "id": 31,
+        "marca": "XL",
+        "titulo": "Esencia",
+        "categorias": "Perfumes",
+        "precio": 1800,
+        "descuento": 5,
+        "stock": 15,
+        "descripcion": "Escencia pura de 1l",
+        "imagenes": [
+            "img-1661522297479.jpeg"
+        ]
     }
 ]
