@@ -3,6 +3,7 @@ header {
     padding: 12px;
     margin-bottom: 20px;
     background-color: var(--colorHeader);
+    z-index: 1!important;
 }
 
 header input {
