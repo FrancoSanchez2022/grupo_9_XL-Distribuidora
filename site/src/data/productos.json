@@ -1,14 +1,16 @@
 [
     {
         "id": 1,
-        "marca": "XL",
-        "titulo": "Esencia de 50ml",
+        "marca": "XL ",
+        "titulo": "Esencia de 50ml ",
         "categoria": "Esencias",
         "precio": 1500,
         "descuento": 10,
         "descripcion": "Escencia de 50ml fabricada artesanalmente por la distribuidora XL contiene una dulce fragancia aroma a vainilla.",
         "stock": 10,
-        "imagenes":["XL-Esencia.jpg"]
+        "imagenes": [
+            "XL-Esencia.jpg"
+        ]
     },
     {
         "id": 2,
@@ -19,7 +21,9 @@
         "descuento": 10,
         "descripcion": "Jabon liquido para lavar la ropa.",
         "stock": 50,
-        "imagenes": ["imagen1.webp"]
+        "imagenes": [
+            "imagen1.webp"
+        ]
     },
     {
         "id": 3,
@@ -30,7 +34,9 @@
         "descuento": 10,
         "descripcion": "Detergente liquido para limpiar vajillas contiene fragancia limón.",
         "stock": 50,
-        "imagenes": ["imagen2.webp"]
+        "imagenes": [
+            "imagen2.webp"
+        ]
     },
     {
         "id": 4,
@@ -41,7 +47,9 @@
         "descuento": 10,
         "descripcion": "Detergente liquido para limpiar vajillas.",
         "stock": 50,
-        "imagenes": ["imagen3.webp"]
+        "imagenes": [
+            "imagen3.webp"
+        ]
     },
     {
         "id": 5,
@@ -52,7 +60,9 @@
         "descuento": 5,
         "descripcion": "Cepillo de dientes para el cuidado diario de la salud bucal.",
         "stock": 50,
-        "imagenes": ["imagen4.webp"]
+        "imagenes": [
+            "imagen4.webp"
+        ]
     },
     {
         "id": 6,
@@ -63,7 +73,9 @@
         "descuento": "",
         "descripcion": "Papel higienico de hoja simple para uso diario.",
         "stock": 50,
-        "imagenes": ["imagen5.webp"]
+        "imagenes": [
+            "imagen5.webp"
+        ]
     },
     {
         "id": 7,
@@ -74,7 +86,9 @@
         "descuento": "",
         "descripcion": "Virulana inoxidable de larga duración.",
         "stock": 50,
-        "imagenes": ["imagen6.webp"]
+        "imagenes": [
+            "imagen6.webp"
+        ]
     },
     {
         "id": 8,
@@ -85,7 +99,9 @@
         "descuento": "",
         "descripcion": "Jabon compacto clasico de 150g.",
         "stock": 50,
-        "imagenes": ["imagen7.webp"]
+        "imagenes": [
+            "imagen7.webp"
+        ]
     },
     {
         "id": 9,
@@ -96,7 +112,9 @@
         "descuento": "",
         "descripcion": "Nueva formula mata moscas y mosquitos de doble acción",
         "stock": 50,
-        "imagenes": ["imagen8.webp"]
+        "imagenes": [
+            "imagen8.webp"
+        ]
     },
     {
         "id": 10,
@@ -107,7 +125,9 @@
         "descuento": "",
         "descripcion": "Raid en tableta, mata y repele mosquitos, insecticida contiene 24 unidades.",
         "stock": 50,
-        "imagenes": ["imagen9.webp"]
+        "imagenes": [
+            "imagen9.webp"
+        ]
     },
     {
         "id": 11,
@@ -118,7 +138,9 @@
         "descuento": "",
         "descripcion": "Toallitas desinfectantes de superficies Ayudin contiene 24 unidades.",
         "stock": 50,
-        "imagenes": ["imagen10.webp"]
+        "imagenes": [
+            "imagen10.webp"
+        ]
     },
     {
         "id": 12,
@@ -129,7 +151,9 @@
         "descuento": "",
         "descripcion": "Insecticida mata cucarachas y arañas en el acto.",
         "stock": 50,
-        "imagenes": ["imagen11.webp"]
+        "imagenes": [
+            "imagen11.webp"
+        ]
     },
     {
         "id": 13,
@@ -140,7 +164,9 @@
         "descuento": "",
         "descripcion": "Repelente contra mosquitos en aerosol marca off con duracion de hasta 12 horas.",
         "stock": 50,
-        "imagenes": ["imagen12.webp"]
+        "imagenes": [
+            "imagen12.webp"
+        ]
     },
     {
         "id": 14,
@@ -151,7 +177,9 @@
         "descuento": "",
         "descripcion": "Raid en espiral contiene 12 unidades repele mosquitos.",
         "stock": 50,
-        "imagenes": ["imagen13.webp"]
+        "imagenes": [
+            "imagen13.webp"
+        ]
     },
     {
         "id": 15,
@@ -162,7 +190,9 @@
         "descuento": "",
         "descripcion": "MrMusculo antigrasa limpieza la suciedad de la cocina dejando un aroma agradable.",
         "stock": 50,
-        "imagenes": ["imagen14.webp"]
+        "imagenes": [
+            "imagen14.webp"
+        ]
     },
     {
         "id": 16,
@@ -173,7 +203,9 @@
         "descuento": "",
         "descripcion": "Lisoform liquido desifectante multisuperficies contiene 500cc",
         "stock": 50,
-        "imagenes": ["imagen15.webp"]
+        "imagenes": [
+            "imagen15.webp"
+        ]
     },
     {
         "id": 17,
@@ -184,7 +216,9 @@
         "descuento": "",
         "descripcion": "Limpiador desinfectante multisuperficies con aroma floral.",
         "stock": 50,
-        "imagenes": ["imagen16.webp"]
+        "imagenes": [
+            "imagen16.webp"
+        ]
     },
     {
         "id": 18,
@@ -195,7 +229,9 @@
         "descuento": 10,
         "descripcion": "Mopa marca Virulana rotomop sin esfuerzo y con centifugado automatico con mopa de respuesto incluida.",
         "stock": 10,
-        "imagenes": ["imagen17c.webp"]
+        "imagenes": [
+            "imagen17c.webp"
+        ]
     },
     {
         "id": 19,
@@ -206,7 +242,9 @@
         "descuento": 10,
         "descripcion": "Jabon liquido para lavar la ropa marca Ala para un lavado perfecto.",
         "stock": 50,
-        "imagenes": ["imagen18.webp"]
+        "imagenes": [
+            "imagen18.webp"
+        ]
     },
     {
         "id": 20,
@@ -217,7 +255,9 @@
         "descuento": "",
         "descripcion": "Lisoform en aerosol contiene 40g/55cm3 + bolsas ziploc con cierre deslizable 11 unidades.",
         "stock": 50,
-        "imagenes": ["imagen19.webp"]
+        "imagenes": [
+            "imagen19.webp"
+        ]
     },
     {
         "id": 21,
@@ -228,7 +268,9 @@
         "descuento": "",
         "descripcion": "Pasta de dientes para cuidado diario remueve manchas dificiles.",
         "stock": 50,
-        "imagenes": ["imagen20.webp"]
+        "imagenes": [
+            "imagen20.webp"
+        ]
     },
     {
         "id": 22,
@@ -239,7 +281,9 @@
         "descuento": "",
         "descripcion": "Enjuage bucal Colgate contiene zero alcohol con sensacion pro alivio contiene 250 ml.",
         "stock": 50,
-        "imagenes": ["imagen21.webp"]
+        "imagenes": [
+            "imagen21.webp"
+        ]
     },
     {
         "id": 23,
@@ -250,7 +294,9 @@
         "descuento": 10,
         "descripcion": "Cepillo de dientes para el cuidado diario de la salud bucal.",
         "stock": 50,
-        "imagenes": ["imagen22.webp"]
+        "imagenes": [
+            "imagen22.webp"
+        ]
     },
     {
         "id": 24,
@@ -261,7 +307,9 @@
         "descuento": "",
         "descripcion": "Enjuage bucal Listerine contiene zero alcohol anticaries, sabor menta, contiene 500 ml.",
         "stock": 50,
-        "imagenes": ["imagen23.webp"]
+        "imagenes": [
+            "imagen23.webp"
+        ]
     },
     {
         "id": 25,
@@ -272,7 +320,9 @@
         "descuento": "",
         "descripcion": "Desodorante dove men care nueva formula mejorada duracion de hasta 48 horas.",
         "stock": 50,
-        "imagenes": ["imagen25.webp"]
+        "imagenes": [
+            "imagen25.webp"
+        ]
     },
     {
         "id": 26,
@@ -283,7 +333,9 @@
         "descuento": 10,
         "descripcion": "Desodorante antitranspirante de hasta 48 horas de duración.",
         "stock": 50,
-        "imagenes": ["imagen26.webp"]
+        "imagenes": [
+            "imagen26.webp"
+        ]
     },
     {
         "id": 27,
@@ -294,7 +346,9 @@
         "descuento": "",
         "descripcion": "Espuma para pieles sensibles marca Gilette contiene 322ml.",
         "stock": 50,
-        "imagenes": ["imagen27.webp"]
+        "imagenes": [
+            "imagen27.webp"
+        ]
     },
     {
         "id": 28,
@@ -305,7 +359,9 @@
         "descuento": 10,
         "descripcion": "Desorante en aerosol con una duración de hasta 48 horas con aroma canela & ambar.",
         "stock": 50,
-        "imagenes": ["imagen28.webp"]
+        "imagenes": [
+            "imagen28.webp"
+        ]
     },
     {
         "id": 29,
@@ -316,7 +372,9 @@
         "descuento": 10,
         "descripcion": "Jabon compacto con efecto purificante Asepxia contiene 100g.",
         "stock": 50,
-        "imagenes": ["imagen29.png"]
+        "imagenes": [
+            "imagen29.png"
+        ]
     },
     {
         "id": 30,
@@ -327,7 +385,21 @@
         "descuento": 10,
         "descripcion": "Maquina rasuradora x2 confort gel sensitive para pieles sensibles.",
         "stock": 50,
-        "imagenes": ["imagen30.webp"]
+        "imagenes": [
+            "imagen30.webp"
+        ]
+    },
+    {
+        "id": 31,
+        "marca": "XL",
+        "titulo": "Esencia",
+        "categorias": "Perfumes",
+        "precio": 1800,
+        "descuento": 5,
+        "stock": 15,
+        "descripcion": "Escencia pura de 1l",
+        "imagenes": [
+            "img-1661522297479.jpeg"
+        ]
     }
-
 ]

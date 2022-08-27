@@ -1,1 +1,13 @@
-[]
+[
+    {
+        "id": 31,
+        "precio": null,
+        "descuento": null,
+        "stock": null,
+        "imagenes": [
+            "img-1661521841812.jpeg",
+            "img-1661521841879.jpeg",
+            "img-1661521841881.jpeg"
+        ]
+    }
+]

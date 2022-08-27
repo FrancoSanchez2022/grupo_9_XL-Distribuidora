@@ -23,29 +23,28 @@ module.exports = {
         let img = req.files.map(imagen => {
             return imagen.filename
         })
-        return res.send(img)
-
-        /*let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
+        /* return res.send(img)
+ */
+        let {marca,titulo,categoria,precio,descuento,stock,descripcion} = req.body
         
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
-            marca:Marca,
-            titulo:Titulo,
-            categorias:Categoria,
-            precio:+Precio,
-            descuento:+Descuento,
-            stock:+Stock,
-            descripcion:Descripcion,
+            marca:marca,
+            titulo:titulo,
+            categorias:categoria,
+            precio:+precio,
+            descuento:+descuento,
+            stock:+stock,
+            descripcion:descripcion,
             imagenes: req.files ? img : 'default-image.png' ,
         }
 
         productos.push(productoNuevo)
         guardar(productos)
- */
+
         /* Redirecciona a la lista de productos */
-        /*return res.redirect('/admin/list')
-        /* Redirecciona al detalle del producto recien creado */
-        /* res.redirect(`/products/detail/${productoNuevo.id}`)*/
+       return res.redirect('/admin/list')
+       
     },
     edit: (req, res) => {
         let categorias = ['Smartphones', 'Tablets', 'Notebooks']

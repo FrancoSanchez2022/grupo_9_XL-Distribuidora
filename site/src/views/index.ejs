@@ -10,30 +10,19 @@
                 <div class="banner"><img src="img/XL-distribuidora.png" alt="perfume.png"></div>
                 <section class="carrucelDestacados">
                     <h1 class="destacado">Productos Destacados</h1>
-                    <article>
-                        <div class="producto"><img src="img/Glade1CF.jpeg" alt="Glade1CF"></div>
-                        <h2 class="nombreP"> Aromatizante de ambientes en aerosol </h2>
-                        <h3 class="precio">$316.10</h3>
-                        <button><a href="/products/detail">Ver más</a></button>
-                    </article>
-                    <article>
-                        <a href="/products/detail"><div class="producto"><img src="img/SaphirusCF.jpeg" alt="SaphirusCF"></div></a>
-                        <h2 class="nombreP"> Difusor automático</h2>
-                        <h3 class="precio">$216.00</h3>
-                        <button><a href="/products/detail">Ver más</a></button>
-                    </article>
-                    <article>
-                        <div class="producto"><img src="img/Glade2CF.jpeg" alt="Glade2CF"></div>
-                        <h2 class="nombreP"> Aromatizante de autos </h2>
-                        <h3 class="precio">$450.00</h3>
-                        <button><a href="/products/detail">Ver más</a></button>
-                    </article>
-                    <article>
-                        <div class="producto"><img src="img/Glade3CF.jpeg" alt="Glade3CF"></div>
-                        <h2 class="nombreP">Aromatizante en barra </h2>
-                        <h3 class="precio">$350</h3>
-                        <button><a href="/products/detail">Ver más</a></button>
-                    </article>
+                    <% productos.forEach(producto => { %>
+                        <article>
+                            <a href="/products/detail/<%=producto.id%>">
+                                <div class="producto"><img src="/img/productos/<%=producto.imagenes[0]%>" alt="Esencia.png"></div>
+                            <h2 class="nombreP"> Esencia Pura por 50ml</h2>
+                                <h2 class="nombreP"> <%=producto.titulo%> </h2>
+                                <h3 class="precio"><%=producto.precio%></h3>
+                                <p class="descuento"><%=producto.descuento%>%</p>
+                                <button><a href="/products/detail/<%=producto.id%>">Ver más</a></button>
+                            </a>
+                        </article>
+                     <% }) %>
+                    
                 </section>
                 <section class="infoempresa">
                     <article id="somos" class="info">
