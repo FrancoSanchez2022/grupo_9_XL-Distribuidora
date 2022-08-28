@@ -62,7 +62,7 @@
 }
 
 .login main .card {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   border: 2px solid var(--grisClaro);
 margin-bottom: 15px;
  margin: 5%;
@@ -70,17 +70,18 @@ margin-bottom: 15px;
 }
 
 .login main .card .form-login .card-header {
-  border-bottom: 1.5px solid var(--grisClaro)
+  border-bottom: 1.5px solid var(--grisClaro);
+  border-radius: 0.35rem 0.35rem 0 0;
 }
 
 .login main .card .form-login .card-footer {
-  border-top: 1.5px solid var(--grisClaro)
+  border-top: 1.5px solid var(--grisClaro);
+  border-radius: 0 0 0.35rem 0.35rem;
 }
 
 .login main .card .form-login .card-header, .card-footer{
   background-color: var(--gray);
-  padding: 1rem;
-  border-radius: 0 0 0.125rem 0.125rem;
+  padding: 1rem
 }
 
 .login main .card .form-login .card-body .I-forgot-my-password {
@@ -92,16 +93,19 @@ margin-bottom: 15px;
 
 .login main .card .form-login .card-body .I-forgot-my-password a{
   color: var(--black);
-  background-color: var(--white);
+
   font-size: 11.5px;
     text-decoration: none;
+    box-shadow:  0px 0.5px 3px 3px white;
+    border-radius: 5%;
 }
 
 .login main .card .form-login .card-body .I-forgot-my-password a:hover{
   color: var(--white);
-  background-color: var(--grisClaro) ;
+  background-color: var(--black) ;
   text-align: center;
-  text-decoration: underline; 
+  box-shadow:  0px 0.5px 3px 3px black;
+border-radius: 10%;
 }
 
 .login main .card .form-login .button-register{

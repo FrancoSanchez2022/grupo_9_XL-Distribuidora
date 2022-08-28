@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "marca": "XL",
-        "titulo": "Esencia de 50ml",
+        "marca": "XL ",
+        "titulo": "Esencia de 50ml ",
         "categoria": "Esencias",
         "precio": 1500,
         "descuento": 10,
@@ -386,6 +386,19 @@
         "stock": 50,
         "imagenes": [
             "imagen30.webp"
+        ]
+    },
+    {
+        "id": 31,
+        "marca": "XL",
+        "titulo": "Esencia",
+        "categorias": "Perfumes",
+        "precio": 1800,
+        "descuento": 5,
+        "stock": 15,
+        "descripcion": "Escencia pura de 1l",
+        "imagenes": [
+            "img-1661522297479.jpeg"
         ]
     }
 ]
