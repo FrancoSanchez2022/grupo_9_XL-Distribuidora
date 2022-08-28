@@ -60,7 +60,10 @@
   border: 2px solid var(--grisClaro);
   margin-bottom: 15px;
   margin: 5%;
+  box-shadow: 0px 4px 20px 12px   #ff347491
 }
+
+
 
 .register main .card .form-register .card-header {
   border-bottom: 1.5px solid var(--grisClaro)
