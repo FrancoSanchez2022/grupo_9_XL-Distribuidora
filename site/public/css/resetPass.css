@@ -47,12 +47,13 @@
   }
   
   .resetPassword main .card {
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     border: 2px solid var(--grisClaro);
   margin-bottom: 15px;
    margin: 5%;
    background-color: var(--white);
    padding: 1rem;
+   box-shadow: 0px 5px 20px 12px   #ff347491
   }
   
   .resetPassword main .card .form-resetPassword .container{
@@ -123,8 +124,6 @@
     
     
     .resetPassword main .card {
-      border-radius: 0.25rem;
-      border: 2px solid var(--grisClaro);
     margin-bottom: 15px;
       margin: 5% 17.5%;
     }
