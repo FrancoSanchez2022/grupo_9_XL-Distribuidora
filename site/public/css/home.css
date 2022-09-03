@@ -1,6 +1,6 @@
 .home main {
     width: 95%;
-    margin: 0 auto;  
+    margin: 0 auto;
 }
 
 .home main .banner img {
@@ -18,19 +18,24 @@
     border: 1px solid var(--colorHeader);
     border-radius: 15px;
     background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /*  .home main .carrucelDestacados article{
   width: 20%;
-} */   
+} */
 
-.home main section article button{
+.home main section article button {
     width: 100%;
     background-color: var(--colorButton);
     padding: 5px;
-    
+
 }
-.home main section article a{
+
+.home main section article a {
     text-decoration: none;
     color: var(--colorLetraPrincipal)
 }
@@ -87,7 +92,8 @@
     width: 100%;
     resize: none;
 }
-.home main section article.contact button{
+
+.home main section article.contact button {
     width: 100%;
     background-color: var(--colorButtonContacto);
     padding: 5px;
@@ -172,13 +178,21 @@
     .home main .products_cards {
         width: 74%;
     }
-    .home main section .video{
+
+    .home main section .video {
         width: 50%;
     }
-    .home main section .video iframe{
+
+    .home main section .video iframe {
         width: 98%;
     }
 
+    .home main section article {
+        text-align: center;
+        margin: 10px;
+        width: 30%;
+
+    }
 
 
     .home main section article.contact {

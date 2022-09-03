@@ -93,7 +93,7 @@ module.exports = {
     },
     history: (req, res) => {
 
-        return res.render('admin/listaProductos', {
+        return res.render('admin/listar', {
             productos: historial,
             redirection: "list"
         })
@@ -111,7 +111,7 @@ module.exports = {
         let historialModificado = historial.filter(producto => producto.id !== idParams)
         guardarHistorial(historialModificado)
 
-        return res.redirect('admin/list')
+        return res.redirect('/admin/list')
     },
     crash: (req, res) => {
         idParams = +req.params.id

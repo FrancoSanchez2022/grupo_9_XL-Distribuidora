@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('./partials/head',{title:'XL - Home'}) %>
+<%- include('./partials/head',{title:'XL - Home'}) %>
 
     <body class="home">
 
@@ -10,25 +10,36 @@
                 <div class="banner"><img src="img/XL-distribuidora.png" alt="perfume.png"></div>
                 <section class="carrucelDestacados">
                     <h1 class="destacado">Productos Destacados</h1>
-                    <% productos.forEach(producto => { %>
-                        <article>
-                            <a href="/products/detail/<%=producto.id%>">
-                                <div class="producto"><img src="/img/productos/<%=producto.imagenes[0]%>" alt="Esencia.png"></div>
-                            <h2 class="nombreP"> Esencia Pura por 50ml</h2>
-                                <h2 class="nombreP"> <%=producto.titulo%> </h2>
-                                <h3 class="precio"><%=producto.precio%></h3>
-                                <p class="descuento"><%=producto.descuento%>%</p>
-                                <button><a href="/products/detail/<%=producto.id%>">Ver más</a></button>
-                            </a>
-                        </article>
-                     <% }) %>
-                    
+                    <% productos.forEach(producto=> { %>
+                        <% if (producto.descuento==="" ) { %>
+
+
+                            <article>
+
+                                <a href="/products/detail/<%=producto.id%>">
+                                    <div class="producto"><img src="/img/productos/<%=producto.imagenes[0]%>"
+                                            alt="Esencia.png"></div>
+                                    <h2 class="nombreP">
+                                        <%=producto.titulo%>
+                                    </h2>
+                                    <h3 class="precio">
+                                        $<%=producto.precio%>
+                                    </h3>
+
+                                    <button><a href="/products/detail/<%=producto.id%>">Ver más</a></button>
+                                </a>
+                            </article>
+                            <% } %>
+                                <% }) %>
+
                 </section>
                 <section class="infoempresa">
                     <article id="somos" class="info">
 
                         <h3 class="XL">la empresa XL:</h3>
-                        <p>Somos una empresa dedicada a la venta de productos quimicos para el cuidado del hogar para que su familia pueda sentirse segura de agentes patologicos y se sienta fresca,agradable para su comodidad.</p>
+                        <p>Somos una empresa dedicada a la venta de productos quimicos para el cuidado del hogar para
+                            que su familia pueda sentirse segura de agentes patologicos y se sienta fresca,agradable
+                            para su comodidad.</p>
                     </article>
                     <div class="video"><iframe width="100%" src="https://www.youtube.com/embed/a4_qWzISsOc"
                             title="Cómo hacer un perfume - Amazing Perfume Factory | How Perfume Is Made In Factory ➤#1 "
@@ -37,24 +48,33 @@
                             allowfullscreen></iframe></div>
                 </section>
                 <section class="carrucelOfertas">
-                    <section class="carrucelDestacados">
-                        <h1 class="oferta">Productos En Oferta</h1>
-                        <article>
-                            <div class="producto"><img src="img/XL-Esencia.jpeg" alt="Esecia.png"></div>
-                            <h2 class="nombreP"> Esencia Pura por 50ml</h2>
-                            <h3 class="precio">$1500</h3>
-                            <p class="descuento">10%</p>
-                            <button><a href="/products/detail">Ver más</a></button>
-                        </article>
-                        <article>
-                            <div class="producto"><img src="img/XL.jpeg" alt="difusor.jpeg"></div>
-                            <h2 class="nombreP"> Difusor automático (de velitas)</h2>
-                            <h3 class="precio">$150</h3>
-                            <p class="descuento">25%</p>
-                            <button><a href="/products/detail">Ver más</a></button>
-                        </article>
-                    </section>
+                    <h1 class="oferta">Productos En Oferta</h1>
+                    <% productos.forEach(producto=> { %>
+                        <% if (producto.descuento >= 1 ) { %>
+
+
+                            <article>
+
+                                <a href="/products/detail/<%=producto.id%>">
+                                    <div class="producto"><img src="/img/productos/<%=producto.imagenes[0]%>"
+                                            alt="Esencia.png"></div>
+                                    <h2 class="nombreP">
+                                        <%=producto.titulo%>
+                                    </h2>
+                                    <h3 class="precio">
+                                        $<%=producto.precio%>
+                                    </h3>
+                                    <p class="descuento">
+                                        %<%=producto.descuento%>
+                                    </p>
+
+                                    <button><a href="/products/detail/<%=producto.id%>">Ver más</a></button>
+                                </a>
+                            </article>
+                            <% } %>
+                                <% }) %>
                 </section>
+                
                 <section class="contacto" id="contacto">
                     <article class="contact">
 

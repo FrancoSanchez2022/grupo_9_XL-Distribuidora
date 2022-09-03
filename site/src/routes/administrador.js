@@ -1,5 +1,5 @@
 const express = require('express');
-const {list,create,edit,store,update,destroy,history} = require('../controllers/adminController')
+const {list,create,edit,store,update,destroy,history,crash, restore} = require('../controllers/adminController')
 const upload = require('../middlewares/multerProducts');
 const router = express.Router();
 
@@ -18,5 +18,8 @@ router.put('/edit/:id',upload.array('imagen'), update);
 
 /* Eliminando un producto */
 router.delete('/destroy/:id', destroy);
+router.delete('/restore/:id', restore);
+router.delete('/crash/:id', crash);
+
 
 module.exports = router;
