@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head',{title:'XL - Inicia Sesión'}) %>
-
+<%- include('../partials/head',{title:'XL - Inicia Sesión'}) %>
 
     <body class="login">
-        <%- include('./partials/header') %>
+        <%- include('../partials/header') %>
             <main>
                 <h1>Inicia sesión</h1>
-                <%- include('./partials/breadcrumbs',{página:'Login'}) %>
+                <%- include('../partials/breadcrumbs',{página:'Login'}) %>
                     <section class="card">
                         <form class="form-login" action="" method="post">
                             <section class="card-header">
@@ -18,12 +17,16 @@
                                 <div class="container bottom">
                                     <label for="email">Email</label>
                                     <input type="email" name="email" id="email" placeholder="Email">
-                                    <small>Debe ingresar un email válido</small>
+                                    <% if (locals.errors && errors.email) { %>
+                                        <small><%= errors.email.msg %></small>
+                                    <% } %>
                                 </div>
                                 <div class="container bottom">
                                     <label for="name">Clave</label>
-                                    <input type="password" name="" id="password" placeholder="Password" required>
-                                    <small>Debe ingresar su clave</small>
+                                    <input type="password" name="" id="password" placeholder="Password">
+                                    <% if (locals.errors && errors.pass) { %>
+                                        <small><%= errors.pass.msg %></small>
+                                    <% } %>
                                     <div class="recordarme bottom">
                                         <label for="recordarme">
                                             <input type="checkbox" name="recordarme" id="recordarme">
@@ -48,7 +51,7 @@
                         </form>
                     </section>
             </main>
-            <%- include('./partials/footer') %>
+            <%- include('../partials/footer') %>
     </body>
 
 </html>

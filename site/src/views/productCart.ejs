@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-    
+
 <%- include('./partials/head',{title:'XL - Carrito de Compras'}) %>
 
     <body class="cart">
@@ -79,19 +79,25 @@
                 <div class="boxRelacionada">
                     <div class="cajaRelacionada">
 
-                        <% aside.forEach(element => { %>
+                        <% aside.forEach(element=> { %>
                             <article>
                                 <div class="contenedorRelacionado">
                                     <img src="/img/<%= element.imagen %> " alt="">
                                 </div>
-                                <h4 class="subproductos"><%= element.titulo %> </h4>
-                                <span class="subtitular"><%= element.descripcion %></span>
-                                <p class="subprecio"><%= element.precio %></p>
+                                <h4 class="subproductos">
+                                    <%= element.titulo %>
+                                </h4>
+                                <span class="subtitular">
+                                    <%= element.descripcion %>
+                                </span>
+                                <p class="subprecio">
+                                    <%= element.precio %>
+                                </p>
                                 <button class="subcarritos">Agregar al carrito</button>
-    
+
                             </article>
-                        <% }) %>
-                </div>
+                            <% }) %>
+                    </div>
             </section>
             <%- include('./partials/footer') %>
     </body>
