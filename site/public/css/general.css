@@ -30,6 +30,9 @@ body::-webkit-scrollbar-track{
   padding: 0
 }
 
+a{
+  text-decoration: none;
+}
 
 
  main h1 {

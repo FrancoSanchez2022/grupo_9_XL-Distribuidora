@@ -66,3 +66,29 @@
 ## Hacer más:
 - Mantener sitio de comunicación activo.
 - Comunicación constante de como venimos y qué hacemos.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+# Retro Sprint 4
+
+## Empezar a hacer:
+- Mayor comunicación entre el equipo.
+- Diagramar tareas.
+
+## Dejar de hacer:
+- Desorganización en el trabajo en equipo.
+- Entregar tarde el sprint.
+
+## Hacer menos:
+- Avisar tarde entrega o como venimos a los profes.
+- No estar al dia con las diferentes plataformas de trabajo.
+
+## Seguir haciendo:
+- La cursada
+- 
+
+## Hacer más:
+- Mantener sitio de comunicación activo.
+- Comunicación constante de como venimos y qué hacemos.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

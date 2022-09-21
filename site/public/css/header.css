@@ -3,7 +3,7 @@ header {
     padding: 12px;
     margin-bottom: 20px;
     background-color: var(--colorHeader);
-    z-index: 1!important;
+    z-index: 1 !important;
 }
 
 header input {
@@ -64,9 +64,11 @@ header .burger nav {
     margin-top: 10px;
     text-align: center;
 
+
 }
 
 header .burger nav ul {
+
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -87,116 +89,119 @@ header .burger nav ul li {
     list-style: none;
     border: 2px solid var(--colorButton);
     border-radius: 25px;
-}
-
-header .burger nav a {
-    color: var(--colorProfundidad);
-    text-transform: uppercase;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-@media (min-width:375px){header {
-    position: relative;
-    padding: 12px;
-    margin-bottom: 20px;
-    background-color: var(--colorHeader);
-}
-
-header input {
-    display: flex;
-    align-self: center;
-    width: 45%;
-}
-
-header .top {
-    display: flex;
-    align-items: center;
-    background-color: var(--colorHeader);
-
-}
-
-header img {
-    background-color: var(--colorHeader);
-    display: flex;
-    width: 78px;
-}
-
-
-
-header .burger label {
     background-color: var(--colorProfundidad);
-    position: absolute;
-    top: 20px;
-    right: 15px;
-    font-size: 20px;
-    padding: 15px 15px;
-    color: var(--colorButton);
-    border: 1px solid white;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-header .carrito {
-    display: block ;
-    position: absolute;
-    right: 73px;
-    top: 37px;
-    border: 1.5px solid var(--colorProfundidad);
-    padding: 5px;
-    border-radius: 5px;
-}
-
-header .carrito i {
-    color: var(--colorButton);
-}
-
-
-header .burger input:checked~nav {
-    display: none;
-}
-
-header .burger input {
-    display: none;
-
-}
-
-header .burger nav {
-    width: 100%;
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-
-}
-
-header .burger nav ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-}
-
-header .burger .menu {
-    background-color: var(--colorHeader);
-}
-
-header .burger .user {
-    background-color: var(--colorHeader);
-}
-
-header .burger nav ul li {
-    margin: 10px 0;
-    padding: 10px;
-    list-style: none;
-    border: 2px solid var(--colorButton);
-    border-radius: 25px;
 }
 
 header .burger nav a {
+    color: var(--colorHeader);
     text-transform: uppercase;
     font-size: 18px;
     text-decoration: none;
-}}
+}
+
+@media (min-width:375px) {
+    header {
+        position: relative;
+        padding: 12px;
+        margin-bottom: 20px;
+        background-color: var(--colorHeader);
+    }
+
+    header input {
+        display: flex;
+        align-self: center;
+        width: 45%;
+    }
+
+    header .top {
+        display: flex;
+        align-items: center;
+        background-color: var(--colorHeader);
+
+    }
+
+    header img {
+        background-color: var(--colorHeader);
+        display: flex;
+        width: 78px;
+    }
+
+
+
+    header .burger label {
+        background-color: var(--colorProfundidad);
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        font-size: 20px;
+        padding: 15px 15px;
+        color: var(--colorButton);
+        border: 1px solid white;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    header .carrito {
+        display: block;
+        position: absolute;
+        right: 73px;
+        top: 37px;
+        border: 1.5px solid var(--colorProfundidad);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    header .carrito i {
+        color: var(--colorButton);
+    }
+
+
+    header .burger input:checked~nav {
+        display: none;
+    }
+
+    header .burger input {
+        display: none;
+
+    }
+
+    header .burger nav {
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+
+    }
+
+    header .burger nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    header .burger .menu {
+        background-color: var(--colorHeader);
+    }
+
+    header .burger .user {
+        background-color: var(--colorHeader);
+    }
+
+    header .burger nav ul li {
+        margin: 10px 0;
+        padding: 10px;
+        list-style: none;
+        border: 2px solid var(--colorButton);
+        border-radius: 25px;
+    }
+
+    header .burger nav a {
+        text-transform: uppercase;
+        font-size: 18px;
+        text-decoration: none;
+    }
+}
 
 @media (min-width:426px) {
 
@@ -238,9 +243,7 @@ header .burger nav a {
 
 @media (min-width:980px) {
     header {
-/*         margin-top: 10px; */
-        padding-right: 20px;
-        height: 90px;
+        height: 150px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -258,8 +261,9 @@ header .burger nav a {
 
     header .top img {
         border: 1px solid var(--colorButton);
-        border-radius: 25%;
-        margin: 0 5px;
+        border-radius: 20%;
+        margin: 0 10px;
+        background-color: white;
     }
 
     header .carrito {
@@ -303,25 +307,25 @@ header .burger nav a {
         width: 68%;
         flex-direction: row;
         justify-content: flex-start;
-        
+
     }
 
     header .burger nav ul.user {
         flex-direction: row;
         width: 32%;
         justify-content: flex-end;
-        
+
     }
 
     header .burger nav ul li {
         list-style: none;
-        margin: 0 2px;
-        padding: 5px;
+        margin: 0px 2px;
+        padding: 5px 10px;
         border: 1px solid var(--colorButton);
         border-radius: 10px;
     }
 
     header .burger nav ul li a {
-        font-size: 13px;
+        font-size: 8px;
     }
 }

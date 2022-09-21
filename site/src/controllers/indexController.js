@@ -9,5 +9,8 @@ module.exports = {
             aside,
             productos
         });
+    },
+    search: (req,res) => {
+        return res.render('search')
     }
 }

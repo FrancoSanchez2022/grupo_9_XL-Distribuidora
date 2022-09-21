@@ -1,0 +1,46 @@
+.list main h1{
+    display: flex;
+    justify-content: center;
+}
+
+
+.list main .table-responsive{
+    text-transform: capitalize;
+    background: var(--white);
+    padding: 20px;
+    margin: 20px;
+}
+.list main .table-responsive thead{
+    color: white;
+    background-color: var(--colorButtonContacto);
+}
+
+
+
+.list main .btnHeader{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.list main .btncrear{
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.list main a .crear{
+    width: 300px;
+    color: white;
+    background: var(--colorButtonContacto);
+    font-weight: 600;
+}
+.list main a .btn:hover{
+    background-color: var(--white);
+    color: var(--colorButtonContacto)
+}
+
+.list main .table-responsive tbody td a{
+    color: var(--colorHeader);
+    font-weight: 500;
+    text-decoration: none;
+}

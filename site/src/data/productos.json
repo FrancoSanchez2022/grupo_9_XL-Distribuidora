@@ -1,5 +1,44 @@
 [
     {
+        "id": 1,
+        "marca": "XL ",
+        "titulo": "Esencia de 50ml ",
+        "categoria": "Esencias",
+        "precio": 1500,
+        "descuento": 10,
+        "descripcion": "Escencia de 50ml fabricada artesanalmente por la distribuidora XL contiene una dulce fragancia aroma a vainilla.",
+        "stock": 10,
+        "imagenes": [
+            "XL-Esencia.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "marca": "Ariel",
+        "titulo": "Jabon liquido Ariel 3l",
+        "categorias": "Limpieza",
+        "precio": 1200,
+        "descuento": 10,
+        "descripcion": "Jabon liquido para lavar la ropa.",
+        "stock": 50,
+        "imagenes": [
+            "imagen1.webp"
+        ]
+    },
+    {
+        "id": 3,
+        "marca": "Magistral",
+        "titulo": "Detergente liquido magistral",
+        "categorias": "Limpieza",
+        "precio": 450,
+        "descuento": 10,
+        "descripcion": "Detergente liquido para limpiar vajillas contiene fragancia limón.",
+        "stock": 50,
+        "imagenes": [
+            "imagen2.webp"
+        ]
+    },
+    {
         "id": 4,
         "marca": "Cif",
         "titulo": "Detergente Cif BioActive",
@@ -348,28 +387,5 @@
         "imagenes": [
             "imagen30.webp"
         ]
-    },
-    {
-        "id": 1,
-        "marca": "XL ",
-        "titulo": "Esencia de 50ml ",
-        "categoria": "Esencias",
-        "precio": 1500,
-        "descuento": 10,
-        "descripcion": "Escencia de 50ml fabricada artesanalmente por la distribuidora XL contiene una dulce fragancia aroma a vainilla.",
-        "stock": 10,
-        "imagenes": [
-            "XL1.jpeg"
-        ]
-    },
-    {
-        "id": 2,
-        "marca": "Cif",
-        "titulo": "Cif Multiusos",
-        "categorias": "Aromatizantes",
-        "precio": 200,
-        "descuento": 0,
-        "stock": 50,
-        "imagenes": []
     }
 ]

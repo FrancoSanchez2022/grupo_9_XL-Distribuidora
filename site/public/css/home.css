@@ -15,6 +15,23 @@
     width: 95%;
     margin: 15px auto;
     padding: 15px;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    border: 2px solid var(--grisClaro);
+    margin-bottom: 15px;
+    margin: 5%;
+    box-shadow: 0px 1px 8px 4px #ff347491
+}
+
+.home main .infoempresa {
+    width: 100%;
+}
+
+.home main .infoempresa .info {
+    width: 500px;
+    height: 400px;
+
+    padding: 35px;
     border: 1px solid var(--colorHeader);
     border-radius: 15px;
     background-color: var(--gray);
@@ -22,27 +39,42 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
+
 }
 
-/*  .home main .carrucelDestacados article{
-  width: 20%;
-} */
 
 .home main section article button {
-    width: 100%;
-    background-color: var(--colorButton);
+    background-color: #4d4d4d;
+    color: var(--white);
+    border-radius: 4px;
+    border: 1px solid var(--black);
+    font-size: 14.5px;
     padding: 5px;
-
+    margin: 5px;
 }
+
+.home main section article button:hover {
+    background: linear-gradient(to bottom,
+            #FFD6D6,
+            #FF3474B9);
+    color: var(--black)
+}
+
+.home main section article button:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+
+
 
 .home main section article a {
     text-decoration: none;
-    color: var(--colorLetraPrincipal)
+    color: white
 }
 
 .home main section .video iframe {
     width: 415px;
-    height: 234px;
+    height: 500px;
 }
 
 
@@ -64,10 +96,12 @@
 
 .home main h3 {
     font-size: var(--fPrecio);
+    color: #4d4d4d;
 }
 
-.home main p {
+.home main h2 {
     font-size: var(--fParrafos);
+    color: black;
 }
 
 .home main section article .descuento {
@@ -127,7 +161,7 @@
 
     .home main section .video iframe {
         width: 362px;
-        height: 200px;
+        height: 400px;
     }
 
 
@@ -180,7 +214,10 @@
     }
 
     .home main section .video {
-        width: 50%;
+        display:   flex  ;
+        align-items: center;
+        width: 500px;
+        
     }
 
     .home main section .video iframe {

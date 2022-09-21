@@ -66,7 +66,7 @@
   border: 2px solid var(--grisClaro);
 margin-bottom: 15px;
  margin: 5%;
- box-shadow: 0px 5px 20px 12px   #ff347491
+ box-shadow: 0px 2.5px 10px 6px   #ff347491
 }
 
 .login main .card .form-login .card-header {
@@ -242,6 +242,9 @@ border-radius: 10%;
     font-size: 16px;
   }
 
+  .login main .card{
+    box-shadow: 0px 5px 20px 12px   #ff347491
+  }
 
   .login main .card .form-login .card-header, .card-footer{
     padding: 1.75rem;

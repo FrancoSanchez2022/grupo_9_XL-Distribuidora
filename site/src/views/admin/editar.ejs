@@ -12,7 +12,7 @@
         <main>
             <h1>Editando el producto</h1>
     
-            <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="post">
+            <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="post" enctype="multipart/form-data">
                 <section>
                     <div class="form-floating m-2">
                         <input type="text" name="Marca" class="form-control" id="marca" placeholder="Marca" value="<%= producto.marca %> ">

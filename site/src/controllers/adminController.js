@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const productos = require('../data/productos.json')
 const historial = require('../data/historial.json')
+const {validationResult} = require('express-validator');
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
@@ -36,7 +37,7 @@ module.exports = {
             descuento:+descuento,
             stock:+stock,
             descripcion:descripcion,
-            imagenes: req.files ? img : 'default-image.png' ,
+            imagenes: req.file ? req.file.filename : 'default-image.png' ,
         }
 
         productos.push(productoNuevo)

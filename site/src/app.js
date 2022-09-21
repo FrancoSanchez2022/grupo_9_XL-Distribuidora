@@ -12,7 +12,7 @@ const methodOverride = require('method-override')
 const app = express();
 const port = 3000;
 
-/* Requerir las rutas */
+/* Importación las rutas */
 let indexRouter = require('./routes/index')
 let administradorRouter = require('./routes/administrador')
 let productosRouter = require('./routes/productos')
@@ -44,6 +44,7 @@ app.use('/', indexRouter);
 app.use('/users', usuariosRouter);
 app.use('/products', productosRouter);
 app.use('/admin', administradorRouter);
+app.use((req,res,next) => {res.status(404).render('404')})
 
 /* Funcion de actualizacion del servidor */
 liveReloadServer.server.once("connection", () => {

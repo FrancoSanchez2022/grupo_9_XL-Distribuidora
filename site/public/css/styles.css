@@ -8,7 +8,9 @@
 @import url('./home.css');
 @import url('./pDetail.css');
 @import url('./pCart.css');
-@import url('./login.css');
-@import url('./register.css');
-@import url('./resetPass.css');
+@import url('./users/login.css');
+@import url('./users/register.css');
+@import url('./users/resetPass.css');
+@import url('./users/profile.css');
 @import url('./pCreate.css');
+@import url('./list.css');
