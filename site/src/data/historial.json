@@ -18,5 +18,15 @@
         "stock": 15,
         "imagenes": "default-image.png",
         "descripcion": ""
+    },
+    {
+        "id": 32,
+        "marca": "",
+        "titulo": "",
+        "categorias": "Selecciona una opción",
+        "precio": 0,
+        "descuento": 0,
+        "stock": 0,
+        "imagenes": "default-image.png"
     }
 ]

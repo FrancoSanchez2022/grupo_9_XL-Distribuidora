@@ -16,14 +16,14 @@
                             <section class="card-body">
                                 <div class="container bottom">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="Email">
+                                    <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.name ? old.email : null %>">
                                     <% if (locals.errors && errors.email) { %>
                                         <small><%= errors.email.msg %></small>
                                     <% } %>
                                 </div>
                                 <div class="container bottom">
                                     <label for="name">Clave</label>
-                                    <input type="password" name="" id="password" placeholder="Password">
+                                    <input type="password" name="pass" id="pass" placeholder="Password">
                                     <% if (locals.errors && errors.pass) { %>
                                         <small><%= errors.pass.msg %></small>
                                     <% } %>

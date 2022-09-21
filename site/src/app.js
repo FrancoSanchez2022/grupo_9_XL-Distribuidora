@@ -11,6 +11,7 @@ const methodOverride = require('method-override')
 
 const app = express();
 const port = 3000;
+/* const userLogin= require('./middlewares/userLoginCheck'); */
 
 /* Importación las rutas */
 let indexRouter = require('./routes/index')
@@ -24,6 +25,9 @@ app.use(express.static(path.join(__dirname,'..', 'public')));
 /* Archivos estaticos monitoreados */
 liveReloadServer.watch(path.join(__dirname,'..', 'public'));
 app.use(connectLivereload());
+
+/* aplicacion de validation */
+/* app.use(userLogin); */
 
 /*View engine setup*/
 app.set('views', path.join(__dirname, 'views'));
