@@ -116,6 +116,15 @@ module.exports = {
     crash: (req, res) => {
         idParams = +req.params.id
 
+        let producto = historial.find(product => product.id === idParams)
+        let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', dato))
+
+        producto.imagenes.forEach(imagen => {
+            if (ruta(imagen) && (imagen !== "default-image.png")) {
+                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', imagen))
+            }
+        })
+
         let historialModificado = historial.filter(producto => producto.id !== idParams)
         guardarHistorial(historialModificado)
 

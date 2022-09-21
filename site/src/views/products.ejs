@@ -1,0 +1,37 @@
+!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head',{title: 'Nuestros productos'}) %> 
+
+<body class="productos">
+    <%- include('./partials/header') %> 
+    <main>
+
+        <%- include('./partials/banner') %> 
+        <!-- Categoria -->
+        
+        <h1><%= categoriaSeleccionada %></h1>
+
+        <section class="carrouselProductos">
+            <div class="glider-contain">
+                <div class="glider">
+                    <% productoPorCategoria.forEach(producto => { %>
+                        <%- include('./partials/card',{
+                            id:producto.id,
+                            imagen:producto.imagenes[0],
+                            nombre:producto.titulo,
+                            descuento:producto.descuento,
+                            precio:producto.precio
+                        }) %> 
+                    <% }) %>
+                </div>
+              
+                <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                <div role="tablist" class="dots"></div>
+              </div>
+        </section>
+    </main>
+    <%- include('./partials/footer') %> 
+</body>
+</html>
