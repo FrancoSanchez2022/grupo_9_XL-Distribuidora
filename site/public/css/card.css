@@ -1,0 +1,40 @@
+.card{
+    width: 250px;
+    margin: 10px auto;
+}
+.card .card-img .card-img-background{
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.card .card-name{
+    text-align: center;
+}
+.card .card-value{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.card .card-discount{
+    font-size: 25px;
+    color: var(--grisOscuro);
+}
+.card .card-price{
+    font-size: 30px;
+}
+.card .card-button{
+    text-align: center;
+}
+.card .card-button button{
+    background-color: var(--colorBase);
+    color: white;
+    width: 200px;
+    border: none;
+    margin: 0 auto 10px;
+    text-transform: uppercase;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;   
+}
