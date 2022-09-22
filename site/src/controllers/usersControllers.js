@@ -13,7 +13,6 @@ module.exports ={
     },
     processRegister: (req,res) =>{
         let errors = validationResult(req)
-
 /*         if (req.fileValidationError) {
             let imagen = {
                 param: 'image',
@@ -72,15 +71,26 @@ module.exports ={
             return res.redirect('/users/profile') */
             return res.send(req.body)
         } else {
-            return res.send(errors.mapped())
-/*             return res.render('users/login', {
+            /* return res.send(errors.mapped()) */
+            return res.render('users/login', {
                 errors: errors.mapped(),
                 old: req.body
-            }) */
+            })
         }
     },
-    resetPassword: (req,res) =>{
+    resetPass: (req,res) =>{
         return res.render('users/resetPass')
+    },
+    processResetPass: (req,res) =>{
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            return res.send(req.body)
+        } else {
+            return res.render('users/resetPass', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
     },
     profile: (req,res) =>{
         return res.render('users/profile')

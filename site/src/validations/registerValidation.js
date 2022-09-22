@@ -22,8 +22,10 @@ module.exports = [
   
     /* Clave */
     check('pass')
+    .notEmpty().withMessage('Debe ingresar una clave').bail()
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
     check('pass2')
+    .notEmpty().withMessage('Debe repetir la clave').bail()
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(),
 
     /* Verificación de igualdad de claves */
