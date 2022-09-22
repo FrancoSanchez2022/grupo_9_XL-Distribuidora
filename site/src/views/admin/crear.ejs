@@ -21,34 +21,43 @@
                         <div class="row justify-content-between align-items-center">
 
                             <!-- Principales -->
-                            <div class="col col-lg-4 col-md-12 col-sm-12">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="titulo"
-                                        placeholder="Nombre del producto" id="name" placeholder="name@example.com">
-                                    <label for="name">Nombre del producto</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" type="text" name="marca"
-                                        placeholder="Marca del Producto" id="brand">
-                                    <label class="form-label" for="brand">Marca del Producto</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" type="number" name="precio"
-                                        placeholder="Precio del producto" id="price">
-                                    <label class="form-label" for="price">Precio del producto</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" type="number" name="descuento"
-                                        placeholder="Descuento del producto" id="discount">
-                                    <label class="form-label" for="discount">Descuento del producto</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" type="text" name="stock"
-                                        placeholder="Stock con el que cuenta el producto" id="stock">
-                                    <label class="form-label" for="stock">Stock con el que cuenta el producto</label>
-                                </div>
-                                
-                            </div>
+                    <div class="col col-lg-4 col-md-12 col-sm-12">
+                        <div class="form-floating mb-3"> 
+                            <input type="text" class="form-control" name="titulo" placeholder="Nombre del producto" id="titulo" value="<%= locals.old && old.titulo ? old.titulo : null%>" placeholder="name@example.com">
+                            <label for="titulo">Nombre del producto</label>
+                            <p class="span text-danger">
+                                <%= locals.errors && errors.titulo ? errors.titulo.msg : null %>
+                            </p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="marca" placeholder="Marca del Producto" id="brand" value="<%= locals.old && old.marca ? old.marca : null%>">
+                            <label class="form-label" for="brand">Marca del Producto</label>
+                            <% if (locals.errors && errors.marca) { %>
+                                <p class="span text-danger"><%= errors.marca.msg %></p>
+                            <% } %>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="number" name="precio" placeholder="Precio del producto" id="price" value="<%= locals.old && old.precio ? old.precio : null%>">
+                            <label class="form-label" for="price">Precio del producto</label>
+                            <p class="span text-danger">
+                                <%= locals.errors && errors.precio ? errors.precio.msg : null %>
+                            </p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="number" name="descuento" placeholder="Descuento del producto" id="discount" value="<%= locals.old && old.descuento ? old.descuento : 0%>">
+                            <label class="form-label" for="discount">Descuento del producto</label>
+                            <p class="span text-danger">
+                                <%= locals.errors && errors.descuento ? errors.descuento.msg : null %>
+                            </p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="stock" placeholder="Stock con el que cuenta el producto" id="stock" value="<%= locals.old && old.stock ? old.stock : null%>">
+                            <label class="form-label" for="stock">Stock con el que cuenta el producto</label>
+                            <p class="span text-danger">
+                                <%= locals.errors && errors.stock ? errors.stock.msg : null %>
+                            </p>
+                        </div>
+                    </div>
 
                             <!-- Imagenes -->
                             <div class="col col-lg-7 col-md-12 col-sm-12">
@@ -123,7 +132,11 @@
 
                                         </div>
                                     </div>
-
+                                </div>
+                                <p class="span text-danger">
+                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                                </p>
+                            </div>
                                 </section>
                             </div>
 
@@ -140,12 +153,23 @@
                                         <h3 class="text-center">Categorias</h3>
                                         <select class="form-select" name="categoria" id="floatingSelect"
                                             aria-label="Floating label select example">
-                                            <option selected hidden>Selecciona una opción</option>
-                                            <option value="Perfumes">Perfumes</option>
-                                            <option value="Aromatizantes">Aromatizantes</option>
-                                            <option value="Aromatizantes">Limpieza</option>
-                                            <option value="Aromatizantes">Limpieza bucal</option>
-                                        </select>
+                                            <% if (locals.errors && old.categoria) { %>
+                                                <option hidden value="">Selecciona una opcion</option>
+                                                <option <%= old.categoria === "Perfumes" ? "selected" : null %>  value="Smartphones">Perfumes</option>
+                                                <option <%= old.categoria === "Aromatizantes" ? "selected" : null %>   value="Tablets">Aromatizantes</option>
+                                                <option <%= old.categoria === "Limpieza" ? "selected" : null %>   value="Notebooks">Limpieza</option>
+                                                <option <%= old.categoria === "Limpieza bucal" ? "selected" : null %>   value="Notebooks">Limpieza bucal</option>
+                                            <% }else{ %>
+                                                <option selected hidden value="">Selecciona una opcion</option>
+                                                <option value="Perfumes">Perfumes</option>
+                                                <option value="Aromatizantes">Aromatizantes</option>
+                                                <option value="Limpieza">Limpieza</option>
+                                                <option value="Limpieza bucal">Limpieza Bucal</option>
+                                            <% } %> 
+                                          </select>
+                                          <p class="span text-danger">
+                                            <%= locals.errors && errors.categoria ? errors.categoria.msg : null %>
+                                        </p>
                                     </div>
 
                                 </div>
@@ -153,7 +177,7 @@
                             <div class="form-floating m-2">
                                 <textarea class="form-control" name="Descripcion" placeholder="Por favor inserte la descripcion del producto"
                                     id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea">Descripcion</label>
+                                <label for="floatingTextarea">Descripción</label>
                                 <small>Obligatorio</small>
                             </div>
             
