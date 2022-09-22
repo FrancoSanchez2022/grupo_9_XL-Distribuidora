@@ -13,7 +13,9 @@
                             <div class="container bottom">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email" placeholder="Email">
-                                <small>Debe ingresar un email válido</small>
+                                <% if (locals.errors && errors.email) { %>
+                                <small><%= errors.email.msg %></small>
+                                <% } %>
                             </div>
                             <div class="sendEmail-button">
                                 <button type="submit">Enviar</button>
