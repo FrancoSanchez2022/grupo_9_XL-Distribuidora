@@ -34,11 +34,12 @@
     padding: 35px;
     border: 1px solid var(--colorHeader);
     border-radius: 15px;
-    background-color: var(--gray);
+    background-color: var(--colorButtonContacto);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
+    color: var(--white);
 
 }
 
