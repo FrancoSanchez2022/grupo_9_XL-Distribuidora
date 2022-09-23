@@ -45,13 +45,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="phone">Teléfono</label>
-                                        <input type="tel" name="phone" id="phone" value="<%= locals.old && old.name ? old.phone : null %>">
+                                        <input type="tel" name="phonenumber" id="phone" value="<%= locals.old && old.name ? old.phonenumber : null %>">
                                         <!-- <div class="verify">
                                             <button type="submit" class="button">Verificar</button>
                                             <div class="alert-msg" style="display: none;"></div>
                                         </div> -->
-                                        <% if (locals.errors && errors.phone) {%> 
-                                            <small><%= errors.phone.msg %></small>
+                                        <% if (locals.errors && errors.phonenumber) {%> 
+                                            <small><%= errors.phonenumber.msg %></small>
                                         <% } %>                                            
                                     </div>
                                 </section>
