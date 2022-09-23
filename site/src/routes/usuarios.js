@@ -15,6 +15,7 @@ router.post('/login', loginValidator, processLogin);
 router.get('/reset', resetPass);
 router.post('/reset', resetPassValidator, processResetPass);
 router.get('/profile', profile);
+//router.post('/profile',upload.single('avatar'), editProfile);   futura ruta a crear y funcionar
 router.delete('/logout', logout);
 
 module.exports = router

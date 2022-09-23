@@ -2,60 +2,56 @@ const fs = require('fs')
 const path = require('path')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
-const usuarios = require('../data/usuarios.json')
+const usuarios = require('../data/users.json')
 const { emitWarning } = require('process')
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/users.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
 
-module.exports ={
-    register: (req,res) =>{
+module.exports = {
+    register: (req, res) => {
         return res.render('users/register')
     },
-    processRegister: (req,res) =>{
+    processRegister: (req, res) => {
         let errors = validationResult(req)
-/*         if (req.fileValidationError) {
-            let imagen = {
-                param: 'image',
-                msg: req.fileValidationError,
-            }
-            errors.errors.push(imagen)
-        } */
-        
- /*        if (errors.isEmpty()) {
-            let {name,lastname,email,phone,pass} = req.body
+
+        if (errors.isEmpty()) {
+            let { name, lastname, email, phonenumber, pass } = req.body
             let usuarioNuevo = {
                 id:usuarios[usuarios.length - 1].id + 1,
+                username: null,
                 name,
                 lastname,
+                gender: null,
                 email,
-                phone,
-                pass: bcrypt.hashSync(pass, 12),
-                image: req.file.size > 1 ? req.file.filename : "default-avatar.png",
+                pass    /* : bcrypt.hashSync(pass, 12) */,
+                phonenumber,
+                country: null,
+                state: null,
+                city: null,
+                streetname: null,
+                postalcode: null,
+                image: "default-avatar.png",
                 rol: "usuario"
             }
             usuarios.push(usuarioNuevo)
             guardar(usuarios)
 
-            return res.redirect('/') */
-            if (errors.isEmpty()) {
-                return res.send(req.body)
-            
-        } else {            
-            /* return res.send(errors.mapped()) */
+            return res.redirect('/')    
+        } else {
             return res.render('users/register', {
                 errors: errors.mapped(),
                 old: req.body
             })
-        }
+        } 
     },
-    login: (req,res) =>{
+    login: (req, res) => {
         return res.render('users/login')
     },
-    processLogin:(req,res) => {
+    processLogin: (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
         
-           const {email,recordarme} = req.body
+/*             const {email,recordarme} = req.body
             let usuario = usuarios.find(user => user.email === email)
 
             req.session.userLogin = {
@@ -65,11 +61,11 @@ module.exports ={
                 rol : usuario.rol
             }
             if(recordarme){
-                res.cookie('helloCookie',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
+                res.cookie('Crafsy',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
             }
 
-            return res.redirect('/users/profile')
-           /* return res.send(req.body) */
+            return res.redirect('/users/profile') */
+            return res.send(req.body)
         } else {
             /* return res.send(errors.mapped()) */
             return res.render('users/login', {
@@ -78,10 +74,10 @@ module.exports ={
             })
         }
     },
-    resetPass: (req,res) =>{
+    resetPass: (req, res) => {
         return res.render('users/resetPass')
     },
-    processResetPass: (req,res) =>{
+    processResetPass: (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
             return res.send(req.body)
@@ -92,10 +88,10 @@ module.exports ={
             })
         }
     },
-    profile: (req,res) =>{
+    profile: (req, res) => {
         return res.render('users/profile')
     },
-    logout : (req,res) => {
+    logout: (req, res) => {
         return res.redirect('/')
     }
 }

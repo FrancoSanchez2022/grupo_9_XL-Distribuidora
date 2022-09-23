@@ -17,7 +17,7 @@ module.exports = [
     .isEmail().withMessage('Debe ingresar un email valido'),
 
     /* Teléfono */
-    check('phone')
+    check('phonenumber')
     .notEmpty().withMessage('Debe ingresar un número de teléfono válido'),
   
     /* Clave */
