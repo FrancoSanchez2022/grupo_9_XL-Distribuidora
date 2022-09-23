@@ -220,6 +220,10 @@
         width: 500px;
         
     }
+    .home main section .video iframe {
+    width: 415px;
+    height: 500px;
+    }
 
     .home main section .video iframe {
         width: 98%;
