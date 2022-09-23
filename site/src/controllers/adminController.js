@@ -144,6 +144,8 @@ module.exports = {
         let productoParaRestaurar = historial.find((elemento) => {
             return elemento.id == idParams
         })
+        let lastId = productos[productos.length - 1].id + 1
+        productoParaRestaurar.id = lastId
 
         productos.push(productoParaRestaurar)
         guardar(productos)
