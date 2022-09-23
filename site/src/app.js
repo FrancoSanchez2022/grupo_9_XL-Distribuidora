@@ -6,12 +6,13 @@ const liveReloadServer = livereload.createServer();
 const express = require("express");
 const connectLivereload = require('connect-livereload')
 const path = require("path");
+const session = require ('express-session')
 
 const methodOverride = require('method-override')
 
 const app = express();
 const port = 3000;
-/* const userLogin= require('./middlewares/userLoginCheck'); */
+const userLogin= require('./middlewares/userLoginCheck');
 
 /* Importación las rutas */
 let indexRouter = require('./routes/index')
@@ -26,8 +27,13 @@ app.use(express.static(path.join(__dirname,'..', 'public')));
 liveReloadServer.watch(path.join(__dirname,'..', 'public'));
 app.use(connectLivereload());
 
+/* implementacion de session */
+
+app.use(session({
+  secret: "XL"
+}))
 /* aplicacion de validation */
-/* app.use(userLogin); */
+app.use(userLogin);
 
 /*View engine setup*/
 app.set('views', path.join(__dirname, 'views'));
@@ -49,6 +55,8 @@ app.use('/users', usuariosRouter);
 app.use('/products', productosRouter);
 app.use('/admin', administradorRouter);
 app.use((req,res,next) => {res.status(404).render('404')})
+
+
 
 /* Funcion de actualizacion del servidor */
 liveReloadServer.server.once("connection", () => {

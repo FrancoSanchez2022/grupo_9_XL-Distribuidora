@@ -3,7 +3,7 @@ const path = require('path')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const usuarios = require('../data/users.json')
-const { emitWarning } = require('process')
+
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/users.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
 
@@ -49,10 +49,12 @@ module.exports = {
     },
     processLogin: (req, res) => {
         let errors = validationResult(req)
-        if (errors.isEmpty()) {
         
-/*             const {email,recordarme} = req.body
+         if (errors.isEmpty()) {
+            const usuarios = require('../data/users.json')
+            const {email,recordarme} = req.body
             let usuario = usuarios.find(user => user.email === email)
+            
 
             req.session.userLogin = {
                 id : usuario.id,
@@ -61,11 +63,11 @@ module.exports = {
                 rol : usuario.rol
             }
             if(recordarme){
-                res.cookie('Crafsy',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
+                /* res.cookie('helloCookie',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24}) */
             }
 
-            return res.redirect('/users/profile') */
-            return res.send(req.body)
+            return res.redirect('/users/profile')
+            /* return res.send(req.body) */
         } else {
             /* return res.send(errors.mapped()) */
             return res.render('users/login', {

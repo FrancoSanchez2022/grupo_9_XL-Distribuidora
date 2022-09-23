@@ -865,5 +865,22 @@
         "postalcode": null,
         "image": "default-avatar.png",
         "rol": "admin"
+    },
+    {
+        "id": 52,
+        "username": null,
+        "name": "leon",
+        "lastname": "martinex",
+        "gender": null,
+        "email": "martinexquis@gmail.com",
+        "pass": "123456789",
+        "phonenumber": "1125679888",
+        "country": null,
+        "state": null,
+        "city": null,
+        "streetname": null,
+        "postalcode": null,
+        "image": "default-avatar.png",
+        "rol": "admin"
     }
 ]

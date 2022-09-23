@@ -15,9 +15,15 @@
                 <li><a href="/#contacto">Contacto</a></li>
             </ul>
             <ul class="user">
-                <li><a href="/admin/list">Admin</a></li>
-                <li><a href="/users/login">Inicia Sesion</a></li>
-                <li><a href="/users/register">Registrate</a></li>
+                <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                    <li><a href="/admin/list">Admin</a></li>
+                <% } %>
+                <% if (locals.userLogin) { %>
+                    <li><a href="/users/profile">Bienvenido <%= locals.userLogin.nombre %> </a></li>
+                <% } else { %>
+                    <li><a href="/users/login">Login</a></li>
+                    <li><a href="/users/register">Registro</a></li>
+                <% } %>
             </ul>
         </nav>
     </div>
