@@ -1,33 +1,33 @@
-.card{
+.products-card{
     width: 250px;
     margin: 10px auto;
 }
-.card .card-img .card-img-background{
+.products-card .card-img .card-img-background{
     height: 250px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.card .card-name{
+.products-card .card-name{
     text-align: center;
 }
-.card .card-value{
+.products-card .card-value{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row-reverse;
     align-items: center;
 }
-.card .card-discount{
+.products-card .card-discount{
     font-size: 25px;
     color: var(--grisOscuro);
 }
-.card .card-price{
+.products-card .card-price{
     font-size: 30px;
 }
-.card .card-button{
+.products-card .card-button{
     text-align: center;
 }
-.card .card-button button{
+.products-card .card-button button{
     background-color: var(--colorBase);
     color: white;
     width: 200px;
