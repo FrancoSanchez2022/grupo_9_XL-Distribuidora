@@ -23,7 +23,7 @@ module.exports = {
                 lastname,
                 gender: null,
                 email,
-                pass    /* : bcrypt.hashSync(pass, 12) */,
+                pass: bcrypt.hashSync(pass, 10),
                 phonenumber,
                 country: null,
                 state: null,
@@ -36,7 +36,7 @@ module.exports = {
             usuarios.push(usuarioNuevo)
             guardar(usuarios)
 
-            return res.redirect('/')    
+            return res.redirect('/users/login')    
         } else {
             return res.render('users/register', {
                 errors: errors.mapped(),
@@ -53,8 +53,8 @@ module.exports = {
          if (errors.isEmpty()) {
             const usuarios = require('../data/users.json')
             const {email,recordarme} = req.body
-            let usuario = usuarios.find(user => user.email === email)
             
+            let usuario = usuarios.find(user => user.email === email)
 
             req.session.userLogin = {
                 id : usuario.id,
@@ -65,9 +65,8 @@ module.exports = {
             if(recordarme){
                 /* res.cookie('helloCookie',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24}) */
             }
-
-            return res.redirect('/users/profile')
             /* return res.send(req.body) */
+            return res.redirect('/users/profile')
         } else {
             /* return res.send(errors.mapped()) */
             return res.render('users/login', {
@@ -94,6 +93,7 @@ module.exports = {
         return res.render('users/profile')
     },
     logout: (req, res) => {
+        req.session.destroy();
         return res.redirect('/')
     }
 }

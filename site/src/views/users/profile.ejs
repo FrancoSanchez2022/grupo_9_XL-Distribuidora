@@ -8,6 +8,9 @@
             <main>
                 <h1>Mi Cuenta</h1>
                 <%- include('../partials/breadcrumbs',{página:'Perfil'}) %>
+                <form action="/users/logout?_method=DELETE" method="post">
+                    <button type="submit">Cerrar Sesion</button>
+                </form>
                 <h3>Mis Datos</h3>
                 <section class="card">
                     <ul>
@@ -29,7 +32,7 @@
                 <h3>Mis Compras</h3>
                 <section class="card">
                     <p>¡Hacé tu primera compra!</p>
-                    <h4><a href="/">VER PRODUCTOS</a></h4>
+                    <h4><a href="/products/listProducts">VER PRODUCTOS</a></h4>
                 </section>
             </main>
             <%- include('../partials/footer') %>

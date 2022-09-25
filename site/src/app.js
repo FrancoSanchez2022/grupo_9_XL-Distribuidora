@@ -7,12 +7,13 @@ const express = require("express");
 const connectLivereload = require('connect-livereload')
 const path = require("path");
 const session = require ('express-session')
-
 const methodOverride = require('method-override')
+
+/* Implementación de locals en la aplicación */
+const userLogin = require('./middlewares/userLoginCheck')
 
 const app = express();
 const port = 3000;
-const userLogin= require('./middlewares/userLoginCheck');
 
 /* Importación las rutas */
 let indexRouter = require('./routes/index')
@@ -27,14 +28,6 @@ app.use(express.static(path.join(__dirname,'..', 'public')));
 liveReloadServer.watch(path.join(__dirname,'..', 'public'));
 app.use(connectLivereload());
 
-/* implementacion de session */
-
-app.use(session({
-  secret: "XL"
-}))
-/* aplicacion de validation */
-app.use(userLogin);
-
 /*View engine setup*/
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
@@ -45,6 +38,13 @@ app.use(express.urlencoded({ extended: false }));
 
 /* Trabajar con put y delete */
 app.use(methodOverride('_method'))
+
+/* implementacion de session */
+app.use(session({
+  secret: "XL"
+}))
+/* aplicación de validation */
+app.use(userLogin);
 
 /*Middlewares */
 app.use(express.static(path.resolve(__dirname,'..', 'public')));
