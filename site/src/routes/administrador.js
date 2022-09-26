@@ -6,22 +6,23 @@ const adminCheck = require('../middlewares/adminCheck')
 const productValidator = require('../validations/productsValidation')
 
 
+
 /* GET home page. */
-router.get('/list', list);
-router.get('/history', history);
+router.get('/list', adminCheck, list);
+router.get('/history', adminCheck, history);
 
 /* Creando un producto */
-router.get('/create', create);
-router.post('/create',upload.array('imagen'),productValidator,store);
+router.get('/create', adminCheck , create);
+router.post('/create',upload.array('imagen'), productValidator,store);
 
 /* Editando un producto */
-router.get('/edit/:id', edit);
-router.put('/edit/:id',upload.array('imagen'),productValidator, update);
+router.get('/edit/:id', adminCheck, edit);
+router.put('/edit/:id', upload.array('imagen'), productValidator, update);
 
 /* Eliminando un producto */
-router.delete('/destroy/:id', destroy);
-router.delete('/restore/:id', restore);
-router.delete('/crash/:id', crash);
+router.delete('/destroy/:id', adminCheck,destroy ) ;
+router.delete('/restore/:id', adminCheck, restore);
+router.delete('/crash/:id', adminCheck, crash);
 
 
 module.exports = router;
