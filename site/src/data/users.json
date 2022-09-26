@@ -14,7 +14,7 @@
         "streetname": "Dwight",
         "postalcode": "94207",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 2,
@@ -31,7 +31,7 @@
         "streetname": "School",
         "postalcode": "5196",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 3,
@@ -48,7 +48,7 @@
         "streetname": "Northport",
         "postalcode": "93429",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 4,
@@ -65,7 +65,7 @@
         "streetname": "Canary",
         "postalcode": "056478",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 5,
@@ -82,7 +82,7 @@
         "streetname": "Westridge",
         "postalcode": "250437",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 6,
@@ -99,7 +99,7 @@
         "streetname": "Old Gate",
         "postalcode": "94807",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 7,
@@ -116,7 +116,7 @@
         "streetname": "Vidon",
         "postalcode": "87445",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 8,
@@ -133,7 +133,7 @@
         "streetname": "Farwell",
         "postalcode": "94324",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 9,
@@ -150,7 +150,7 @@
         "streetname": "Bayside",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 10,
@@ -167,7 +167,7 @@
         "streetname": "Laurel",
         "postalcode": "39204",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 11,
@@ -184,7 +184,7 @@
         "streetname": "Norway Maple",
         "postalcode": "31704",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 12,
@@ -201,7 +201,7 @@
         "streetname": "Warbler",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 13,
@@ -218,7 +218,7 @@
         "streetname": "Straubel",
         "postalcode": "80045",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 14,
@@ -235,7 +235,7 @@
         "streetname": "Butterfield",
         "postalcode": "63169",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 15,
@@ -252,7 +252,7 @@
         "streetname": "Miller",
         "postalcode": "9400",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 16,
@@ -269,7 +269,7 @@
         "streetname": "Farwell",
         "postalcode": "520518",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 17,
@@ -286,7 +286,7 @@
         "streetname": "Lien",
         "postalcode": "56944",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 18,
@@ -303,7 +303,7 @@
         "streetname": "Melvin",
         "postalcode": "84125",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 19,
@@ -320,7 +320,7 @@
         "streetname": "Everett",
         "postalcode": "63143",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 20,
@@ -337,7 +337,7 @@
         "streetname": "Bayside",
         "postalcode": "71836",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 21,
@@ -354,7 +354,7 @@
         "streetname": "Vermont",
         "postalcode": "152867",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 22,
@@ -371,7 +371,7 @@
         "streetname": "East",
         "postalcode": "45147",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 23,
@@ -388,7 +388,7 @@
         "streetname": "Brickson Park",
         "postalcode": "15240",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 24,
@@ -405,7 +405,7 @@
         "streetname": "Hazelcrest",
         "postalcode": "8328",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 25,
@@ -422,7 +422,7 @@
         "streetname": "Roxbury",
         "postalcode": "111711",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 26,
@@ -439,7 +439,7 @@
         "streetname": "Eastwood",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 27,
@@ -456,7 +456,7 @@
         "streetname": "Beilfuss",
         "postalcode": "5174",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 28,
@@ -473,7 +473,7 @@
         "streetname": "Reinke",
         "postalcode": "151247",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 29,
@@ -490,7 +490,7 @@
         "streetname": "Gina",
         "postalcode": "3165",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 30,
@@ -507,7 +507,7 @@
         "streetname": "Warbler",
         "postalcode": "50625",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 31,
@@ -524,7 +524,7 @@
         "streetname": "Buhler",
         "postalcode": "053467",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 32,
@@ -541,7 +541,7 @@
         "streetname": "Garrison",
         "postalcode": "80279",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 33,
@@ -558,7 +558,7 @@
         "streetname": "Hoard",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 34,
@@ -575,7 +575,7 @@
         "streetname": "Susan",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 35,
@@ -592,7 +592,7 @@
         "streetname": "Vermont",
         "postalcode": "22156",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 36,
@@ -609,7 +609,7 @@
         "streetname": "Lighthouse Bay",
         "postalcode": "477047",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 37,
@@ -626,7 +626,7 @@
         "streetname": "Logan",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 38,
@@ -643,7 +643,7 @@
         "streetname": "Tomscot",
         "postalcode": "632067",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 39,
@@ -660,7 +660,7 @@
         "streetname": "Crescent Oaks",
         "postalcode": "4162",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 40,
@@ -677,7 +677,7 @@
         "streetname": "Caliangt",
         "postalcode": "95405",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 41,
@@ -694,7 +694,7 @@
         "streetname": "Tennessee",
         "postalcode": "02912",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 42,
@@ -711,7 +711,7 @@
         "streetname": "Merry",
         "postalcode": "77260",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 43,
@@ -728,7 +728,7 @@
         "streetname": "Texas",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 44,
@@ -745,7 +745,7 @@
         "streetname": "Rigney",
         "postalcode": "520006",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 45,
@@ -762,7 +762,7 @@
         "streetname": "David",
         "postalcode": "98148",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 46,
@@ -779,7 +779,7 @@
         "streetname": "American Ash",
         "postalcode": "89714",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 47,
@@ -796,7 +796,7 @@
         "streetname": "Brickson Park",
         "postalcode": "762008",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 48,
@@ -813,7 +813,7 @@
         "streetname": "Shelley",
         "postalcode": "77713",
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 49,
@@ -830,7 +830,7 @@
         "streetname": null,
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "admin"
+        "rol": "Admin"
     },
     {
         "id": 50,
@@ -847,7 +847,7 @@
         "streetname": null,
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     },
     {
         "id": 51,
@@ -864,6 +864,6 @@
         "streetname": null,
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "usuario"
+        "rol": "Usuario"
     }
 ]

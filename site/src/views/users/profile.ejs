@@ -6,7 +6,7 @@
     <body class="profile">
         <%- include('../partials/header') %>
             <main>
-                <h1>Mi Cuenta</h1>
+                <h1><%= `${locals.userLogin.rol} ${locals.userLogin.name} ${locals.userLogin.lastname}` %></h1>
                 <%- include('../partials/breadcrumbs',{página:'Perfil'}) %>
                 <form action="/users/profile?_method=PUT" method="post" enctype="multipart/form-data">
                     <div>
