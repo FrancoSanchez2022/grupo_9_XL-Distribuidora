@@ -8,32 +8,46 @@
             <main>
                 <h1>Mi Cuenta</h1>
                 <%- include('../partials/breadcrumbs',{página:'Perfil'}) %>
-                <form action="/users/logout?_method=DELETE" method="post">
-                    <button type="submit">Cerrar Sesion</button>
+                <form action="/users/profile?_method=PUT" method="post" enctype="multipart/form-data">
+                    <div>
+                        <img src="/img/users/<%= locals.userLogin.image %> " alt="">
+                    </div>
                 </form>
-                <h3>Mis Datos</h3>
-                <section class="card">
-                    <ul>
-                        <li>Nombre de Usuario</li>
-                        <li>Nombre</li>
-                        <li>Apellido</li>
-                        <li>Email</li>
-                        <li>Contraseña</li>
-                        <li>Teléfono</li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </section>
-                <h3>Mis Compras</h3>
-                <section class="card">
-                    <p>¡Hacé tu primera compra!</p>
-                    <h4><a href="/products/listProducts">VER PRODUCTOS</a></h4>
-                </section>
+                <form action="/users/logout?_method=DELETE" method="post">
+                </form>
+                <button type="submit">Cerrar Sesión</button>
+                    <h3>Mis Datos</h3>
+                    <section class="card">
+                        <ul>
+                            <li>Nombre de Usuario: <%= locals.userLogin.username %>
+                            </li>
+                            <li>Nombre: <%= locals.userLogin.name %>
+                            </li>
+                            <li>Apellido: <%= locals.userLogin.lastname %>
+                            </li>
+                            <li>Email: <%= locals.userLogin.email %>
+                            </li>
+                            <li>Género: <%= locals.userLogin.gender %>
+                            </li>
+                            <li>Teléfono: <%= locals.userLogin.phonenumber %>
+                            </li>
+                            <li>País: <%= locals.userLogin.country %>
+                            </li>
+                            <li>Estádo: <%= locals.userLogin.state %>
+                            </li>
+                            <li>Ciudad: <%= locals.userLogin.city %>
+                            </li>
+                            <li>Calle: <%= locals.userLogin.streetname %>
+                            </li>
+                            <li>Código postal: <%= locals.userLogin.postalCode %>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>Mis Compras</h3>
+                    <section class="card">
+                        <p>¡Hacé tu primera compra!</p>
+                        <h4><a href="/products/listProducts">VER PRODUCTOS</a></h4>
+                    </section>
             </main>
             <%- include('../partials/footer') %>
     </body>

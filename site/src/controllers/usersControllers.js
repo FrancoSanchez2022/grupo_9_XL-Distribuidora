@@ -58,12 +58,22 @@ module.exports = {
 
             req.session.userLogin = {
                 id : usuario.id,
-                nombre : usuario.name,
+                username : usuario.username,
+                name : usuario.name,
+                lastname : usuario.lastname,
+                gender : usuario.gender,
+                email : usuario.email,
+                phonenumber : usuario.phonenumber,
+                country : usuario.country,
+                state : usuario.state,
+                city : usuario.city,
+                streetname : usuario.streetname,
+                postalcode : usuario.postalcode,
                 image : usuario.image,
                 rol : usuario.rol
             }
             if(recordarme){
-                /* res.cookie('helloCookie',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24}) */
+            /* res.cookie('helloCookie',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24}) */
             }
             /* return res.send(req.body) */
             return res.redirect('/users/profile')
@@ -81,7 +91,8 @@ module.exports = {
     processResetPass: (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
-            return res.send(req.body)
+            /* return res.send(req.body) */
+            return res.render('users/resetPass')
         } else {
             return res.render('users/resetPass', {
                 errors: errors.mapped(),
@@ -91,6 +102,9 @@ module.exports = {
     },
     profile: (req, res) => {
         return res.render('users/profile')
+    },
+    profileEdit: (req, res) => {
+        return res.render('users/profileEdit')
     },
     logout: (req, res) => {
         req.session.destroy();

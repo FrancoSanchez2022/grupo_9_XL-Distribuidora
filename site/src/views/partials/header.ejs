@@ -19,7 +19,7 @@
                     <li><a href="/admin/list">Admin</a></li>
                 <% } %>
                 <% if (locals.userLogin) { %>
-                    <li><a href="/users/profile">Bienvenido <%= locals.userLogin.nombre %> </a></li>
+                    <li><a href="/users/profile">¡Hola <%= locals.userLogin.name %>! </a></li>
                 <% } else { %>
                     <li><a href="/users/login">Login</a></li>
                     <li><a href="/users/register">Registro</a></li>
