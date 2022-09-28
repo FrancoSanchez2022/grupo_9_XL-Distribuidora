@@ -71,13 +71,18 @@
 }
 
 .profile main .card ul {
-/*     display: flex;
-    flex-direction: column;
-    padding: 0; */
     margin: 0;
     list-style: none;
 }
 
-.profile main form div img{
-    height: 100px;
+
+.profile main .labelinput{
+    display: none;
+    
+}
+
+.profile main .img .selectImg img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
 }

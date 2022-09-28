@@ -6,16 +6,24 @@
     <body class="profile">
         <%- include('../partials/header') %>
             <main>
-                <h1><%= `${locals.userLogin.rol} ${locals.userLogin.name} ${locals.userLogin.lastname}` %></h1>
+                <h1>
+                    <%= `${locals.userLogin.rol} ${locals.userLogin.name} ${locals.userLogin.lastname}` %>
+                </h1>
                 <%- include('../partials/breadcrumbs',{página:'Perfil'}) %>
-                <form action="/users/profile?_method=PUT" method="post" enctype="multipart/form-data">
-                    <div>
-                        <img src="/img/users/<%= locals.userLogin.image %> " alt="">
-                    </div>
-                </form>
-                <form action="/users/logout?_method=DELETE" method="post">
-                </form>
-                <button type="submit">Cerrar Sesión</button>
+                    <form class="form-cambiar-img" action="/users/profile?_method=PUT" method="post"
+                        enctype="multipart/form-data">
+                        <div class="img">
+                            <label class="selectImg" for="product-img">
+                                    <img id="img-preview" src="/img/users/<%= locals.userLogin.image %>" alt="">
+                            </label>
+                            <div class="labelinput">
+                                <input id="product-img" type="file" name="avatar" placeholder="Imagen de perfil" </div>
+                            </div>
+                            <button class="buttonsubmit" type="submit">Guardar</button>
+                    </form>
+                    <form action="/users/logout?_method=DELETE" method="post">
+                    </form>
+                    <button type="submit">Cerrar Sesión</button>
                     <h3>Mis Datos</h3>
                     <section class="card">
                         <ul>
@@ -51,5 +59,6 @@
             </main>
             <%- include('../partials/footer') %>
     </body>
+    <script src="/javascripts/images.js"></script>
 
 </html>

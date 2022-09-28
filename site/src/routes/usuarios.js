@@ -1,6 +1,6 @@
 const express = require ('express')
 const router = express.Router()
-const {register, processRegister, login, processLogin, resetPass, processResetPass, profile, profileEdit, logout} = require('../controllers/usersControllers')
+const {register, processRegister, login, processLogin, resetPass, processResetPass, profile, profileEdit, logout, uploadProfileImage} = require('../controllers/usersControllers')
 
 /* requiero middlewares */
 const registerValidator = require('../validations/registerValidation')
@@ -18,8 +18,11 @@ router.post('/login', loginValidator, processLogin);
 router.get('/reset', guestCheck, resetPass);
 router.post('/reset', resetPassValidator, processResetPass);
 router.get('/profile', userCheck, profile);
-router.get('/profileEdit', userCheck, profileEdit)
-router.put('/profileEdit', upload.single('avatar'),profileEdit)
+router.put('/profile', upload.single('avatar'), uploadProfileImage);
+/*    
+router.get('/profileEdit', userCheck, profileEdit)      aùn no se hacen las vistas de estas rutas extras
+router.put('/profileEdit', upload.single('avatar'),profileEdit)    aùn no se hacen las vistas de estas rutas extras 
+*/
 router.delete('/logout', logout);
 
 module.exports = router

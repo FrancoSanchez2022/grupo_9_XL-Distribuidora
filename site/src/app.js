@@ -8,6 +8,7 @@ const connectLivereload = require('connect-livereload')
 const path = require("path");
 const session = require ('express-session')
 const methodOverride = require('method-override')
+const cookieParser = require('cookie-parser');
 
 /* Implementación de locals en la aplicación */
 const userLogin = require('./middlewares/userLoginCheck')
@@ -45,6 +46,9 @@ app.use(session({
 }))
 /* aplicación de validation */
 app.use(userLogin);
+
+/* cookie */
+app.use(cookieParser());
 
 /*Middlewares */
 app.use(express.static(path.resolve(__dirname,'..', 'public')));

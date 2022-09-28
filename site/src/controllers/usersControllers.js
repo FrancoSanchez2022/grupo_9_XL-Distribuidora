@@ -73,7 +73,7 @@ module.exports = {
                 rol : usuario.rol
             }
             if(recordarme){
-            /* res.cookie('helloCookie',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24}) */
+            res.cookie('helloCookie',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
             }
             /* return res.send(req.body) */
             return res.redirect('/users/profile')
@@ -103,11 +103,49 @@ module.exports = {
     profile: (req, res) => {
         return res.render('users/profile')
     },
+    uploadProfileImage: (req, res) => {
+        let session = req.session.userLogin
+        let id = +session.id
+
+        let errors = validationResult(req)
+
+        if(req.fileValidationError) {
+            let image = {
+                param : "avatar",
+                msg : req.fileValidationError
+            }
+            errors.errors.push(image)
+        }
+        if (errors.isEmpty()){
+            usuarios.forEach(user => {
+                if (user.id === id) {
+                    /* return res.send(user) */
+                    let ruta = fs.existsSync(path.join(__dirname, '..', 'public', 'img', 'users', user.image))
+                    if(ruta && req.file.filename  !== user.image&& user.image !== "default-avatar.png"){
+                        fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'users', user.image))
+                    }
+                    user.image = req.file ? req.file.filename : user.image
+                }
+            })
+            guardar(usuarios);
+            return res.redirect('/users/profile');
+
+        }else{
+            /* return res.send(errors.mapped()) */
+            return res.render('/users/profile',{
+                errors : errors.mapped(),
+                old : req.body
+            })
+        }
+    },
     profileEdit: (req, res) => {
         return res.render('users/profileEdit')
     },
     logout: (req, res) => {
         req.session.destroy();
+        if(req.cookies.Crafsy){
+            res.cookie('helloCookie','',{maxAge: -1})
+        }
         return res.redirect('/')
     }
 }
