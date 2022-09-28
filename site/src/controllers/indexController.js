@@ -10,7 +10,16 @@ module.exports = {
             productos
         });
     },
-    search: (req,res) => {
-        return res.render('search')
+    search: (req, res) => {
+        let elemento = req.query.search
+
+        let resultados = productos.filter(producto => {
+            return producto.marca.toLowerCase() === elemento.toLowerCase() || (producto.titulo.toLowerCase().includes(elemento.toLowerCase())) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
+        })
+        return res.render('search', 
+        {
+            busqueda: elemento,
+            resultados
+        });
     }
 }

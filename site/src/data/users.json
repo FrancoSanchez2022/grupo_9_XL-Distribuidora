@@ -847,7 +847,7 @@
         "streetname": null,
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "Admin"
     },
     {
         "id": 51,

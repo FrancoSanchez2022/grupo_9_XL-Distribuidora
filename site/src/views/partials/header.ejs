@@ -1,7 +1,12 @@
 <header>
     <div class="top">
         <a href="/"><div class="Logo"><img src="/img/Logo-XL-sinFondo.png" alt="logo XL Distribuidora"></div></a>
-        <input type="text" maxlength="100" placeholder="buscar productos,marcas"> <i class="fas fa-search"></i>
+        <div class="form-search">
+            <form action="/search" method="get">
+                <input type="text"  name="search" id="search" class="barraDeBusqueda" maxlength="100" placeholder="buscar productos,marcas">
+                <button type="submit" class="lupa"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
     </div>
 
     <div class="burger">
