@@ -14,9 +14,9 @@ header input {
     padding: 10px;
     margin: 5px;
 }
-header .top .form-search{
+header .top .form-search .formulario{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 header .top .form-search button{
     background-color: var(--colorHeader);
@@ -114,6 +114,9 @@ header .burger nav ul li:hover {
     color: var(--colorProfundidad);
     border: 2px solid var(--colorProfundidad);
     background-color: var(--colorHeader)
+}
+header .burger nav ul .carritoli{
+    display: none;
 }
 
 header .burger nav a {
@@ -271,6 +274,11 @@ header .burger nav a:hover {
     }
 }
 
+@media (min-width:680px) {
+    header input{
+        width: 80%;
+    }
+}
 
 
 @media (min-width:980px) {
@@ -350,6 +358,9 @@ header .burger nav a:hover {
         padding: 5px;
         border: 1px solid var(--colorButton);
         border-radius: 10px;
+    }
+    header .burger nav ul .carritoli{
+        display: block;
     }
 
     header .burger nav ul li a {
