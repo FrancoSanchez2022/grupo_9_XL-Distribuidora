@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head',{title:'XL - Restablecer Contraseña'}) %>
+
+    <body class="resetPassword">
+        <%- include('../partials/header') %>
+            <main>
+                <h1>Restablecer contraseña</h1>
+                <%- include('../partials/breadcrumbs',{página:'Restablecer Contraseña'}) %>
+                    <section class="card">
+                        <form class="form-resetPassword" action="" method="post">
+                            <div class="container bottom">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Email">
+                                <% if (locals.errors && errors.email) { %>
+                                <small><%= errors.email.msg %></small>
+                                <% } %>
+                            </div>
+                            <div class="sendEmail-button">
+                                <button type="submit">Enviar</button>
+                            </div>
+                            <div class="form-status">
+                                <h5>Ingresa tu email con el que te registraste y en unos minutos te llegará un email
+                                    para que puedas
+                                    generar una nueva clave.</h5>
+                            </div>
+                        </form>
+                    </section>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

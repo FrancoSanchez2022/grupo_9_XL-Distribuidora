@@ -1,0 +1,307 @@
+.register {
+  line-height: 1.5;
+}
+
+.register main h1 {
+  text-align: center;
+  font-weight: 500;
+  margin: 40px 20px 20px;
+  font-size: 35px;
+}
+
+.register main h2 {
+  font-weight: 440;
+  font-size: 22.5px;
+    margin: 0px 0px 10px;
+}
+
+.register main h4 {
+  font-weight: 420;
+  font-size: 16px;
+  margin: auto;
+}
+
+.register main p {
+  font-weight: 320;
+  font-size: 13px;
+  margin: 0px 0px 10px;
+}
+
+.register main .breadcrumbs {
+  padding: 0.5rem;
+  border-top: 1px solid #4d4d4d;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.register main .breadcrumbs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.register main .breadcrumbs ul li {
+  display: inline-block;
+  color: var(--grisClaro);
+}
+
+.register main .breadcrumbs ul li a {
+  color: var(--grisOscuro);
+  display: block;
+  text-decoration: none;
+}
+
+.register main .breadcrumbs ul li a:hover {
+  text-decoration: underline;
+  color: var(--black);
+}
+
+.register main .card {
+  border-radius: 0.5rem;
+  border: 2px solid var(--grisClaro);
+  margin-bottom: 15px;
+  margin: 5%;
+    box-shadow: 0px 2px 10px 6px   #ff347491
+}
+
+.register main .card .form-register .card-header {
+  border-bottom: 1.5px solid var(--grisClaro);
+  border-radius: 0.35rem 0.35rem 0 0;
+}
+
+.register main .card .form-register .card-footer {
+  border-top: 1.5px solid var(--grisClaro);
+  border-radius: 0 0 0.35rem 0.35rem;
+}
+
+.register main .card .form-register .card-header,
+.card-footer {
+  background-color: var(--gray);
+  color: var(--black);
+  padding: 1rem
+}
+
+.register main .card .form-register .card-header a,
+.card-footer .inicia-sesión a {
+  color: var(--black);
+  background-color: var(--white);
+  font-size: 11.5px;
+  text-decoration: none;
+  box-shadow:  0px 0.5px 3px 3px white;
+  border-radius: 15%;
+}
+
+.register main .card .form-register .card-header a:hover,
+.card-footer .inicia-sesión a:hover {
+  color: var(--white);
+  background-color: var(--black);
+  box-shadow:  0px 0.5px 3px 3px black;
+border-radius: 15%;
+}
+
+.register main .card .card-body {
+  padding: 1rem;
+  background-color: var(--white);
+}
+
+.register main .card .form-register .card-body .container .form-group {
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12.5px;
+}
+
+
+.register main .card button {
+  background-color: #4d4d4d;
+  color: var(--white);
+  border-radius: 4px;
+  border: 1px solid var(--black);
+  font-size: 14.5px;
+}
+
+.register main .card button:hover {
+  background: linear-gradient(
+    to bottom,
+    #FFD6D6,
+    #FF3474B9);
+  color: var(--black)
+}
+
+.register main .card button:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+/* .register main .card .form-register .card-body .container .form-group .verify {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.5px;
+}
+
+.register main .card .form-register .card-body .container .form-group .verify .button {
+  width: 22.5%;
+  padding: 1.75px 3.5px 1px;
+  font-size: 11px;
+}
+
+.register main .card .form-register .card-body .container .form-group .verify .alert-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #bce8f1;
+  color: #31708f;
+  background-color: #d9edf7;
+  margin-left: 0.75%;
+  width: 76.25%;
+  font-size: 9.75px;
+  border-radius: 2.5px;
+} */
+
+.register main .card .form-register .card-body .container .form-group small {
+  margin-top: 5px;
+  padding-left: 8px;
+  font-size: 10.5px;
+  color: rgb(148, 1, 1);
+  background-color: #f7e7d9ee;
+  width: 100%;
+  border-radius: 2.5px;
+  box-sizing: border-box;
+}
+
+.register main .card .form-register .card-body .container .form-group input {
+  padding: 6px;
+  padding-bottom: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.register main .card .form-register .card-body .container .form-group #phone {
+  width: 100%;
+  padding-left: 52px;
+}
+
+.register main .card .form-register .card-footer .register-button {
+  margin-bottom: 7.5px;
+}
+
+.register main .card .form-register .card-footer .register-button button {
+  padding: 3.5px 7px;
+}
+
+/* Tablet */
+@media (min-width:426px) {
+
+  .register main h1 {
+    font-weight: 500;
+    font-size: 45px;
+  }
+
+  .register main h2 {
+    font-weight: 400;
+    font-size: 25px;
+  }
+
+  .register main p {
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .register main .card .form-register .card-footer .register-button button {
+    padding: 6.5px 10px;
+  }
+
+/*   .register main .card .form-register .card-body .container .form-group .verify .button {
+    padding: 4px 5px 1.25px;
+    width: 20%;
+  }
+
+  .register main .card .form-register .card-body .container .form-group .verify .alert-msg{
+    font-size: 10.5px;
+    width: 79.25%;
+  } */
+}
+
+
+
+/* Desktop */
+@media (min-width:769px) {
+
+  .register main h1 {
+    font-weight: 500;
+    font-size: 57.5px;
+  }
+
+  .register main h2 {
+    font-weight: 400;
+    font-size: 27.5px;
+  }
+
+  .register main p {
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .register main .card {
+    box-shadow: 0px 4px 20px 12px   #ff347491
+  }
+
+  .register main .card .form-register .card-header,
+  .card-footer {
+    padding: 1.75rem;
+
+  }
+
+  .register main .card .form-register .card-body {
+    padding: 1.75rem;
+  }
+
+  .register main .card .form-register .card-body .container .form-group {
+    width: 47.5%;
+  }
+
+  .register main .card .form-register .card-body .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+/*   .register main .card .form-register .card-body .container .form-group .verify .alert-msg {
+    width: 78.25%;
+  }
+
+  .register main .card .form-register .card-body .container .form-group .verify .button {
+    padding: 2.5px 2.5px 1.5px;
+    font-size: 12px;
+    width: 21%;
+  } */
+
+  .register main .card .form-register .card-footer .register-button button {
+    padding: 5.5px 10px;
+  }
+
+  .register main .card .form-register .card-body .container .form-group input {
+    padding: 10px 10px 8px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width:1024px) {
+
+  .register main .card .form-register .card-body .container .form-group small {
+    font-size: 12.5px;
+  }
+
+  .register main .card .form-register .card-footer .register-button button {
+    padding: 6px 12px;
+  }
+
+/*   .register main .card .form-register .card-body .container .form-group .verify .alert-msg {
+    font-size: 13px;
+    width: 79.25%;
+  }
+
+  .register main .card .form-register .card-body .container .form-group .verify .button {
+    width: 20%;
+    padding: 2.75px 5.5px 2.5px;
+  } */
+}

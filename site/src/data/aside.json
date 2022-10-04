@@ -1,0 +1,20 @@
+[
+    [
+        {
+            "imagen":"aside-01.jpg",
+            "titulo":"Nunca creeras lo que estas aprendiendo aca"
+        },
+        {
+            "imagen":"aside-02.jpg",
+            "titulo":"Como terminar un sprint a tiempo"
+        },
+        {
+            "imagen":"aside-03.jpg",
+            "titulo":"Como hackear a la nasa"
+        },
+        {
+            "imagen":"aside-04.jpg",
+            "titulo":"Metodos nunca antes vistos en JS"
+        }
+    ]
+]

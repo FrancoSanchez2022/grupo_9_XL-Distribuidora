@@ -1,0 +1,249 @@
+.home main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.home main .banner img {
+    width: 100%;
+}
+
+.home main section .producto img {
+    width: 100%;
+}
+
+.home main section article {
+    width: 95%;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    border: 2px solid var(--grisClaro);
+    margin-bottom: 15px;
+    margin: 5%;
+    box-shadow: 0px 1px 8px 4px #ff347491
+}
+
+.home main .infoempresa {
+    width: 100%;
+}
+
+.home main .infoempresa .info {
+    width: 500px;
+    height: 400px;
+
+    padding: 35px;
+    border: 1px solid var(--colorHeader);
+    border-radius: 15px;
+    background-color: var(--colorButtonContacto);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--white);
+
+}
+
+
+.home main section article button {
+    background-color: #4d4d4d;
+    color: var(--white);
+    border-radius: 4px;
+    border: 1px solid var(--black);
+    font-size: 14.5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.home main section article button:hover {
+    background: linear-gradient(to bottom,
+            #FFD6D6,
+            #FF3474B9);
+    color: var(--black)
+}
+
+.home main section article button:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+
+
+
+.home main section article a {
+    text-decoration: none;
+    color: white
+}
+
+.home main section .video iframe {
+    width: 415px;
+    height: 500px;
+}
+
+
+.home main section article .envio img {
+    width: 100%;
+}
+
+.home main h1 {
+    width: 100%;
+    text-align: center;
+    font-size: var(--fTitulos);
+    color: var(--colorLetraPrincipal);
+}
+
+.home main section article .nombreP h2 {
+    font-size: var(--fSubtitulos);
+    color: var(--colorLetraSecundaria);
+}
+
+.home main h3 {
+    font-size: var(--fPrecio);
+    color: #4d4d4d;
+}
+
+.home main h2 {
+    font-size: var(--fParrafos);
+    color: black;
+}
+
+.home main section article .descuento {
+    color: green;
+}
+
+
+
+.home main .contacto {
+    background-image: url(../img/background-img2.jpg);
+    padding: 5px;
+
+}
+
+.home main section article.contact {
+    margin-top: 5px;
+    background-color: #f0f8ff8c;
+    font-size: var(--fSubtitulos);
+}
+
+.home main textarea {
+    width: 100%;
+    resize: none;
+}
+
+.home main section article.contact button {
+    width: 100%;
+    background-color: var(--colorButtonContacto);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.home main section .envio img {
+    width: 100%;
+}
+
+
+/* Tablet */
+@media (min-width:426px) {
+
+    .home main .detacado h1 {
+        position: absolute;
+        right: 122px;
+    }
+
+    .home main section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .home main section article {
+        margin: 10px;
+        width: 44%;
+    }
+
+    .home main section .video iframe {
+        width: 362px;
+        height: 400px;
+    }
+
+
+    .home main section article p {
+        font-size: small;
+    }
+
+    .home main section article.contact {
+        background-color: #f0f8ff8c;
+        font-size: var(--fSubtitulos);
+    }
+
+    .home main section article.contact input {
+        width: 100%;
+    }
+
+    .home main textarea {
+        width: 100%;
+        resize: none;
+    }
+
+    .home main section .envio {
+        display: flex;
+        align-items: center;
+        width: 48%;
+    }
+
+    .home main section .envio img {
+        width: 100%;
+    }
+
+    .home main section article.contact {
+        background-color: #f0f8ff8c;
+        font-size: var(--fSubtitulos);
+    }
+
+}
+
+/* Desktop */
+@media (min-width:769px) {
+    .home main {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .home main .products_cards {
+        width: 74%;
+    }
+
+    .home main section .video {
+        display:   flex  ;
+        align-items: center;
+        width: 500px;
+        
+    }
+    .home main section .video iframe {
+    width: 415px;
+    height: 500px;
+    }
+
+    .home main section .video iframe {
+        width: 98%;
+    }
+
+    .home main section article {
+        text-align: center;
+        margin: 10px;
+        width: 30%;
+
+    }
+
+
+    .home main section article.contact {
+        background-color: #f0f8ff8c;
+        font-size: var(--fSubtitulos);
+    }
+
+    .home main textarea {
+        width: 100%;
+        resize: none;
+    }
+}

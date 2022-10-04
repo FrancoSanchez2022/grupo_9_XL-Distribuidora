@@ -1,0 +1,27 @@
+.liProduct .product-relacionado{
+    width: 95%;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    border: 2px solid var(--grisClaro);
+    box-shadow: 0px 1px 8px 4px #ff347491
+}
+.liProduct .product-relacionado button {
+    background-color: #4d4d4d;
+    color: var(--white);
+    border-radius: 4px;
+    border: 1px solid var(--black);
+    font-size: 14.5px;
+    padding: 5px;
+    margin: 5px;
+}
+.liProduct .product-relacionado button:hover {
+    background: linear-gradient(to bottom,
+            #FFD6D6,
+            #FF3474B9);
+    color: var(--black)
+}
+.liProduct .product-relacionado img{
+    width: 100%;
+}

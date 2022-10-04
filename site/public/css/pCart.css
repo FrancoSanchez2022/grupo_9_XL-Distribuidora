@@ -1,9 +1,9 @@
 .cart {
-    background-color: var(--colorHeader);
+    background-color: var(--profundidad2);
 }
 
 .cart .producto {
-    width: 100%;
+    width: 98%;
     margin: 0 auto;
 }
 
@@ -42,7 +42,6 @@
     color: white;
     border: none;
     width: 10%;
-    ;
 }
 
 .cart .producto table tbody tr td .boton2 input {
@@ -58,10 +57,11 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    color: black;
     
 }
 .cart .producto .Compra a{
-    color: #65BAA4;
+    color: black;
 }
 
 .cart section.precios{
@@ -79,15 +79,36 @@
 .cart section.precios h3,
 .cart section.precios p{
     text-align: end;
-    color: white;
+    color: black;
 }
 .cart section.precios p.precioFinal{
     font-size: 30px;
-    color: #65BAA4;
+    color: black;
+}
+.cart section.precios{
+    margin-bottom: 10px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+}
+.cart .Compra{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    color: black;
+    margin: 0 auto;
+    width: 80%;
+}
+.cart .Compra a{
+    text-decoration: none;
+    color: black;
+}
+
+.cart .Compra a:hover{
+    color: var(--colorButtonContacto)
 }
 
 .cart section.relacionado h5{
-    color: white;
+    color: black;
     font-size: 30px;
     margin: 10px 10px;
     text-align: center;
@@ -102,7 +123,8 @@
 }
 
 .cart section.relacionado article img {
-    width: 100%;
+    width: 80%;
+    object-fit: contain;
 }
 
 .cart section.relacionado article p{
@@ -115,7 +137,7 @@
     font-size: 25px;
     padding: 10px;
     width: 80%;
-    margin: 30px;
+    margin: 30px auto;
     color: white;
     background-color: var(--colorButton);
     border: none;
@@ -134,6 +156,32 @@
         width: 30px;
         text-align: center;
     }
+
+    .cart .relacionado .boxRelacionada{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .cart .relacionado .boxRelacionada article{
+        width: 40%;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .cart section.relacionado article img{
+        height: 280px;
+
+    }
+    .cart section.relacionado span{
+        width: 100%;
+    }
+    .cart section.relacionado article button{
+        font-size: 15px;
+        margin: 30px auto;
+    }
 }
 
 @media(min-width:769px) {
@@ -151,13 +199,12 @@
     .cart section.precios{
         font-size: 15px;
     }
+    .cart .relacionado article{
+        width: 30%;
+    }
     .cart .relacionado .cajaRelacionada{
-        width: 50%;
         display: flex;
         flex-wrap: wrap;
     }
-    .cart .relacionado .cajaRelacionada .imagenRelacionada{
-        width: 50%;
-        align-items: center;
-    }
+
 }

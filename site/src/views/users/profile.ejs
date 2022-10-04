@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head',{title:'XL - Perfil'}) %>
+
+    <body class="profile">
+        <%- include('../partials/header') %>
+            <main>
+                <h1>Mi Cuenta</h1>
+                <%- include('../partials/breadcrumbs',{página:'Perfil'}) %>
+                <h3>Mis Datos</h3>
+                <section class="card">
+                    <ul>
+                        <li>Nombre de Usuario</li>
+                        <li>Nombre</li>
+                        <li>Apellido</li>
+                        <li>Email</li>
+                        <li>Contraseña</li>
+                        <li>Teléfono</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </section>
+                <h3>Mis Compras</h3>
+                <section class="card">
+                    <p>¡Hacé tu primera compra!</p>
+                    <h4><a href="/">VER PRODUCTOS</a></h4>
+                </section>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

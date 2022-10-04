@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head',{title:'XL - Carrito de Compras'}) %>
+
+    <body class="cart">
+        <%- include('./partials/header') %>
+            <section class="producto">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre de producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="imagen">
+                                    <img src="/img/productos/<%= productos[1].imagenes[0] %>" alt="producto1">
+                                </div>
+                            </td>
+                            <td>
+                                <h4><%= productos[1].titulo %> </h4>
+                            </td>
+                            <td>
+                                <div class="boton2">
+                                    <button>-</button>
+                                    <input class="" type="number" value="1" min="1" step="1">
+                                    <button>+</button>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="precio"><%= productos[1].precio %> </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="imagen">
+                                    <img src="/img/productos/<%= productos[2].imagenes[0] %>" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <h4><%= productos[2].titulo %></h4>
+                            </td>
+                            <td>
+                                <div class="boton2">
+                                    <button>-</button>
+                                    <input class="" type="number" value="1" min="1" step="1">
+                                    <button>+</button>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="precio"><%= productos[2].precio %></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="precios">
+                <div class="postal">
+                    <button class="boton">Calcular envio</button>
+                    <input type="number" name="envio" id="envio" placeholder="Ingresa tu código postal">
+                </div>
+                <h3>Subtotal</h3>
+                <p>$0</p>
+                <h3>Total con envio</h3>
+                <p class="precioFinal">$626.10</p>
+                <button class="compraa">Comprar productos </button>
+            </section>
+            <div class="Compra">
+                <a href=""><i class="fas fa-ban"></i></a>
+                <a href="">Seguir comprando</a>
+            </div>
+            <section class="relacionado">
+                <h5>Productos relacionados</h5>
+                <div class="boxRelacionada">
+                    <div class="cajaRelacionada">
+
+                        <% aside.forEach(element=> { %>
+                            <article>
+
+                                <% for( let i = 0; i < 4; i++ ) { %>
+                                    <article>
+                                        <div class="contenedorRelacionado">
+                                            <img src="/img/productos/<%= productos[i].imagenes[0] %> " alt="">
+                                        </div>
+                                        <h4 class="subproductos"><%= productos[i].titulo %> </h4>
+                                        <span class="subtitular"><%= productos[i].descripcion %></span>
+                                        <p class="subprecio"><%= productos[i].precio %></p>
+                                        <button class="subcarritos">Agregar al carrito</button>
+            
+                                    </article>
+                            <% } %>
+    
+                            </article>
+                            <% }) %>
+                    </div>
+            </section>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>

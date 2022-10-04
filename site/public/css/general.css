@@ -1,9 +1,91 @@
+body{
+  font-family: Merriweather ;
+    background-color: var(--profundidad2);
+    display: block;
+    margin:auto ;
+    max-width: 2560px;
+}
+
+body::-webkit-scrollbar{
+width: 12.5px;
+height: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: linear-gradient(
+    to bottom,
+    #FFD6D6,
+    #FF3474B9);
+     border-radius: 10px;
+     outline: 1px solid rgba(112, 128, 144, 0)
+}
+
+body::-webkit-scrollbar-track{
+  background: darkgrey;
+}
+
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+a{
+  text-decoration: none;
+}
+
+
+ main h1 {
+  font-weight: 500;
+  font-size: 35px;
+}
+
+ main h2 {
+  font-weight: 440;
+  font-size: 22.5px;
+}
+
+ main h4 {
+  font-weight: 420;
+  font-size: 16px;
+}
+
+ main p {
+  font-weight: 320;
+  font-size: 13px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--colorLetraPrincipal);
     font-family: var(--fuente);
 }
-a{
+
+main .breadcrumbs {
+    padding: 0.5rem;
+    border-top: 1px solid #4d4d4d;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  
+main .breadcrumbs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+main .breadcrumbs ul li {
+    display: inline-block;
+    color: var(--grisClaro);
+  }
+  
+main .breadcrumbs ul li a {
+    color: var(--grisOscuro);
+    display: block;
     text-decoration: none;
-}
+  }
+  
+main .breadcrumbs ul li a:hover {
+    text-decoration: underline;
+    color: var(--black);
+  }

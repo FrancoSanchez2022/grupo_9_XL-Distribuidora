@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head',{title:'XL - Home'}) %>
+
+    <body class="home">
+
+        <%- include('./partials/header') %>
+            <main>
+                <div class="banner"><img src="img/XL-distribuidora.png" alt="perfume.png"></div>
+                <section class="carrucelDestacados">
+                    <h1 class="destacado">Productos Destacados</h1>
+                    <% productos.forEach(producto=> { %>
+                        <% if (producto.descuento==="" ) { %>
+
+
+                            <article>
+
+                                <a href="/products/detail/<%=producto.id%>">
+                                    <div class="producto"><img src="/img/productos/<%=producto.imagenes[0].nombre%>"
+                                            alt="Imagen descriptiva del producto"></div>
+                                    <h2 class="nombreP">
+                                        <%=producto.nombre%>
+                                    </h2>
+                                    <h3 class="precio">
+                                        $<%=producto.precio%>
+                                    </h3>
+
+                                    <div>
+                                        <button><a href="/products/detail/<%=producto.id%>">Ver más</a></button>
+                                    </div>
+                                </a>
+                            </article>
+                            <% } %>
+                                <% }) %>
+
+                </section>
+                <section class="infoempresa">
+                    <article id="somos" class="info">
+
+                        <h3 class="XL">la empresa XL:</h3>
+                        <p>Somos una empresa dedicada a la venta de productos quimicos para el cuidado del hogar para
+                            que su familia pueda sentirse segura de agentes patologicos y se sienta fresca,agradable
+                            para su comodidad.</p>
+                    </article>
+                    <div class="video"><iframe width="100%" src="https://www.youtube.com/embed/a4_qWzISsOc"
+                            title="Cómo hacer un perfume - Amazing Perfume Factory | How Perfume Is Made In Factory ➤#1 "
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></div>
+                </section>
+                <section class="carrucelOfertas">
+                    <h1 class="oferta">Productos En Oferta</h1>
+                    <% productos.forEach(producto=> { %>
+                        <% if (producto.descuento >= 1 ) { %>
+
+
+                            <article>
+
+                                <a href="/products/detail/<%=producto.id%>">
+                                    <div class="producto"><img src="/img/productos/<%=producto.imagenes[0]%>"
+                                            alt="Esencia.png"></div>
+                                    <h2 class="nombreP">
+                                        <%=producto.nombre%>
+                                    </h2>
+                                    <h3 class="precio">
+                                        $<%=producto.precio%>
+                                    </h3>
+                                    <p class="descuento">
+                                        %<%=producto.descuento%>
+                                    </p>
+
+                                    <button><a href="/products/detail/<%=producto.id%>">Ver más</a></button>
+                                </a>
+                            </article>
+                            <% } %>
+                                <% }) %>
+                </section>
+                
+                <section class="contacto" id="contacto">
+                    <article class="contact">
+
+                        <h2>Contacto</h2>
+                        <form action="" method="get">
+                            <div class="container bottom">
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
+                                <small>Debe ingresar su nombre</small>
+                            </div>
+                            <div class="container bottom">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                                <small>Debe ingresar su email</small>
+                            </div>
+                            <div class="container bottom">
+                                <label for="telefono">Teléfono</label>
+                                <input type="number" name="telefono" placeholder="Ingresa tu numero de telefono">
+                                <small>Debe ingresar su numero de teléfono</small>
+                            </div>
+                            <div class="container bottom">
+                                <textarea class="bottom" name="comentarios" id="comentarios" cols="30" rows="10"
+                                    placeholder="Escribi tu consulta"></textarea>
+                            </div>
+
+                            <button type="submit">Enviar</button>
+                    </article>
+                    <div class="envio"><img src="img/envioATodoElPais-removebg-preview.png" alt=""></div>
+
+                </section>
+
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 32,
+        "marca": "paris ",
+        "titulo": "loreal ",
+        "precio": 10000,
+        "descuento": 15,
+        "stock": 1,
+        "imagenes": "default-image.png",
+        "descripcion": ""
+    },
+    {
+        "id": 31,
+        "marca": "pantene",
+        "titulo": "amamamam ",
+        "precio": 123,
+        "descuento": 1,
+        "stock": 15,
+        "imagenes": "default-image.png",
+        "descripcion": ""
+    },
+    {
+        "id": 32,
+        "marca": "",
+        "titulo": "",
+        "categorias": "Selecciona una opción",
+        "precio": 0,
+        "descuento": 0,
+        "stock": 0,
+        "imagenes": "default-image.png"
+    }
+]
