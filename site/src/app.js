@@ -6,23 +6,18 @@ const liveReloadServer = livereload.createServer();
 
 /* Entry point */
 const express = require("express");
+const path = require("path");
 const connectLivereload = require('connect-livereload')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
-const path = require("path");
 const methodOverride = require('method-override')
 
 /*Implementamos locals dentro de nuestra aplicacion*/
 
 const userLogin= require('./middlewares/userLoginCheck');
 const dbConnectionTest = require('./middlewares/dbConnectionTest')
-const path = require("path");
-const session = require ('express-session')
-const methodOverride = require('method-override')
-const cookieParser = require('cookie-parser');
 
 /* Implementación de locals en la aplicación */
-const userLogin = require('./middlewares/userLoginCheck')
 const app = express();
 const port = 3000;
 

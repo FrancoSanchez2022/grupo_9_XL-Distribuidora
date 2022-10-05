@@ -2,40 +2,38 @@ const fs = require('fs')
 const path = require('path')
 const productos = require('../data/productos.json')
 const historial = require('../data/historial.json')
-const {validationResult} = require('express-validator');
+const { validationResult } = require('express-validator');
 let db = require('../database/models')
 
 module.exports = {
     list: (req, res) => {
 
         db.Productos.findAll({
-            include : [{
+            include: [{
                 all: true
             }]
         })
-        .then (productos => {
-            return res.render('admin/listar', {
-                productos,
-                redirection: "history"
+            .then(productos => {
+                return res.render('admin/listar', {
+                    productos,
+                    redirection: "history"
+                })
             })
-        })
     },
     create: async (req, res) => {
         try {
             let categorias = db.Categorias.findAll()
             let marcas = db.Marcas.findAll()
-            return res.render('admin/crear',{
+            return res.render('admin/crear', {
                 categorias,
                 marcas
             })
-            
+
         } catch (error) {
             return res.send(error)
         }
     },
-    store: async (req, res) => {
-
-
+    store: (req, res) => {
 
         let errors = validationResult(req)
         if (req.fileValidationError) {
@@ -45,38 +43,44 @@ module.exports = {
             }
             errors.errors.push(imagen)
         }
-
         if (errors.isEmpty()) {
-            try {
-            let img = req.files.map(imagen => {
-                    return imagen.filename
-                })
-            
             let { marca, titulo, categoria, precio, descuento, stock, descripcion } = req.body
-            
-            let productoNuevo = await db.Productos.create ({
-                id: productos[productos.length - 1].id + 1,
-                marcaId: marca,
+
+            db.Productos.create({
                 nombre: titulo,
-                categoriaId: categoria,
                 precio: +precio,
                 descuento: +descuento,
                 stock: +stock,
                 descripcion,
-
+                categoriasId: categoria,
+                marcasId: marca,
             })
-            await img.forEach(imagen => {
-                db.Imagenes.create({
-                    nombre: imagen,
-                    productosId: productoNuevo.id
+                .then(productoNuevo => {
+
+                    if (req.files) {
+                        let img = req.files.map(imagen => {
+                            let nuevo = {
+                                nombre: imagen.filename,
+                                productosId: productoNuevo.id
+                            }
+                            return nuevo
+                        })
+
+                        db.Imagenes.bulkCreate(img)
+                            .then(imagenes => {
+                                return res.redirect('/admin/list')
+                            })
+                    } else {
+                        db.Imagenes.create({
+                            nombre: 'default-image.png',
+                            productosId: productoNuevo.id
+                        })
+                            .then(imagenes => {
+                                return res.redirect('/admin/list')
+                            })
+                    }
                 })
-
-            })
-
-            return res.redirect('/admin/list')
-        }catch(error){
-            return res.send(error)
-        }
+                .catch(error => res.send(error))
         } else {
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', dato))
 
@@ -86,27 +90,37 @@ module.exports = {
                 }
             })
             /* return res.send(errors.mapped()) */
-            return res.render('admin/crear', {
+            return res.render('admin/crearProducto', {
                 errors: errors.mapped(),
                 old: req.body
             })
         }
     },
     edit: (req, res) => {
-        let categorias = ['Smartphones', 'Tablets', 'Notebooks']
-        id = +req.params.id
-        let producto = productos.find((elemento) => {
-            return elemento.id == id
+        idParams = +req.params.id
+
+        let categorias = db.Categorias.findAll()
+        let marcas = db.Marcas.findAll()
+        let producto = db.Productos.findOne({
+            where: {
+                id: idParams
+            },
+            include: [{
+                all: true
+            }]
         })
-        /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
-        return res.render('admin/editar', {
-            producto,
-            categorias
-        })
+        Promise.all([categorias, marcas, producto])
+            .then(([categorias, marcas, producto]) => {
+                /* return res.send(imagenes) //Comprobar que esta llegando bien el elemento */
+                return res.render('admin/editarProducto', {
+                    producto,
+                    categorias,
+                    marcas
+                })
+            })
+            .catch(error => res.send(error))
     },
     update: (req, res) => {
-        const idParams = +req.params.id
-        const { Marca, Titulo, Categoria, Precio, Descuento, Stock, Descripcion } = req.body
         let errors = validationResult(req)
         if (req.fileValidationError) {
             let imagen = {
@@ -116,41 +130,69 @@ module.exports = {
             errors.errors.push(imagen)
         }
         if (errors.isEmpty()) {
-            productos.forEach(producto => {
-                if (producto.id === idParams) {
-                    producto.marca = Marca
-                    producto.titulo = Titulo
-                    producto.categorias = Categoria
-                    producto.precio = +Precio
-                    producto.descuento = +Descuento
-                    producto.stock = +Stock
-                    producto.descripcion = Descripcion
+            const idParams = +req.params.id
+            const { marca, titulo, categoria, precio, descuento, stock, descripcion } = req.body
+
+            let producto = db.Productos.findOne({
+                where: {
+                    id: idParams
+                },
+                include: [{
+                    all: true
+                }]
+            })
+            let actualizacion = db.Productos.update({
+                nombre: titulo,
+                precio: +precio,
+                descuento: +descuento,
+                stock: +stock,
+                descripcion,
+                categoriasId: categoria,
+                marcasId: marca,
+            }, {
+                where: {
+                    id: idParams
                 }
             })
-            guardar(productos)
-            return res.redirect('/admin/listar')
-        } else {
-            /* return res.send(errors.mapped()) */
-            return res.render('admin/crear', {
+
+            Promise.all([producto, actualizacion])
+                .then(([producto, actualizacion]) => {
+                    if (req.files) {
+                        db.Imagenes.update({
+                            nombre: req.file.filename,
+                            productosId: producto.id
+                        }, {
+                            where: {
+                                id: producto.imagenes.id
+                            }
+                        })
+                            .then(data => {
+                                return res.redirect('/admin/list')
+                            })
+                            .catch(error => res.send(error))
+                    } else {
+                        return res.redirect('/admin/list')
+                    }})
+                    .catch(error => res.send(error))
+             } else {
+            return res.render('admin/crearProducto', {
                 errors: errors.mapped(),
                 old: req.body
             })
         }
     },
     destroy: (req, res) => {
-        idParams = +req.params.id
+        let idParams = +req.params.id
 
-        let productoParaEliminar = productos.find((elemento) => {
-            return elemento.id == idParams
+        db.Productos.destroy({
+            where: {
+                id: idParams
+            }
         })
-
-        historial.push(productoParaEliminar)
-        guardarHistorial(historial)
-
-        let productosModificados = productos.filter(producto => producto.id !== idParams)
-        guardar(productosModificados)
-
-        return res.redirect('/admin/history')
+            .then(producto => {
+                return res.redirect('/admin/history')
+            })
+            .catch(error => res.send(error))
     },
     history: (req, res) => {
 

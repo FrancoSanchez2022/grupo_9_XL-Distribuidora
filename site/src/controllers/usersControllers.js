@@ -134,5 +134,11 @@ module.exports = {
             res.cookie('XL','',{maxAge : -1})
         }
         return res.redirect('/')
+    },
+    uploadProfileImage: (req, res) => {
+        return res.render('users/profile')
+    },
+    profileEdit: (req, res) => {
+        return res.render('users/profile')
     }
 }
