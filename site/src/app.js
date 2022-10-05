@@ -10,14 +10,21 @@ const connectLivereload = require('connect-livereload')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const path = require("path");
-
 const methodOverride = require('method-override')
 
-const port = 3000;
 /*Implementamos locals dentro de nuestra aplicacion*/
 
 const userLogin= require('./middlewares/userLoginCheck');
 const dbConnectionTest = require('./middlewares/dbConnectionTest')
+const path = require("path");
+const session = require ('express-session')
+const methodOverride = require('method-override')
+const cookieParser = require('cookie-parser');
+
+/* Implementación de locals en la aplicación */
+const userLogin = require('./middlewares/userLoginCheck')
+const app = express();
+const port = 3000;
 
 /* Importación las rutas */
 let indexRouter = require('./routes/index')
@@ -25,7 +32,6 @@ let administradorRouter = require('./routes/administrador')
 let productosRouter = require('./routes/productos')
 let usuariosRouter = require('./routes/usuarios')
 
-const app = express();
 /* Archivos estaticos */
 app.use(express.static(path.join(__dirname,'..', 'public')));
 

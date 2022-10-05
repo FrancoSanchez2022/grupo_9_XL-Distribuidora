@@ -1,4 +1,4 @@
-.liProduct .product-relacionado{
+.liProduct main .product-relacionado{
     width: 95%;
     margin: 15px auto;
     padding: 15px;
@@ -7,7 +7,7 @@
     border: 2px solid var(--grisClaro);
     box-shadow: 0px 1px 8px 4px #ff347491
 }
-.liProduct .product-relacionado button {
+.liProduct main .product-relacionado button {
     background-color: #4d4d4d;
     color: var(--white);
     border-radius: 4px;
@@ -16,12 +16,19 @@
     padding: 5px;
     margin: 5px;
 }
-.liProduct .product-relacionado button:hover {
+.liProduct main .product-relacionado button:hover {
     background: linear-gradient(to bottom,
             #FFD6D6,
             #FF3474B9);
     color: var(--black)
 }
-.liProduct .product-relacionado img{
+.liProduct main .product-relacionado img{
     width: 100%;
+}
+@media(min-width: 426px){
+    .liProduct main .product-relacionado{
+        width: 45%;
+        margin: 10px;
+
+    }
 }

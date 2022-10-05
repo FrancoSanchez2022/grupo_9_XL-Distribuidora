@@ -1,7 +1,15 @@
 <header>
     <div class="top">
-        <a href="/"><div class="Logo"><img src="/img/Logo-XL-sinFondo.png" alt="logo XL Distribuidora"></div></a>
-        <input type="text" maxlength="100" placeholder="buscar productos,marcas"> <i class="fas fa-search"></i>
+        <a href="/">
+            <div class="Logo"><img src="/img/Logo-XL-sinFondo.png" alt="logo XL Distribuidora"></div>
+        </a>
+        <div class="form-search">
+            <form class="formulario" action="/search" method="get">
+                <input type="text" name="search" id="search" class="barraDeBusqueda" maxlength="100"
+                    placeholder="buscar productos,marcas">
+                <button type="submit" class="lupa"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
     </div>
 
     <div class="burger">
@@ -15,9 +23,17 @@
                 <li><a href="/#contacto">Contacto</a></li>
             </ul>
             <ul class="user">
-                <li><a href="/admin/list">Admin</a></li>
-                <li><a href="/users/login">Inicia Sesion</a></li>
-                <li><a href="/users/register">Registrate</a></li>
+                <% if (locals.userLogin && locals.userLogin.rol==="Admin" ) { %>
+                    <li><a href="/admin/list">Admin</a></li>
+                    <% } %>
+                        <% if (locals.userLogin) { %>
+                            <li><a href="/users/profile">¡Hola <%= locals.userLogin.name %>! </a></li>
+                            <% } else { %>
+                                <li><a href="/users/login">Login</a></li>
+                                <li><a href="/users/register">Registro</a></li>
+                            <% } %>
+
+                    <li class="carritoli"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
     </div>

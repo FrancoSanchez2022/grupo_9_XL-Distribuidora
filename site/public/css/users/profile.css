@@ -66,5 +66,23 @@
     margin-bottom: 15px;
     margin: 5%;
     padding: 0.5rem;
-    box-shadow: 0px 2px 10px 6px   #ff347491
+    box-shadow: 0px 2px 10px 6px   #ff347491;
+    background-color: var(--gray);
+}
+
+.profile main .card ul {
+    margin: 0;
+    list-style: none;
+}
+
+
+.profile main .labelinput{
+    display: none;
+    
+}
+
+.profile main .img .selectImg img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
 }

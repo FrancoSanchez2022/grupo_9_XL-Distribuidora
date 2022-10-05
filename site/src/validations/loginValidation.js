@@ -1,5 +1,4 @@
 const {check,body} = require('express-validator')
-const usuarios = require('../data/users.json')
 const bcryptjs = require('bcryptjs')
 const db = require('../database/models')
 
@@ -29,5 +28,4 @@ module.exports = [
     })
     .catch(() => Promise.reject('El email o la contraseña no coincide'))
 })
-.withMessage('El usuario no se encuentra registrado o las credenciales son invalidas')
 ]

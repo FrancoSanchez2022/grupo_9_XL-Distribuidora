@@ -881,6 +881,23 @@
         "streetname": null,
         "postalcode": null,
         "image": "default-avatar.png",
+        "rol": "admin"
+    },
+    {
+        "id": 51,
+        "username": null,
+        "name": "Facundo",
+        "lastname": "Olave",
+        "gender": null,
+        "email": "facuolave18@gmail.com",
+        "pass": "$2a$10$Akvdpni6QFYuHB9Q5u5IDeYgW4pU0UbuvZXN5Mcq.IBSZ.ppfiHm.",
+        "phonenumber": "+5492994219044",
+        "country": null,
+        "state": null,
+        "city": null,
+        "streetname": null,
+        "postalcode": null,
+        "image": "default-avatar.png",
         "rol": "usuario"
     }
 ]
