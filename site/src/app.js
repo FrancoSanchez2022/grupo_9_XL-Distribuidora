@@ -10,6 +10,9 @@ const session = require ('express-session')
 const methodOverride = require('method-override')
 const cookieParser = require('cookie-parser');
 
+/* cookies */
+/* const cookieAuth = require('./middlewares/cookieCheck') */
+
 /* Implementación de locals en la aplicación */
 const userLogin = require('./middlewares/userLoginCheck')
 
@@ -41,14 +44,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'))
 
 /* implementacion de session */
-app.use(session({
-  secret: "XL"
-}))
+app.use(session({ secret: "XL" }))
+
 /* aplicación de validation */
 app.use(userLogin);
 
 /* cookie */
 app.use(cookieParser());
+
+/* app.use(cookieAuth) */
 
 /*Middlewares */
 app.use(express.static(path.resolve(__dirname,'..', 'public')));

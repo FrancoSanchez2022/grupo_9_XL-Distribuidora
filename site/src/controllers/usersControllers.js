@@ -16,6 +16,7 @@ module.exports = {
 
         if (errors.isEmpty()) {
             let { name, lastname, email, phonenumber, pass } = req.body
+            
             let usuarioNuevo = {
                 id:usuarios[usuarios.length - 1].id + 1,
                 username: null,
@@ -31,7 +32,7 @@ module.exports = {
                 streetname: null,
                 postalcode: null,
                 image: "default-avatar.png",
-                rol: "usuario"
+                rol: "Usuario"
             }
             usuarios.push(usuarioNuevo)
             guardar(usuarios)
@@ -73,12 +74,11 @@ module.exports = {
                 rol : usuario.rol
             }
             if(recordarme){
-            res.cookie('helloCookie',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
+                res.cookie('helloCookie',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
             }
-            /* return res.send(req.body) */
+
             return res.redirect('/users/profile')
         } else {
-            /* return res.send(errors.mapped()) */
             return res.render('users/login', {
                 errors: errors.mapped(),
                 old: req.body
@@ -143,7 +143,7 @@ module.exports = {
     },
     logout: (req, res) => {
         req.session.destroy();
-        if(req.cookies.Crafsy){
+        if(req.cookies.helloCookie){
             res.cookie('helloCookie','',{maxAge: -1})
         }
         return res.redirect('/')

@@ -9,7 +9,7 @@
                 <h1>Inicia sesión</h1>
                 <%- include('../partials/breadcrumbs',{página:'Login'}) %>
                     <section class="card">
-                        <form class="form-login" action="" method="post">
+                        <form class="form-login" action="/users/login" method="post">
                             <section class="card-header">
                                 <h2>¡Bienvenid@!</h2>
                             </section>
@@ -28,8 +28,8 @@
                                         <small><%= errors.pass.msg %></small>
                                     <% } %>
                                     <div class="recordarme bottom">
+                                        <input type="checkbox" name="recordarme" id="recordarme">
                                         <label for="recordarme">
-                                            <input type="checkbox" name="recordarme" id="recordarme">
                                             <span>Recordar clave</span>
                                         </label>
                                     </div>
