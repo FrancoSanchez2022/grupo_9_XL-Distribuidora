@@ -17,6 +17,9 @@ const methodOverride = require('method-override')
 const userLogin= require('./middlewares/userLoginCheck');
 const dbConnectionTest = require('./middlewares/dbConnectionTest')
 
+/* cookies */
+/* const cookieAuth = require('./middlewares/cookieCheck') */
+
 /* Implementación de locals en la aplicación */
 const app = express();
 const port = 3000;
@@ -56,6 +59,10 @@ app.use(session({
 app.use(userLogin);
 app.use(cookieParser());
 
+/* app.use(cookieAuth) */
+
+/*Middlewares */
+app.use(express.static(path.resolve(__dirname,'..', 'public')));
 
 /*Rutas */
 app.use('/', indexRouter);

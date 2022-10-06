@@ -191,7 +191,7 @@ border-radius: 10%;
   border-radius: 4px;
 }
 
-.login main .card .form-login .card-body .recordarme label {
+.login main .card .form-login .card-body .recordarme  {
   display: flex;
   flex-wrap: wrap;
   align-items: center;

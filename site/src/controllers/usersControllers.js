@@ -48,8 +48,8 @@ module.exports = {
                 streetname: null,
                 postalcode: null,
                 image: "default-avatar.png",
-                rol: "usuario" 
-            
+                rol: "Usuario"
+            }
             usuarios.push(usuarioNuevo)
             guardar(usuarios)
             */
@@ -103,7 +103,6 @@ module.exports = {
             })    
             .catch(errores => res.send (errores)) 
         } else {
-            /* return res.send(errors.mapped()) */
             return res.render('users/login', {
                 errors: errors.mapped(),
                 old: req.body
@@ -130,8 +129,8 @@ module.exports = {
     logout: (req, res) => {
 
         req.session.destroy();
-        if(req.cookies.XL){
-            res.cookie('XL','',{maxAge : -1})
+        if(req.cookies.helloCookie){
+            res.cookie('helloCookie','',{maxAge: -1})
         }
         return res.redirect('/')
     },

@@ -92,3 +92,25 @@
 - Comunicación constante de como venimos y qué hacemos.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+# Retro Sprint 5
+
+## Empezar a hacer:
+- 
+- 
+
+## Dejar de hacer:
+- 
+- 
+
+## Hacer menos:
+- 
+- 
+
+## Seguir haciendo:
+- 
+- 
+
+## Hacer más:
+- 
+- 
