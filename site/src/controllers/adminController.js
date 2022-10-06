@@ -182,24 +182,63 @@ module.exports = {
         }
     },
     destroy: (req, res) => {
-        let idParams = +req.params.id
 
-        db.Productos.destroy({
-            where: {
-                id: idParams
-            }
+        let idParams = +req.params.id
+        db.Productos.findOne({
+            where : {
+                id : idParams
+            },
+            include : [{
+                all:true
+            }]
         })
-            .then(producto => {
-                return res.redirect('/admin/history')
+        .then(producto => {
+
+            db.Historiales.create({
+                nombre: producto.nombre,
+                precio: producto.precio,
+                descuento: producto.descuento,
+                stock: producto.stock,
+                descripcion:producto.descripcion,
+                categoriasId: producto.categoriasId,
+                marcasId: producto.marcasId,
             })
-            .catch(error => res.send(error))
+            .then(historial => {
+
+                let imagen1 = db.HistorialImagenes.create({
+                    nombre: producto.imagenes[0].nombre,
+                    historialId: historial.id
+                })
+
+                Promise.all([imagen1])
+                .then(([imagen1])=>{
+                    db.Productos.destroy({
+                        where : {
+                            id : idParams
+                        }
+                    })
+                    .then(producto => {
+                        return res.redirect('/admin/history')
+                    })
+                })
+            })
+        })
+        .catch(error => res.send(error))
     },
     history: (req, res) => {
-
-        return res.render('admin/listar', {
-            productos: historial,
-            redirection: "list"
+        db.Historiales.findAll({
+            include : [{
+                all : true
+            }]
         })
+        .then(historial => {
+            /* return res.send(historial) */
+            return res.render('admin/list', {
+                productos: historial,
+                redirection: "list"
+            })
+        })
+
     },
     restore: (req, res) => {
         idParams = +req.params.id
