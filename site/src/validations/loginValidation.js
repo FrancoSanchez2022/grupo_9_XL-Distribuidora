@@ -26,6 +26,8 @@ module.exports = [
             return Promise.reject()
         }
     })
-    .catch(() => Promise.reject('El email o la contraseña no coincide'))
+    .catch(() =>{
+        return Promise.reject('El email o la contraseña no coincide')
+    })
 })
 ]

@@ -1,6 +1,6 @@
 'use strict';
 
-let listado = ["Detergentes","Desinfectantes","Insectisida","Otros"]
+let listado = ["Aromatizantes","Detergentes","Desinfectantes","Fragancias","Higiene dental","Insecticida","Limpieza","Otros"]
 
 let categorias = listado.map(categoria =>{
   

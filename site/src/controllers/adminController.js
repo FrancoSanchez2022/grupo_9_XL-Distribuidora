@@ -21,17 +21,16 @@ module.exports = {
             })
     },
     create: async (req, res) => {
-        try {
-            let categorias = db.Categorias.findAll()
-            let marcas = db.Marcas.findAll()
-            return res.render('admin/crear', {
+        let categorias = db.Categorias.findAll()
+        let marcas = db.Marcas.findAll()
+        Promise.all([categorias,marcas])
+        .then(([categorias,marcas]) => {
+            return res.render('admin/crear',{
                 categorias,
                 marcas
             })
-
-        } catch (error) {
-            return res.send(error)
-        }
+        })
+        .catch(error => res.send(error))
     },
     store: (req, res) => {
 
@@ -112,7 +111,7 @@ module.exports = {
         Promise.all([categorias, marcas, producto])
             .then(([categorias, marcas, producto]) => {
                 /* return res.send(imagenes) //Comprobar que esta llegando bien el elemento */
-                return res.render('admin/editarProducto', {
+                return res.render('admin/editar', {
                     producto,
                     categorias,
                     marcas
@@ -233,7 +232,7 @@ module.exports = {
         })
         .then(historial => {
             /* return res.send(historial) */
-            return res.render('admin/list', {
+            return res.render('admin/listar', {
                 productos: historial,
                 redirection: "list"
             })

@@ -36,7 +36,7 @@ module.exports = {
                 city: null,
                 streetname: null,
                 postalcode: null,
-                imagen: req.file.size > 1 ? req.file.filename : "default-avatar.png",
+                imagenes: req.file.size > 1 ? req.file.filename : "default-avatar.png",
                 rolId: 2
             })
             /*let usuarioNuevo = {
