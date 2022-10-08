@@ -2,9 +2,9 @@
 
 let listado = require('../../data/productos.json')
 
-let listadoCategorias = ["Detergentes","Desinfectantes","Insectisida","Otros"]
+let listadoCategorias = ["Aromatizantes","Detergentes","Desinfectantes","Fragancias","Higiene dental","Insecticida","Limpieza","Otros"]
 
-let marcas = ["Magistral","Ala","Ariel"]
+let marcas = ["Axe","Ala","Asepxia","Ariel","Ayudin","Cif","Colgate","Dove","Gilette","Higienol","Inoxy","Lisoform","LisoformZiploc","Listerine","Raid","Magistral","MrMusculo","Rexona","Off","Oral B","Otros","Virulana","Zorro3D"]
 
 let productos = []
 
@@ -15,7 +15,7 @@ listado.forEach(producto =>{
   let marca
   listadoCategorias.forEach((categoriaLista,index) => {
     if(categoriaLista === producto.categoria){
-      return categoria = index
+      return categoria = index + 1
     }
   });
   marcas.forEach((elemento,index) => {
@@ -29,8 +29,8 @@ listado.forEach(producto =>{
     precio: producto.precio,
     descuento: producto.descuento,
     descripcion: producto.descripcion,
-    categoriasId: 1,
-    marcasId: 1,
+    categoriasId: categoria,
+    marcasId: marca,
     createdAt: new Date,
     updatedAt: new Date
   }

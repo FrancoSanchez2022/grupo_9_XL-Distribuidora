@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       descripcion: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1000)
       },
       categoriasId: {
         type: Sequelize.INTEGER,
