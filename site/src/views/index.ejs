@@ -27,7 +27,7 @@
                                     </h3>
 
                                     <div>
-                                        <button><a href="/products/detail/<%=producto.id%>">Ver más</a></button>
+                                        <button><a href="/products/detail/<%=producto.nombre%>">Ver más</a></button>
                                     </div>
                                 </a>
                             </article>
@@ -58,7 +58,7 @@
                             <article>
 
                                 <a href="/products/detail/<%=producto.id%>">
-                                    <div class="producto"><img src="/img/productos/<%=producto.imagenes[0]%>"
+                                    <div class="producto"><img src="/img/productos/<%=producto.imagenes[0].nombre%>"
                                             alt="Esencia.png"></div>
                                     <h2 class="nombreP">
                                         <%=producto.nombre%>

@@ -19,11 +19,11 @@
                         <tr>
                             <td>
                                 <div class="imagen">
-                                    <img src="/img/productos/<%= productos[1].imagenes[0] %>" alt="producto1">
+                                    <img src="/img/productos/<%= producto.imagenes[0].nombre %>" alt="producto1">
                                 </div>
                             </td>
                             <td>
-                                <h4><%= productos[1].titulo %> </h4>
+                                <h4><%= producto[1].titulo %> </h4>
                             </td>
                             <td>
                                 <div class="boton2">
@@ -33,17 +33,17 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="precio"><%= productos[1].precio %> </span>
+                                <span class="precio"><%= producto[1].precio %> </span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="imagen">
-                                    <img src="/img/productos/<%= productos[2].imagenes[0] %>" alt="">
+                                    <img src="/img/productos/<%= producto[2].imagenes[0].nombre %>" alt="">
                                 </div>
                             </td>
                             <td>
-                                <h4><%= productos[2].titulo %></h4>
+                                <h4><%= producto[2].titulo %></h4>
                             </td>
                             <td>
                                 <div class="boton2">
@@ -53,7 +53,7 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="precio"><%= productos[2].precio %></span>
+                                <span class="precio"><%= producto[2].precio %></span>
                             </td>
                         </tr>
                     </tbody>
@@ -85,11 +85,11 @@
                                 <% for( let i = 0; i < 4; i++ ) { %>
                                     <article>
                                         <div class="contenedorRelacionado">
-                                            <img src="/img/productos/<%= productos[i].imagenes[0] %> " alt="">
+                                            <img src="/img/productos/<%= producto[i].imagenes[0].nombre %> " alt="">
                                         </div>
-                                        <h4 class="subproductos"><%= productos[i].titulo %> </h4>
-                                        <span class="subtitular"><%= productos[i].descripcion %></span>
-                                        <p class="subprecio"><%= productos[i].precio %></p>
+                                        <h4 class="subproductos"><%= producto[i].titulo %> </h4>
+                                        <span class="subtitular"><%= producto[i].descripcion %></span>
+                                        <p class="subprecio"><%= producto[i].precio %></p>
                                         <button class="subcarritos">Agregar al carrito</button>
             
                                     </article>

@@ -11,6 +11,7 @@ module.exports = {
         })
         Promise.all([productos, aside])
             .then(([productos, aside]) => {
+                
                 return res.render('index',
                     {
                         aside,

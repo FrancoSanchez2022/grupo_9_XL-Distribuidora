@@ -6,10 +6,7 @@ let Sequelize = require('sequelize')
 module.exports ={
     detail: (req,res) =>{
         let idParams= +req.params.id;
-        db.Productos.findOne({
-            where : {
-                id : idParams
-            },
+        db.Productos.findByPk(idParams,{
             include : [{
                 all : true
             }]
@@ -18,7 +15,7 @@ module.exports ={
 
             db.Productos.findAll({
                 where : {
-                    categoriaId: productos.categoriaId
+                    categoriasId: producto.categoriasId
                 },
                 limit : 4,
                 order : [[Sequelize.literal("RAND()")]],
@@ -33,19 +30,26 @@ module.exports ={
             })
         })})
         .catch(error => res.send(error))
-        let producto= productos.find(producto => {
-            return producto.id === idParams
-        } ) 
-        /* return res.send(productAencontrar) */
-        return res.render('productDetail',{producto, productos} )
-
     },
     cart: (req,res) =>{
-        return res.render('productCart',{productos,aside})
+        return res.render('productCart')
 
     },
     list: (req,res) =>{
-        return res.render('listProducts',{productos})
+        db.Productos.findAll({
+            include : [{
+                all : true
+        }]
+        })
+        .then(productos => {
+            let imagenes= [] 
+            productos.forEach(producto =>{
+                imagenes.push(producto.imagenes)
+            })
+            return res.render('listProducts',{productos})
+    })
+    .catch(error => res.send(error))
+
     },
     categoria : (req,res) => {
         let categoriaSeleccionada = req.params.categoria

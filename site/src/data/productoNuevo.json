@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "nombre": "Esencia de 50ml  ",
+      "stock": 10,
+      "precio": 1500,
+      "descuento": 10,
+      "descripcion": "Escencia de 50ml fabricada artesanalmente por la distribuidora XL contiene una dulce fragancia aroma a vainilla.",
+      "categoriasId": 1,
+      "marcasId": 1,
+      "createdAt": "2022-10-06T14:37:44.000Z",
+      "updatedAt": "2022-10-06T14:37:44.000Z",
+      "category": {
+        "id": 1,
+        "nombre": "Detergentes",
+        "createdAt": "2022-10-06T14:37:44.000Z",
+        "updatedAt": "2022-10-06T14:37:44.000Z"
+      },
+      "marca": {
+        "id": 1,
+        "nombre": "Esencia de 50ml  ",
+        "stock": 10,
+        "precio": 1500,
+        "descuento": 10,
+        "descripcion": "Escencia de 50ml fabricada artesanalmente por la distribuidora XL contiene una dulce fragancia aroma a vainilla.",
+        "categoriasId": 1,
+        "marcasId": 1,
+        "createdAt": "2022-10-06T14:37:44.000Z",
+        "updatedAt": "2022-10-06T14:37:44.000Z"
+      },
+      "imagenes": [
+        {
+          "id": 1,
+          "nombre": "XL1.jpeg",
+          "productosId": 1,
+          "createdAt": "2022-10-06T14:37:44.000Z",
+          "updatedAt": "2022-10-06T14:37:44.000Z",
+          "ProductosId": 1
+        }
+      ]
+    }
+]
