@@ -16,7 +16,6 @@ let usuarios = listado.map(usuario =>{
   calle: usuario.streetname,
   codigoPostal: usuario.postalcode,
   imagen: usuario.image,
-  
   rolId: usuario.rol === 'admin' ? 1 : 2,
   createdAt: new Date,
   updatedAt: new Date

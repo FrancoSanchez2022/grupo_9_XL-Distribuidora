@@ -13,23 +13,29 @@ module.exports = {
     },
     processRegister: (req, res) => {
         let errors = validationResult(req)
-
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'image',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
         if (errors.isEmpty()) {
-            let { name, lastname, email,pass /*phonenumbergenero,pais,provincia*/ } = req.body
+            let { name, lastname, email,pass,phonenumber,gender,country,state } = req.body
             
             db.Usuarios.create({
-                /*username: null,*/
+                username: null,
                 nombre: name,
                 apellido : lastname,
                 genero : gender,
                 email : email,
                 password: bcrypt.hashSync(pass, 12) ,
-                /*phonenumber,*/
+                phonenumber,
                 pais : country,
                 provincia: state,
-                /*city: null,
+                city: null,
                 streetname: null,
-                postalcode: null,*/
+                postalcode: null,
                 imagen: req.file.size > 1 ? req.file.filename : "default-avatar.png",
                 rolId: 2
             })
@@ -62,7 +68,7 @@ module.exports = {
             }
                return res.redirect('/')                
            })
-           .catch(errores => (errores)) 
+           .catch(errores => res.send(errores)) 
         } else {
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', dato))
             if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
@@ -129,8 +135,8 @@ module.exports = {
     logout: (req, res) => {
 
         req.session.destroy();
-        if(req.cookies.helloCookie){
-            res.cookie('helloCookie','',{maxAge: -1})
+        if(req.cookies.XL){
+            res.cookie('XL','',{maxAge: -1})
         }
         return res.redirect('/')
     },

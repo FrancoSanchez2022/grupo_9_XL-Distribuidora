@@ -1,6 +1,6 @@
 'use strict';
 
-let listado = ['Administrador','Usuario']
+let listado = ['admin','usuario']
 
 let rolesDeUsuarios = listado.map(rol =>{
   

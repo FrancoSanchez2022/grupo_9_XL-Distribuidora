@@ -1,7 +1,7 @@
-const express = require('express');
 const {list,create,edit,store,update,destroy,history,crash, restore} = require('../controllers/adminController')
-const upload = require('../middlewares/multerProducts');
+const express = require('express');
 const router = express.Router();
+const upload = require('../middlewares/multerProducts');
 /*const adminCheck = require('../middlewares/adminCheck')
 const productValidator = require('../validations/productsValidation')*/
 
