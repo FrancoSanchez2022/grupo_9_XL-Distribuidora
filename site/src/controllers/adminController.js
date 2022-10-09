@@ -205,7 +205,7 @@ module.exports = {
             .then(historial => {
 
                 let imagen1 = db.HistorialImagenes.create({
-                    nombre: producto.imagenes[0].nombre,
+                    nombre: producto.imagenes.nombre,
                     historialId: historial.id
                 })
 

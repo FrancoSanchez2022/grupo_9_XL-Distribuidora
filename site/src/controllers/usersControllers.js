@@ -36,7 +36,6 @@ module.exports = {
                 city: null,
                 streetname: null,
                 postalcode: null,
-                imagenes: req.file.size > 1 ? req.file.filename : "default-avatar.png",
                 rolId: 2
             })
             /*let usuarioNuevo = {
@@ -71,15 +70,12 @@ module.exports = {
            .catch(errores => res.send(errores)) 
         } else {
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', dato))
-            if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
-            fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', req.file.filename))
-            
             
             return res.render('users/register', {
                 errors: errors.mapped(),
                 old: req.body
             })
-        }}
+        }
     },
     login: (req, res) => {
         return res.render('users/login')

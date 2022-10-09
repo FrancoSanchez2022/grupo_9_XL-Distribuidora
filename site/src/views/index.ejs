@@ -58,7 +58,7 @@
                             <article>
 
                                 <a href="/products/detail/<%=producto.id%>">
-                                    <div class="producto"><img src="/img/productos/<%=producto.imagenes[0].nombre%>"
+                                    <div class="producto"><img src="/img/productos/<%= producto.imagenes.nombre %>"
                                             alt="Esencia.png"></div>
                                     <h2 class="nombreP">
                                         <%=producto.nombre%>

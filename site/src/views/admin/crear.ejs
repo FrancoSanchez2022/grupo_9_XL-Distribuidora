@@ -30,13 +30,6 @@
                             </p>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" type="text" name="marca" placeholder="Marca del Producto" id="brand" value="<%= locals.old && old.marca ? old.marca : null%>">
-                            <label class="form-label" for="brand">Marca del Producto</label>
-                            <% if (locals.errors && errors.marca) { %>
-                                <p class="span text-danger"><%= errors.marca.msg %></p>
-                            <% } %>
-                        </div>
-                        <div class="form-floating mb-3">
                             <input class="form-control" type="number" name="precio" placeholder="Precio del producto" id="price" value="<%= locals.old && old.precio ? old.precio : null%>">
                             <label class="form-label" for="price">Precio del producto</label>
                             <p class="span text-danger">
