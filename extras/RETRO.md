@@ -96,21 +96,19 @@
 # Retro Sprint 5
 
 ## Empezar a hacer:
-- 
-- 
+- Terminar tareas a tiempo
 
 ## Dejar de hacer:
-- 
-- 
+- Avisar tarde entrega o cómo venimos a los profes.
+- Entregar tarde el sprint.
 
 ## Hacer menos:
-- 
-- 
+- No estar al dia con las diferentes plataformas de trabajo.
+
 
 ## Seguir haciendo:
-- 
-- 
+- La cursada
+- Comunicación constante de cómo venimos y qué hacemos.
 
 ## Hacer más:
-- 
-- 
+- Mantener sitio de comunicación activo.
