@@ -1,70 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <!-- Boostrap -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<!-- Boostrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
 
 <%- include('../partials/head',{title:'XL - Editar'}) %>
 
     <body>
         <%- include('../partials/header') %>
-        <main>
-            <h1>Editando el producto</h1>
-    
-            <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="post" enctype="multipart/form-data">
-                <section>
-                    <div class="form-floating m-2">
-                        <input type="text" name="Marca" class="form-control" id="marca" placeholder="Marca" value="<%= producto.marca %> ">
-                        <label for="marca">Marca</label>
-                        <small>Obligatorio</small>
-                    </div>
-                    <div class="form-floating m-2">
-                        <input type="text" name="Titulo" class="form-control" id="Titulo" placeholder="Titulo" value="<%= producto.titulo %> ">
-                        <label for="Titulo">Titulo</label>
-                        <small>Obligatorio</small>
-                    </div>
-                    <div class="form-floating m-2">
-                        <select class="form-select" name="Categoria" id="floatingSelect" aria-label="Floating label select example">
+            <main>
+                <h1 class="text-center pt-5 pb-5">Editando el producto <%= producto.nombre %></h1>
 
-                        </select>
-                        <label for="floatingSelect">Categoria</label>
-                        <small>Obligatorio</small>
-                      </div>
-                    <div class="form-floating m-2">
-                        <input type="number" name="Precio" class="form-control" id="Precio" placeholder="Precio" value="<%=producto.precio%>">
-                        <label for="Precio m-2">Precio</label>
-                        <small>Obligatorio</small>
-                    </div>
-                    <div class="form-floating m-2">
-                        <input type="number" name="Descuento" class="form-control" id="Descuento" placeholder="Descuento" value="<%=producto.descuento%>">
-                        <label for="Descuento">Descuento</label>
-                    </div>
-                    <div class="form-floating m-2">
-                        <input type="number" name="Stock" class="form-control" id="Stock" placeholder="Stock" value="<%=producto.stock%>">
-                        <label for="Stock">Stock</label>
-                    </div>
-                    
-                    <div class="form-floating m-2">
-                        <textarea class="form-control h-100" name="Descripcion" placeholder="Por favor inserte la descripcion del producto"
-                            id="floatingTextarea"><%= producto.descripcion %></textarea>
-                        <label for="floatingTextarea">Descripcion</label>
-                        <small>Obligatorio</small>
-                    </div>
-    
-                    <div class="m-2">
-                        <label for="formFileMultiple" name="imagen" class="form-label">Subir imagenes del producto</label>
-                        <input class="form-control" type="file" id="formFileMultiple" multiple>
-                        <small>Obligatorio</small>
-                    </div>
-                    
-                    <div class="button">
-                        <button class="btn btn-outline-success" type="submit">Editar Producto</button>
-                    </div>
-                    
-                </section>
-            </form>
-        </main>
+                <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+                    <section>
+                        <div class="form-floating m-2">
+                            <input type="text" name="Titulo" class="form-control" id="Titulo" placeholder="Titulo"
+                                value="<%= producto.nombre %> ">
+                            <label for="Titulo">Titulo</label>
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="form-floating m-2">
+                            <input type="number" name="Precio" class="form-control" id="Precio" placeholder="Precio"
+                                value="<%=producto.precio%>">
+                            <label for="Precio m-2">Precio</label>
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="form-floating m-2">
+                            <input type="number" name="Descuento" class="form-control" id="Descuento"
+                                placeholder="Descuento" value="<%=producto.descuento%>">
+                            <label for="Descuento">Descuento</label>
+                        </div>
+                        <div class="form-floating m-2">
+                            <input type="number" name="Stock" class="form-control" id="Stock" placeholder="Stock"
+                                value="<%=producto.stock%>">
+                            <label for="Stock">Stock</label>
+                        </div>
+
+                        <div class="form-floating m-2">
+                            <textarea class="form-control h-100" name="Descripcion"
+                                placeholder="Por favor inserte la descripcion del producto"
+                                id="floatingTextarea"><%= producto.descripcion %></textarea>
+                            <label for="floatingTextarea">Descripción</label>
+                            <small>Obligatorio</small>
+                        </div>
+                        <!-- Imagen -->
+
+                        <div class="col col-5">
+                            <label class="selectImg" for="product-img">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
+                                    src="/images/productos/<%= producto.imagenes[0].nombre%>" alt="">
+                                <div class="imgHover">
+                                    <p class="text-center">Selecionar imagen del producto</p>
+                                </div>
+                            </label>
+                            <div class="form-admin__box inactivo">
+                                <input class="d-none" id="product-img" type="file" name="imagen"
+                                    placeholder="Imagen del Producto" accept="image/*" multiple>
+                            </div>
+                        </div>
+                        <!-- Selects  -->
+                        <div class="container m-3">
+                            <div class="row justify-content-around align-items-center">
+                                <div class="col col-4">
+                                    <h3 class="text-center">Categorias</h3>
+                                    <select class="form-select" name="categoria" id="floatingSelect"
+                                        aria-label="Floating label select example">
+                                        <% if (locals.errors && old.categoria) { %>
+                                            <option hidden value="">Selecciona una opcion</option>
+                                            <option <%= old.categoria == "1" ? "selected" : null %>  value="Perfumes">Aromatizantes</option>
+                                            <option <%= old.categoria == "2" ? "selected" : null %>   value="Aromatizantes">Detergentes</option>
+                                            <option <%= old.categoria == "3" ? "selected" : null %>   value="Limpieza">Desinfectantes</option>
+                                            <option <%= old.categoria == "4" ? "selected" : null %>   value="Limpieza bucal">Fragancias</option>
+                                            <option <%= old.categoria == "5" ? "selected" : null %>   value="Limpieza bucal">Higiene dental</option>
+                                            <option <%= old.categoria == "6" ? "selected" : null %>   value="Limpieza bucal">Insecticida</option>
+                                            <option <%= old.categoria == "7" ? "selected" : null %>   value="Limpieza bucal">Limpieza</option>
+                                            <option <%= old.categoria == "8" ? "selected" : null %>   value="Limpieza bucal">Otros</option>
+                                            <% }else{ %>
+                                                <option selected hidden value="">Selecciona una opcion</option>
+                                                <% categorias.forEach(categoria=> { %>
+                                                    <option value="<%= categoria.id %>"
+                                                        <%=producto.categoriasId===categoria.id ? "selected" : null %>>
+                                                        <%= categoria.nombre %>
+                                                    </option>
+                                                    <% }) %>
+                                                        <% } %>
+                                    </select>
+                                    <% if (locals.errors && errors.categoria) { %>
+                                        <p class="span text-danger">
+                                            <%= errors.categoria.msg %>
+                                        </p>
+                                        <% } %>
+                                </div>
+                                <div class="col col-4">
+                                    <h3 class="text-center">Marcas</h3>
+                                    <select class="form-select" name="marca" id="floatingSelect"
+                                        aria-label="Floating label select example">
+                                        <% if (locals.errors && old.marca) { %>
+                                            <option hidden value="">Selecciona una opcion</option>
+                                            <% marcas.forEach(marca=> { %>
+                                                <% if (marca.id==old.marca) { %>
+                                                    <option value="<%= marca.id %>" selected>
+                                                        <%= marca.nombre %>
+                                                    </option>
+                                                    <% }else{ %>
+                                                        <option value="<%= marca.id %>">
+                                                            <%= marca.nombre %>
+                                                        </option>
+                                                        <% } %>
+                                                            <option value="<%= marca.id %>">
+                                                                <%= marca.nombre %>
+                                                            </option>
+                                                            <% }) %>
+                                                                <% }else{ %>
+                                                                    <option selected hidden value="">Selecciona una
+                                                                        opcion</option>
+                                                                    <% marcas.forEach(marca=> { %>
+                                                                        <option value="<%= marca.id %>"
+                                                                            <%=producto.marcasId===marca.id ? "selected"
+                                                                            : null %>><%= marca.nombre %>
+                                                                        </option>
+                                                                        <% }) %>
+                                                                            <% } %>
+                                    </select>
+                                    <% if (locals.errors && errors.marca) { %>
+                                        <p class="span text-danger">
+                                            <%= errors.marca.msg %>
+                                        </p>
+                                        <% } %>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="button">
+                            <button class="btn btn-outline-success" type="submit">Editar Producto</button>
+                        </div>
+
+                    </section>
+                </form>
+            </main>
             <%- include('../partials/footer') %>
     </body>
 
