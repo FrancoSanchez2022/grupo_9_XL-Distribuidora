@@ -2,7 +2,7 @@
 
 let listado = require('../../data/productos.json')
 
-let listadoCategorias = ["Aromatizantes","Detergentes","Desinfectantes","Fragancias","Higiene dental","Insecticida","Limpieza","Otros"]
+let listadoCategorias = ["Aromatizantes","Detergentes","Desinfectantes","Fragancias","Higiene dental","Higiene personal","Insecticida","Limpieza","Repelente","Otros"]
 
 let marcas = ["Axe","Ala","Asepxia","Ariel","Ayudin","Cif","Colgate","Dove","Gilette","Higienol","Inoxy","Lisoform","LisoformZiploc","Listerine","Raid","Magistral","MrMusculo","Rexona","Off","Oral B","Otros","Virulana","Zorro3D"]
 
@@ -23,14 +23,17 @@ listado.forEach(producto =>{
       return marca = index + 1
     }
   });
+    function random(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
   let nuevo= {
     nombre: producto.titulo,
     stock: producto.stock,
     precio: producto.precio,
     descuento: producto.descuento,
     descripcion: producto.descripcion,
-    categoriasId: categoria,
-    marcasId: marca,
+    categoriasId: random(1,8),
+    marcasId: random(1,23),
     createdAt: new Date,
     updatedAt: new Date
   }
