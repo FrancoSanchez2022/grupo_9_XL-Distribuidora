@@ -14,7 +14,7 @@
         "streetname": "Dwight",
         "postalcode": "94207",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 2,
@@ -31,7 +31,7 @@
         "streetname": "School",
         "postalcode": "5196",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 3,
@@ -48,7 +48,7 @@
         "streetname": "Northport",
         "postalcode": "93429",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 4,
@@ -65,7 +65,7 @@
         "streetname": "Canary",
         "postalcode": "056478",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 5,
@@ -82,7 +82,7 @@
         "streetname": "Westridge",
         "postalcode": "250437",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 6,
@@ -99,7 +99,7 @@
         "streetname": "Old Gate",
         "postalcode": "94807",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 7,
@@ -116,7 +116,7 @@
         "streetname": "Vidon",
         "postalcode": "87445",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 8,
@@ -133,7 +133,7 @@
         "streetname": "Farwell",
         "postalcode": "94324",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 9,
@@ -150,7 +150,7 @@
         "streetname": "Bayside",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 10,
@@ -167,7 +167,7 @@
         "streetname": "Laurel",
         "postalcode": "39204",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 11,
@@ -184,7 +184,7 @@
         "streetname": "Norway Maple",
         "postalcode": "31704",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 12,
@@ -201,7 +201,7 @@
         "streetname": "Warbler",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 13,
@@ -218,7 +218,7 @@
         "streetname": "Straubel",
         "postalcode": "80045",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 14,
@@ -235,7 +235,7 @@
         "streetname": "Butterfield",
         "postalcode": "63169",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 15,
@@ -252,7 +252,7 @@
         "streetname": "Miller",
         "postalcode": "9400",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 16,
@@ -269,7 +269,7 @@
         "streetname": "Farwell",
         "postalcode": "520518",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 17,
@@ -286,7 +286,7 @@
         "streetname": "Lien",
         "postalcode": "56944",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 18,
@@ -303,7 +303,7 @@
         "streetname": "Melvin",
         "postalcode": "84125",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 19,
@@ -320,7 +320,7 @@
         "streetname": "Everett",
         "postalcode": "63143",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 20,
@@ -337,7 +337,7 @@
         "streetname": "Bayside",
         "postalcode": "71836",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 21,
@@ -354,7 +354,7 @@
         "streetname": "Vermont",
         "postalcode": "152867",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 22,
@@ -371,7 +371,7 @@
         "streetname": "East",
         "postalcode": "45147",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 23,
@@ -388,7 +388,7 @@
         "streetname": "Brickson Park",
         "postalcode": "15240",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 24,
@@ -405,7 +405,7 @@
         "streetname": "Hazelcrest",
         "postalcode": "8328",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 25,
@@ -422,7 +422,7 @@
         "streetname": "Roxbury",
         "postalcode": "111711",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 26,
@@ -439,7 +439,7 @@
         "streetname": "Eastwood",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 27,
@@ -456,7 +456,7 @@
         "streetname": "Beilfuss",
         "postalcode": "5174",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 28,
@@ -473,7 +473,7 @@
         "streetname": "Reinke",
         "postalcode": "151247",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 29,
@@ -490,7 +490,7 @@
         "streetname": "Gina",
         "postalcode": "3165",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 30,
@@ -507,7 +507,7 @@
         "streetname": "Warbler",
         "postalcode": "50625",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 31,
@@ -524,7 +524,7 @@
         "streetname": "Buhler",
         "postalcode": "053467",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 32,
@@ -541,7 +541,7 @@
         "streetname": "Garrison",
         "postalcode": "80279",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 33,
@@ -558,7 +558,7 @@
         "streetname": "Hoard",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 34,
@@ -575,7 +575,7 @@
         "streetname": "Susan",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 35,
@@ -592,7 +592,7 @@
         "streetname": "Vermont",
         "postalcode": "22156",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 36,
@@ -609,7 +609,7 @@
         "streetname": "Lighthouse Bay",
         "postalcode": "477047",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 37,
@@ -626,7 +626,7 @@
         "streetname": "Logan",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 38,
@@ -643,7 +643,7 @@
         "streetname": "Tomscot",
         "postalcode": "632067",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 39,
@@ -660,7 +660,7 @@
         "streetname": "Crescent Oaks",
         "postalcode": "4162",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 40,
@@ -677,7 +677,7 @@
         "streetname": "Caliangt",
         "postalcode": "95405",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 41,
@@ -694,7 +694,7 @@
         "streetname": "Tennessee",
         "postalcode": "02912",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 42,
@@ -711,7 +711,7 @@
         "streetname": "Merry",
         "postalcode": "77260",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 43,
@@ -728,7 +728,7 @@
         "streetname": "Texas",
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 44,
@@ -745,7 +745,7 @@
         "streetname": "Rigney",
         "postalcode": "520006",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 45,
@@ -762,10 +762,44 @@
         "streetname": "David",
         "postalcode": "98148",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
         "id": 46,
+        "username": "aarnoult19",
+        "name": "Arnoldo",
+        "lastname": "Arnoult",
+        "gender": "Male",
+        "email": "aarnoult19@rediff.com",
+        "pass": "IXLPk91QY",
+        "phonenumber": "+52 (115) 399-0340",
+        "country": "Mexico",
+        "state": "Tamaulipas",
+        "city": "Buenavista",
+        "streetname": "Wayridge",
+        "postalcode": "88815",
+        "image": "default-avatar.png",
+        "rol": "usuario"
+    },
+    {
+        "id": 47,
+        "username": "eilbert1a",
+        "name": "Ethelda",
+        "lastname": "Ilbert",
+        "gender": "Female",
+        "email": "eilbert1a@oakley.com",
+        "pass": "z0glOzyZO",
+        "phonenumber": "+57 (215) 672-5684",
+        "country": "Colombia",
+        "state": null,
+        "city": "Íquira",
+        "streetname": "Barby",
+        "postalcode": "412068",
+        "image": "default-avatar.png",
+        "rol": "usuario"
+    },
+    {
+        "id": 48,
         "username": "cdebruijn1b",
         "name": "Corri",
         "lastname": "De Bruijn",
@@ -779,10 +813,10 @@
         "streetname": "American Ash",
         "postalcode": "89714",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
-        "id": 47,
+        "id": 49,
         "username": "bmcjury1c",
         "name": "Bernhard",
         "lastname": "McJury",
@@ -796,10 +830,10 @@
         "streetname": "Brickson Park",
         "postalcode": "762008",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
-        "id": 48,
+        "id": 50,
         "username": "hclover1d",
         "name": "Hewe",
         "lastname": "Clover",
@@ -813,16 +847,16 @@
         "streetname": "Shelley",
         "postalcode": "77713",
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     },
     {
-        "id": 49,
+        "id": 51,
         "username": null,
         "name": "Facuu",
         "lastname": "Olave",
         "gender": null,
         "email": "facuolave98@gmail.com",
-        "pass": "$2a$10$FVcwHOZMntMr75kjJ4Xsne5xfIvkD9tMV2QZghscBwKOOYZ6jdqE2",
+        "pass": "digitalhouse2022",
         "phonenumber": "+5492994219044",
         "country": null,
         "state": null,
@@ -830,24 +864,24 @@
         "streetname": null,
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Admin"
+        "rol": "admin"
     },
     {
-        "id": 50,
+        "id": 52,
         "username": null,
-        "name": "leon",
-        "lastname": "martinex",
+        "name": "Franco",
+        "lastname": "Sanchez",
         "gender": null,
-        "email": "martinexquis@gmail.com",
-        "pass": "$2a$10$BR7Lfhz5odDCQlubHo.rp.SkvoNYhUO8kP8Pc8dYFjm/7.yKiPbw6",
-        "phonenumber": "1125679888",
+        "email": "fraannsanchez40@gmail.com",
+        "pass": "minumes44518709",
+        "phonenumber": "01125706839",
         "country": null,
         "state": null,
         "city": null,
         "streetname": null,
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Admin"
+        "rol": "admin"
     },
     {
         "id": 51,
@@ -864,6 +898,6 @@
         "streetname": null,
         "postalcode": null,
         "image": "default-avatar.png",
-        "rol": "Usuario"
+        "rol": "usuario"
     }
 ]

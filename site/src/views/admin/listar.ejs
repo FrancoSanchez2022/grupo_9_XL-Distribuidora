@@ -31,7 +31,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Marca</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">stock</th>
+                    <th scope="col">Stock</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Descuento</th>
                     <th scope="col">Acción</th>
@@ -42,8 +42,8 @@
                       <tr>
                           
                             <th scope="row"><a href="/admin/edit/<%= producto.id %>"><%= producto.id %> </a></th>
-                            <td><a href="/admin/edit/<%= producto.id %>"><%= producto.marca %></a></td>
-                            <td ><a href="/admin/edit/<%= producto.id %>"><%= producto.titulo %></a></td>
+                            <td><a href="/admin/edit/<%= producto.id %>"><%= producto.marca.nombre %></a></td>
+                            <td><a href="/admin/edit/<%= producto.id %>"><%= producto.nombre %></a></td>
                             <td><a href="/admin/edit/<%= producto.id %> "><%= producto.stock %></a></td>
                             <td><a href="/admin/edit/<%= producto.id %> "><%= producto.precio %></a></td>
                             <td><a href="/admin/edit/<%= producto.id %> "><%= producto.descuento %></a></td>

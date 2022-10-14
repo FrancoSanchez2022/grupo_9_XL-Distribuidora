@@ -8,10 +8,10 @@
                 <%- include('./partials/breadcrumbs',{página:'Detail'}) %> 
                 <section class="producto">
                     <div class="imagen">
-                        <img src="/img/productos/<%= producto.imagenes[0] %>" alt="Imagen producto">
+                        <img src="/img/productos/<%= producto.imagenes[0].nombre %>" alt="Imagen producto">
                     </div>
                     <div class="bloqueDetalle">
-                        <h3 class="titular"><%= producto.titulo%> </h3>
+                        <h3 class="titular"><%= producto.nombre%> </h3>
                         <p class="subprecio"><%= producto.precio %></p>
                         <div class="boton">
                             <input type="button" value="-">
@@ -30,19 +30,18 @@
                     </div>
                     <h3 class="tituloRelacionado">Productos relacionados</h3>
                     <div class="cajaRelacionada">
-
-                        <% for( let i = 0; i < 4; i++ ) { %>
+                        <% productos.forEach(producto => { %> 
                                 <article>
                                     <div class="contenedorRelacionado">
-                                        <img src="/img/productos/<%= productos[i].imagenes[0] %> " alt="">
+                                        <img src="/img/productos/<%= producto.imagenes[0].nombre %> " alt="">
                                     </div>
-                                    <h4 class="subproductos"><%= productos[i].titulo %> </h4>
-                                    <span class="subtitular"><%= productos[i].descripcion %></span>
-                                    <p class="subprecio"><%= productos[i].precio %></p>
+                                    <h4 class="subproductos"><%= producto.nombre %> </h4>
+                                    <span class="subtitular"><%= producto.descripcion %></span>
+                                    <p class="subprecio"><%= productos.precio %></p>
                                     <button class="subcarritos">Agregar al carrito</button>
         
                                 </article>
-                        <% } %>
+                        <% }) %>
 
                     </div>
                 </section>

@@ -30,13 +30,6 @@
                             </p>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" type="text" name="marca" placeholder="Marca del Producto" id="brand" value="<%= locals.old && old.marca ? old.marca : null%>">
-                            <label class="form-label" for="brand">Marca del Producto</label>
-                            <% if (locals.errors && errors.marca) { %>
-                                <p class="span text-danger"><%= errors.marca.msg %></p>
-                            <% } %>
-                        </div>
-                        <div class="form-floating mb-3">
                             <input class="form-control" type="number" name="precio" placeholder="Precio del producto" id="price" value="<%= locals.old && old.precio ? old.precio : null%>">
                             <label class="form-label" for="price">Precio del producto</label>
                             <p class="span text-danger">
@@ -82,54 +75,6 @@
                                                 </div>
                                             </div>
 
-                                            <!-- Imagen 2 -->
-                                            <div class="col col-5">
-                                                <label class="selectImg" for="product-sub-img-1">
-                                                    <img id="sub-img-preview-1"
-                                                        class="img-fluid img-thumbnail  imagen-height rounded"
-                                                        src="/img/productos/default-image.png" alt="">
-                                                    <div class="imgHover">
-                                                        <p class="text-center">Selecionar Imagen 2</p>
-                                                    </div>
-                                                </label>
-                                                <div class="form_desciption__box inactivo">
-                                                    <input class="d-none" id="product-sub-img-1" type="file"
-                                                        name="imagen" placeholder="Imagen del Producto">
-                                                </div>
-                                            </div>
-
-                                            <!-- Imagen 3 -->
-                                            <div class="col col-5">
-                                                <label class="selectImg" for="product-sub-img-2">
-                                                    <img id="sub-img-preview-2"
-                                                        class="img-fluid img-thumbnail imagen-height rounded"
-                                                        src="/img/productos/default-image.png" height="auto" alt="">
-                                                    <div class="imgHover">
-                                                        <p class="text-center">Selecionar Imagen 3</p>
-                                                    </div>
-                                                </label>
-                                                <div class="form_desciption__box inactivo">
-                                                    <input class="d-none " id="product-sub-img-2" type="file"
-                                                        name="imagen" placeholder="Imagen del Producto">
-                                                </div>
-                                            </div>
-
-                                            <!-- Imagen 4 -->
-                                            <div class="col col-5">
-                                                <label class="selectImg" for="product-sub-img-3">
-                                                    <img id="sub-img-preview-3"
-                                                        class="img-fluid img-thumbnail imagen-height rounded"
-                                                        src="/img/productos/default-image.png" alt="">
-                                                    <div class="imgHover">
-                                                        <p class="text-center">Selecionar Imagen 4</p>
-                                                    </div>
-                                                </label>
-                                                <div class="form_desciption__box inactivo">
-                                                    <input class="d-none" id="product-sub-img-3" type="file"
-                                                        name="imagen" placeholder="Imagen del Producto">
-                                                </div>
-                                            </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -155,30 +100,55 @@
                                             aria-label="Floating label select example">
                                             <% if (locals.errors && old.categoria) { %>
                                                 <option hidden value="">Selecciona una opcion</option>
-                                                <option <%= old.categoria === "Perfumes" ? "selected" : null %>  value="Smartphones">Perfumes</option>
-                                                <option <%= old.categoria === "Aromatizantes" ? "selected" : null %>   value="Tablets">Aromatizantes</option>
-                                                <option <%= old.categoria === "Limpieza" ? "selected" : null %>   value="Notebooks">Limpieza</option>
-                                                <option <%= old.categoria === "Limpieza bucal" ? "selected" : null %>   value="Notebooks">Limpieza bucal</option>
+                                                <option <%= old.categoria == "1" ? "selected" : null %>  value="Perfumes">Aromatizantes</option>
+                                                <option <%= old.categoria == "2" ? "selected" : null %>   value="Aromatizantes">Detergentes</option>
+                                                <option <%= old.categoria == "3" ? "selected" : null %>   value="Limpieza">Desinfectantes</option>
+                                                <option <%= old.categoria == "4" ? "selected" : null %>   value="Limpieza bucal">Fragancias</option>
+                                                <option <%= old.categoria == "5" ? "selected" : null %>   value="Limpieza bucal">Higiene dental</option>
+                                                <option <%= old.categoria == "6" ? "selected" : null %>   value="Limpieza bucal">Insecticida</option>
+                                                <option <%= old.categoria == "7" ? "selected" : null %>   value="Limpieza bucal">Limpieza</option>
+                                                <option <%= old.categoria == "8" ? "selected" : null %>   value="Limpieza bucal">Otros</option>
                                             <% }else{ %>
                                                 <option selected hidden value="">Selecciona una opcion</option>
-                                                <option value="Perfumes">Perfumes</option>
-                                                <option value="Aromatizantes">Aromatizantes</option>
-                                                <option value="Limpieza">Limpieza</option>
-                                                <option value="Limpieza bucal">Limpieza Bucal</option>
+                                                <% categorias.forEach(categoria => { %>
+                                                    <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                                                <% }) %>
                                             <% } %> 
                                           </select>
-                                          <p class="span text-danger">
-                                            <%= locals.errors && errors.categoria ? errors.categoria.msg : null %>
-                                        </p>
+                                          <% if (locals.errors && errors.categoria) { %>
+                                            <p class="span text-danger"><%=  errors.categoria.msg %></p>
+                                        <% } %>
                                     </div>
-
+                                    <div class="col col-4">
+                                        <h3 class="text-center">Marcas</h3>
+                                        <select class="form-select" name="marca" id="floatingSelect" aria-label="Floating label select example">
+                                            <% if (locals.errors && old.marca) { %>
+                                                <option hidden value="">Selecciona una opcion</option>
+                                                <% marcas.forEach(marca => { %>
+                                                    <% if (marca.id == old.marca) { %>
+                                                        <option value="<%= marca.id %>" selected><%= marca.nombre %></option>
+                                                    <% }else{ %>
+                                                        <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                                    <% } %>
+                                                    <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                                <% }) %>
+                                            <% }else{ %>
+                                                <option selected hidden value="">Selecciona una opcion</option>
+                                                <% marcas.forEach(marca => { %>
+                                                    <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                                <% }) %>
+                                            <% } %> 
+                                        </select>
+                                        <% if (locals.errors && errors.marca) { %>
+                                            <p class="span text-danger"><%= errors.marca.msg %></p>
+                                        <% } %>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-floating m-2">
                                 <textarea class="form-control" name="Descripcion" placeholder="Por favor inserte la descripcion del producto"
                                     id="floatingTextarea"></textarea>
                                 <label for="floatingTextarea">Descripción</label>
-                                <small>Obligatorio</small>
                             </div>
             
 

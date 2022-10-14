@@ -7,7 +7,8 @@
         <%- include('../partials/header') %>
             <main>
                 <h1>
-                    <%= `${locals.userLogin.rol} ${locals.userLogin.name} ${locals.userLogin.lastname}` %>
+        <img src="/img/users/<%=locals.userLogin.image %> " alt="">
+        <%= `${locals.userLogin.rol == 1 ? 'admin' : 'usuario'} ${locals.userLogin.nombre}` %>
                 </h1>
                 <%- include('../partials/breadcrumbs',{página:'Perfil'}) %>
                     <form class="form-cambiar-img" action="/users/profile?_method=PUT" method="post"
@@ -27,27 +28,27 @@
                     <h3>Mis Datos</h3>
                     <section class="card">
                         <ul>
-                            <li>Nombre de Usuario: <%= locals.userLogin.username %>
+                            <li>Nombre de Usuario: <%= locals.userLogin.usuario %>
                             </li>
-                            <li>Nombre: <%= locals.userLogin.name %>
+                            <li>Nombre: <%= locals.userLogin.nombre %>
                             </li>
-                            <li>Apellido: <%= locals.userLogin.lastname %>
+                            <li>Apellido: <%= locals.userLogin.apellido %>
                             </li>
                             <li>Email: <%= locals.userLogin.email %>
                             </li>
-                            <li>Género: <%= locals.userLogin.gender %>
+                            <li>Género: <%= locals.userLogin.genero %>
                             </li>
-                            <li>Teléfono: <%= locals.userLogin.phonenumber %>
+                            <li>Teléfono: <%= locals.userLogin.telefono %>
                             </li>
-                            <li>País: <%= locals.userLogin.country %>
+                            <li>País: <%= locals.userLogin.pais%>
                             </li>
-                            <li>Estádo: <%= locals.userLogin.state %>
+                            <li>Estádo: <%= locals.userLogin.provincia %>
                             </li>
-                            <li>Ciudad: <%= locals.userLogin.city %>
+                            <li>Ciudad: <%= locals.userLogin.ciudad %>
                             </li>
-                            <li>Calle: <%= locals.userLogin.streetname %>
+                            <li>Calle: <%= locals.userLogin.calle %>
                             </li>
-                            <li>Código postal: <%= locals.userLogin.postalCode %>
+                            <li>Código postal: <%= locals.userLogin.codigoPostal %>
                             </li>
                         </ul>
                     </section>

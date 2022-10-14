@@ -14,15 +14,18 @@ header input {
     padding: 10px;
     margin: 5px;
 }
-header .top .form-search .formulario{
+
+header .top .form-search .formulario {
     display: flex;
     flex-wrap: nowrap;
 }
-header .top .form-search button{
+
+header .top .form-search button {
     background-color: var(--colorHeader);
     border: none
 }
-header .top .lupa i{
+
+header .top .lupa i {
     border: 1px solid black;
     border-radius: 50%;
     background-color: var(--colorProfundidad);
@@ -42,8 +45,6 @@ header img {
     background-color: white;
     width: 78px;
 }
-
-
 
 header .burger label {
     background-color: var(--colorProfundidad);
@@ -115,7 +116,8 @@ header .burger nav ul li:hover {
     border: 2px solid var(--colorProfundidad);
     background-color: var(--colorHeader)
 }
-header .burger nav ul .carritoli{
+
+header .burger nav ul .carritoli {
     display: none;
 }
 
@@ -157,9 +159,6 @@ header .burger nav a:hover {
         background-color: white;
         width: 78px;
     }
-
-
-
 
     header .burger label {
         background-color: var(--colorProfundidad);
@@ -275,7 +274,7 @@ header .burger nav a:hover {
 }
 
 @media (min-width:680px) {
-    header input{
+    header input {
         width: 80%;
     }
 }
@@ -296,7 +295,6 @@ header .burger nav a:hover {
     }
 
     header .top {
-
         width: 10%;
     }
 
@@ -324,7 +322,6 @@ header .burger nav a:hover {
         display: none;
     }
 
-
     header .burger nav {
         display: flex;
         flex-wrap: nowrap;
@@ -339,7 +336,6 @@ header .burger nav a:hover {
     }
 
     header .burger nav ul.menu {
-
         flex-direction: row;
         justify-content: flex-start;
 
@@ -347,7 +343,6 @@ header .burger nav a:hover {
 
     header .burger nav ul.user {
         flex-direction: row;
-
         justify-content: flex-end;
 
     }
@@ -359,7 +354,8 @@ header .burger nav a:hover {
         border: 1px solid var(--colorButton);
         border-radius: 10px;
     }
-    header .burger nav ul .carritoli{
+
+    header .burger nav ul .carritoli {
         display: block;
     }
 
@@ -388,8 +384,6 @@ header .burger nav a:hover {
         margin-left: 30px;
     }
 
-
-
     header .burger nav ul li {
         list-style: none;
         margin: none;
@@ -401,10 +395,6 @@ header .burger nav a:hover {
     header .burger nav ul li a {
         font-size: 12px;
     }
-
-
-
-
 }
 
 @media (min-width:1240px) {
@@ -427,7 +417,6 @@ header .burger nav a:hover {
         margin-left: 35px;
     }
 
-
     header .burger nav ul li {
         list-style: none;
         margin: 5px;
@@ -439,10 +428,6 @@ header .burger nav a:hover {
     header .burger nav ul li a {
         font-size: 13px;
     }
-
-
-
-
 }
 
 @media (min-width:1440px) {
@@ -464,8 +449,6 @@ header .burger nav a:hover {
         margin-left: 0;
     }
 
-
-
     header .burger nav ul li {
         list-style: none;
         margin: 5px;
@@ -477,8 +460,4 @@ header .burger nav a:hover {
     header .burger nav ul li a {
         font-size: 20px;
     }
-
-
-
-
 }
