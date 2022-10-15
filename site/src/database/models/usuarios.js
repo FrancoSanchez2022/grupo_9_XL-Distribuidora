@@ -17,17 +17,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Usuarios.init({
+    nombreUsuario: DataTypes.STRING,
     nombre: DataTypes.STRING,
     apellido: DataTypes.STRING,
-    genero: DataTypes.STRING,
+    género: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     pais: DataTypes.STRING,
-    provincia: DataTypes.STRING,
+    estado_provincia: DataTypes.STRING,
     ciudad: DataTypes.STRING,
-    calle: DataTypes.INTEGER,
-    codigoPostal: DataTypes.INTEGER,
-    telefono: DataTypes.STRING,
+    calle: DataTypes.STRING,
+    códigoPostal: DataTypes.INTEGER,
+    teléfono: DataTypes.STRING,
     imagen: DataTypes.STRING,
     rolId: DataTypes.INTEGER
 
