@@ -3,9 +3,7 @@ const path = require('path')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const db = require('../database/models')
-/*const usuarios = require('../data/users.json')
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/users.json')
-    , JSON.stringify(dato, null, 4), 'utf-8')*/
+const { devNull } = require('os')
 
 module.exports = {
     register: (req, res) => {
@@ -21,48 +19,40 @@ module.exports = {
             errors.errors.push(imagen)
         }
         if (errors.isEmpty()) {
-            let { name, lastname, email,pass,phonenumber,gender,country,state } = req.body
+            let { name, lastname, email,pass,phonenumber} = req.body
             
             db.Usuarios.create({
-                username: null,
+                nombreUsuario: null,
                 nombre: name,
                 apellido : lastname,
-                genero : gender,
+                género : null,
                 email : email,
                 password: bcrypt.hashSync(pass, 12) ,
-                phonenumber,
-                pais : country,
-                provincia: state,
-                city: null,
-                streetname: null,
-                postalcode: null,
-                rolId: 2
+                teléfono: phonenumber,
+                pais: null,
+                estado_provincia: null,
+                ciudad: null,
+                calle: null,
+                códigoPostal: null,
+                rolId: 2,
+                imagen: "default-avatar.png"
             })
-            /*let usuarioNuevo = {
-                id:usuarios[usuarios.length - 1].id + 1,
-                username: null,
-                name,
-                lastname,
-                gender: null,
-                email,
-                pass: bcrypt.hashSync(pass, 12),
-                phonenumber,
-                country: null,
-                state: null,
-                city: null,
-                streetname: null,
-                postalcode: null,
-                image: "default-avatar.png",
-                rol: "Usuario"
-            }
-            usuarios.push(usuarioNuevo)
-            guardar(usuarios)
-            */
+
            .then(usuario => {
             req.session.userLogin = {
                 id : usuario.id,
-                nombre : usuario.nombre,
-                image : usuario.imagen,
+                nombreUsuario: usuario.nombreUsuario,
+                nombre: usuario.nombre,
+                email: usuario.email,
+                apellido: usuario.apellido,
+                género: usuario.género,
+                teléfono: usuario.teléfono,
+                pais: usuario.pais,
+                estado_provincia: usuario.estado_provincia,
+                ciudad: usuario.ciudad,
+                calle: usuario.calle,
+                códigoPostal: usuario.códigoPostal,
+                imagen : usuario.imagen,
                 rol : usuario.rolId
             }
                return res.redirect('/')                
@@ -94,8 +84,18 @@ module.exports = {
             .then(usuario => {
                 req.session.userLogin = {
                     id : usuario.id,
-                    nombre : usuario.nombre,
-                    image : usuario.imagen,
+                    nombreUsuario: usuario.nombreUsuario,
+                    nombre: usuario.nombre,
+                    email: usuario.email,
+                    apellido: usuario.apellido,
+                    género: usuario.género,
+                    teléfono: usuario.teléfono,
+                    pais: usuario.pais,
+                    estado_provincia: usuario.estado_provincia,
+                    ciudad: usuario.ciudad,
+                    calle: usuario.calle,
+                    códigoPostal: usuario.códigoPostal,
+                    imagen : usuario.imagen,
                     rol : usuario.rolId
                 }
                 if(recordarme){

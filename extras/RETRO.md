@@ -112,3 +112,72 @@
 
 ## Hacer más:
 - Mantener sitio de comunicación activo.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+# Retro Sprint 6
+
+## Empezar a hacer:
+-
+-
+
+## Dejar de hacer:
+-
+-
+
+## Hacer menos:
+-
+-
+
+## Seguir haciendo:
+-
+-
+
+## Hacer más:
+- Mantener sitio de comunicación activo.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+# Retro Sprint 7
+
+## Empezar a hacer:
+-
+-
+
+## Dejar de hacer:
+-
+-
+
+## Hacer menos:
+-
+-
+
+## Seguir haciendo:
+-
+-
+
+## Hacer más:
+- Mantener sitio de comunicación activo.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+# Retro Sprint 8
+
+## Empezar a hacer:
+- 
+-
+
+## Dejar de hacer:
+-
+-
+
+## Hacer menos:
+-
+-
+
+## Seguir haciendo:
+-
+
+## Hacer más:
+-
+-

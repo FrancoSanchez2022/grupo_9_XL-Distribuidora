@@ -4,19 +4,20 @@ let listado = require('../../../src/data/users.json')
 
 let usuarios = listado.map(usuario =>{
   let elemento = {
+  nombreUsuario: usuario.username,
   nombre: usuario.name,
   apellido: usuario.lastname,
-  genero: usuario.gender,
+  género: usuario.gender,
   email: usuario.email,
   password: usuario.pass,
-  telefono: usuario.phonenumber,
+  teléfono: usuario.phonenumber,
   pais: usuario.country,
-  provincia: usuario.state,
+  estado_provincia: usuario.state,
   ciudad: usuario.city,
   calle: usuario.streetname,
-  codigoPostal: usuario.postalcode,
+  códigoPostal: usuario.postalcode,
   imagen: usuario.image,
-  rolId: usuario.rol === 'admin' ? 1 : 2,
+  rolId: usuario.rol === 'Admin' ? 1 : 2,
   createdAt: new Date,
   updatedAt: new Date
   }

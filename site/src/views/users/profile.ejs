@@ -7,15 +7,14 @@
         <%- include('../partials/header') %>
             <main>
                 <h1>
-        <img src="/img/users/<%=locals.userLogin.image %> " alt="">
-        <%= `${locals.userLogin.rol == 1 ? 'admin' : 'usuario'} ${locals.userLogin.nombre}` %>
+        <%= `${locals.userLogin.rol == 1 ? 'Admin' : 'Usuario'} ${locals.userLogin.nombre}` %>
                 </h1>
                 <%- include('../partials/breadcrumbs',{página:'Perfil'}) %>
                     <form class="form-cambiar-img" action="/users/profile?_method=PUT" method="post"
                         enctype="multipart/form-data">
                         <div class="img">
                             <label class="selectImg" for="product-img">
-                                    <img id="img-preview" src="/img/users/<%= locals.userLogin.image %>" alt="">
+                                    <img id="img-preview" src="/img/users/<%= locals.userLogin.imagen%>" alt="">
                             </label>
                             <div class="labelinput">
                                 <input id="product-img" type="file" name="avatar" placeholder="Imagen de perfil" </div>
@@ -23,12 +22,12 @@
                             <button class="buttonsubmit" type="submit">Guardar</button>
                     </form>
                     <form action="/users/logout?_method=DELETE" method="post">
+                        <button type="submit">Cerrar Sesión</button>
                     </form>
-                    <button type="submit">Cerrar Sesión</button>
                     <h3>Mis Datos</h3>
                     <section class="card">
                         <ul>
-                            <li>Nombre de Usuario: <%= locals.userLogin.usuario %>
+                            <li>Nombre de Usuario: <%= locals.userLogin.nombreUsuario %>
                             </li>
                             <li>Nombre: <%= locals.userLogin.nombre %>
                             </li>
@@ -36,19 +35,19 @@
                             </li>
                             <li>Email: <%= locals.userLogin.email %>
                             </li>
-                            <li>Género: <%= locals.userLogin.genero %>
+                            <li>Género: <%= locals.userLogin.género %>
                             </li>
-                            <li>Teléfono: <%= locals.userLogin.telefono %>
+                            <li>Teléfono: <%= locals.userLogin.teléfono %>
                             </li>
                             <li>País: <%= locals.userLogin.pais%>
                             </li>
-                            <li>Estádo: <%= locals.userLogin.provincia %>
+                            <li>Estádo: <%= locals.userLogin.estado_provincia %>
                             </li>
                             <li>Ciudad: <%= locals.userLogin.ciudad %>
                             </li>
                             <li>Calle: <%= locals.userLogin.calle %>
                             </li>
-                            <li>Código postal: <%= locals.userLogin.codigoPostal %>
+                            <li>Código postal: <%= locals.userLogin.códigoPostal %>
                             </li>
                         </ul>
                     </section>
