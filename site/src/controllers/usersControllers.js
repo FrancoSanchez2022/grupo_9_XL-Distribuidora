@@ -11,16 +11,10 @@ module.exports = {
     },
     processRegister: (req, res) => {
         let errors = validationResult(req)
-        if (req.fileValidationError) {
-            let imagen = {
-                param: 'image',
-                msg: req.fileValidationError,
-            }
-            errors.errors.push(imagen)
-        }
+
         if (errors.isEmpty()) {
             let { name, lastname, email,pass,phonenumber} = req.body
-            
+             
             db.Usuarios.create({
                 nombreUsuario: null,
                 nombre: name,
@@ -59,8 +53,6 @@ module.exports = {
            })
            .catch(errores => res.send(errores)) 
         } else {
-            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', dato))
-            
             return res.render('users/register', {
                 errors: errors.mapped(),
                 old: req.body
