@@ -129,7 +129,44 @@ module.exports = {
         return res.redirect('/')
     },
     uploadProfileImage: (req, res) => {
-        return res.render('users/profile')
+
+        
+
+        let session = req.session.userLogin
+        let id = +session.id
+
+        let errors = validationResult(req)
+
+        if(req.fileValidationError) {
+            let image = {
+                param : "avatar",
+                msg : req.fileValidationError
+            }
+            errors.errors.push(image)
+        }
+        if (errors.isEmpty()){
+            db.Usuarios.forEach(user => {
+                if (user.id === id) {
+                    /* return res.send(user) */
+                    let ruta = fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                    if(ruta && req.file.filename  !== user.imagen&& user.imagen !== "default-avatar.png"){
+                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                    }
+                    user.imagen = req.file ? req.file.filename : user.imagen
+                }
+            })
+           /*  db.Usuarios.update(db.Usuarios); */
+            return res.redirect('/users/profile');
+
+        }else{
+            /* return res.send(errors.mapped()) */
+            return res.render('/users/profile',{
+                errors : errors.mapped(),
+                old : req.body
+            })
+        }
+
+
     },
     profileEdit: (req, res) => {
         return res.render('users/profile')

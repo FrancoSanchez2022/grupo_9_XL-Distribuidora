@@ -5,6 +5,7 @@ const db = require('../database/models')
 module.exports = [
     /* Email */
     check('email').trim()
+    .normalizeEmail()
     .notEmpty().withMessage('Debe ingresar su email').bail()
     .isEmail().withMessage('Debe ingresar un email valido'),
 
@@ -16,11 +17,7 @@ module.exports = [
      body('pass')
     .custom((value,{req}) =>{
 
-        return db.Usuarios.findOne({
-            where : {
-                email : req.body.email
-            }
-        })
+        return db.Usuarios.findOne({ where: {email: req.body.email} })
         .then(user => {
             if (bcryptjs.compareSync(value, user.dataValues.password)){
             return Promise.reject()
