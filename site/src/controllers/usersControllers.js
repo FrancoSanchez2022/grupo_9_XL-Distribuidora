@@ -172,9 +172,9 @@ module.exports = {
             .then(user => {
                 if (req.file) {
                     /* return res.send(user) */
-                    let ruta = fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                    let ruta = fs.existsSync(path.join(__dirname, '..', 'public', 'img', 'users', user.imagen))
                     if (ruta && req.file.filename !== user.imagen && user.imagen !== "default-avatar.png") {
-                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                        fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'users', user.imagen))
                     }
                 }
                 return res.render('/users/profile', {
@@ -182,6 +182,7 @@ module.exports = {
                     old: req.body
                 })
             })
+            .catch(errores => res.send(errores))
             /* return res.send(errors.mapped()) */
         }
 

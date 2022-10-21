@@ -118,20 +118,18 @@
 # Retro Sprint 6
 
 ## Empezar a hacer:
--
--
+
 
 ## Dejar de hacer:
--
--
 
 ## Hacer menos:
--
+- No estar al dia con las diferentes plataformas de trabajo.
 -
 
 ## Seguir haciendo:
--
--
+- La cursada
+- Comunicación constante de cómo venimos y qué hacemos.
+- Entregando a tiempo
 
 ## Hacer más:
 - Mantener sitio de comunicación activo.
