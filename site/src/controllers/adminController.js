@@ -285,11 +285,11 @@ module.exports = {
             }]
         })
             .then(producto => {
-                let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', dato))
+                let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'productos', dato))
 
                 producto.imagenes.forEach(imagen => {
                     if (ruta(imagen.nombre) && (imagen.nombre !== "default-image.png")) {
-                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', imagen.nombre))
+                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'productos', imagen.nombre))
                     }
                 })
                 db.Historiales.destroy({

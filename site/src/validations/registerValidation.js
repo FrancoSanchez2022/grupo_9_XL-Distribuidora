@@ -14,7 +14,6 @@ module.exports = [
 
     /* Email */
     check('email').trim()
-        .normalizeEmail()
         .notEmpty().withMessage('Debe ingresar su email').bail()
         .isEmail().withMessage('Debe ingresar un email valido').bail()
         .custom((value, { req }) => {

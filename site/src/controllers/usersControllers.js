@@ -13,15 +13,15 @@ module.exports = {
         let errors = validationResult(req)
 
         if (errors.isEmpty()) {
-            let { name, lastname, email,pass,phonenumber} = req.body
-             
+            let { name, lastname, email, pass, phonenumber } = req.body
+
             db.Usuarios.create({
                 nombreUsuario: null,
                 nombre: name,
-                apellido : lastname,
-                género : null,
-                email : email,
-                password: bcrypt.hashSync(pass, 12) ,
+                apellido: lastname,
+                género: null,
+                email: email,
+                password: bcrypt.hashSync(pass, 12),
                 teléfono: phonenumber,
                 pais: null,
                 estado_provincia: null,
@@ -32,26 +32,26 @@ module.exports = {
                 imagen: "default-avatar.png"
             })
 
-           .then(usuario => {
-            req.session.userLogin = {
-                id : usuario.id,
-                nombreUsuario: usuario.nombreUsuario,
-                nombre: usuario.nombre,
-                email: usuario.email,
-                apellido: usuario.apellido,
-                género: usuario.género,
-                teléfono: usuario.teléfono,
-                pais: usuario.pais,
-                estado_provincia: usuario.estado_provincia,
-                ciudad: usuario.ciudad,
-                calle: usuario.calle,
-                códigoPostal: usuario.códigoPostal,
-                imagen : usuario.imagen,
-                rol : usuario.rolId
-            }
-               return res.redirect('/')                
-           })
-           .catch(errores => res.send(errores)) 
+                .then(usuario => {
+                    req.session.userLogin = {
+                        id: usuario.id,
+                        nombreUsuario: usuario.nombreUsuario,
+                        nombre: usuario.nombre,
+                        email: usuario.email,
+                        apellido: usuario.apellido,
+                        género: usuario.género,
+                        teléfono: usuario.teléfono,
+                        pais: usuario.pais,
+                        estado_provincia: usuario.estado_provincia,
+                        ciudad: usuario.ciudad,
+                        calle: usuario.calle,
+                        códigoPostal: usuario.códigoPostal,
+                        imagen: usuario.imagen,
+                        rol: usuario.rolId
+                    }
+                    return res.redirect('/')
+                })
+                .catch(errores => res.send(errores))
         } else {
             return res.render('users/register', {
                 errors: errors.mapped(),
@@ -65,37 +65,37 @@ module.exports = {
     processLogin: (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
-        
-             const {email,recordarme} = req.body
+
+            const { email, recordarme } = req.body
             /*let usuario = usuarios.find(user => user.email === email)*/
             db.Usuarios.findOne({
-                where : {
+                where: {
                     email
                 }
             })
-            .then(usuario => {
-                req.session.userLogin = {
-                    id : usuario.id,
-                    nombreUsuario: usuario.nombreUsuario,
-                    nombre: usuario.nombre,
-                    email: usuario.email,
-                    apellido: usuario.apellido,
-                    género: usuario.género,
-                    teléfono: usuario.teléfono,
-                    pais: usuario.pais,
-                    estado_provincia: usuario.estado_provincia,
-                    ciudad: usuario.ciudad,
-                    calle: usuario.calle,
-                    códigoPostal: usuario.códigoPostal,
-                    imagen : usuario.imagen,
-                    rol : usuario.rolId
-                }
-                if(recordarme){
-                    res.cookie('XL',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
-                }
-                return res.redirect('/users/profile')
-            })    
-            .catch(errores => res.send (errores)) 
+                .then(usuario => {
+                    req.session.userLogin = {
+                        id: usuario.id,
+                        nombreUsuario: usuario.nombreUsuario,
+                        nombre: usuario.nombre,
+                        email: usuario.email,
+                        apellido: usuario.apellido,
+                        género: usuario.género,
+                        teléfono: usuario.teléfono,
+                        pais: usuario.pais,
+                        estado_provincia: usuario.estado_provincia,
+                        ciudad: usuario.ciudad,
+                        calle: usuario.calle,
+                        códigoPostal: usuario.códigoPostal,
+                        imagen: usuario.imagen,
+                        rol: usuario.rolId
+                    }
+                    if (recordarme) {
+                        res.cookie('XL', req.session.userLogin, { maxAge: 1000 * 60 * 60 * 24 })
+                    }
+                    return res.redirect('/users/profile')
+                })
+                .catch(errores => res.send(errores))
         } else {
             return res.render('users/login', {
                 errors: errors.mapped(),
@@ -123,47 +123,66 @@ module.exports = {
     logout: (req, res) => {
 
         req.session.destroy();
-        if(req.cookies.XL){
-            res.cookie('XL','',{maxAge: -1})
+        if (req.cookies.XL) {
+            res.cookie('XL', '', { maxAge: -1 })
         }
         return res.redirect('/')
     },
     uploadProfileImage: (req, res) => {
 
-        
+
 
         let session = req.session.userLogin
         let id = +session.id
 
         let errors = validationResult(req)
 
-        if(req.fileValidationError) {
+        if (req.fileValidationError) {
             let image = {
-                param : "avatar",
-                msg : req.fileValidationError
+                param: "avatar",
+                msg: req.fileValidationError
             }
             errors.errors.push(image)
         }
-        if (errors.isEmpty()){
-            db.Usuarios.forEach(user => {
-                if (user.id === id) {
-                    /* return res.send(user) */
-                    let ruta = fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
-                    if(ruta && req.file.filename  !== user.imagen&& user.imagen !== "default-avatar.png"){
-                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
-                    }
-                    user.imagen = req.file ? req.file.filename : user.imagen
+        if (errors.isEmpty()) {
+            db.Usuarios.findOne({
+                where: {
+                    id: req.params.id
                 }
             })
-           /*  db.Usuarios.update(db.Usuarios); */
-            return res.redirect('/users/profile');
-
-        }else{
-            /* return res.send(errors.mapped()) */
-            return res.render('/users/profile',{
-                errors : errors.mapped(),
-                old : req.body
+                .then(user => {
+                    db.Usuarios.update({
+                        imagen: req.file ? req.file.filename : user.imagen,
+                    }, {
+                            where: {
+                                id: req.params.id
+                            }
+                        }).then(image => {
+                            return res.redirect('/users/profile');
+                        })
+                })
+                .catch(errores => res.send(errores))
+        }
+        else {
+            db.Usuarios.findOne({
+                where: {
+                    id: req.params.id
+                }
             })
+            .then(user => {
+                if (req.file) {
+                    /* return res.send(user) */
+                    let ruta = fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                    if (ruta && req.file.filename !== user.imagen && user.imagen !== "default-avatar.png") {
+                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                    }
+                }
+                return res.render('/users/profile', {
+                    errors: errors.mapped(),
+                    old: req.body
+                })
+            })
+            /* return res.send(errors.mapped()) */
         }
 
 
