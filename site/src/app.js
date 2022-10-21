@@ -9,16 +9,15 @@ const express = require("express");
 const path = require("path");
 const connectLivereload = require('connect-livereload')
 const cookieParser = require('cookie-parser')
-const session = require('express-session')
 const methodOverride = require('method-override')
+const session = require('express-session')
 
 /*Implementamos locals dentro de nuestra aplicacion*/
-
 const userLogin= require('./middlewares/userLoginCheck');
 const dbConnectionTest = require('./middlewares/dbConnectionTest')
 
 /* cookies */
-/* const cookieAuth = require('./middlewares/cookieCheck') */
+const cookieAuth = require('./middlewares/cookieCheck')
 
 /* Implementación de locals en la aplicación */
 const app = express();
@@ -59,7 +58,7 @@ app.use(session({
 app.use(userLogin);
 app.use(cookieParser());
 
-/* app.use(cookieAuth) */
+app.use(cookieAuth)
 
 /*Middlewares */
 app.use(express.static(path.resolve(__dirname,'..', 'public')));
