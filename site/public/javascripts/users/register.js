@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     let $ = (elemento) => document.querySelector(elemento)
     console.log("Register vinculado correctamente");
 
-    const regExLetter = /^[A-Z]+$/i;
+    const regExLetter = /^[a-zA-Z\u00C0-\u017F]+$/;
     const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/;
     const regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
     const regExPhonenumber = /^\(?(\d{3})\)?[-]?(\d{3})[-]?(\d{4})$/
@@ -113,7 +113,7 @@ window.addEventListener('load', () => {
                 break;
             case !regExLetter.test(apellido.value):
                 $('#lastnameContainer').innerHTML = "El apellido no puede contener números ni caracteres especiales"
-                nombre.style.border = "2px solid red"
+                apellido.style.border = "2px solid red"
                 errores.forEach(e => {
                     if(e.id === 2 ){
                         e.mensaje = "El apellido no puede contener números ni caracteres especiales"

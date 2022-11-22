@@ -17,7 +17,7 @@ module.exports = [
 
         return db.Usuarios.findOne({ where: {email: req.body.email} })
         .then(user => {
-            if (bcryptjs.compareSync(value, user.dataValues.password)){
+            if (!bcryptjs.compareSync(value, user.dataValues.password)){
             return Promise.reject()
         }
     })

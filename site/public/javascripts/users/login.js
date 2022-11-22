@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
         mensaje: null
     }]
 
-    email.addEventListener('keyup',() => {
+    email.addEventListener('blur',() => {
         let error = {
             id: 1,
             elemento:"email",
