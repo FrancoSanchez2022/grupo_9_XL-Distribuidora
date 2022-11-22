@@ -10,8 +10,7 @@ module.exports = [
 
     /* Clave */
     check('pass').trim()
-    .notEmpty().withMessage('Debe ingresar su clave').bail()
-    .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
+    .notEmpty().withMessage('Debe ingresar su clave'),
 
      body('pass')
     .custom((value,{req}) =>{

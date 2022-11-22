@@ -16,23 +16,29 @@
                             <section class="card-body">
                                 <div class="container bottom">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.name ? old.email : null %>">
-                                    <% if (locals.errors && errors.email) { %>
-                                        <small><%= errors.email.msg %></small>
-                                    <% } %>
+                                    <input type="email" name="email" id="email" placeholder="Email"
+                                        value="<%= locals.old && old.name ? old.email : null %>">
+                                        <small id="emailContainer">
+                                            <%= locals.errors && errors.email?errors.email.msg:null %>
+                                        </small>
+                              
                                 </div>
                                 <div class="container bottom">
                                     <label for="name">Clave</label>
-                                    <input type="password" name="pass" id="pass" placeholder="Password">
-                                    <% if (locals.errors && errors.pass) { %>
-                                        <small><%= errors.pass.msg %></small>
-                                    <% } %>
-                                    <div class="recordarme bottom">
-                                        <input type="checkbox" name="recordarme" id="recordarme">
-                                        <label for="recordarme">
-                                            <span>Recordar clave</span>
-                                        </label>
+                                    <div class="password">
+                                        <input type="password" name="pass" id="pass" placeholder="Password">
+                                        <i class="fas fa-eye-slash" id="eye-pass"></i>
                                     </div>
+                                        <small id="passContainer">
+                                            <%= locals.errors && errors.pass?errors.pass.msg:null %>
+                                        </small>
+                                       
+                                            <div class="recordarme bottom">
+                                                <input type="checkbox" name="recordarme" id="recordarme">
+                                                <label for="recordarme">
+                                                    <span>Recordar clave</span>
+                                                </label>
+                                            </div>
                                 </div>
                                 <div class="login-button">
                                     <button type="submit"><i class="fa fa-sign-in"></i> Iniciar sesión</button>
@@ -52,6 +58,8 @@
                     </section>
             </main>
             <%- include('../partials/footer') %>
+                <script src="/javascripts/users/login.js"></script>
+                <script src="/javascripts/users/eyePass.js"></script>
     </body>
 
 </html>
