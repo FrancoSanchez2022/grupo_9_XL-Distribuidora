@@ -4,27 +4,29 @@
 
     <body class="liProduct">
         <%- include('./partials/header') %>
-            <%- include('./partials/breadcrumbs',{página:'Nuestros Productos'}) %>
-                <h1 class="TituloPrincipal">Conoce nuestros productos</h1>
-                <% for( let i=0; i < 30; i++ ) { %>
-                    <article class="product-relacionado">
-                        <div class="contenedorRelacionado">
-                            <img src="/img/productos/<%= productos[i].imagenes[0].nombre %> " alt="">
-                        </div>
-                        <h4 class="subproductos">
-                            <%= productos[i].titulo %>
-                        </h4>
-                        <span class="subtitular">
-                            <%= productos[i].descripcion %>
-                        </span>
-                        <p class="subprecio">
-                            <%= productos[i].precio %>
-                        </p>
-                        <button class="subcarritos">Agregar al carrito</button>
+            <main>
+                <%- include('./partials/breadcrumbs',{página:'Nuestros Productos'}) %>
+                    <h1 class="TituloPrincipal">Conoce nuestros productos</h1>
+                    <% for( let i=0; i < 30; i++ ) { %>
+                        <article class="product-relacionado">
+                            <div class="contenedorRelacionado">
+                                <img src="/img/productos/<%= productos[i].imagenes[0].nombre %> " alt="">
+                            </div>
+                            <h4 class="subproductos">
+                                <%= productos[i].titulo %>
+                            </h4>
+                            <span class="subtitular">
+                                <%= productos[i].descripcion %>
+                            </span>
+                            <p class="subprecio">
+                                <%= productos[i].precio %>
+                            </p>
+                            <button class="subcarritos">Agregar al carrito</button>
 
-                    </article>
-                    <% } %>
-                        <%- include('./partials/footer') %>
+                        </article>
+                        <% } %>
+            </main>
+            <%- include('./partials/footer') %>
     </body>
 
 </html>

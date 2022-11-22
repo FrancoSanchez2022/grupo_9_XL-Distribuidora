@@ -8,13 +8,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      nombreUsuario: {
+        type: Sequelize.STRING
+      },
       nombre: {
         type: Sequelize.STRING
       },
       apellido: {
         type: Sequelize.STRING
       },
-      genero: {
+      género: {
         type: Sequelize.STRING
       },
       email: {
@@ -26,7 +29,7 @@ module.exports = {
       pais: {
         type: Sequelize.STRING
       },
-      provincia: {
+      estado_provincia: {
         type: Sequelize.STRING
       },
       ciudad: {
@@ -35,10 +38,10 @@ module.exports = {
       calle: {
         type: Sequelize.STRING
       },
-      telefono: {
+      teléfono: {
         type: Sequelize.STRING
       },
-      codigoPostal: {
+      códigoPostal: {
         type: Sequelize.INTEGER
       },
       imagen: {

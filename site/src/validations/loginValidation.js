@@ -10,19 +10,14 @@ module.exports = [
 
     /* Clave */
     check('pass').trim()
-    .notEmpty().withMessage('Debe ingresar su clave').bail()
-    .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
+    .notEmpty().withMessage('Debe ingresar su clave'),
 
      body('pass')
     .custom((value,{req}) =>{
 
-        return db.Usuarios.findOne({
-            where : {
-                email : req.body.email
-            }
-        })
+        return db.Usuarios.findOne({ where: {email: req.body.email} })
         .then(user => {
-            if (bcryptjs.compareSync(value, user.dataValues.password)){
+            if (!bcryptjs.compareSync(value, user.dataValues.password)){
             return Promise.reject()
         }
     })

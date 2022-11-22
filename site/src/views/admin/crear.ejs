@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    
- <!-- Bootstrap -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
 
 <%- include('../partials/head',{title:'XL - Crear'}) %>
 
@@ -21,36 +24,47 @@
                         <div class="row justify-content-between align-items-center">
 
                             <!-- Principales -->
-                    <div class="col col-lg-4 col-md-12 col-sm-12">
-                        <div class="form-floating mb-3"> 
-                            <input type="text" class="form-control" name="titulo" placeholder="Nombre del producto" id="titulo" value="<%= locals.old && old.titulo ? old.titulo : null%>" placeholder="name@example.com">
-                            <label for="titulo">Nombre del producto</label>
-                            <p class="span text-danger">
-                            <small><%= locals.errors && errors.titulo ? errors.titulo.msg : null %> </small>
-                            </p>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="number" name="precio" placeholder="Precio del producto" id="price" value="<%= locals.old && old.precio ? old.precio : null%>">
-                            <label class="form-label" for="price">Precio del producto</label>
-                            <p class="span text-danger">
-                                <%= locals.errors && errors.precio ? errors.precio.msg : null %>
-                            </p>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="number" name="descuento" placeholder="Descuento del producto" id="discount" value="<%= locals.old && old.descuento ? old.descuento : 0%>">
-                            <label class="form-label" for="discount">Descuento del producto</label>
-                            <p class="span text-danger">
-                                <%= locals.errors && errors.descuento ? errors.descuento.msg : null %>
-                            </p>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="text" name="stock" placeholder="Stock con el que cuenta el producto" id="stock" value="<%= locals.old && old.stock ? old.stock : null%>">
-                            <label class="form-label" for="stock">Stock con el que cuenta el producto</label>
-                            <p class="span text-danger">
-                                <%= locals.errors && errors.stock ? errors.stock.msg : null %>
-                            </p>
-                        </div>
-                    </div>
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" name="titulo"
+                                        placeholder="Nombre del producto" id="titulo"
+                                        value="<%= locals.old && old.titulo ? old.titulo : null%>"
+                                        placeholder="name@example.com">
+                                    <label for="titulo">Nombre del producto</label>
+                                    <p class="span text-danger">
+                                        <small>
+                                            <%= locals.errors && errors.titulo ? errors.titulo.msg : null %>
+                                        </small>
+                                    </p>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="number" name="precio"
+                                        placeholder="Precio del producto" id="price"
+                                        value="<%= locals.old && old.precio ? old.precio : null%>">
+                                    <label class="form-label" for="price">Precio del producto</label>
+                                    <p class="span text-danger">
+                                        <%= locals.errors && errors.precio ? errors.precio.msg : null %>
+                                    </p>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="number" name="descuento"
+                                        placeholder="Descuento del producto" id="discount"
+                                        value="<%= locals.old && old.descuento ? old.descuento : 0%>">
+                                    <label class="form-label" for="discount">Descuento del producto</label>
+                                    <p class="span text-danger">
+                                        <%= locals.errors && errors.descuento ? errors.descuento.msg : null %>
+                                    </p>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="text" name="stock"
+                                        placeholder="Stock con el que cuenta el producto" id="stock"
+                                        value="<%= locals.old && old.stock ? old.stock : null%>">
+                                    <label class="form-label" for="stock">Stock con el que cuenta el producto</label>
+                                    <p class="span text-danger">
+                                        <%= locals.errors && errors.stock ? errors.stock.msg : null %>
+                                    </p>
+                                </div>
+                            </div>
 
                             <!-- Imagenes -->
                             <div class="col col-lg-7 col-md-12 col-sm-12">
@@ -71,21 +85,21 @@
                                                 </label>
                                                 <div class="form-admin__box inactivo">
                                                     <input class="d-none" id="product-img" type="file" name="imagen"
-                                                        placeholder="Imagen del Producto"  multiple>
+                                                        placeholder="Imagen del Producto" multiple>
                                                 </div>
                                             </div>
 
                                         </div>
                                     </div>
-                                </div>
-                                <p class="span text-danger">
-                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                                </p>
                             </div>
-                                </section>
-                            </div>
-
+                            <p class="span text-danger">
+                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                            </p>
                         </div>
+                        </section>
+                    </div>
+
+                    </div>
                     </div>
 
                     <div class="container">
@@ -100,58 +114,81 @@
                                             aria-label="Floating label select example">
                                             <% if (locals.errors && old.categoria) { %>
                                                 <option hidden value="">Selecciona una opcion</option>
-                                                <option <%= old.categoria == "1" ? "selected" : null %>  value="Perfumes">Aromatizantes</option>
-                                                <option <%= old.categoria == "2" ? "selected" : null %>   value="Aromatizantes">Detergentes</option>
-                                                <option <%= old.categoria == "3" ? "selected" : null %>   value="Limpieza">Desinfectantes</option>
-                                                <option <%= old.categoria == "4" ? "selected" : null %>   value="Limpieza bucal">Fragancias</option>
-                                                <option <%= old.categoria == "5" ? "selected" : null %>   value="Limpieza bucal">Higiene dental</option>
-                                                <option <%= old.categoria == "6" ? "selected" : null %>   value="Limpieza bucal">Insecticida</option>
-                                                <option <%= old.categoria == "7" ? "selected" : null %>   value="Limpieza bucal">Limpieza</option>
-                                                <option <%= old.categoria == "8" ? "selected" : null %>   value="Limpieza bucal">Otros</option>
-                                            <% }else{ %>
-                                                <option selected hidden value="">Selecciona una opcion</option>
-                                                <% categorias.forEach(categoria => { %>
-                                                    <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
-                                                <% }) %>
-                                            <% } %> 
-                                          </select>
-                                          <% if (locals.errors && errors.categoria) { %>
-                                            <p class="span text-danger"><%=  errors.categoria.msg %></p>
-                                        <% } %>
+                                                <option <%=old.categoria=="1" ? "selected" : null %>
+                                                    value="Perfumes">Aromatizantes</option>
+                                                <option <%=old.categoria=="2" ? "selected" : null %>
+                                                    value="Aromatizantes">Detergentes</option>
+                                                <option <%=old.categoria=="3" ? "selected" : null %>
+                                                    value="Limpieza">Desinfectantes</option>
+                                                <option <%=old.categoria=="4" ? "selected" : null %> value="Limpieza
+                                                    bucal">Fragancias</option>
+                                                <option <%=old.categoria=="5" ? "selected" : null %> value="Limpieza
+                                                    bucal">Higiene dental</option>
+                                                <option <%=old.categoria=="6" ? "selected" : null %> value="Limpieza
+                                                    bucal">Insecticida</option>
+                                                <option <%=old.categoria=="7" ? "selected" : null %> value="Limpieza
+                                                    bucal">Limpieza</option>
+                                                <option <%=old.categoria=="8" ? "selected" : null %> value="Limpieza
+                                                    bucal">Otros</option>
+                                                <% }else{ %>
+                                                    <option selected hidden value="">Selecciona una opcion</option>
+                                                    <% categorias.forEach(categoria=> { %>
+                                                        <option value="<%= categoria.id %>">
+                                                            <%= categoria.nombre %>
+                                                        </option>
+                                                        <% }) %>
+                                                            <% } %>
+                                        </select>
+                                        <% if (locals.errors && errors.categoria) { %>
+                                            <p class="span text-danger">
+                                                <%= errors.categoria.msg %>
+                                            </p>
+                                            <% } %>
                                     </div>
                                     <div class="col col-4">
                                         <h3 class="text-center">Marcas</h3>
-                                        <select class="form-select" name="marca" id="floatingSelect" aria-label="Floating label select example">
+                                        <select class="form-select" name="marca" id="floatingSelect"
+                                            aria-label="Floating label select example">
                                             <% if (locals.errors && old.marca) { %>
                                                 <option hidden value="">Selecciona una opcion</option>
-                                                <% marcas.forEach(marca => { %>
-                                                    <% if (marca.id == old.marca) { %>
-                                                        <option value="<%= marca.id %>" selected><%= marca.nombre %></option>
-                                                    <% }else{ %>
-                                                        <option value="<%= marca.id %>"><%= marca.nombre %></option>
-                                                    <% } %>
-                                                    <option value="<%= marca.id %>"><%= marca.nombre %></option>
-                                                <% }) %>
-                                            <% }else{ %>
-                                                <option selected hidden value="">Selecciona una opcion</option>
-                                                <% marcas.forEach(marca => { %>
-                                                    <option value="<%= marca.id %>"><%= marca.nombre %></option>
-                                                <% }) %>
-                                            <% } %> 
+                                                <% marcas.forEach(marca=> { %>
+                                                    <% if (marca.id==old.marca) { %>
+                                                        <option value="<%= marca.id %>" selected>
+                                                            <%= marca.nombre %>
+                                                        </option>
+                                                        <% }else{ %>
+                                                            <option value="<%= marca.id %>">
+                                                                <%= marca.nombre %>
+                                                            </option>
+                                                            <% } %>
+                                                                <option value="<%= marca.id %>">
+                                                                    <%= marca.nombre %>
+                                                                </option>
+                                                                <% }) %>
+                                                                    <% }else{ %>
+                                                                        <option selected hidden value="">Selecciona una
+                                                                            opcion</option>
+                                                                        <% marcas.forEach(marca=> { %>
+                                                                            <option value="<%= marca.id %>">
+                                                                                <%= marca.nombre %>
+                                                                            </option>
+                                                                            <% }) %>
+                                                                                <% } %>
                                         </select>
                                         <% if (locals.errors && errors.marca) { %>
-                                            <p class="span text-danger"><%= errors.marca.msg %></p>
-                                        <% } %>
+                                            <p class="span text-danger">
+                                                <%= errors.marca.msg %>
+                                            </p>
+                                            <% } %>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-floating m-2">
-                                <textarea class="form-control" name="Descripcion" placeholder="Por favor inserte la descripcion del producto"
+                                <textarea class="form-control" name="Descripcion"
+                                    placeholder="Por favor inserte la descripcion del producto"
                                     id="floatingTextarea"></textarea>
                                 <label for="floatingTextarea">Descripción</label>
                             </div>
-            
-
                         </div>
                     </div>
 
@@ -163,8 +200,7 @@
 
             </main>
             <%- include('../partials/footer') %>
+                <script src="/javascripts/images.js"></script>
     </body>
-
-    <script src="/javascripts/images.js"></script>
 
 </html>

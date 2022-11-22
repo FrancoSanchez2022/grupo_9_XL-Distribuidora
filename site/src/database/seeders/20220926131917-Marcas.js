@@ -1,6 +1,6 @@
 'use strict';
 
-let listado = ["Axe","Ala","Asepxia","Ariel","Ayudin","Cif","Colgate","Dove","Gilette","Higienol","Inoxy","Lisoform","LisoformZiploc","Listerine","Raid","Magistral","MrMusculo","Rexona","Off","Oral B","Otros","Virulana","Zorro3D"]
+let listado = ['Axe','Ala','Asepxia','Ariel','Ayudin','Cif','Colgate','Dove','Gilette','Higienol','Inoxy','Lisoform','LisoformZiploc','Listerine','Raid','Magistral','MrMusculo','Rexona','Off','Oral B','Otros','Virulana','Zorro3D']
 
 let marcas = listado.map(marca =>{
   

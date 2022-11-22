@@ -96,21 +96,86 @@
 # Retro Sprint 5
 
 ## Empezar a hacer:
-- 
-- 
+- Terminar tareas a tiempo
 
 ## Dejar de hacer:
-- 
-- 
+- Avisar tarde entrega o cómo venimos a los profes.
+- Entregar tarde el sprint.
 
 ## Hacer menos:
-- 
-- 
+- No estar al dia con las diferentes plataformas de trabajo.
+
 
 ## Seguir haciendo:
-- 
-- 
+- La cursada
+- Comunicación constante de cómo venimos y qué hacemos.
 
 ## Hacer más:
+- Mantener sitio de comunicación activo.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+# Retro Sprint 6
+
+## Empezar a hacer:
+
+
+## Dejar de hacer:
+
+## Hacer menos:
+- No estar al dia con las diferentes plataformas de trabajo.
+-
+
+## Seguir haciendo:
+- La cursada
+- Comunicación constante de cómo venimos y qué hacemos.
+- Entregando a tiempo
+
+## Hacer más:
+- Mantener sitio de comunicación activo.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+# Retro Sprint 7
+
+## Empezar a hacer:
+-
+-
+
+## Dejar de hacer:
+-
+-
+
+## Hacer menos:
+-
+-
+
+## Seguir haciendo:
+-
+-
+
+## Hacer más:
+- Mantener sitio de comunicación activo.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+# Retro Sprint 8
+
+## Empezar a hacer:
 - 
-- 
+-
+
+## Dejar de hacer:
+-
+-
+
+## Hacer menos:
+-
+-
+
+## Seguir haciendo:
+-
+
+## Hacer más:
+-
+-

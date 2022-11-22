@@ -19,8 +19,8 @@ router.get('/reset', guestCheck, resetPass);
 router.post('/reset', resetPassValidator, processResetPass);
 router.get('/profile', userCheck, profile);
 router.put('/profile', upload.single('avatar'), uploadProfileImage);
-router.get('/profileEdit', userCheck, profileEdit)
-router.put('/profileEdit', upload.single('avatar'),profileEdit)
+router.get('/profileEdit', userCheck, profileEdit);
+router.put('/profileEdit', upload.single('avatar'),profileEdit);
 router.delete('/logout', logout);
 
 module.exports = router
