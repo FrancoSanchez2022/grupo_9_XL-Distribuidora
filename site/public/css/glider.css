@@ -82,6 +82,7 @@
   }
   .glider-slide {
     min-width: 150px;
+    max-height: 500px;
   }
   .glider-hide {
     opacity: 0;
