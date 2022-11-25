@@ -111,6 +111,17 @@ border-radius: 15%;
   margin-bottom: 12.5px;
 }
 
+.register main .card .form-register .card-body .container .form-group .password {
+  position: relative;
+}
+
+.register main .card .form-register .card-body .container .form-group .password i {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 6px;
+}
+
 
 .register main .card button {
   background-color: #4d4d4d;
@@ -173,6 +184,13 @@ border-radius: 15%;
   padding-bottom: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+.register main .card .form-register .card-body .container .form-group .password input {
+  padding: 6px;
+  padding-bottom: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
 }
 
 .register main .card .form-register .card-body .container .form-group #phone {
@@ -282,6 +300,13 @@ border-radius: 15%;
   .register main .card .form-register .card-body .container .form-group input {
     padding: 10px 10px 8px;
     font-size: 15px;
+  }
+  .register main .card .form-register .card-body .container .form-group .password input {
+    padding: 10px 10px 8px;
+    font-size: 15px;
+  }
+  .register main .card .form-register .card-body .container .form-group .password i {
+    top: 6px;
   }
 }
 

@@ -1,15 +1,22 @@
 .products-card{
-    width: 250px;
-    margin: 10px auto;
+    background-color: white;
+    width: 240px;
+    height: auto;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 0.5rem;
+    border: 2px solid var(--grisClaro);
+    box-shadow: 0px 5px 10px 2px #ff347491;
 }
 .products-card .card-img .card-img-background{
-    height: 250px;
+    height: 200px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 .products-card .card-name{
     text-align: center;
+    padding: 10px;
 }
 .products-card .card-value{
     display: flex;
@@ -28,7 +35,7 @@
     text-align: center;
 }
 .products-card .card-button button{
-    background-color: var(--colorBase);
+    background-color: var(--colorButtonContacto);
     color: white;
     width: 200px;
     border: none;
@@ -37,4 +44,11 @@
     padding: 10px;
     display: inline-block;
     margin-top: 10px;   
+}
+.products-card .card-button button:hover{
+    background-color: var(--colorBase);
+    color: var(--colorLetraPrincipal);
+}
+.products-card .card-button button a{
+    color: white;
 }

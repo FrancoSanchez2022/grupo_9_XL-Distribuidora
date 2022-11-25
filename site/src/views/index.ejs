@@ -10,102 +10,79 @@
                 <div class="banner"><img src="img/XL-distribuidora.png" alt="perfume.png"></div>
                 <section class="carrucelDestacados">
                     <h1 class="destacado">Productos Destacados</h1>
-                    <% productos.forEach(producto=> { %>
-                        <% if (producto.descuento==="" ) { %>
-
-
-                            <article>
-
-                                <a href="/products/detail/<%=producto.id%>">
-                                    <div class="producto"><img src="/img/productos/<%=producto.imagenes[0][0].nombre%>"
-                                            alt="Imagen descriptiva del producto"></div>
-                                    <h2 class="nombreP">
-                                        <%=producto.nombre%>
-                                    </h2>
-                                    <h3 class="precio">
-                                        $<%=producto.precio%>
-                                    </h3>
-
-                                    <div>
-                                        <button><a href="/products/detail/<%=producto.nombre%>">Ver más</a></button>
-                                    </div>
-                                </a>
-                            </article>
-                            <% } %>
-                                <% }) %>
-
-                </section>
-                <section class="infoempresa">
-                    <article id="somos" class="info">
-
-                        <h3 class="XL">la empresa XL:</h3>
-                        <p>Somos una empresa dedicada a la venta de productos quimicos para el cuidado del hogar para
-                            que su familia pueda sentirse segura de agentes patologicos y se sienta fresca,agradable
-                            para su comodidad.</p>
-                    </article>
-                    <div class="video"><iframe width="100%" src="https://www.youtube.com/embed/a4_qWzISsOc"
-                            title="Cómo hacer un perfume - Amazing Perfume Factory | How Perfume Is Made In Factory ➤#1 "
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe></div>
-                </section>
-                <section class="carrucelOfertas">
-                    <h1 class="oferta">Productos En Oferta</h1>
-                    <% productos.forEach(producto=> { %>
+                    <% productos.forEach(producto => { %>
                         <% if (producto.descuento >= 1 ) { %>
-
-
-                            <article>
-
-                                <a href="/products/detail/<%=producto.id%>">
-                                    <div class="producto"><img src="/img/productos/<%= producto.imagenes[0].nombre %>"
-                                            alt="Esencia.png"></div>
-                                    <h2 class="nombreP">
-                                        <%=producto.nombre%>
-                                    </h2>
-                                    <h3 class="precio">
-                                        $<%=producto.precio%>
-                                    </h3>
-                                    <p class="descuento">
-                                        %<%=producto.descuento%>
-                                    </p>
-
-                                    <button><a href="/products/detail/<%=producto.id%>">Ver más</a></button>
-                                </a>
-                            </article>
-                            <% } %>
-                                <% }) %>
+                            <%- include('./partials/card',{
+                                id: producto.id,
+                                imagen: producto.imagenes[0].nombre,
+                                nombre: producto.nombre,
+                                descuento: producto.descuento,
+                                precio: producto.precio
+                            }) %>
+                        <% } %>
+                    <% }) %>
                 </section>
-                
+                <section>
+                    <div class="infoempresa">
+                        <article id="somos" class="info">
+                            <h3 class="XL">NOSOTROS</h3>
+                            <br>
+                            <p>Somos una empresa dedicada a la venta de productos quimicos químicos, artículos para limpieza y equipamientos para el cuidado del hogar para que su familia pueda sentirse segura de agentes patologicos y se sienta fresca,agradable para su comodidad.</p>
+                            <br>
+                            <p>Somos ampliamente reconocidos porque ofrecemos productos químicos que superan altos estándares de calidad. Asimismo, brindamos el asesoramiento correspondiente para cada producto y contamos con stock permanente en variedad de artículos y marcas con precios competitivos. Atendemos al público en general de manera personalizada y directa, para brindar soluciones a cualquier requerimiento.</p>
+                        </article>
+                        <div class="video"><iframe src="https://www.youtube.com/embed/a4_qWzISsOc"
+                                title="Cómo hacer un perfume - Amazing Perfume Factory | How Perfume Is Made In Factory ➤#1 "
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+                <h1 class="oferta">Productos En Oferta</h1>
+                <section class="carrouselProductos">
+                    <div class="glider-contain">
+                        <div class="glider">
+                            <% productos.forEach(producto => { %>
+                                <% if (producto.descuento >= 1 ) { %>
+                                    <%- include('./partials/card',{
+                                        id: producto.id,
+                                        imagen: producto.imagenes[0].nombre,
+                                        nombre: producto.nombre,
+                                        descuento: producto.descuento,
+                                        precio: producto.precio
+                                    }) %>
+                                <% } %>
+                            <% }) %>
+                        </div>
+                    <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                  </div>
+            </section>
                 <section class="contacto" id="contacto">
-                    <article class="contact">
-
-                        <h2>Contacto</h2>
+                    <div class="contact">
+                        <h1>Contacto</h1>
                         <form action="" method="get">
-                            <div class="container bottom">
-                                <label for="name">Nombre</label>
+                            <div>
                                 <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
-                                <small>Debe ingresar su nombre</small>
+                                <small>*Debe ingresar su nombre</small>
                             </div>
-                            <div class="container bottom">
-                                <label for="email">Email</label>
+                            <div>
                                 <input type="email" name="email" id="email" placeholder="Ingresa tu email">
-                                <small>Debe ingresar su email</small>
+                                <small>*Debe ingresar su email</small>
                             </div>
-                            <div class="container bottom">
-                                <label for="telefono">Teléfono</label>
+                            <div>
                                 <input type="number" name="telefono" placeholder="Ingresa tu numero de telefono">
-                                <small>Debe ingresar su numero de teléfono</small>
+                                <small>*Debe ingresar su numero de teléfono</small>
                             </div>
-                            <div class="container bottom">
+                            <div>
                                 <textarea class="bottom" name="comentarios" id="comentarios" cols="30" rows="10"
                                     placeholder="Escribi tu consulta"></textarea>
                             </div>
 
                             <button type="submit">Enviar</button>
-                    </article>
+                    </div>
                     <div class="envio"><img src="img/envioATodoElPais-removebg-preview.png" alt=""></div>
-
                 </section>
 
             </main>

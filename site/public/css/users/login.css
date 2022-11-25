@@ -9,14 +9,14 @@
   font-size: 35px;
 }
 
-.login main h2{
+.login main h2 {
   text-align: center;
   font-weight: 440;
   font-size: 22.5px;
   margin: 5px 0px;
 }
 
-.login main h4{
+.login main h4 {
   text-align: center;
   font-weight: 420;
   font-size: 16px;
@@ -24,7 +24,7 @@
 
 }
 
-.login main p{
+.login main p {
   text-align: center;
   font-weight: 320;
   font-size: 13px;
@@ -64,9 +64,9 @@
 .login main .card {
   border-radius: 0.5rem;
   border: 2px solid var(--grisClaro);
-margin-bottom: 15px;
- margin: 5%;
- box-shadow: 0px 2.5px 10px 6px   #ff347491
+  margin-bottom: 15px;
+  margin: 5%;
+  box-shadow: 0px 2.5px 10px 6px #ff347491
 }
 
 .login main .card .form-login .card-header {
@@ -79,7 +79,8 @@ margin-bottom: 15px;
   border-radius: 0 0 0.35rem 0.35rem;
 }
 
-.login main .card .form-login .card-header, .card-footer{
+.login main .card .form-login .card-header,
+.card-footer {
   background-color: var(--gray);
   padding: 1rem
 }
@@ -87,31 +88,31 @@ margin-bottom: 15px;
 .login main .card .form-login .card-body .I-forgot-my-password {
   display: flex;
   align-items: center;
- justify-content: center;
- margin: 10px;
+  justify-content: center;
+  margin: 10px;
 }
 
-.login main .card .form-login .card-body .I-forgot-my-password a{
+.login main .card .form-login .card-body .I-forgot-my-password a {
   color: var(--black);
 
   font-size: 11.5px;
-    text-decoration: none;
-    box-shadow:  0px 0.5px 3px 3px white;
-    border-radius: 5%;
+  text-decoration: none;
+  box-shadow: 0px 0.5px 3px 3px white;
+  border-radius: 5%;
 }
 
-.login main .card .form-login .card-body .I-forgot-my-password a:hover{
+.login main .card .form-login .card-body .I-forgot-my-password a:hover {
   color: var(--white);
-  background-color: var(--black) ;
+  background-color: var(--black);
   text-align: center;
-  box-shadow:  0px 0.5px 3px 3px black;
-border-radius: 10%;
+  box-shadow: 0px 0.5px 3px 3px black;
+  border-radius: 10%;
 }
 
-.login main .card .form-login .button-register{
+.login main .card .form-login .button-register {
   background-color: #4d4d4d;
   color: var(--white);
-  border:  1px solid var(--black);
+  border: 1px solid var(--black);
   font-size: 12px;
   padding: 2px;
   border-radius: 4px;
@@ -119,59 +120,68 @@ border-radius: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
-  }
-  
-  .login main .card .form-login .button-register:hover{
-    background: linear-gradient(
-      to bottom,
+}
+
+.login main .card .form-login .button-register:hover {
+  background: linear-gradient(to bottom,
       #FFD6D6,
       #FF3474B9);
-    color: var(--black)
-  }
-  
-  .login main .card .form-login .button-register:active {
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
-  }
+  color: var(--black)
+}
+
+.login main .card .form-login .button-register:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
 
 .login main .card .form-login .card-body {
   padding: 1rem;
   background-color: var(--white);
 }
 
-.login main .card .form-login .card-body .container{
+.login main .card .form-login .card-body .container {
 
   display: flex;
   flex-direction: column;
   margin-bottom: 12.5px;
 }
 
-.login main .card button  {
+.login main .card .form-login .card-body .container .password {
+  position: relative;
+}
+
+.login main .card .form-login .card-body .container .password i {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 6px;
+}
+
+.login main .card button {
   background-color: #4d4d4d;
-    color: var(--white);
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid var(--black);
-    margin: auto;
-    padding: 9px 18px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .login main .card button:hover {
-    background: linear-gradient(
-      to bottom,
+  color: var(--white);
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid var(--black);
+  margin: auto;
+  padding: 9px 18px;
+  display: flex;
+  align-items: center;
+}
+
+.login main .card button:hover {
+  background: linear-gradient(to bottom,
       #FFD6D6,
       #FF3474B9);
-    color: var(--black)
-  }
-  
-  .login main .card button:active {
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
-  }
-  
-  .login main .card i{
-    margin-right: 3px
-  }
+  color: var(--black)
+}
+
+.login main .card button:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.login main .card i {
+  margin-right: 3px
+}
 
 .login main .card .form-login .card-body .container small {
   margin-top: 5px;
@@ -184,14 +194,22 @@ border-radius: 10%;
   box-sizing: border-box;
 }
 
-.login main .card .form-login .card-body .container input{
+.login main .card .form-login .card-body .container input {
   padding: 6px;
   padding-bottom: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.login main .card .form-login .card-body .recordarme  {
+.login main .card .form-login .card-body .container .password input {
+  padding: 6px;
+  padding-bottom: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.login main .card .form-login .card-body .recordarme {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -201,73 +219,81 @@ border-radius: 10%;
 
 
 /* Tablet */
-@media (min-width:426px){ 
-    
+@media (min-width:426px) {
+
   .login main h1 {
     font-weight: 500;
     font-size: 45px;
   }
-  
-  .login main h2{
+
+  .login main h2 {
     font-weight: 400;
     font-size: 25px;
   }
-  
-  .login main p{
+
+  .login main p {
     font-weight: 300;
     font-size: 15px;
   }
-  
+
   .login main .card {
     margin: 5% 17.5%;
   }
 
 }
 
-  /* Desktop */
+/* Desktop */
 @media (min-width:769px) {
 
   .login main h1 {
     font-weight: 500;
     font-size: 57.5px;
   }
-  
-  .login main h2{
+
+  .login main h2 {
     font-weight: 400;
     font-size: 27.5px;
   }
-  
-  .login main p{
+
+  .login main p {
     font-weight: 300;
     font-size: 16px;
   }
 
-  .login main .card{
-    box-shadow: 0px 5px 20px 12px   #ff347491
+  .login main .card {
+    box-shadow: 0px 5px 20px 12px #ff347491
   }
 
-  .login main .card .form-login .card-header, .card-footer{
+  .login main .card .form-login .card-header,
+  .card-footer {
     padding: 1.75rem;
- 
+
   }
 
   .login main .card .form-login .card-body {
     padding: 1.75rem;
   }
-  .login main .card .form-login .card-body .container input{
+
+  .login main .card .form-login .card-body .container input,
+  .login main .card .form-login .card-body .container .password input {
     padding: 10px 10px 8px;
-    font-size: 16px ;
+    font-size: 16px;
   }
 
-  .login main .card button  {
-      padding: 10px 20px;
-      font-size: 16px;
-    }
+  .login main .card .form-login .card-body .container .password i {
+    top: 6px;
+
   }
 
-  @media (min-width:1024px) {
-    
-    .login main .card .form-login .card-body .container small {
-      font-size: 12.5px;
-    }
+  .login main .card button {
+    padding: 10px 20px;
+    font-size: 16px;
   }
+}
+
+@media (min-width:1024px) {
+
+  .login main .card .form-login .card-body .container small {
+    font-size: 12.5px;
+  }
+}
