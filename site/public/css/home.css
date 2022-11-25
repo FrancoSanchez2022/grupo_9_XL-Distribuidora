@@ -11,34 +11,28 @@
     width: 100%;
 }
 
-.home main section article {
+
+.home main section .infoempresa {
     width: 95%;
-    margin: 15px auto;
-    padding: 15px;
-    background-color: var(--white);
-    border-radius: 0.5rem;
-    border: 2px solid var(--grisClaro);
-    margin-bottom: 15px;
-    margin: 5%;
-    box-shadow: 0px 1px 8px 4px #ff347491
+    display: flex;
+    background-color: white;
+    border-radius: 60px 0 60px 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-.home main .infoempresa {
+.home main section .infoempresa .info {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
 }
-
-.home main .infoempresa .info {
-    width: 100%;
-    height: 400px;
-    padding: 35px;
-    border: 1px solid var(--colorHeader);
-    border-radius: 15px;
-    background-color: var(--colorButtonContacto);
-    color: var(--white);
-
+.home main section .infoempresa .video iframe{
+    height: 250px;
 }
-
-
 .home main section article button {
     background-color: #4d4d4d;
     color: var(--white);
@@ -60,46 +54,10 @@
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
 
-
-
-
 .home main section article a {
     text-decoration: none;
     color: white
 }
-
-.home main section .video iframe {
-    width: 415px;
-    height: 500px;
-}
-.infoempresa{
-    position: relative;
-}
-.video-container{
-  width: 100vw;
-  height: 100vh;
-}
-
- iframe.video-youtube {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 20vh;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-#text{
-height: 250px;
-width: 250px;
-  position: absolute;
-  color: #FFFFFF;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 
 .home main section article .envio img {
     width: 100%;
@@ -130,35 +88,47 @@ width: 250px;
 .home main section article .descuento {
     color: green;
 }
-
-
-
+/*CONTACTO*/
 .home main .contacto {
-    width: 100%;
     background-image: url(../img/background-img2.jpg);
     padding: 5px;
-
+}
+.home main .contact {
+   padding: 15px;
+}
+.home main .contacto div form input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+}
+.home main .contacto div form div{
+    margin-bottom: 10px;
 }
 
-.home main section article.contact {
-    margin-top: 5px;
-    background-color: #f0f8ff8c;
-    font-size: var(--fSubtitulos);
+.home main .contacto div form div small{
+    font-size: 10px;
+    font-weight: 800;
 }
-
 .home main textarea {
     width: 100%;
-    text-align: center;
     resize: none;
+    font-size: 16px;
+    padding: 10px;
 }
 
-.home main section article.contact button {
+.home main section div.contact button {
     width: 100%;
     background-color: var(--colorButtonContacto);
     padding: 5px;
     border-radius: 20px;
 }
-
+.home main section div.contact button:hover {
+    width: 100%;
+    background-color: var(--colorLetraPrincipal);
+    color:white;
+    padding: 5px;
+    border-radius: 20px;
+}
 .home main section .envio img {
     width: 100%;
 }
@@ -176,31 +146,26 @@ width: 250px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
-
-    .home main section article {
-        margin: 10px;
-        width: 44%;
+    .home main section .infoempresa .video iframe{
+        width: 500px;
+        height: 288px;
     }
-
-    .home main section .video iframe {
-        width: 362px;
-        height: 400px;
-    }
-
-
-    .home main section article p {
-        font-size: small;
-    }
-
-    .home main section article.contact {
-        background-color: #f0f8ff8c;
-        font-size: var(--fSubtitulos);
-    }
-
-    .home main section article.contact input {
+    .home main section.contacto{
         width: 100%;
+    }
+    .home main section .contacto h1{
+        font-size: var(--fSubtitulos);
+        font-weight: 500;
+    }
+    .home main section div.contact {
+        display: flex;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 3%, rgba(255,255,255,0.2) 100%);
+        font-size: var(--fSubtitulos);
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
     }
 
     .home main textarea {
@@ -218,11 +183,6 @@ width: 250px;
         width: 100%;
     }
 
-    .home main section article.contact {
-        background-color: #f0f8ff8c;
-        font-size: var(--fSubtitulos);
-    }
-
 }
 
 /* Desktop */
@@ -237,38 +197,17 @@ width: 250px;
     .home main .products_cards {
         width: 74%;
     }
-
-    .home main section .video {
-        display:   flex  ;
-        align-items: center;
+    .home main section .infoempresa .video iframe{
         width: 500px;
-        
+        height: 288px;
     }
-    .home main section .video iframe {
-    width: 415px;
-    height: 500px;
-    }
-
-    .home main section .video iframe {
-        width: 98%;
-    }
-
-    .home main section article {
-        text-align: center;
-        margin: 10px;
-        width: 30%;
-
-    }
-
-
-    .home main section article.contact {
-        background-color: #f0f8ff8c;
+    .home main section div.contact {
+        display: flex;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 3%, rgba(255,255,255,0.2) 100%);
         font-size: var(--fSubtitulos);
-    }
-
-    .home main textarea {
-        width: 100%;
-        resize: none;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        width: 50%;
     }
 }
-

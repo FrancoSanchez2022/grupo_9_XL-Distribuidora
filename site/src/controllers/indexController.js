@@ -32,6 +32,9 @@ module.exports = {
             {
                 busqueda: elemento,
                 resultados
-            });
-    }
+            })
+    },
+    /*query: (req, res) => {
+
+    }*/
 }
