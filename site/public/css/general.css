@@ -54,6 +54,10 @@ a{
   font-weight: 320;
   font-size: 13px;
 }
+a{
+  
+  text-decoration: none;
+}
 
 ul li a{
     text-decoration: none;
