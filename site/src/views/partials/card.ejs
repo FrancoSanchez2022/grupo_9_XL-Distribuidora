@@ -1,20 +1,20 @@
 <div class="products-card">
-  <a href="/products/detail/<%= id %>">
-    <div class="card-img">
-      <div
-        class="card-img-background"
-        style="background-image: url('/img/productos/<%=imagen%>')"
-      ></div>
-    </div>
-  </a>
-    <div class="card-text-box">
-      <h3 class="card-name"><%= nombre.slice(0,30) %></h3>
-      <div class="card-value">
-        <p class="card-discount"><%= descuento %>%</p>
-        <p class="card-price">$<%= precio - (precio * descuento / 100)%></p>
+    <a href="/products/detail/<%= id %>">
+      <div class="card-img">
+        <div
+          class="card-img-background"
+          style="background-image: url('/img/productos/<%=imagen%>')"
+        ></div>
       </div>
-    </div>
-    <div class="card-button">
-        <button><a href="/products/productDetail">Comprar producto</a></button>
-    </div>
-</div>
+    </a>
+      <div class="card-text-box">
+        <h3 class="card-name"><%= nombre.slice(0,30) %></h3>
+        <div class="card-value">
+          <p class="card-discount"><%= descuento %>%</p>
+          <p class="card-price">$<%= precio - (precio * descuento / 100)%></p>
+        </div>
+      </div>
+      <div class="card-button">
+          <button><a href="/products/detail/<%= id %>">Comprar producto</a></button>
+      </div>
+  </div>

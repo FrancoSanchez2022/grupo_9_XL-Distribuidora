@@ -11,10 +11,10 @@
         <% resultados.forEach(producto => { %>
             <%- include('./partials/card',{
               id:producto.id,
-              imagen:producto.imagenes[0],
-              nombre:producto.titulo,
-              descuento:producto.descuento,
-              precio:producto.precio 
+              imagen:productos.imagenes[0],
+              nombre:productos.titulo,
+              descuento:productos.descuento,
+              precio:productos.precio 
             }) %> 
         <% }) %>
       </section>

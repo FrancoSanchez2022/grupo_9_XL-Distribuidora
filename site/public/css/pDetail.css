@@ -51,18 +51,23 @@
     text-align: center;
 }
 
-.detalle .mainDetalle .producto .boton{
+.detalle .mainDetalle .producto .sumar-carrito{
     text-align: center;
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: space-around;
+    align-items: stretch;
     
 }
-.detalle .mainDetalle .producto .boton input{
+.detalle .mainDetalle .producto .sumar-carrito input{
     background-color: var(--marronClaro);
     border: none;
     color: black;
 
 }
-.detalle .mainDetalle .producto .boton .medio{
+.detalle .mainDetalle .producto .sumar-carrito .medio{
     width: 100px;
     text-align: center;
     background-color: white;

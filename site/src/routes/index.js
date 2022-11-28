@@ -1,6 +1,6 @@
 const express = require ('express')
 const router = express.Router()
-const {home, search, query} = require('../controllers/indexController')
+const {home, search, /*query*/} = require('../controllers/indexController')
 
 /* GET home page. */
 router.get('/', home)
