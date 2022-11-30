@@ -25,17 +25,16 @@ module.exports = {
                     {descripcion : {[Op.substring] : elemento}}
                 ]
             },
-            includes: [{
+            include: [{
                 all: true
             }]
         })
         .then(productos => {
-
-            return res.render('busqueda'),
-            {
+            return res.render('busqueda',{
                 busqueda: elemento,
                 productos
-            }})
+            })
+        })
         .catch(error => res.send(error))
     },
 }
