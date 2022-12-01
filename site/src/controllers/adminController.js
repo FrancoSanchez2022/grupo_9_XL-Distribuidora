@@ -41,14 +41,15 @@ module.exports = {
             errors.errors.push(imagen)
         }
         if (errors.isEmpty()) {
-            let { marca, titulo, categoria, precio, descuento, stock, descripcion } = req.body
+            console.log(req.body)
+            let { marca, titulo, categoria, precio, descuento, stock, Descripcion } = req.body
 
             db.Productos.create({
                 nombre: titulo,
                 precio: +precio,
                 descuento: +descuento,
                 stock: +stock,
-                descripcion,
+                descripcion: Descripcion,
                 categoriasId: +categoria,
                 marcasId: +marca,
             })
@@ -162,9 +163,14 @@ module.exports = {
                             }
                         })
                             .then(data => {
-                                return res.redirect('/admin/list')
-                            })
-                    } else {
+                                let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'productos', dato))
+                                    if (ruta(producto.imagenes[0].nombre) && (producto.imagenes[0].nombre !== "default-image.png")) {
+                                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'productos', producto.imagenes[0].nombre))
+                                    }
+                                    return res.redirect('/admin/list')
+                                })
+                                .catch(error => res.send(error))
+                            } else {
                         return res.redirect('/admin/list')
                     }
                 })
@@ -234,8 +240,8 @@ module.exports = {
 
     },
     restore: (req, res) => {
-         const idParams = +req.params.id
-        db.Productos.findOne({
+        const idParams = +req.params.id
+        db.Historiales.findOne({
             where: {
                 id: +req.params.id
             },
@@ -245,7 +251,7 @@ module.exports = {
         })
             .then(historialProducto => {
                 db.Productos.create({
-                    nombre: historialProducto.titulo,
+                    nombre: historialProducto.nombre,
                     precio: historialProducto.precio,
                     descuento: historialProducto.descuento,
                     stock: historialProducto.stock,
@@ -253,23 +259,23 @@ module.exports = {
                     categoriasId: historialProducto.categoriasId,
                     marcasId: historialProducto.marcasId,
                 })
-            .then(productoNuevo => {
-
-                db.Imagenes.create({
-                    nombre: historialProducto.imagenes[0].nombre,
-                    productosId: historialProducto.id
-                })
-                .then(imagen => {
-                    db.Historiales.destroy({
-                        where: {
-                            id: idParams
-                        }
-                    })
-                        .then(eliminar => {
-                            return res.redirect('/admin/list')
+                    .then(productoNuevo => {
+                        console.log(historialProducto)
+                        db.Imagenes.create({
+                            nombre: historialProducto.imagenes[0].nombre,
+                            productosId: productoNuevo.id
                         })
+                            .then(imagen => {
+                                db.Historiales.destroy({
+                                    where: {
+                                        id: idParams
+                                    }
+                                })
+                                    .then(eliminar => {
+                                        return res.redirect('/admin/list')
+                                    })
+                            })
                     })
-                })
             })
             .catch(errores => res.send(errores))
     },

@@ -1,7 +1,8 @@
 let aside= require('../data/aside.json')
 /*let productos = require('../data/productos.json');*/
 const db = require('../database/models');
-let Sequelize = require('sequelize')
+let Sequelize = require('sequelize');
+const { reset } = require('nodemon');
 
 module.exports ={
     detail: (req,res) =>{
@@ -32,33 +33,19 @@ module.exports ={
         .catch(error => res.send(error))
     },
     cart: (req,res) =>{
-        let idParams= +req.params.id;
-        db.Productos.findByPk(idParams,{
+        db.Productos.findAll({
+            limit : 4,
+            order : [[Sequelize.literal("RAND()")]],
             include : [{
                 all : true
-            }]
+        }]
         })
-        .then(producto => {
-
-            db.Productos.findAll({
-                where : {
-                    categoriasId: producto.categoriasId
-                },
-                limit : 4,
-                order : [[Sequelize.literal("RAND()")]],
-                include : [{
-                    all : true
-            }]
-            })
-            .then(productos => {
-            return res.render('productCart',{
-                producto,
-                productos
-            })
-        })})
-        .catch(error => res.send(error))
-
-
+        .then(productos => {
+        return res.render('productCart',{
+            productos
+        })
+    })
+    .catch(error => res.send(error))
     },
     list: (req,res) =>{
         db.Productos.findAll({

@@ -1,0 +1,13 @@
+.busqueda h1{
+    text-align: center;
+}
+.busqueda .resultados{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.busqueda .card-img img{
+    width: 100%;
+}

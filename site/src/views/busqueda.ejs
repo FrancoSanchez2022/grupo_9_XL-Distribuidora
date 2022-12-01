@@ -5,13 +5,13 @@
   <body class="busqueda">
     <%- include('./partials/header') %>
     <main>
-      <% if (resultados.length != 0) { %>
+      <% if (productos.length != 0) { %>
       <h1>Resultado de la busqueda: <%= busqueda %></h1>
       <section class="resultados">
-        <% resultados.forEach(producto => { %>
+        <% productos.forEach(producto => { %>
             <%- include('./partials/card',{
               id:producto.id,
-              imagen:producto.imagenes[0],
+              imagen:producto.imagenes[0].nombre,
               nombre:producto.titulo,
               descuento:producto.descuento,
               precio:producto.precio 
