@@ -18,20 +18,23 @@ module.exports = {
     },
     search: (req, res) => {
         let elemento = req.query.search
-
         db.Productos.findAll({
             where : {
                 [Op.or] : [
                     {nombre : {[Op.substring] : elemento}},
                     {descripcion : {[Op.substring] : elemento}}
                 ]
-            }
+            },
+            include: [{
+                all: true
+            }]
         })
-
-        return res.render('busqueda',
-            {
+        .then(productos => {
+            return res.render('busqueda',{
                 busqueda: elemento,
-                resultados
-            });
-    }
+                productos
+            })
+        })
+        .catch(error => res.send(error))
+    },
 }

@@ -7,7 +7,22 @@
             <main>
                 <%- include('./partials/breadcrumbs',{página:'Nuestros Productos'}) %>
                     <h1 class="TituloPrincipal">Conoce nuestros productos</h1>
-                    <% for( let i=0; i < 30; i++ ) { %>
+<<<<<<< HEAD
+                    <section>
+                        <% productos.forEach(producto => { %>
+                            
+                            <%- include('./partials/card',{
+                                id: producto.id,
+                                imagen: producto.imagenes[0].nombre,
+                                nombre: producto.nombre,
+                                descuento: producto.descuento,
+                                precio: producto.precio
+                            }) %>
+                            
+                        <% }) %>
+                    </section>
+=======
+                    <% for( let i=0; i < 26; i++ ) { %>
                         <article class="product-relacionado">
                             <div class="contenedorRelacionado">
                                 <img src="/img/productos/<%= productos[i].imagenes[0].nombre %> " alt="">
@@ -22,9 +37,9 @@
                                 <%= productos[i].precio %>
                             </p>
                             <button class="subcarritos">Agregar al carrito</button>
-
                         </article>
                         <% } %>
+>>>>>>> 36fee79fe4e4807c67c2362c9cee5cfb7ca52901
             </main>
             <%- include('./partials/footer') %>
     </body>
