@@ -29,6 +29,7 @@ let administradorRouter = require('./routes/administrador')
 let productosRouter = require('./routes/productos')
 let usuariosRouter = require('./routes/usuarios')
 let apiRouter = require('./routes/api/paginacion');
+let apiCarrito = require('./routes/api/apiCarrito');
 
 /* Archivos estaticos */
 app.use(express.static(path.join(__dirname,'..', 'public')));
@@ -70,6 +71,7 @@ app.use('/users', usuariosRouter);
 app.use('/products', productosRouter);
 app.use('/admin', administradorRouter);
 app.use('/api',apiRouter);
+app.use('/api/carrito',apiCarrito);
 app.use((req,res,next) => {res.status(404).render('404')})
 
 /* Funcion de actualizacion del servidor */
