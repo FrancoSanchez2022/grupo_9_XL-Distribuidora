@@ -7,8 +7,9 @@
             <main>
                 <%- include('./partials/breadcrumbs',{página:'Nuestros Productos'}) %>
                     <h1 class="TituloPrincipal">Conoce nuestros productos</h1>
-                    <% productos.forEach(producto => { %>
-                        <% if (producto.descuento >= 1 ) { %>
+                    <section>
+                        <% productos.forEach(producto => { %>
+                            
                             <%- include('./partials/card',{
                                 id: producto.id,
                                 imagen: producto.imagenes[0].nombre,
@@ -16,8 +17,9 @@
                                 descuento: producto.descuento,
                                 precio: producto.precio
                             }) %>
-                        <% } %>
-                    <% }) %>
+                            
+                        <% }) %>
+                    </section>
             </main>
             <%- include('./partials/footer') %>
     </body>
