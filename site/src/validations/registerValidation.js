@@ -19,7 +19,7 @@ module.exports = [
         .custom((value, { req }) => {
             return db.Usuarios.findOne({ where: {email: req.body.email} })
                 .then(user => {
-                    if (!!(value, user)) {
+                    if ((value, user)) {
                         return Promise.reject()
                     }
                 }).catch(() => {
