@@ -120,17 +120,9 @@ module.exports = {
     profile: (req, res) => {
         return res.render('users/profile')
     },
-    logout: (req, res) => {
 
-        req.session.destroy();
-        if (req.cookies.XL) {
-            res.cookie('XL', '', { maxAge: -1 })
-        }
-        return res.redirect('/')
-    },
+
     uploadProfileImage: (req, res) => {
-
-
 
         let session = req.session.userLogin
         let id = +session.id
@@ -146,18 +138,16 @@ module.exports = {
         }
         if (errors.isEmpty()) {
             db.Usuarios.findOne({
-                where: {
-                    id: req.params.id
-                }
+                where: { id: req.params.id }
             })
                 .then(user => {
                     db.Usuarios.update({
                         imagen: req.file ? req.file.filename : user.imagen,
-                    }, {
-                            where: {
-                                id: req.params.id
-                            }
-                        }).then(image => {
+                    },
+                        {
+                            where: { id: req.params.id }
+                        })
+                        .then(image => {
                             return res.redirect('/users/profile');
                         })
                 })
@@ -165,30 +155,130 @@ module.exports = {
         }
         else {
             db.Usuarios.findOne({
-                where: {
-                    id: req.params.id
-                }
+                where: { id: req.params.id }
             })
-            .then(user => {
-                if (req.file) {
-                    /* return res.send(user) */
-                    let ruta = fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
-                    if (ruta && req.file.filename !== user.imagen && user.imagen !== "default-avatar.png") {
-                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                .then(user => {
+                    if (req.file) {
+                        /* return res.send(user) */
+                        let ruta = fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                        if (ruta && req.file.filename !== user.imagen && user.imagen !== "default-avatar.png") {
+                            fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                        }
+                        db.Usuarios.update({
+                            imagen: req.file ? req.file.filename : usuario.imagen
+                        }, {
+                            where: {
+                                id: +req.params.id
+                            }
+                        })
                     }
-                }
-                return res.render('/users/profile', {
-                    errors: errors.mapped(),
-                    old: req.body
+                    return res.render('users/profile', {
+                        errors: errors.mapped(),
+                        old: req.body
+                    })
                 })
-            })
-            .catch(errores => res.send(errores))
+                .catch(errores => res.send(errores))
             /* return res.send(errors.mapped()) */
         }
 
+    },
+
+
+    profileEdit: (req, res) => {
+
+        return res.render('users/profileEdit');
 
     },
-    profileEdit: (req, res) => {
-        return res.render('users/profile')
+    profileEdit2: (req, res) => {
+
+        req.session.destroy();
+        if (req.cookies.XL) {
+            res.cookie('XL', '', { maxAge: -1 })
+        }
+
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'avatar',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
+
+        let errors = validationResult(req)
+
+        if (errors.isEmpty()) {
+
+
+
+            db.Usuarios.findOne({
+                where: {
+                    id: +req.params.id
+                }
+            })
+                .then(usuario => {
+
+                    const { nombreUsuario, nombre, email, apellido, género, teléfono, pais, estado_provincia, ciudad, calle, códigoPostal } = req.body
+                    
+                    usuario=usuario.dataValues
+                       console.log(usuario)
+                       console.log(req.body)
+                    db.Usuarios.update({
+                        nombreUsuario: nombreUsuario,
+                        nombre: nombre,
+                        email: email,
+                        apellido: apellido,
+                        género: género,
+                        teléfono: teléfono,
+                        pais: pais,
+                        estado_provincia: estado_provincia,
+                        ciudad: ciudad,
+                        calle: calle,
+                        códigoPostal: códigoPostal,
+                        imagen: req.file ? req.file.filename : imagen
+                    }, {
+                        where: {
+                            id: +req.params.id
+                        }
+                    })
+                        .then(data => {
+
+                            req.session.userLogin = {
+                                id: usuario.id,
+                                nombreUsuario: usuario.nombreUsuario,
+                                nombre: usuario.nombre,
+                                email: usuario.email,
+                                apellido: usuario.apellido,
+                                género: usuario.género,
+                                teléfono: usuario.teléfono,
+                                pais: usuario.pais,
+                                estado_provincia: usuario.estado_provincia,
+                                ciudad: usuario.ciudad,
+                                calle: usuario.calle,
+                                códigoPostal: usuario.códigoPostal,
+                                imagen: usuario.imagen,
+                                rol: usuario.rolId
+                            }
+
+
+                            return res.redirect('/users/profile')
+
+                        });
+                })
+              .catch(err => res.send(err))
+
+        } else {
+            return res.render('users/profileEdit', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
+    },
+logout: (req, res) => {
+
+    req.session.destroy();
+    if (req.cookies.XL) {
+        res.cookie('XL', '', { maxAge: -1 })
     }
+    return res.redirect('/')
+}
 }
