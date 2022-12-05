@@ -21,7 +21,7 @@ window.addEventListener("load",()=> {
 
 
     /* elementos a validar */
-    let titulo = $("#titulo")
+    let titulo = $("#tituloI")
     let precio= $("#precio")
     let descuento= $("#discount")
     let stock= $("#stock")
@@ -34,7 +34,7 @@ window.addEventListener("load",()=> {
     titulo.addEventListener( "blur", ()=>{
         /* console.log("me tocaste") */
         switch (true) {
-            case !this.value.trim():
+            case !this.value:
                 $("#tituloError").innerHTML= "debes ingresar el titulo del producto"
                 this.classList.add("is-invalid")
                 validate.titulo= false
