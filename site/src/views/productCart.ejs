@@ -5,7 +5,7 @@
 
     <body class="cart">
         <%- include('./partials/header') %>
-            <section class="producto">
+            <!--<section class="producto">
                 <table>
                     <thead>
                         <tr>
@@ -60,20 +60,18 @@
                 </table>
             </section>
             <section class="precios">
-                <div class="postal">
-                    <button class="boton">Calcular envio</button>
-                    <input type="number" name="envio" id="envio" placeholder="Ingresa tu código postal">
+
                 </div>
                 <h3>Subtotal</h3>
-                <p>$0</p>
+
                 <h3>Total con envio</h3>
-                <p class="precioFinal">$626.10</p>
+
                 <button class="compraa">Comprar productos </button>
             </section>
             <div class="Compra">
                 <a href=""><i class="fas fa-ban"></i></a>
                 <a href="">Seguir comprando</a>
-            </div>
+            </div>-->
             <section class="relacionado">
                 <h5>Productos relacionados</h5>
                 <div class="boxRelacionada">
@@ -85,13 +83,14 @@
                                 </div>
                                 <h4 class="subproductos"><%= productos[i].titulo %> </h4>
                                 <span class="subtitular"><%= productos[i].descripcion %></span>
-                                <p class="subprecio"><%= productos[i].precio %></p>
+                                <p class="subprecio">$<%= productos[i].precio %></p>
                                 <button class="subcarritos">Agregar al carrito</button>
                             </article>
                         <% } %>
                     </div>
             </section>
             <%- include('./partials/footer') %>
+
     </body>
 
 </html>

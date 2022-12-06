@@ -8,13 +8,15 @@
     box-shadow: 0px 1px 8px 4px #ff347491
 }
 .liProduct main .product-relacionado button {
-    background-color: #4d4d4d;
-    color: var(--white);
-    border-radius: 4px;
-    border: 1px solid var(--black);
-    font-size: 14.5px;
-    padding: 5px;
-    margin: 5px;
+    background-color: var(--colorButtonContacto);
+    color: white;
+    width: 200px;
+    border: none;
+    margin: 0 auto 10px;
+    text-transform: uppercase;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;   
 }
 .liProduct main .product-relacionado button:hover {
     background: linear-gradient(to bottom,

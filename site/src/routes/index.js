@@ -1,6 +1,7 @@
 const express = require ('express')
 const router = express.Router()
 const {home, search} = require('../controllers/indexController')
+const db = require('../database/models')
 
 /* GET home page. */
 router.get('/', home)

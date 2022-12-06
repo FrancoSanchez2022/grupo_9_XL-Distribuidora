@@ -1,3 +1,92 @@
+/* Articulo */
+
+.cart main {
+    width: 90%;
+    margin: 0 auto;
+}
+.cart main h1 {
+    font-weight: 700;
+    margin: 20px 0;
+}
+.cart section.none {
+    display: none;
+    background-color: transparent;
+}
+.cart section article{
+    background-color: var(--Marta);
+    width: 100%;
+    border-bottom: 1px solid var(--Alfonzo);
+    border-top: 1px solid var(--Alfonzo);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 5px 0 10px 0;
+    margin-bottom: 20px;
+    min-height: 135px;
+}
+.cart section article .imagenes{
+    width: 25%;
+} 
+.cart section article .imagenes img{
+    width: 100%;
+    object-fit: cover;
+}
+.cart section article .detail {
+    width: 73%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cart section article .detail h4 {
+    width: 100%;
+    font-size: 16px;
+    margin: 10px 0 5px 0;
+}
+.cart section article .añadir-elementos {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+.cart section article .añadir-elementos .restar,
+.cart section article .añadir-elementos .agregar {
+    background-color: var(--Alfonzo);
+    font-size: 700;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.cart section article .añadir-elementos span {
+    margin: 0 10px;
+}
+.cart section article .precio-descuento {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart section article .precio-descuento p {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.cart section article .precio-descuento .precio-secundario {
+    position: relative;
+    text-decoration: line-through;
+    color: gray;
+}
+.cart section article .precio-descuento .precio-secundario span {
+    position: absolute;
+    font-size: 10px;
+    color: green;
+    font-weight: 700;
+}
+
+/*Termina prueba aca*/
+
 .products-card{
     background-color: white;
     width: 240px;
@@ -26,7 +115,7 @@
 }
 .products-card .card-discount{
     font-size: 25px;
-    color: var(--grisOscuro);
+    color: green;
 }
 .products-card .card-price{
     font-size: 30px;
