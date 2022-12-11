@@ -1,0 +1,64 @@
+<%- include('../partials/dashboard-ps') %>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Modificar usuario</h1>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="inputNombre" class="col-sm-2 control-label">Nombre</label>
+                <div class="col-sm-10">
+                  <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre del usuario">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputApellido" class="col-sm-2 control-label">Apellido</label>
+                <div class="col-sm-10">
+                  <input type="apellido" class="form-control" id="inputApellido" placeholder="Apellido del usuario">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail disabled-input"
+                    placeholder="Email del usuario" disabled>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputContraseña" class="col-sm-2 control-label">Contraseña</label>
+                <div class="col-sm-10">
+                  <input type="contraseña" class="form-control" id="inputContraseña"
+                    placeholder="Contraseña del usuario">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputFoto" class="col-sm-2 control-label">Foto</label>
+                <div class="col-sm-10">
+                  <input type="apellido" class="form-control" id="inputFoto" placeholder="Foto del usuario">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputTelefono" class="col-sm-2 control-label">Teléfono</label>
+                <div class="col-sm-10">
+                  <input type="telefono" class="form-control" id="inputTelefono" placeholder="Teléfono del usuario">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputFechaNac" class="col-sm-2 control-label">Fecha de nacimiento</label>
+                <div class="col-sm-10">
+                  <input type="fechanac" class="form-control" id="inputFechaNac"
+                    placeholder="Fecha de nacimiento del usuario">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-warning">Modificar</button>
+                  <button type="submit" class="btn btn-defaylt">Cancelar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <%- include('../partials/dashboard-pi') %>

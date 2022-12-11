@@ -6,31 +6,31 @@
     <body class="profileEdit">
         <%- include('../partials/header') %>
             <main>
+                <%- include('../partials/breadcrumbs',{ másSecciones: '<a href="/users/profile">Perfil</a>',página: 'Edición de Perfil'}) %>
                 <h1>Edición de Perfil</h1>
-                <%- include('../partials/breadcrumbs',{ página: 'Edición de Perfil'}) %>
                 
 <!-- <li class="crumb"><a href="/users/profile">Perfil</a></li> <li class="divider"> > </li> -->
 
                 <section class="card">
                 
 
-                    <form class="form-profileEdit" action="/users/profileEdit/<%=locals.userLogin.id%>?_method=put" method="post" id="formulario">
+                    <form class="form-profileEdit" action="/users/profileEdit/<%=locals.userLogin.id%>?_method=put" method="post" id="formulario" enctype="multipart/form-data">
 
                         <div class="container">
                             <div id="preview" class="styleImage">
                                 <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                             </div>
-                            <label  class="selectImg" for="file">
+                            <label  class="selectImg" for="user-img">
                                 <img id="img-preview" src="/img/users/<%= locals.userLogin.imagen%>" alt="">
                             </label>
                                <div class="labelinput"> 
-                            <input type="file" name="imagen" id="file">
+                            <input id="user-img" type="file" name="avatar" id="avatar">
                         </div>
                         </div>
 
                    
                         <div class="container">
-                            <label for="nombreUsuario">username</label>
+                            <label for="nombre  Usuario">username</label>
                             <input type="text" name="nombreUsuario" id="nombreUsuario"
                                 placeholder="Ingresa tu nombre de usuario"
                                 value="<%=locals.old && old.nombreUsuario ? old.nombreUsuario : locals.userLogin.nombreUsuario %>">
@@ -58,17 +58,17 @@
                             <!-- <input type="género" id="género" name="género" value="<%= locals.userLogin.género%> "> -->
                             <section class="genre">
                                 <article>
-                                    <input type="radio" name="genero" id="F" value="F" <%=locals.old &&
+                                    <input type="radio" name="género" id="F" value="F" <%=locals.old &&
                                         old.género==='Female' ? "checked" : null%> >
                                     <label for="F">Femenino</label>
                                 </article>
                                 <article>
-                                    <input type="radio" name="genero" id="M" value="M" <%=locals.old &&
+                                    <input type="radio" name="género" id="M" value="M" <%=locals.old &&
                                         old.género==='Male' ? "checked" : null%>>
                                     <label for="M">Masculino</label>
                                 </article>
                                 <article>
-                                    <input type="radio" name="genero" id="NB" value="NB" <%=locals.old &&
+                                    <input type="radio" name="género" id="NB" value="NB" <%=locals.old &&
                                         old.género==='Non-binary' ? "checked" : null%> >
                                     <label for="NB">Otro</label>
                                 </article>
@@ -90,7 +90,7 @@
 
                         <div class="container">
                             <label for="provincia">estado_provincia</label>
-                            <input type="text" name="provincia" id="estado_provincia"
+                            <input type="text" name="estado_provincia" id="estado_provincia"
                                 placeholder="Ingresa tu estado o provincia"
                                 value="<%=locals.old && old.estado_provincia ? old.estado_provincia : locals.userLogin.estado_provincia %>">
                             <div id="estado_provinciaContainer"></div>
@@ -104,14 +104,14 @@
 
                         <div class="container">
                             <label for="calle">calle</label>
-                            <input type="text" name="calle" id="ciudad" placeholder="Ingresa tu calle"
+                            <input type="text" name="calle" id="calle" placeholder="Ingresa tu calle"
                                 value="<%=locals.old && old.calle ? old.calle : locals.userLogin.calle %>">
                             <div id="calleContainer"></div>
                         </div>
                         <div class="container">
                             <label for="códigoPostal">códigoPostal</label>
-                            <input type="text" name="códigoPostal" id="códigoPostal" placeholder="códigoPostal"
-                                value="<%=locals.old && old.códigoPostal ? old.códigoPostal : locals.userLogin.códigoPostal %>">
+                            <input type="number" name="códigoPostal" id="códigoPostal" placeholder="códigoPostal"
+                                value="<%=locals.old && old.códigoPostal ? old.códigoPostal : locals.userLogin.códigoPostal%>">
                             <div id="códigoPostalContainer"></div>
                         </div>
 
@@ -125,5 +125,6 @@
             <%- include('../partials/footer') %>
     </body>
     <script src="/javascripts/images.js"></script>
+    
 
 </html>

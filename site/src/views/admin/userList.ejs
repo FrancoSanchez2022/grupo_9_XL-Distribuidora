@@ -1,0 +1,160 @@
+<%- include('../partials/dashboard-ps') %>
+
+  
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Listado de usuarios</h1>
+          <div class="table-responsive">
+            <table class="table table-striped center">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="action-toggle"></th>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Email</th>
+                  <th>Teléfono</th>
+                  <th>Fecha de nacimiento</th>
+                  <th>Ver foto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>1</td>
+                  <td>Jaime</td>
+                  <td>Ibañez</td>
+                  <td>jaime.ibanez@gmail.com</td>
+                  <td>011-152155155</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>2</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>3</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>4</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>5</td>
+                  <td>dapibus</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>6</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>7</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>8</td>
+                  <td>sagittis</td>
+                  <td>ipsum</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>9</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>10</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>11</td>
+                  <td>massa</td>
+                  <td>Vestibulum</td>
+                  <td>lacinia</td>
+                  <td>arcu</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button type="button" class="btn btn-danger btn-right" data-toggle="modal" data-target="#ConfirmDeleteModal">Eliminar usuarios seleccionados</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Eliminar usuario</h4>
+          </div>
+          <div class="modal-body">
+            ¿Estás seguro que deseas eliminar el usuario?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger ">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../partials/dashboard-pi') %>

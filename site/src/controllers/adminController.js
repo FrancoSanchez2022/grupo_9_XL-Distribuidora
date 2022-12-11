@@ -4,6 +4,7 @@ let db = require('../database/models')
 const { validationResult } = require('express-validator');
 
 module.exports = {
+
     list: (req, res) => {
 
         db.Productos.findAll({

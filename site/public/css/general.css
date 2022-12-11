@@ -64,32 +64,3 @@ ul li a{
     color: var(--colorLetraPrincipal);
     font-family: var(--fuente);
 }
-
-main .breadcrumbs {
-    padding: 0.5rem;
-    border-top: 1px solid #4d4d4d;
-    font-size: 12px;
-    line-height: 20px;
-  }
-  
-main .breadcrumbs ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-main .breadcrumbs ul li {
-    display: inline-block;
-    color: var(--grisClaro);
-  }
-  
-main .breadcrumbs ul li a {
-    color: var(--grisOscuro);
-    display: block;
-    text-decoration: none;
-  }
-  
-main .breadcrumbs ul li a:hover {
-    text-decoration: underline;
-    color: var(--black);
-  }
