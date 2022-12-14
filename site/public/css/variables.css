@@ -20,6 +20,7 @@
     --gray: #DEE2E6;
     --black: #000000;
     --white: #FFFFFF;
+    --negroClaro: rgba(0, 0, 0, 0.973);
 
     /*Tamaños de fuente */
     --fTitulos:30px;

@@ -5,23 +5,11 @@ const upload = require('../middlewares/multerProducts');
 const adminCheck = require('../middlewares/adminCheck');
 /* const productValidator = require('../validations/productsValidation') */
 
-/* GET home page. */
-router.get('/modUsers', adminCheck, (req, res) => {
-	return res.render('admin/userEdit')
-},);
-router.get('/users', adminCheck, function (req, res, next) {
-	res.render('admin/userList', { css: '/css/dashboard.css' });
-});
-router.get('/addUser', adminCheck, function (req, res, next) {
-	res.render('admin/userCreate', { css: '/css/dashboard.css' });
-});
-router.get('/modUser', adminCheck, function (req, res, next) {
-	res.render('admin/userEdit', { css: '/css/dashboard.css' });
-});
-router.get('/', adminCheck, function (req, res, next) {
-	res.render('admin/index', { css: '/css/dashboard.css' });
-});
-
+/* Admin Dashboard & users */
+router.get('/', adminCheck, function (req, res) { res.render('admin/index') });
+router.get('/users', adminCheck, function (req, res) { res.render('admin/userList') });
+router.get('/addUser', adminCheck, function (req, res) { res.render('admin/userCreate') });
+router.get('/modUser', adminCheck, function (req, res) { res.render('admin/userEdit') });
 
 router.get('/list', adminCheck, list);
 router.get('/history', adminCheck, history);

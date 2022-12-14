@@ -66,6 +66,16 @@ body {
     background-color: #fff
 }
 
+.dashboard h1 {
+    text-align: center;
+    font-weight: 500;
+    margin: 0px 20px 20px;
+    font-size: 35px;
+    border-top: 1.5px solid #4d4d4d;
+    padding: 8px;
+    border-bottom: 1.5px solid #4d4d4d;  
+   }
+
 [tabindex="-1"]:focus:not(:focus-visible) {
     outline: 0 !important
 }
@@ -5187,7 +5197,10 @@ input[type=submit].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, .5)
+    color: rgba(0, 0, 0, .5);
+    background-color: white;
+    border-radius: 15px;
+    bottom: 7px
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
@@ -5534,40 +5547,6 @@ input[type=submit].btn-block {
     margin-bottom: 0
 }
 
-.breadcrumb {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: .75rem 1rem;
-    margin-bottom: 1rem;
-    list-style: none;
-    background-color: #e9ecef;
-    border-radius: .25rem
-}
-
-.breadcrumb-item+.breadcrumb-item {
-    padding-left: .5rem
-}
-
-.breadcrumb-item+.breadcrumb-item::before {
-    float: left;
-    padding-right: .5rem;
-    color: #6c757d;
-    content: "/"
-}
-
-.breadcrumb-item+.breadcrumb-item:hover::before {
-    text-decoration: underline
-}
-
-.breadcrumb-item+.breadcrumb-item:hover::before {
-    text-decoration: none
-}
-
-.breadcrumb-item.active {
-    color: #6c757d
-}
 
 .pagination {
     display: -ms-flexbox;
@@ -11894,7 +11873,7 @@ html {
     margin-top: calc(3.5rem + 1px)
 }
 
-.layout-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm~.sidebar {
+.layout-navbar-fixed.layout-fixed .wrapper .xl-link.text-sm~.sidebar {
     margin-top: calc(2.93725rem + 1px)
 }
 
@@ -11906,22 +11885,22 @@ html {
     margin-top: calc(2.93725rem + 1px)
 }
 
-.layout-navbar-fixed.sidebar-mini-md.sidebar-collapse .wrapper .brand-link,
-.layout-navbar-fixed.sidebar-mini-xs.sidebar-collapse .wrapper .brand-link,
-.layout-navbar-fixed.sidebar-mini.sidebar-collapse .wrapper .brand-link {
+.layout-navbar-fixed.sidebar-mini-md.sidebar-collapse .wrapper .xl-link,
+.layout-navbar-fixed.sidebar-mini-xs.sidebar-collapse .wrapper .xl-link,
+.layout-navbar-fixed.sidebar-mini.sidebar-collapse .wrapper .xl-link {
     height: calc(3.5rem + 1px);
     width: 4.6rem
 }
 
-.layout-navbar-fixed.sidebar-mini-md.sidebar-collapse .wrapper .brand-link.text-sm,
-.layout-navbar-fixed.sidebar-mini-xs.sidebar-collapse .wrapper .brand-link.text-sm,
-.layout-navbar-fixed.sidebar-mini.sidebar-collapse .wrapper .brand-link.text-sm {
+.layout-navbar-fixed.sidebar-mini-md.sidebar-collapse .wrapper .xl-link.text-sm,
+.layout-navbar-fixed.sidebar-mini-xs.sidebar-collapse .wrapper .xl-link.text-sm,
+.layout-navbar-fixed.sidebar-mini.sidebar-collapse .wrapper .xl-link.text-sm {
     height: calc(2.93725rem + 1px)
 }
 
-.layout-navbar-fixed.sidebar-mini-md.sidebar-collapse.text-sm .wrapper .brand-link,
-.layout-navbar-fixed.sidebar-mini-xs.sidebar-collapse.text-sm .wrapper .brand-link,
-.layout-navbar-fixed.sidebar-mini.sidebar-collapse.text-sm .wrapper .brand-link {
+.layout-navbar-fixed.sidebar-mini-md.sidebar-collapse.text-sm .wrapper .xl-link,
+.layout-navbar-fixed.sidebar-mini-xs.sidebar-collapse.text-sm .wrapper .xl-link,
+.layout-navbar-fixed.sidebar-mini.sidebar-collapse.text-sm .wrapper .xl-link {
     height: calc(2.93725rem + 1px)
 }
 
@@ -11943,12 +11922,12 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     top: calc((3.5rem + 1px + (.5rem * 2))/ -1)
 }
 
-.layout-navbar-fixed .wrapper .main-sidebar:hover .brand-link {
+.layout-navbar-fixed .wrapper .main-sidebar:hover .xl-link {
     transition: width .3s ease-in-out;
     width: 250px
 }
 
-.layout-navbar-fixed .wrapper .brand-link {
+.layout-navbar-fixed .wrapper .xl-link {
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -11957,219 +11936,219 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     z-index: 1035
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-primary .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-primary .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-primary .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-secondary .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-secondary .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-secondary .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-secondary .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-success .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-success .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-success .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-success .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-info .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-info .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-info .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-info .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-warning .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-warning .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-warning .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-warning .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-danger .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-danger .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-danger .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-danger .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-light .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-light .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-light .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-light .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-dark .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-dark .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-dark .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-dark .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-lightblue .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-lightblue .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-lightblue .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-lightblue .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-navy .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-navy .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-navy .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-navy .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-olive .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-olive .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-olive .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-olive .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-lime .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-lime .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-lime .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-lime .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-fuchsia .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-fuchsia .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-fuchsia .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-fuchsia .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-maroon .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-maroon .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-maroon .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-maroon .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-blue .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-blue .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-blue .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-blue .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-indigo .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-indigo .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-indigo .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-indigo .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-purple .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-purple .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-purple .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-purple .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-pink .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-pink .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-pink .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-pink .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-red .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-red .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-red .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-red .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-orange .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-orange .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-orange .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-orange .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-yellow .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-yellow .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-yellow .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-yellow .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-green .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-green .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-green .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-green .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-teal .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-teal .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-teal .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-teal .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-cyan .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-cyan .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-cyan .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-cyan .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-white .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-white .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-white .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-white .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-gray .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-gray .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-gray .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-gray .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
-.layout-navbar-fixed .wrapper .sidebar-dark-gray-dark .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-dark-gray-dark .xl-link:not([class*=navbar]) {
     background-color: #343a40
 }
 
-.layout-navbar-fixed .wrapper .sidebar-light-gray-dark .brand-link:not([class*=navbar]) {
+.layout-navbar-fixed .wrapper .sidebar-light-gray-dark .xl-link:not([class*=navbar]) {
     background-color: #fff
 }
 
@@ -12197,7 +12176,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     margin-top: calc(2.93725rem + 1px)
 }
 
-.layout-navbar-not-fixed .wrapper .brand-link {
+.layout-navbar-not-fixed .wrapper .xl-link {
     position: static
 }
 
@@ -12227,8 +12206,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     margin-top: calc(3.5rem + 1px)
 }
 
-.layout-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm~.sidebar,
-.text-sm .layout-navbar-fixed.layout-fixed .wrapper .brand-link~.sidebar {
+.layout-navbar-fixed.layout-fixed .wrapper .xl-link.text-sm~.sidebar,
+.text-sm .layout-navbar-fixed.layout-fixed .wrapper .xl-link~.sidebar {
     margin-top: calc(2.93725rem + 1px)
 }
 
@@ -12250,23 +12229,23 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     top: calc((3.5rem + 1px + (.5rem * 2))/ -1)
 }
 
-.layout-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+.layout-navbar-fixed .wrapper.sidebar-collapse .xl-link {
     height: calc(3.5rem + 1px);
     transition: width .3s ease-in-out;
     width: 4.6rem
 }
 
-.layout-navbar-fixed .wrapper.sidebar-collapse .brand-link.text-sm,
-.text-sm .layout-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+.layout-navbar-fixed .wrapper.sidebar-collapse .xl-link.text-sm,
+.text-sm .layout-navbar-fixed .wrapper.sidebar-collapse .xl-link {
     height: calc(2.93725rem + 1px)
 }
 
-.layout-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+.layout-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .xl-link {
     transition: width .3s ease-in-out;
     width: 250px
 }
 
-.layout-navbar-fixed .wrapper .brand-link {
+.layout-navbar-fixed .wrapper .xl-link {
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -12304,7 +12283,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     margin-top: calc(2.93725rem + 1px)
 }
 
-.layout-navbar-not-fixed .wrapper .brand-link {
+.layout-navbar-not-fixed .wrapper .xl-link {
     position: static
 }
 
@@ -12335,8 +12314,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         margin-top: calc(3.5rem + 1px)
     }
 
-    .layout-sm-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm~.sidebar,
-    .text-sm .layout-sm-navbar-fixed.layout-fixed .wrapper .brand-link~.sidebar {
+    .layout-sm-navbar-fixed.layout-fixed .wrapper .xl-link.text-sm~.sidebar,
+    .text-sm .layout-sm-navbar-fixed.layout-fixed .wrapper .xl-link~.sidebar {
         margin-top: calc(2.93725rem + 1px)
     }
 
@@ -12358,23 +12337,23 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         top: calc((3.5rem + 1px + (.5rem * 2))/ -1)
     }
 
-    .layout-sm-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+    .layout-sm-navbar-fixed .wrapper.sidebar-collapse .xl-link {
         height: calc(3.5rem + 1px);
         transition: width .3s ease-in-out;
         width: 4.6rem
     }
 
-    .layout-sm-navbar-fixed .wrapper.sidebar-collapse .brand-link.text-sm,
-    .text-sm .layout-sm-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+    .layout-sm-navbar-fixed .wrapper.sidebar-collapse .xl-link.text-sm,
+    .text-sm .layout-sm-navbar-fixed .wrapper.sidebar-collapse .xl-link {
         height: calc(2.93725rem + 1px)
     }
 
-    .layout-sm-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+    .layout-sm-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .xl-link {
         transition: width .3s ease-in-out;
         width: 250px
     }
 
-    .layout-sm-navbar-fixed .wrapper .brand-link {
+    .layout-sm-navbar-fixed .wrapper .xl-link {
         overflow: hidden;
         position: fixed;
         top: 0;
@@ -12412,7 +12391,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         margin-top: calc(2.93725rem + 1px)
     }
 
-    .layout-sm-navbar-not-fixed .wrapper .brand-link {
+    .layout-sm-navbar-not-fixed .wrapper .xl-link {
         position: static
     }
 
@@ -12444,8 +12423,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         margin-top: calc(3.5rem + 1px)
     }
 
-    .layout-md-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm~.sidebar,
-    .text-sm .layout-md-navbar-fixed.layout-fixed .wrapper .brand-link~.sidebar {
+    .layout-md-navbar-fixed.layout-fixed .wrapper .xl-link.text-sm~.sidebar,
+    .text-sm .layout-md-navbar-fixed.layout-fixed .wrapper .xl-link~.sidebar {
         margin-top: calc(2.93725rem + 1px)
     }
 
@@ -12467,23 +12446,23 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         top: calc((3.5rem + 1px + (.5rem * 2))/ -1)
     }
 
-    .layout-md-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+    .layout-md-navbar-fixed .wrapper.sidebar-collapse .xl-link {
         height: calc(3.5rem + 1px);
         transition: width .3s ease-in-out;
         width: 4.6rem
     }
 
-    .layout-md-navbar-fixed .wrapper.sidebar-collapse .brand-link.text-sm,
-    .text-sm .layout-md-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+    .layout-md-navbar-fixed .wrapper.sidebar-collapse .xl-link.text-sm,
+    .text-sm .layout-md-navbar-fixed .wrapper.sidebar-collapse .xl-link {
         height: calc(2.93725rem + 1px)
     }
 
-    .layout-md-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+    .layout-md-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .xl-link {
         transition: width .3s ease-in-out;
         width: 250px
     }
 
-    .layout-md-navbar-fixed .wrapper .brand-link {
+    .layout-md-navbar-fixed .wrapper .xl-link {
         overflow: hidden;
         position: fixed;
         top: 0;
@@ -12521,7 +12500,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         margin-top: calc(2.93725rem + 1px)
     }
 
-    .layout-md-navbar-not-fixed .wrapper .brand-link {
+    .layout-md-navbar-not-fixed .wrapper .xl-link {
         position: static
     }
 
@@ -12553,8 +12532,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         margin-top: calc(3.5rem + 1px)
     }
 
-    .layout-lg-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm~.sidebar,
-    .text-sm .layout-lg-navbar-fixed.layout-fixed .wrapper .brand-link~.sidebar {
+    .layout-lg-navbar-fixed.layout-fixed .wrapper .xl-link.text-sm~.sidebar,
+    .text-sm .layout-lg-navbar-fixed.layout-fixed .wrapper .xl-link~.sidebar {
         margin-top: calc(2.93725rem + 1px)
     }
 
@@ -12576,23 +12555,23 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         top: calc((3.5rem + 1px + (.5rem * 2))/ -1)
     }
 
-    .layout-lg-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+    .layout-lg-navbar-fixed .wrapper.sidebar-collapse .xl-link {
         height: calc(3.5rem + 1px);
         transition: width .3s ease-in-out;
         width: 4.6rem
     }
 
-    .layout-lg-navbar-fixed .wrapper.sidebar-collapse .brand-link.text-sm,
-    .text-sm .layout-lg-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+    .layout-lg-navbar-fixed .wrapper.sidebar-collapse .xl-link.text-sm,
+    .text-sm .layout-lg-navbar-fixed .wrapper.sidebar-collapse .xl-link {
         height: calc(2.93725rem + 1px)
     }
 
-    .layout-lg-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+    .layout-lg-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .xl-link {
         transition: width .3s ease-in-out;
         width: 250px
     }
 
-    .layout-lg-navbar-fixed .wrapper .brand-link {
+    .layout-lg-navbar-fixed .wrapper .xl-link {
         overflow: hidden;
         position: fixed;
         top: 0;
@@ -12630,7 +12609,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         margin-top: calc(2.93725rem + 1px)
     }
 
-    .layout-lg-navbar-not-fixed .wrapper .brand-link {
+    .layout-lg-navbar-not-fixed .wrapper .xl-link {
         position: static
     }
 
@@ -12662,8 +12641,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         margin-top: calc(3.5rem + 1px)
     }
 
-    .layout-xl-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm~.sidebar,
-    .text-sm .layout-xl-navbar-fixed.layout-fixed .wrapper .brand-link~.sidebar {
+    .layout-xl-navbar-fixed.layout-fixed .wrapper .xl-link.text-sm~.sidebar,
+    .text-sm .layout-xl-navbar-fixed.layout-fixed .wrapper .xl-link~.sidebar {
         margin-top: calc(2.93725rem + 1px)
     }
 
@@ -12685,23 +12664,23 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         top: calc((3.5rem + 1px + (.5rem * 2))/ -1)
     }
 
-    .layout-xl-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+    .layout-xl-navbar-fixed .wrapper.sidebar-collapse .xl-link {
         height: calc(3.5rem + 1px);
         transition: width .3s ease-in-out;
         width: 4.6rem
     }
 
-    .layout-xl-navbar-fixed .wrapper.sidebar-collapse .brand-link.text-sm,
-    .text-sm .layout-xl-navbar-fixed .wrapper.sidebar-collapse .brand-link {
+    .layout-xl-navbar-fixed .wrapper.sidebar-collapse .xl-link.text-sm,
+    .text-sm .layout-xl-navbar-fixed .wrapper.sidebar-collapse .xl-link {
         height: calc(2.93725rem + 1px)
     }
 
-    .layout-xl-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+    .layout-xl-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .xl-link {
         transition: width .3s ease-in-out;
         width: 250px
     }
 
-    .layout-xl-navbar-fixed .wrapper .brand-link {
+    .layout-xl-navbar-fixed .wrapper .xl-link {
         overflow: hidden;
         position: fixed;
         top: 0;
@@ -12739,7 +12718,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         margin-top: calc(2.93725rem + 1px)
     }
 
-    .layout-xl-navbar-not-fixed .wrapper .brand-link {
+    .layout-xl-navbar-not-fixed .wrapper .xl-link {
         position: static
     }
 
@@ -12889,7 +12868,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     margin-left: 0
 }
 
-.layout-top-nav .wrapper .main-header .brand-image {
+.layout-top-nav .wrapper .main-header .xl-image {
     margin-top: -.5rem;
     margin-right: .2rem;
     height: 33px
@@ -12921,7 +12900,8 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
     body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-footer,
     body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header {
         transition: margin-left .3s ease-in-out;
-        margin-left: 250px
+        margin-left: 250px;
+        background-color: var(--profundidad2)
     }
 }
 
@@ -12948,7 +12928,9 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
     body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .content-wrapper,
     body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-footer,
     body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header {
-        margin-left: 0
+        margin-left: 0;
+        background-color: var(--profundidad2)
+
     }
 }
 
@@ -13096,7 +13078,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     overflow-y: auto
 }
 
-.layout-fixed .brand-link {
+.layout-fixed .xl-link {
     width: 250px
 }
 
@@ -13174,16 +13156,6 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     font-size: 1.5rem
 }
 
-.content-header .breadcrumb {
-    background-color: transparent;
-    line-height: 1.8rem;
-    margin-bottom: 0;
-    padding: 0
-}
-
-.text-sm .content-header .breadcrumb {
-    line-height: 1.5rem
-}
 
 .hold-transition .content-wrapper,
 .hold-transition .control-sidebar,
@@ -13199,10 +13171,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 
 
-.main-header {
-    border-bottom: 1px solid #dee2e6;
-    z-index: 1034
-}
+
 
 .main-header .nav-link {
     height: 2.5rem;
@@ -13362,7 +13331,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     color: #ced4da
 }
 
-.brand-link {
+.xl-link {
     display: block;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -13371,54 +13340,54 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     white-space: nowrap
 }
 
-.brand-link:hover {
+.xl-link:hover {
     color: #fff;
     text-decoration: none
 }
 
-.text-sm .brand-link {
+.text-sm .xl-link {
     font-size: inherit
 }
 
-[class*=sidebar-dark] .brand-link {
+[class*=sidebar-dark] .xl-link {
     border-bottom: 1px solid #4b545c
 }
 
-[class*=sidebar-dark] .brand-link,
-[class*=sidebar-dark] .brand-link .pushmenu {
+[class*=sidebar-dark] .xl-link,
+[class*=sidebar-dark] .xl-link .pushmenu {
     color: rgba(255, 255, 255, .8)
 }
 
-[class*=sidebar-dark] .brand-link .pushmenu:hover,
-[class*=sidebar-dark] .brand-link:hover {
+[class*=sidebar-dark] .xl-link .pushmenu:hover,
+[class*=sidebar-dark] .xl-link:hover {
     color: #fff
 }
 
-[class*=sidebar-light] .brand-link {
+[class*=sidebar-light] .xl-link {
     border-bottom: 1px solid #dee2e6
 }
 
-[class*=sidebar-light] .brand-link,
-[class*=sidebar-light] .brand-link .pushmenu {
+[class*=sidebar-light] .xl-link,
+[class*=sidebar-light] .xl-link .pushmenu {
     color: rgba(0, 0, 0, .8)
 }
 
-[class*=sidebar-light] .brand-link .pushmenu:hover,
-[class*=sidebar-light] .brand-link:hover {
+[class*=sidebar-light] .xl-link .pushmenu:hover,
+[class*=sidebar-light] .xl-link:hover {
     color: #000
 }
 
-.brand-link .pushmenu {
+.xl-link .pushmenu {
     margin-right: .5rem;
     font-size: 1rem
 }
 
-.brand-link .brand-link {
+.xl-link .xl-link {
     padding: 0;
     border-bottom: none
 }
 
-.brand-link .brand-image {
+.xl-link .xl-image {
     float: left;
     line-height: .8;
     margin-left: .8rem;
@@ -13428,7 +13397,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     width: auto
 }
 
-.brand-link .brand-image-xs {
+.xl-link .xl-image-xs {
     float: left;
     line-height: .8;
     margin-top: -.1rem;
@@ -13436,32 +13405,32 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     width: auto
 }
 
-.brand-link .brand-image-xl {
+.xl-link .xl-image-xl {
     line-height: .8;
     max-height: 40px;
     width: auto
 }
 
-.brand-link .brand-image-xl.single {
+.xl-link .xl-image-xl.single {
     margin-top: -.3rem
 }
 
-.brand-link.text-sm .brand-image,
-.text-sm .brand-link .brand-image {
+.xl-link.text-sm .xl-image,
+.text-sm .xl-link .xl-image {
     height: 29px;
     margin-bottom: -.25rem;
     margin-left: .95rem;
     margin-top: -.25rem
 }
 
-.brand-link.text-sm .brand-image-xs,
-.text-sm .brand-link .brand-image-xs {
+.xl-link.text-sm .xl-image-xs,
+.text-sm .xl-link .xl-image-xs {
     margin-top: -.2rem;
     max-height: 29px
 }
 
-.brand-link.text-sm .brand-image-xl,
-.text-sm .brand-link .brand-image-xl {
+.xl-link.text-sm .xl-image-xl,
+.text-sm .xl-link .xl-image-xl {
     margin-top: -.225rem;
     max-height: 38px
 }
@@ -13514,7 +13483,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     height: .5rem
 }
 
-.brand-link.border-bottom-0~.sidebar {
+.xl-link.border-bottom-0~.sidebar {
     height: calc(100% - 3.5rem)
 }
 
@@ -13788,7 +13757,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 }
 
 [class*=sidebar-dark-] {
-    background-color: #343a40
+    background-color: var(--negroClaro)
 }
 
 [class*=sidebar-dark-] .user-panel a:hover {
@@ -13878,8 +13847,9 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
 .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
-    background-color: #007bff;
-    color: #fff
+    color: #fff;
+    background-color: 
+        pink;
 }
 
 .sidebar-dark-primary .nav-sidebar.nav-legacy>.nav-item>.nav-link.active,
@@ -14794,14 +14764,14 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     visibility: visible
 }
 
-.logo-xl.brand-image-xs,
-.logo-xs.brand-image-xs {
+.logo-xl.xl-image-xs,
+.logo-xs.xl-image-xs {
     left: 18px;
     top: 12px
 }
 
-.logo-xl.brand-image-xl,
-.logo-xs.brand-image-xl {
+.logo-xl.xl-image-xl,
+.logo-xs.xl-image-xl {
     left: 12px;
     top: 6px
 }
@@ -14811,12 +14781,12 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     visibility: hidden
 }
 
-.logo-xs.brand-image-xl {
+.logo-xs.xl-image-xl {
     left: 16px;
     top: 8px
 }
 
-.brand-link.logo-switch::before {
+.xl-link.logo-switch::before {
     content: "\00a0"
 }
 
@@ -14900,8 +14870,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
         width: 250px
     }
 
-    .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .brand-link,
-    .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .brand-link {
+    .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .xl-link,
+    .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .xl-link {
         width: 250px
     }
 
@@ -14945,8 +14915,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
         visibility: hidden
     }
 
-    .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .brand-image,
-    .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .brand-image {
+    .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .xl-image,
+    .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .xl-image {
         margin-right: .5rem
     }
 
@@ -14968,11 +14938,11 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
         display: block !important
     }
 
-    .sidebar-mini.sidebar-collapse.layout-fixed .main-sidebar:hover .brand-link {
+    .sidebar-mini.sidebar-collapse.layout-fixed .main-sidebar:hover .xl-link {
         width: 250px
     }
 
-    .sidebar-mini.sidebar-collapse.layout-fixed .brand-link {
+    .sidebar-mini.sidebar-collapse.layout-fixed .xl-link {
         width: 4.6rem
     }
 }
@@ -15063,8 +15033,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
         width: 250px
     }
 
-    .sidebar-mini-md.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .brand-link,
-    .sidebar-mini-md.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .brand-link {
+    .sidebar-mini-md.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .xl-link,
+    .sidebar-mini-md.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .xl-link {
         width: 250px
     }
 
@@ -15108,8 +15078,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
         visibility: hidden
     }
 
-    .sidebar-mini-md.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .brand-image,
-    .sidebar-mini-md.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .brand-image {
+    .sidebar-mini-md.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .xl-image,
+    .sidebar-mini-md.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .xl-image {
         margin-right: .5rem
     }
 
@@ -15131,11 +15101,11 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
         display: block !important
     }
 
-    .sidebar-mini-md.sidebar-collapse.layout-fixed .main-sidebar:hover .brand-link {
+    .sidebar-mini-md.sidebar-collapse.layout-fixed .main-sidebar:hover .xl-link {
         width: 250px
     }
 
-    .sidebar-mini-md.sidebar-collapse.layout-fixed .brand-link {
+    .sidebar-mini-md.sidebar-collapse.layout-fixed .xl-link {
         width: 4.6rem
     }
 }
@@ -15224,8 +15194,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     width: 250px
 }
 
-.sidebar-mini-xs.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .brand-link,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .brand-link {
+.sidebar-mini-xs.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .xl-link,
+.sidebar-mini-xs.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .xl-link {
     width: 250px
 }
 
@@ -15269,8 +15239,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     visibility: hidden
 }
 
-.sidebar-mini-xs.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .brand-image,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .brand-image {
+.sidebar-mini-xs.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused .xl-image,
+.sidebar-mini-xs.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .xl-image {
     margin-right: .5rem
 }
 
@@ -15292,11 +15262,11 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     display: block !important
 }
 
-.sidebar-mini-xs.sidebar-collapse.layout-fixed .main-sidebar:hover .brand-link {
+.sidebar-mini-xs.sidebar-collapse.layout-fixed .main-sidebar:hover .xl-link {
     width: 250px
 }
 
-.sidebar-mini-xs.sidebar-collapse.layout-fixed .brand-link {
+.sidebar-mini-xs.sidebar-collapse.layout-fixed .xl-link {
     width: 4.6rem
 }
 
@@ -15762,12 +15732,12 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     display: none
 }
 
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .brand-link,
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .brand-link,
-.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .brand-link,
-.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .brand-link,
-.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .brand-link,
-.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .brand-link {
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .xl-link,
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .xl-link,
+.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .xl-link,
+.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .xl-link,
+.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .xl-link,
+.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .xl-link {
     width: 4.6rem !important
 }
 
@@ -25420,7 +25390,6 @@ a.disabled.mailbox-attachment-close {
     position: relative;
     text-align: center;
     text-decoration: none;
-    z-index: 10
 }
 
 .small-box>.small-box-footer:hover {
@@ -37047,13 +37016,13 @@ a.text-muted:hover {
 
 .accent-primary .btn-link,
 .accent-primary .nav-tabs .nav-link,
-.accent-primary a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-primary a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #007bff
 }
 
 .accent-primary .btn-link:hover,
 .accent-primary .nav-tabs .nav-link:hover,
-.accent-primary a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-primary a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #0056b3
 }
 
@@ -37097,31 +37066,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-primary [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-primary [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-primary [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-primary [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-primary [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-primary [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-primary [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-primary [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-secondary .btn-link,
 .accent-secondary .nav-tabs .nav-link,
-.accent-secondary a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-secondary a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #6c757d
 }
 
 .accent-secondary .btn-link:hover,
 .accent-secondary .nav-tabs .nav-link:hover,
-.accent-secondary a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-secondary a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #494f54
 }
 
@@ -37165,31 +37134,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-secondary [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-secondary [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-secondary [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-secondary [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-secondary [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-secondary [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-secondary [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-secondary [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-success .btn-link,
 .accent-success .nav-tabs .nav-link,
-.accent-success a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-success a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #28a745
 }
 
 .accent-success .btn-link:hover,
 .accent-success .nav-tabs .nav-link:hover,
-.accent-success a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-success a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #19692c
 }
 
@@ -37233,31 +37202,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-success [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-success [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-success [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-success [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-success [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-success [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-success [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-success [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-info .btn-link,
 .accent-info .nav-tabs .nav-link,
-.accent-info a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-info a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #17a2b8
 }
 
 .accent-info .btn-link:hover,
 .accent-info .nav-tabs .nav-link:hover,
-.accent-info a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-info a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #0f6674
 }
 
@@ -37301,31 +37270,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-info [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-info [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-info [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-info [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-info [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-info [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-info [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-info [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-warning .btn-link,
 .accent-warning .nav-tabs .nav-link,
-.accent-warning a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-warning a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #ffc107
 }
 
 .accent-warning .btn-link:hover,
 .accent-warning .nav-tabs .nav-link:hover,
-.accent-warning a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-warning a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #ba8b00
 }
 
@@ -37369,31 +37338,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-warning [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-warning [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-warning [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-warning [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-warning [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-warning [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-warning [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-warning [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-danger .btn-link,
 .accent-danger .nav-tabs .nav-link,
-.accent-danger a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-danger a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #dc3545
 }
 
 .accent-danger .btn-link:hover,
 .accent-danger .nav-tabs .nav-link:hover,
-.accent-danger a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-danger a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #a71d2a
 }
 
@@ -37437,31 +37406,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-danger [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-danger [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-danger [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-danger [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-danger [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-danger [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-danger [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-danger [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-light .btn-link,
 .accent-light .nav-tabs .nav-link,
-.accent-light a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-light a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #f8f9fa
 }
 
 .accent-light .btn-link:hover,
 .accent-light .nav-tabs .nav-link:hover,
-.accent-light a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-light a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #cbd3da
 }
 
@@ -37505,31 +37474,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-light [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-light [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-light [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-light [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-light [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-light [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-light [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-light [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-dark .btn-link,
 .accent-dark .nav-tabs .nav-link,
-.accent-dark a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-dark a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #343a40
 }
 
 .accent-dark .btn-link:hover,
 .accent-dark .nav-tabs .nav-link:hover,
-.accent-dark a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-dark a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #121416
 }
 
@@ -37573,31 +37542,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-dark [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-dark [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-dark [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-dark [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-dark [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-dark [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-dark [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-dark [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-lightblue .btn-link,
 .accent-lightblue .nav-tabs .nav-link,
-.accent-lightblue a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-lightblue a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #3c8dbc
 }
 
 .accent-lightblue .btn-link:hover,
 .accent-lightblue .nav-tabs .nav-link:hover,
-.accent-lightblue a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-lightblue a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #296282
 }
 
@@ -37641,31 +37610,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-lightblue [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-lightblue [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-lightblue [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-lightblue [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-lightblue [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-lightblue [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-lightblue [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-lightblue [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-navy .btn-link,
 .accent-navy .nav-tabs .nav-link,
-.accent-navy a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-navy a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #001f3f
 }
 
 .accent-navy .btn-link:hover,
 .accent-navy .nav-tabs .nav-link:hover,
-.accent-navy a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-navy a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #000
 }
 
@@ -37709,31 +37678,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-navy [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-navy [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-navy [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-navy [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-navy [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-navy [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-navy [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-navy [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-olive .btn-link,
 .accent-olive .nav-tabs .nav-link,
-.accent-olive a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-olive a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #3d9970
 }
 
 .accent-olive .btn-link:hover,
 .accent-olive .nav-tabs .nav-link:hover,
-.accent-olive a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-olive a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #276248
 }
 
@@ -37777,31 +37746,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-olive [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-olive [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-olive [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-olive [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-olive [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-olive [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-olive [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-olive [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-lime .btn-link,
 .accent-lime .nav-tabs .nav-link,
-.accent-lime a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-lime a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #01ff70
 }
 
 .accent-lime .btn-link:hover,
 .accent-lime .nav-tabs .nav-link:hover,
-.accent-lime a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-lime a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #00b44e
 }
 
@@ -37845,31 +37814,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-lime [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-lime [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-lime [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-lime [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-lime [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-lime [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-lime [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-lime [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-fuchsia .btn-link,
 .accent-fuchsia .nav-tabs .nav-link,
-.accent-fuchsia a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-fuchsia a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #f012be
 }
 
 .accent-fuchsia .btn-link:hover,
 .accent-fuchsia .nav-tabs .nav-link:hover,
-.accent-fuchsia a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-fuchsia a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #ab0b87
 }
 
@@ -37913,31 +37882,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-fuchsia [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-fuchsia [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-fuchsia [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-fuchsia [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-fuchsia [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-fuchsia [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-fuchsia [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-fuchsia [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-maroon .btn-link,
 .accent-maroon .nav-tabs .nav-link,
-.accent-maroon a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-maroon a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #d81b60
 }
 
 .accent-maroon .btn-link:hover,
 .accent-maroon .nav-tabs .nav-link:hover,
-.accent-maroon a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-maroon a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #941342
 }
 
@@ -37981,31 +37950,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-maroon [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-maroon [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-maroon [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-maroon [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-maroon [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-maroon [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-maroon [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-maroon [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-blue .btn-link,
 .accent-blue .nav-tabs .nav-link,
-.accent-blue a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-blue a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #007bff
 }
 
 .accent-blue .btn-link:hover,
 .accent-blue .nav-tabs .nav-link:hover,
-.accent-blue a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-blue a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #0056b3
 }
 
@@ -38049,31 +38018,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-blue [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-blue [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-blue [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-blue [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-blue [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-blue [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-blue [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-blue [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-indigo .btn-link,
 .accent-indigo .nav-tabs .nav-link,
-.accent-indigo a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-indigo a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #6610f2
 }
 
 .accent-indigo .btn-link:hover,
 .accent-indigo .nav-tabs .nav-link:hover,
-.accent-indigo a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-indigo a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #4709ac
 }
 
@@ -38117,31 +38086,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-indigo [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-indigo [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-indigo [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-indigo [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-indigo [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-indigo [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-indigo [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-indigo [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-purple .btn-link,
 .accent-purple .nav-tabs .nav-link,
-.accent-purple a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-purple a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #6f42c1
 }
 
 .accent-purple .btn-link:hover,
 .accent-purple .nav-tabs .nav-link:hover,
-.accent-purple a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-purple a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #4e2d89
 }
 
@@ -38185,31 +38154,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-purple [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-purple [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-purple [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-purple [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-purple [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-purple [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-purple [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-purple [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-pink .btn-link,
 .accent-pink .nav-tabs .nav-link,
-.accent-pink a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-pink a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #e83e8c
 }
 
 .accent-pink .btn-link:hover,
 .accent-pink .nav-tabs .nav-link:hover,
-.accent-pink a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-pink a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #c21766
 }
 
@@ -38253,31 +38222,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-pink [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-pink [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-pink [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-pink [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-pink [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-pink [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-pink [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-pink [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-red .btn-link,
 .accent-red .nav-tabs .nav-link,
-.accent-red a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-red a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #dc3545
 }
 
 .accent-red .btn-link:hover,
 .accent-red .nav-tabs .nav-link:hover,
-.accent-red a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-red a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #a71d2a
 }
 
@@ -38321,31 +38290,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-red [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-red [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-red [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-red [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-red [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-red [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-red [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-red [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-orange .btn-link,
 .accent-orange .nav-tabs .nav-link,
-.accent-orange a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-orange a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #fd7e14
 }
 
 .accent-orange .btn-link:hover,
 .accent-orange .nav-tabs .nav-link:hover,
-.accent-orange a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-orange a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #c35a02
 }
 
@@ -38389,31 +38358,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-orange [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-orange [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-orange [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-orange [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-orange [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-orange [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-orange [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-orange [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-yellow .btn-link,
 .accent-yellow .nav-tabs .nav-link,
-.accent-yellow a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-yellow a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #ffc107
 }
 
 .accent-yellow .btn-link:hover,
 .accent-yellow .nav-tabs .nav-link:hover,
-.accent-yellow a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-yellow a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #ba8b00
 }
 
@@ -38457,31 +38426,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-yellow [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-yellow [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-yellow [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-yellow [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-yellow [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-yellow [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-yellow [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-yellow [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-green .btn-link,
 .accent-green .nav-tabs .nav-link,
-.accent-green a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-green a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #28a745
 }
 
 .accent-green .btn-link:hover,
 .accent-green .nav-tabs .nav-link:hover,
-.accent-green a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-green a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #19692c
 }
 
@@ -38525,32 +38494,32 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-green [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-green [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-green [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-green [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-green [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-green [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-green [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-green [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 
 .accent-teal .btn-link,
 .accent-teal .nav-tabs .nav-link,
-.accent-teal a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-teal a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #20c997
 }
 
 .accent-teal .btn-link:hover,
 .accent-teal .nav-tabs .nav-link:hover,
-.accent-teal a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-teal a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #158765
 }
 
@@ -38594,31 +38563,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-teal [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-teal [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-teal [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-teal [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-teal [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-teal [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-teal [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-teal [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-cyan .btn-link,
 .accent-cyan .nav-tabs .nav-link,
-.accent-cyan a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-cyan a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #17a2b8
 }
 
 .accent-cyan .btn-link:hover,
 .accent-cyan .nav-tabs .nav-link:hover,
-.accent-cyan a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-cyan a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #0f6674
 }
 
@@ -38662,31 +38631,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-cyan [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-cyan [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-cyan [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-cyan [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-cyan [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-cyan [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-cyan [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-cyan [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-white .btn-link,
 .accent-white .nav-tabs .nav-link,
-.accent-white a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-white a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #fff
 }
 
 .accent-white .btn-link:hover,
 .accent-white .nav-tabs .nav-link:hover,
-.accent-white a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-white a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #d9d9d9
 }
 
@@ -38730,31 +38699,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-white [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-white [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-white [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-white [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-white [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-white [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-white [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-white [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-gray .btn-link,
 .accent-gray .nav-tabs .nav-link,
-.accent-gray a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-gray a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #6c757d
 }
 
 .accent-gray .btn-link:hover,
 .accent-gray .nav-tabs .nav-link:hover,
-.accent-gray a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-gray a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #494f54
 }
 
@@ -38798,31 +38767,31 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-gray [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-gray [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-gray [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-gray [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-gray [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-gray [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-gray [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-gray [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
 .accent-gray-dark .btn-link,
 .accent-gray-dark .nav-tabs .nav-link,
-.accent-gray-dark a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn) {
+.accent-gray-dark a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn) {
     color: #343a40
 }
 
 .accent-gray-dark .btn-link:hover,
 .accent-gray-dark .nav-tabs .nav-link:hover,
-.accent-gray-dark a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.badge):not(.btn):hover {
+.accent-gray-dark a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):not(.page-link):not(.badge):not(.btn):hover {
     color: #121416
 }
 
@@ -38866,19 +38835,19 @@ a.text-muted:hover {
     color: #6c757d
 }
 
-.accent-gray-dark [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-gray-dark [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #c2c7d0
 }
 
-.accent-gray-dark [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-gray-dark [class*=sidebar-dark-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #fff
 }
 
-.accent-gray-dark [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
+.accent-gray-dark [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link) {
     color: #343a40
 }
 
-.accent-gray-dark [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):hover {
+.accent-gray-dark [class*=sidebar-light-] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.xl-link):hover {
     color: #212529
 }
 
