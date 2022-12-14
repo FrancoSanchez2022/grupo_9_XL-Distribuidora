@@ -6,8 +6,8 @@
     <body class="login">
         <%- include('../partials/header') %>
             <main>
+                <%- include('../partials/breadcrumbs',{másSecciones:null,página:'Login'}) %>
                 <h1>Inicia sesión</h1>
-                <%- include('../partials/breadcrumbs',{página:'Login'}) %>
                     <section class="card">
                         <form class="form-login" action="/users/login" method="post">
                             <section class="card-header">
@@ -36,7 +36,7 @@
                                             <div class="recordarme bottom">
                                                 <input type="checkbox" name="recordarme" id="recordarme">
                                                 <label for="recordarme">
-                                                    <span>Recordar clave</span>
+                                                    <span>Recordarme</span>
                                                 </label>
                                             </div>
                                 </div>

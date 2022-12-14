@@ -6,8 +6,8 @@
     <body class="register">
         <%- include('../partials/header') %>
             <main>
+                <%- include('../partials/breadcrumbs',{másSecciones:null,página:'Registrate'}) %>
                 <h1>Registrate</h1>
-                <%- include('../partials/breadcrumbs',{página:'Registrate'}) %>
                     <section class="card">
                         <form class="form-register" action="/users/register" method="POST" id="formulario">
                             <section class="card-header">

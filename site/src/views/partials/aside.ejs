@@ -1,0 +1,119 @@
+   <!-- Main Sidebar Container -->
+   <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- XL-DISTRIBUIDORA Logo -->
+    <a href="/" class="xl-link">
+      <img src="/img/Logo-distribuidora-de-esencias.jpeg" alt="Logo" class="xl-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">XL - Distribuidora</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+         <a href="/users/profile">
+          <img src="/img/users/<%= locals.userLogin.imagen%>" class="img-circle elevation-2" alt="User Image">
+         </a>
+        </div>
+        <div class="info">
+          <a href="/users/profile" class="d-block"><%=locals.userLogin.nombre%> <%=locals.userLogin.apellido%> </a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item menu-open">          
+                <a href="/admin" class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Admin Dashboard</p>
+                </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-users"></i>
+              <p>
+                Usuarios
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/users" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver Listado</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/addUser" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Añadir Usuario</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/modUser" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Modificar Usuario</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/users" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Eliminar Usuario</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-light fa-bag-shopping"></i>             
+              <p>
+                Productos
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver productos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/create" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Añadir producto</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/edit" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Editar producto</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Eliminar producto</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

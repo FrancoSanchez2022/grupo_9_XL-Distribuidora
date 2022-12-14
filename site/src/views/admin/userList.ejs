@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap/css/bootstrap-theme.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <%- include('../partials/head',{title:'XL - Admin'}) %>
+
+</head>
+
+<body class="dashboard hold-transition sidebar-mini layout-fixed">
+  <%- include('../partials/header') %>
+    <div class="wrapper">
+
+
+      <%- include('../partials/aside') %>
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+          <!-- Left navbar links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+          </ul>
+          <%- include('../partials/breadcrumbs',{ másSecciones:'<a href="/admin">Admin</a>',página: 'Listado de Usuarios'}) %>
+        </nav>
+       <!-- /.navbar -->
+
+         <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+          <!-- Main content -->
+          <section class="content">
+            <h1>Listado de Usuarios</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div class="table-responsive">
+            <table class="table table-striped center">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="action-toggle"></th>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Email</th>
+                  <th>Teléfono</th>
+                  <th>Fecha de nacimiento</th>
+                  <th>Ver foto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>1</td>
+                  <td>Jaime</td>
+                  <td>Ibañez</td>
+                  <td>jaime.ibanez@gmail.com</td>
+                  <td>011-152155155</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>2</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>3</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>4</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>5</td>
+                  <td>dapibus</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>6</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>7</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>8</td>
+                  <td>sagittis</td>
+                  <td>ipsum</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>9</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>10</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+                <tr>
+                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
+                  <td>11</td>
+                  <td>massa</td>
+                  <td>Vestibulum</td>
+                  <td>lacinia</td>
+                  <td>arcu</td>
+                  <td>15/12/2015</td>
+                  <td>Link</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button type="button" class="btn btn-danger btn-right" data-toggle="modal" data-target="#ConfirmDeleteModal">Eliminar usuarios seleccionados</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Eliminar usuario</h4>
+          </div>
+          <div class="modal-body">
+            ¿Estás seguro que deseas eliminar el usuario?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger ">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.content -->
+</div>
+ <!-- /.content-wrapper --> 
+</div>
+<!-- ./wrapper -->
+
+
+<!-- Footer  -->
+<%- include('../partials/footer') %>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- vista de carga -->
+<script src="/dist/js/adminlte.js"></script>
+
+</body>
+
+</html>

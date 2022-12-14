@@ -1,0 +1,105 @@
+@media (max-width:768px) {
+    .bc {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media (min-width:769px) {
+
+    .bc {
+        padding-top: 10px;
+        font-family: 'Merriweather Sans', arial, verdana;
+    }
+
+    .bc .breadcrumb {
+        display: inline-block;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+        border-radius: 5px;
+        counter-reset: flag;
+        margin-left: 20px;
+    }
+
+    .bc .breadcrumb a {
+        text-align: center;
+        outline: none;
+        display: block;
+        float: left;
+        font-size: 11.5px;
+        line-height: 30px;
+        padding: 0 10px 0 60px;
+        height: 30px;
+        position: relative;
+    }
+
+    .bc .breadcrumb a:first-child {
+        padding-left: 46px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .bc .breadcrumb a:first-child:before {
+        left: 14px;
+    }
+
+    .bc .breadcrumb a:last-child {
+        border-radius: 0 5px 5px 0;
+        padding-right: 20px;
+    }
+
+    .bc .breadcrumb a:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -15px;
+        width: 30px;
+        height: 30px;
+        transform: scale(0.707) rotate(45deg);
+        z-index: 1;
+
+        box-shadow:
+            2px -2px 0 2px rgba(0, 0, 0, 0.281),
+            3px -3px 0 2px rgba(255, 255, 255, 0.082);
+        border-radius: 0 5px 0 50px;
+    }
+
+    .bc .breadcrumb a:last-child:after {
+        content: none;
+    }
+
+    .bc .breadcrumb a:before {
+        content: counter(flag);
+        counter-increment: flag;
+        border-radius: 100%;
+        width: 16px;
+        height: 16px;
+        line-height: 18px;
+        margin: 6px 0;
+        position: absolute;
+        top: 0;
+        left: 30px;
+        font-weight: bold;
+    }
+
+    .bc .flat a,
+    .bc .flat a:after {
+        background: white;
+        color: black;
+        transition: all 0.5s;
+    }
+
+    .bc .flat a:before {
+        background: white;
+        box-shadow: 0 0 0 1px #ccc;
+    }
+
+    .bc .flat a:hover,
+    .bc .flat a.active,
+    .bc .flat a:hover:after,
+    .bc .flat a.active:after {
+        background: linear-gradient(to bottom,
+                #FFD6D6,
+                #FF3474B9);
+    }
+
+}

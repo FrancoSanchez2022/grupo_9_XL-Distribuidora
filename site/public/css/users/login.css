@@ -5,8 +5,9 @@
 .login main h1 {
   text-align: center;
   font-weight: 500;
-  margin: 40px 20px 20px;
+  margin: 0px 20px 20px;
   font-size: 35px;
+  border-bottom: 1px solid #4d4d4d;
 }
 
 .login main h2 {
