@@ -13,6 +13,7 @@ header input {
     border-radius: 20px;
     padding: 10px;
     margin: 5px;
+    color: black;
 }
 
 header .top .form-search .formulario {
