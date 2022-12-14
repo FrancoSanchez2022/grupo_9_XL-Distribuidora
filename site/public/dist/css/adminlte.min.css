@@ -3842,7 +3842,8 @@ input[type=submit].btn-block {
 }
 
 .dropdown-menu.show {
-    display: block
+    display: block;
+    margin-left: -33.5px
 }
 
 .dropdown-header {
