@@ -21,7 +21,7 @@ const cookieAuth = require('./middlewares/cookieCheck')
 
 /* Implementación de locals en la aplicación */
 const app = express();
-const port = 3030;
+const port = 3000;
 
 /* Importación las rutas */
 let indexRouter = require('./routes/index')
