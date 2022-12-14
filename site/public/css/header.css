@@ -117,6 +117,17 @@ header .burger nav ul li:hover {
     border: 2px solid var(--colorProfundidad);
     background-color: var(--colorHeader)
 }
+header .burger nav ul .desloguear form button{
+    background: none;
+    border: none;
+    color: var(--colorHeader);
+}
+header .burger nav ul .desloguear form button:hover{
+    color: var(--colorProfundidad);
+    background-color: var(--colorHeader)
+    
+}
+
 
 header .burger nav ul .carritoli {
     display: none;
@@ -373,6 +384,7 @@ header .burger nav a:hover {
         border-radius: 20px;
         padding: 10px 100px;
         margin: 5px;
+        color: black;
     }
 
     header .burger nav {
@@ -406,6 +418,7 @@ header .burger nav a:hover {
         border-radius: 20px;
         padding: 10px 130px;
         margin: 5px;
+        color: black;
     }
 
     header .burger nav {
@@ -439,6 +452,7 @@ header .burger nav a:hover {
         border-radius: 20px;
         padding: 10px 100px;
         margin: 5px;
+        color: black;
     }
 
     header .burger nav {
