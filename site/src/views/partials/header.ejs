@@ -28,12 +28,18 @@
                     <% } %>
                         <% if (locals.userLogin) { %>
                             <li><a href="/users/profile">¡Hola <%= locals.userLogin.nombre %>! </a></li>
+                            <li class="carritoli"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="desloguear">
+                                <form action="/users/logout?_method=DELETE" method="post">
+                                    <button type="submit"><i class="fas fa-sign-out-alt"></i></button>
+                                </form>
+                            </li>
                             <% } else { %>
                                 <li><a href="/users/login">Login</a></li>
                                 <li><a href="/users/register">Registro</a></li>
                             <% } %>
 
-                    <li class="carritoli"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></li>
+                   
             </ul>
         </nav>
     </div>

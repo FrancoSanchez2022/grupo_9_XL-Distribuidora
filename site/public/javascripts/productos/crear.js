@@ -34,7 +34,7 @@ window.addEventListener("load",()=> {
     titulo.addEventListener( "blur", function(){
         console.log("me tocaste")
         switch (true) {
-            case titulo.value.trim():
+            case !titulo.value.trim():
                 $("#tituloError").innerHTML = "debes ingresar el titulo del producto"
                 titulo.classList.add("is-invalid")
                 validate.titulo= false
