@@ -10,7 +10,8 @@
 @import url('./pCart.css');
 @import url('./users/login.css');
 @import url('./users/register.css');
-@import url('./users/resetPass.css');
+@import url('./users/forgotPass.css');
+@import url('./users/recoverPass.css');
 @import url('./users/profile.css');
 @import url('./users/profileEdit.css');
 @import url('./pCreate.css');

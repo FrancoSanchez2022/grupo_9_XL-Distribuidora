@@ -52,12 +52,6 @@
                                         <label for="phone">Teléfono</label>
                                         <input type="tel" name="phonenumber" id="phone"
                                             value="<%= locals.old && old.phonenumber ? old.phonenumber : null %>">
-
-                                        <!-- <div class="verify">
-                                            <button type="submit" class="button">Verificar</button>
-                                            <div class="alert-msg" style="display: none;"></div>
-                                        </div> -->
-
                                             <small id="phonenumberContainer">
                                                 <%= locals.errors && errors.phonenumber ? errors.phonenumber.msg : null %>
                                             </small>

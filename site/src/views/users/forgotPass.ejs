@@ -3,19 +3,19 @@
 
 <%- include('../partials/head',{title:'XL - Restablecer Contraseña'}) %>
 
-    <body class="resetPassword">
+    <body class="forgotPassword">
         <%- include('../partials/header') %>
             <main>
                 <%- include('../partials/breadcrumbs',{ másSecciones: '<a href="/users/login">Login</a>',página: 'Restablecer Contraseña'}) %>
                 <h1>Restablecer contraseña</h1>
                     <section class="card">
-                        <form class="form-resetPassword" action="" method="post">
+                        <form class="form-forgotPassword" action="" method="post">
                             <div class="container bottom">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email" placeholder="Email">
-                                <% if (locals.errors && errors.email) { %>
-                                <small><%= errors.email.msg %></small>
-                                <% } %>
+                                <small>
+                                    <%= locals.errors && errors.email?errors.email.msg:null %>
+                                </small>
                             </div>
                             <div class="sendEmail-button">
                                 <button type="submit">Enviar</button>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head',{title:'XL - Restablecer Contraseña'}) %>
+
+    <body class="recoverPassword">
+        <%- include('../partials/header') %>
+            <main>
+                <%- include('../partials/breadcrumbs',{másSecciones:'<a href="/users/login">Login</a>',página:'Restablecer Contraseña'}) %>
+                    <h1>Restablecer contraseña</h1>
+    
+                    <section class="card">
+                        <form class="form-recoverPass" action="/users/recoverPassword" method="post" id="formulario">
+                            <section class="card-header">
+                                <h3>¡Estás a solo un paso de tu nueva contraseña, recupera tu contraseña ahora!</h3>
+                            </section>
+                            <section class="card-body">
+                                <div class="container bottom">
+                                    <label for="pass1">Nueva Clave</label>
+                                    <div class="password">
+                                        <input type="password" name="pass" id="pass" placeholder="Password">
+                                        <i class="fas fa-eye-slash" id="eye-pass"></i>
+                                    </div>
+                                    <small id="passContainer">
+                                        <%= locals.errors && errors.pass ? errors.pass.msg : null %>
+                                    </small>
+                                </div>
+                                <div class="container bottom">
+                                    <label for="pass2">Repetir Clave</label>
+                                    <div class="password">
+                                        <input type="password" name="pass2" id="pass2" placeholder="Password">
+                                        <i class="fas fa-eye-slash" id="eye-pass2"></i>
+                                    </div>
+                                    <small id="passContainer2">
+                                        <%= locals.errors && errors.pass2 ? errors.pass2.msg : null %>
+                                    </small>
+                                </div>
+                            </section>
+                            <section class="card-footer">
+                                <div class="changePass-button">
+                                    <button type="submit">Cambiar Contraseña</button>
+                                </div>
+                            </section>
+                        </form>
+                    </section>
+            </main>
+            <%- include('../partials/footer') %>
+            <script src="/javascripts/users/recoverPass.js"></script>
+            <script src="/javascripts/users/eyePass.js"></script>
+    </body>
+
+</html>

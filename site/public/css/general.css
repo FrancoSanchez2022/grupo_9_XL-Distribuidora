@@ -1,6 +1,6 @@
 body{
   font-family: Merriweather ;
-    background-color: var(--profundidad2);
+  background-color: var(--profundidad2);
     display: block;
     margin:auto ;
     max-width: 2560px;
