@@ -296,7 +296,7 @@ header .burger nav a:hover {
     header {
         height: 150px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* error ancho de la página */
         align-items: center;
     }
 
@@ -425,7 +425,7 @@ header .burger nav a:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        width: 100%;
+        width: 95%;
         position: inherit;
         margin: 0;
         margin-left: 35px;

@@ -28,34 +28,8 @@
   margin: 0px 0px 10px;
 }
 
-.register main .breadcrumbs {
-  padding: 0.5rem;
-  border-top: 1px solid #4d4d4d;
-  font-size: 12px;
-  line-height: 20px;
-}
 
-.register main .breadcrumbs ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-.register main .breadcrumbs ul li {
-  display: inline-block;
-  color: var(--grisClaro);
-}
-
-.register main .breadcrumbs ul li a {
-  color: var(--grisOscuro);
-  display: block;
-  text-decoration: none;
-}
-
-.register main .breadcrumbs ul li a:hover {
-  text-decoration: underline;
-  color: var(--black);
-}
 
 .register main .card {
   border-radius: 0.5rem;
