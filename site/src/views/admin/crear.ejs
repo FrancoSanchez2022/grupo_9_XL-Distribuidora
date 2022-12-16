@@ -40,14 +40,14 @@
 
                         <!-- Main content -->
                         <section class="content">
-                            <main>
+                            <main class="crea">
                                 <h1>Crear un producto nuevo</h1>
                                 <!-- Formulario -->
                                 <form action="" class="create" method="POST" enctype="multipart/form-data">
 
                                     <!-- Contenedor de imagenes y Principales -->
                                     <div class="container">
-                                        <div class="row justify-content-between align-items-center">
+                                        <div class="conjunto">
 
                                             <!-- Principales -->
                                             <div class="col col-lg-4 col-md-12 col-sm-12">
@@ -97,13 +97,13 @@
                                             </div>
 
                                             <!-- Imagenes -->
-                                            <div class="col col-lg-7 col-md-12 col-sm-12">
+                                            <div class="img-producto">
                                                 <section class="img-product">
 
-                                                    <div class="container">
-                                                        <div class="row">
+                                                    <div class="contenedor">
+                                                        <div class="espacio">
                                                             <!-- Imagen 1 -->
-                                                            <div class="col col-5">
+                                                            <div class="image">
                                                                 <label class="selectImg" for="product-img">
                                                                     <img id="img-preview"
                                                                         class="img-fluid img-thumbnail imagen-height rounded"
@@ -221,10 +221,10 @@
                                             </div>
                                             <div class="form-floating m-2">
                                                 <div class="from-floating">
+                                                    <label for="floatingTextarea">Descripción</label>
                                                     <textarea class="form-control" name="Descripcion"
                                                         placeholder="Por favor inserte la descripcion del producto"
-                                                        id="floatingTextarea"></textarea>
-                                                    <label for="floatingTextarea">Descripción</label>
+                                                        id="floatingTextarea" ></textarea>
                                                 </div>
                                                 <p class="span text-danger" id="descripcionError">
                                                     <% locals.errors && errors.descripcion ? errors.descripcion.msg :
@@ -235,8 +235,8 @@
                                     </div>
 
                                     <!-- Button -->
-                                    <div class="create-button text-center mt-5 pb-5">
-                                        <button class="btn btn-primary" type="submit">Crear producto</button>
+                                    <div class="boton">
+                                        <button class="botoncito" type="submit">Crear producto</button>
                                     </div>
                                 </form>
 

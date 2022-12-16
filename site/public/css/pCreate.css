@@ -1,5 +1,42 @@
-.content{
+.content .crea{
     background-color: white;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 62px;
+}
+.content .crea form .container .conjunto{
+    display: flex;
+    justify-content: space-around;
+}
+.content .crea form .container .conjunto .img-producto .img-product .contenedor{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.content .crea form .container .row .form-floating label{
+    display: flex;
+    justify-content: center;
+}
+.content .crea form .container .row .form-floating .form-control{
+    resize: none;
+}
+.content .crea form .boton{
+    display: flex;
+    justify-content: center;
+}
+.content .crea form .boton .botoncito{
+    background-color: #FF3474B9;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    color: white;
+}
+.content .crea form .boton .botoncito:hover{
+    background-color:  white;
+    border: 1px solid #FF3474B9;
+    padding: 15px;
+    border-radius: 25px;
+    color: #FF3474B9;
 }
 
 

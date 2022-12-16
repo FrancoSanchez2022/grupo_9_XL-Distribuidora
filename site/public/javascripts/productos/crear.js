@@ -156,7 +156,7 @@ window.addEventListener("load",()=> {
                 $('#marcaError').innerHTML =null
                 marca.classList.remove('is-invalid')
                 marca.classList.add('is-valid')
-                validate.marca=false
+                validate.marca=true
                 break;
         }
     })
