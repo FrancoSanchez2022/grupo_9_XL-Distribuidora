@@ -32,36 +32,6 @@
   margin: 7px 0px;
 }
 
-.login main .breadcrumbs {
-  padding: 0.5rem;
-  border-top: 1px solid #4d4d4d;
-  font-size: 12px;
-  line-height: 20px;
-}
-
-.login main .breadcrumbs ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.login main .breadcrumbs ul li {
-  display: inline-block;
-  color: var(--grisClaro);
-}
-
-.login main .breadcrumbs ul li a {
-  color: var(--grisOscuro);
-  display: block;
-  text-decoration: none;
-}
-
-.login main .breadcrumbs ul li a:hover {
-  text-decoration: underline;
-  color: var(--black);
-
-}
-
 .login main .card {
   border-radius: 0.5rem;
   border: 2px solid var(--grisClaro);
@@ -98,7 +68,7 @@
 
   font-size: 11.5px;
   text-decoration: none;
-  box-shadow: 0px 0.5px 3px 3px white;
+  box-shadow: 0px 0.5px 3px 3px white, #e3dbee70;
   border-radius: 5%;
 }
 
@@ -136,8 +106,11 @@
 
 .login main .card .form-login .card-body {
   padding: 1rem;
-  background-color: var(--white);
-}
+  background: linear-gradient(
+      to bottom,
+      white,
+       #e7dbeeec);
+      }
 
 .login main .card .form-login .card-body .container {
 
@@ -189,7 +162,7 @@
   padding-left: 8px;
   font-size: 10.5px;
   color: rgb(148, 1, 1);
-  background-color: #f7e7d9ee;
+  background-color: #ffb6a496;
   width: 100%;
   border-radius: 2.5px;
   box-sizing: border-box;

@@ -21,10 +21,9 @@
                                         <small id="emailContainer">
                                             <%= locals.errors && errors.email?errors.email.msg:null %>
                                         </small>
-                              
                                 </div>
                                 <div class="container bottom">
-                                    <label for="name">Clave</label>
+                                    <label for="pass">Clave</label>
                                     <div class="password">
                                         <input type="password" name="pass" id="pass" placeholder="Password">
                                         <i class="fas fa-eye-slash" id="eye-pass"></i>
@@ -43,7 +42,7 @@
                                 <div class="login-button">
                                     <button type="submit"><i class="fa fa-sign-in"></i> Iniciar sesión</button>
                                 </div>
-                                <span class="I-forgot-my-password"><a href="/users/reset"><i
+                                <span class="I-forgot-my-password"><a href="/users/forgotPassword"><i
                                             class="fas fa-exclamation-triangle"></i>
                                         Olvidé mi contraseña</a>
                                 </span>

@@ -103,15 +103,29 @@ module.exports = {
             })
         }
     },
-    resetPass: (req, res) => {
-        return res.render('users/resetPass')
+    forgotPass: (req, res) => {
+        return res.render('users/forgotPass')
     },
-    processResetPass: (req, res) => {
+    processForgotPass: (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
             return res.send(req.body)
         } else {
-            return res.render('users/resetPass', {
+            return res.render('users/forgotPass', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
+    },
+    recoverPass: (req, res) => {
+        return res.render('users/recoverPass')
+    },
+    processRecoverPass: (req, res) => {
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            return res.send(req.body)
+        } else {
+            return res.render('users/recoverPass', {
                 errors: errors.mapped(),
                 old: req.body
             })

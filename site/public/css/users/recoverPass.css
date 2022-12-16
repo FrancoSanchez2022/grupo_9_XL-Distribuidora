@@ -1,0 +1,214 @@
+
+
+ .recoverPassword {
+    line-height: 1.5;
+  }
+  
+  .recoverPassword main h1 {
+    text-align: center;
+    font-weight: 500;
+    margin: 0px 20px 20px;
+    font-size: 35px;
+    border-bottom: 1px solid #4d4d4d;
+  }
+  
+  .recoverPassword main h3 {
+    text-align: center;
+    font-weight: 430;
+    font-size: 18px;
+    margin: 5px 0px;
+  }
+  
+  .recoverPassword main p {
+    text-align: center;
+    font-weight: 320;
+    font-size: 13px;
+    margin: 7px 0px;
+  }
+  
+  .recoverPassword main .card {
+    border-radius: 0.5rem;
+    border: 2px solid var(--grisClaro);
+    margin-bottom: 15px;
+    margin: 5%;
+    box-shadow: 0px 2.5px 10px 6px #ff347491
+  }
+  
+  .recoverPassword main .card .form-recoverPass .card-header {
+    border-bottom: 1.5px solid var(--grisClaro);
+    border-radius: 0.35rem 0.35rem 0 0;
+  }
+  
+  .recoverPassword main .card .form-recoverPass .card-footer {
+    border-top: 1.5px solid var(--grisClaro);
+    border-radius: 0 0 0.35rem 0.35rem;
+  }
+  
+  .recoverPassword main .card .form-recoverPass .card-header,
+  .card-footer {
+    background-color: var(--gray);
+    padding: 1rem
+  }
+  
+
+
+  
+
+  .recoverPassword main .card .form-recoverPass .card-body {
+    padding: 1rem;
+    background: linear-gradient(
+        to bottom,
+        white,
+         #e7dbeeec);
+  }
+  
+  .recoverPassword main .card .form-recoverPass .card-body .container {
+  
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12.5px;
+  }
+  
+  .recoverPassword main .card .form-recoverPass .card-body .container .password {
+    position: relative;
+  }
+  
+  .recoverPassword main .card .form-recoverPass .card-body .container .password i {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 6px;
+  }
+  
+  .recoverPassword main .card button {
+    background-color: #4d4d4d;
+    color: var(--white);
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid var(--black);
+    margin: auto;
+    padding: 9px 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .recoverPassword main .card button:hover {
+    background: linear-gradient(to bottom,
+        #FFD6D6,
+        #FF3474B9);
+    color: var(--black)
+  }
+  
+  .recoverPassword main .card button:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  }
+  
+  .recoverPassword main .card i {
+    margin-right: 3px
+  }
+  
+  .recoverPassword main .card .form-recoverPass .card-body .container small {
+    margin-top: 5px;
+    padding-left: 8px;
+    font-size: 10.5px;
+    color: rgb(148, 1, 1);
+    background-color: #ffb6a496;
+    width: 100%;
+    border-radius: 2.5px;
+    box-sizing: border-box;
+  }
+  
+  .recoverPassword main .card .form-recoverPass .card-body .container input {
+    padding: 6px;
+    padding-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .recoverPassword main .card .form-recoverPass .card-body .container .password input {
+    padding: 6px;
+    padding-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  /* Tablet */
+  @media (min-width:426px) {
+  
+    .recoverPassword main h1 {
+      font-weight: 500;
+      font-size: 45px;
+    }
+  
+    .recoverPassword main h2 {
+      font-weight: 400;
+      font-size: 25px;
+    }
+  
+    .recoverPassword main p {
+      font-weight: 300;
+      font-size: 15px;
+    }
+  
+    .recoverPassword main .card {
+      margin: 5% 17.5%;
+    }
+  
+  }
+  
+  /* Desktop */
+  @media (min-width:769px) {
+  
+    .recoverPassword main h1 {
+      font-weight: 500;
+      font-size: 57.5px;
+    }
+  
+    .recoverPassword main h2 {
+      font-weight: 400;
+      font-size: 27.5px;
+    }
+  
+    .recoverPassword main p {
+      font-weight: 300;
+      font-size: 16px;
+    }
+  
+    .recoverPassword main .card {
+      box-shadow: 0px 5px 20px 12px #ff347491
+    }
+  
+    .recoverPassword main .card .form-recoverPass .card-header,
+    .card-footer {
+      padding: 1.75rem;
+  
+    }
+  
+    .recoverPassword main .card .form-recoverPass .card-body {
+      padding: 1.75rem;
+    }
+  
+    .recoverPassword main .card .form-recoverPass .card-body .container input,
+    .recoverPassword main .card .form-recoverPass .card-body .container .password input {
+      padding: 10px 10px 8px;
+      font-size: 16px;
+    }
+  
+    .recoverPassword main .card .form-recoverPass .card-body .container .password i {
+      top: 6px;
+  
+    }
+  
+    .recoverPassword main .card button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (min-width:1024px) {
+  
+    .recoverPassword main .card .form-recoverPass .card-body .container small {
+      font-size: 12.5px;
+    }
+  }

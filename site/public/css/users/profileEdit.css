@@ -54,13 +54,17 @@ margin: auto
 .profileEdit main .card .form-profileEdit {
   border: 1.5px solid var(--grisClaro);
   border-radius: 0.35rem;
-  background-color: var(--gray);
+  background: linear-gradient(
+    to bottom,
+    #cfc4c4,
+    #aa0565b9);
   color: var(--black);
   padding: 1rem;
 }
 
 
 .profileEdit main .card {
+  margin-bottom: 50px;
   padding: 3px;
   background-color: var(--white);
   width: 70%;  

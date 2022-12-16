@@ -76,7 +76,10 @@ border-radius: 15%;
 
 .register main .card .card-body {
   padding: 1rem;
-  background-color: var(--white);
+  background: linear-gradient(
+      to bottom,
+      white,
+       #e7dbeeec);
 }
 
 .register main .card .form-register .card-body .container .form-group {
@@ -148,7 +151,7 @@ border-radius: 15%;
   padding-left: 8px;
   font-size: 10.5px;
   color: rgb(148, 1, 1);
-  background-color: #f7e7d9ee;
+  background-color: #ffb6a496;
   width: 100%;
   border-radius: 2.5px;
   box-sizing: border-box;
@@ -295,13 +298,5 @@ border-radius: 15%;
     padding: 6px 12px;
   }
 
-/*   .register main .card .form-register .card-body .container .form-group .verify .alert-msg {
-    font-size: 13px;
-    width: 79.25%;
-  }
 
-  .register main .card .form-register .card-body .container .form-group .verify .button {
-    width: 20%;
-    padding: 2.75px 5.5px 2.5px;
-  } */
 }
