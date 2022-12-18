@@ -10,6 +10,11 @@
     border-bottom: 1px solid #4d4d4d;
 }
 
+.profile main h2 {
+    font-weight: 440;
+  font-size: 22.5px;
+    margin: 0px 0px 10px;
+}
 .profile main h3 {
     font-weight: 430;
     font-size: 18px;
@@ -21,15 +26,14 @@
     font-weight: 420;
     font-size: 16px;
     margin: auto;
-
 }
 
 .profile main p {
-    text-align: center;
     font-weight: 320;
     font-size: 13px;
-    margin: 7px 0px;
-}
+    margin: 2.5px 
+  }
+  
 
 .profile main .breadcrumbs {
     padding: 0.5rem;
@@ -68,7 +72,7 @@
     padding: 0.5rem;
     background: linear-gradient(
         to bottom,
-        #cfc4c4,
+        #f1dada,
         #aa0565b9);
         font-family: cursive;
 }
@@ -94,7 +98,8 @@
 }
 
 .profile main .img .selectImg{
-    margin: auto;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -124,14 +129,21 @@
 .profile main .info-user{
     width: 30%;
     margin: 5px 30px;
+}
+.profile main .info-user p{ 
     color: white;
+}
+
+.profile main .info-user ul li{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .profile main .info-compras{
     width: 60%;
 }
 
-.profile main section h3{
+.profile main section h2, .profile main section h3{
     text-align: center;
 }
 

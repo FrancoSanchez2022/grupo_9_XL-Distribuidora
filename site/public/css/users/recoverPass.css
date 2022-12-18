@@ -51,9 +51,6 @@
   }
   
 
-
-  
-
   .recoverPassword main .card .form-recoverPass .card-body {
     padding: 1rem;
     background: linear-gradient(
@@ -69,6 +66,16 @@
     margin-bottom: 12.5px;
   }
   
+  .recoverPassword main .card .form-recoverPass .card-body .container  label {
+    color: #aa0565b9;
+    background: linear-gradient(to bottom,
+        white,
+        #e7dbeeec);
+    padding: 2.5px 5px;
+    width: fit-content;
+    border-radius: 15%;
+  }
+
   .recoverPassword main .card .form-recoverPass .card-body .container .password {
     position: relative;
   }

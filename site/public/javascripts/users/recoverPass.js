@@ -3,8 +3,7 @@ window.addEventListener('load', () => {
     let $ = (elemento) => document.querySelector(elemento)
     console.log("recoverPassword vinculado correctamente");
 
-    const regExLetter = /^[a-zA-Z\u00C0-\u017F]+$/;
-    const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/;
+    const regExPass = /^(?=.*\d)(?=.*[a-z]).{8,16}$/;
 
     let form = $('#formulario')
     let inputPass = $('#pass')
@@ -44,11 +43,11 @@ inputPass.addEventListener('keyup', () => {
             }
             break;
         case !regExPass.test(inputPass.value):
-            $('#passContainer').innerHTML = "La clave debe contener entre 8 y 12 caracteres, debe contener una mayúscula, una minúscula y un número"
+            $('#passContainer').innerHTML = "La clave debe contener entre 8 y 16 caracteres, debe contener letras y números"
             inputPass.style.border = "2px solid red"
             errores.forEach(e => {
                 if (e.id === 5) {
-                    e.mensaje = "La clave debe contener entre 8 y 12 caracteres, debe contener una mayúscula, una minúscula y un número"
+                    e.mensaje = "La clave debe contener entre 8 y 16 caracteres, debe contener letras y números"
                     variable = false
                 }
             });

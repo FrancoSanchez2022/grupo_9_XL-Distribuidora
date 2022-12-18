@@ -391,7 +391,7 @@ header .burger nav a:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        width: 100%;
+        width: 97%;
         position: inherit;
         margin: 0;
         margin-left: 30px;

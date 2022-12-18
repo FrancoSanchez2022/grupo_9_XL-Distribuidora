@@ -17,7 +17,7 @@ module.exports = {
       apellido: {
         type: Sequelize.STRING
       },
-      género: {
+      genero: {
         type: Sequelize.STRING
       },
       email: {
@@ -38,10 +38,10 @@ module.exports = {
       calle: {
         type: Sequelize.STRING
       },
-      teléfono: {
+      telefono: {
         type: Sequelize.STRING
       },
-      códigoPostal: {
+      codigoPostal: {
         type: Sequelize.INTEGER
       },
       imagen: {
