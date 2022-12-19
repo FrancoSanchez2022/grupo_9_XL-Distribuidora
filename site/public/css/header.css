@@ -331,6 +331,7 @@ header .burger nav a {
     header .burger input:checked~nav {
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
     }
 
     header .burger label {
