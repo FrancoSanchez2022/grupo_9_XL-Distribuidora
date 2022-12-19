@@ -13,7 +13,7 @@
 }
 .glider-track {
   transform: translateZ(0);
-  width: 100%;
+  width: width: 3264px;;
   margin: 0;
   padding: 0;
   display: flex;
@@ -121,7 +121,21 @@
 .glider-dot.active {
   background: var(--dorado);
 }
-/* @media(max-width: 36em){
+@media (min-width: 1360px) {
+  .glider-contain {
+    width: 1360px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+@media (min-width: 1440px) {
+  .glider-contain {
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+@media(max-width: 36em){
   .glider::-webkit-scrollbar {
     opacity: 1;
     -webkit-appearance: none;
@@ -134,4 +148,4 @@
     background-color: rgba(156, 156, 156, 0.25);
     box-shadow: 0 0 1px rgba(255,255,255,.25);
   }
-} */
+}

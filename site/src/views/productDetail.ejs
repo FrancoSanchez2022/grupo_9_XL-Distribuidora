@@ -5,49 +5,58 @@
     <body class="detalle">
         <%- include('./partials/header') %>
             <main class="mainDetalle">
-                <%- include('./partials/breadcrumbs',{másSecciones:null,página:'Detalle de Producto'}) %> 
-                <section class="producto">
-                    <div class="imagen">
-                        <img src="/img/productos/<%= producto.imagenes[0].nombre %>" alt="Imagen producto">
-                    </div>
-                    <div class="bloqueDetalle">
-                        <h3 class="titular"><%= producto.nombre%> </h3>
-                        <p class="subprecio"> $ <%= producto.precio %></p>
-                        <div class="sumar-carrito">
-                            <input value="<%= producto.stock %>" id="stockOculto" />
-                            <div class="restar" id="decrease">-</div>
-                            <input type="number" id="contador" value="1">
-                            <div class="agregar" id="increase">+</div>
+                <%- include('./partials/breadcrumbs',{másSecciones:null,página:'Detalle de Producto'}) %>
+                    <section class="producto">
+                        <div class="imagen">
+                            <img src="/img/productos/<%= producto.imagenes[0].nombre %>" alt="Imagen producto">
                         </div>
-                        <span class="descripcion"><%= producto.descripcion %>
-                        <button class="subcarrito">Agregar al carrito</button>
-                        </span>
-                    </div>
-                </section>
-                <section class="relacionado">
-                    <div class="comprando">
-                        <a href=""><i class="fas fa-ban"></i></a>
-                        <a href="">Seguir comprando</a>
-                    </div>
-                    <h3 class="tituloRelacionado">Productos relacionados</h3>
-                    <div class="cajaRelacionada">
-                        <% productos.forEach(producto => { %> 
+                        <div class="bloqueDetalle">
+                            <h3 class="titular">
+                                <%= producto.nombre%>
+                            </h3>
+                            <p class="subprecio"> $ <%= producto.precio %>
+                            </p>
+                            <div class="sumar-carrito">
+                                <input value="<%= producto.stock %>" id="stockOculto" />
+                                <div class="boton2">
+                                    <button>-</button>
+                                    <input class="" type="number" value="1" min="1" step="1">
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <span class="descripcion">
+                                <%= producto.descripcion %>
+                                    <button class="subcarrito">Agregar al carrito</button>
+                            </span>
+                        </div>
+                    </section>
+                    <section class="relacionado">
+                        <div class="comprando">
+                            <a href=""><i class="fas fa-ban"></i></a>
+                            <a href="">Seguir comprando</a>
+                        </div>
+                        <h3 class="tituloRelacionado">Productos relacionados</h3>
+                        <div class="cajaRelacionada">
+                            <% productos.forEach(producto=> { %>
                                 <article>
                                     <div class="contenedorRelacionado">
                                         <img src="/img/productos/<%= producto.imagenes[0].nombre %> " alt="">
                                     </div>
-                                    <h4 class="subproductos"><%= producto.nombre %> </h4>
-                                    <p class="subprecio">$ <%= producto.precio %></p>
+                                    <h4 class="subproductos">
+                                        <%= producto.nombre %>
+                                    </h4>
+                                    <p class="subprecio">$ <%= producto.precio %>
+                                    </p>
                                     <button class="subcarritos">Agregar al carrito</button>
-        
-                                </article>
-                        <% }) %>
 
-                    </div>
-                </section>
+                                </article>
+                                <% }) %>
+
+                        </div>
+                    </section>
             </main>
             <%- include('./partials/footer') %>
-            <script src="/javascripts/increase.js"></script>
+                <script src="/javascripts/increase.js"></script>
     </body>
 
 </html>
