@@ -128,7 +128,7 @@
 
     // set slide dimensions
     [].forEach.call(_.slides, function (__) {
-      
+
       width += _.itemWidth
       height = Math.max(__.offsetHeight, height)
     })
@@ -267,7 +267,7 @@
         _.arrows.next.classList.toggle(
           'disabled',
           Math.ceil(_.ele.scrollLeft + _.containerWidth) >=
-            Math.floor(_.trackWidth) || disableArrows
+          Math.floor(_.trackWidth) || disableArrows
         )
         _.arrows.next.classList.contains('disabled')
           ? _.arrows.next.setAttribute('aria-disabled', true)
@@ -459,7 +459,7 @@
       _.ele.scrollLeft =
         _.ele.scrollLeft +
         (scrollTarget - _.ele.scrollLeft) *
-          _.opt.easing(0, now, 0, 1, scrollDuration)
+        _.opt.easing(0, now, 0, 1, scrollDuration)
       if (now < scrollDuration && animateIndex === _.animate_id) {
         _window.requestAnimationFrame(animate)
       } else {
@@ -571,7 +571,7 @@
   return Glider
 })
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
   console.log('Glider.js Vinculado')
   new Glider(document.querySelector('.glider'), {
     // Mobile-first defaults
@@ -579,7 +579,7 @@ window.addEventListener('load', function(){
     slidesToScroll: 1,
     scrollLock: true,
     dots: '.dots',
-    draggable : true,
+    draggable: true,
     arrows: {
       prev: '.glider-prev',
       next: '.glider-next'
@@ -619,5 +619,49 @@ window.addEventListener('load', function(){
       }
     ]
   });
-  
+  new Glider(document.querySelector('.glider1'), {
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    draggable: true,
+    dots: '.dots',
+    arrows: {
+      prev: '.glider-prev1',
+      next: '.glider-next1'
+    },
+    responsive: [
+      {
+        // screens greater than >= 775px
+        breakpoint: 460,
+        settings: {
+          // Set to `auto` and provide item width to adjust to viewport
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          itemWidth: 150,
+          duration: 0.25
+        }
+      },
+      {
+        // screens greater than >= 775px
+        breakpoint: 769,
+        settings: {
+          // Set to `auto` and provide item width to adjust to viewport
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          itemWidth: 150,
+          duration: 0.25
+        }
+      },
+      {
+        // screens greater than >= 1024px
+        breakpoint: 1265,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          itemWidth: 150,
+          duration: 0.25
+        }
+      }
+    ]
+  })
+
 });

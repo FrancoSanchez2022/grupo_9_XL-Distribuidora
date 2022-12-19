@@ -10,6 +10,9 @@
 .home main section .producto img {
     width: 100%;
 }
+.home main .carrucelDestacados,.carrouselProductos{
+    width: 100%;
+}
 
 
 .home main section .infoempresa {
@@ -193,6 +196,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    
 
     .home main .products_cards {
         width: 74%;
