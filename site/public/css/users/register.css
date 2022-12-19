@@ -13,7 +13,7 @@
 .register main h2 {
   font-weight: 440;
   font-size: 22.5px;
-    margin: 0px 0px 10px;
+  margin: 0px 0px 10px;
 }
 
 .register main h4 {
@@ -36,7 +36,7 @@
   border: 2px solid var(--grisClaro);
   margin-bottom: 15px;
   margin: 5%;
-    box-shadow: 0px 2px 10px 6px   #ff347491
+  box-shadow: 0px 2px 10px 6px #ff347491
 }
 
 .register main .card .form-register .card-header {
@@ -62,7 +62,7 @@
   background-color: var(--white);
   font-size: 11.5px;
   text-decoration: none;
-  box-shadow:  0px 0.5px 3px 3px white;
+  box-shadow: 0px 0.5px 3px 3px white;
   border-radius: 15%;
 }
 
@@ -70,16 +70,15 @@
 .card-footer .inicia-sesión a:hover {
   color: var(--white);
   background-color: var(--black);
-  box-shadow:  0px 0.5px 3px 3px black;
-border-radius: 15%;
+  box-shadow: 0px 0.5px 3px 3px black;
+  border-radius: 15%;
 }
 
 .register main .card .card-body {
   padding: 1rem;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       white,
-       #e7dbeeec);
+      #e7dbeeec);
 }
 
 .register main .card .form-register .card-body .container .form-group {
@@ -87,6 +86,16 @@ border-radius: 15%;
   display: flex;
   flex-direction: column;
   margin-bottom: 12.5px;
+}
+
+.register main .card .form-register .card-body .container .form-group label {
+  color: #aa0565b9;
+  background: linear-gradient(to bottom,
+      white,
+      #e7dbeeec);
+  padding: 2.5px 5px;
+  width: fit-content;
+  border-radius: 20%;
 }
 
 .register main .card .form-register .card-body .container .form-group .password {
@@ -110,10 +119,9 @@ border-radius: 15%;
 }
 
 .register main .card button:hover {
-  background: linear-gradient(
-    to bottom,
-    #FFD6D6,
-    #FF3474B9);
+  background: linear-gradient(to bottom,
+      #FFD6D6,
+      #FF3474B9);
   color: var(--black)
 }
 
@@ -163,6 +171,7 @@ border-radius: 15%;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 .register main .card .form-register .card-body .container .form-group .password input {
   padding: 6px;
   padding-bottom: 6px;
@@ -206,7 +215,7 @@ border-radius: 15%;
     padding: 6.5px 10px;
   }
 
-/*   .register main .card .form-register .card-body .container .form-group .verify .button {
+  /*   .register main .card .form-register .card-body .container .form-group .verify .button {
     padding: 4px 5px 1.25px;
     width: 20%;
   }
@@ -238,7 +247,7 @@ border-radius: 15%;
   }
 
   .register main .card {
-    box-shadow: 0px 4px 20px 12px   #ff347491
+    box-shadow: 0px 4px 20px 12px #ff347491
   }
 
   .register main .card .form-register .card-header,
@@ -261,7 +270,7 @@ border-radius: 15%;
     justify-content: space-between;
   }
 
-/*   .register main .card .form-register .card-body .container .form-group .verify .alert-msg {
+  /*   .register main .card .form-register .card-body .container .form-group .verify .alert-msg {
     width: 78.25%;
   }
 
@@ -279,10 +288,12 @@ border-radius: 15%;
     padding: 10px 10px 8px;
     font-size: 15px;
   }
+
   .register main .card .form-register .card-body .container .form-group .password input {
     padding: 10px 10px 8px;
     font-size: 15px;
   }
+
   .register main .card .form-register .card-body .container .form-group .password i {
     top: 6px;
   }

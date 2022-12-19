@@ -4,10 +4,11 @@ window.addEventListener('load', () => {
     console.log("Register vinculado correctamente");
 
     const regExLetter = /^[a-zA-Z\u00C0-\u017F]+$/;
-    const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/;
+    const regExPass = /^(?=.*\d)(?=.*[a-z]).{8,16}$/;
     const regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
-    const regExPhonenumber = /^\(?(\d{3})\)?[-]?(\d{3})[-]?(\d{4})$/
+    const regExPhonenumber = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/
 
+    
     let form = $('#formulario')
     let nombre = $('#name')
     let apellido = $('#lastname')
@@ -15,6 +16,40 @@ window.addEventListener('load', () => {
     let phone = $('#phone')
     let inputPass = $('#pass')
     let inputPass2 = $('#pass2')
+
+    /* const fv = FormValidation.formValidation(form, {
+        fields: {
+            fullName: {
+                validators: {
+                    notEmpty: {
+                        message: 'The full name is required',
+                    },
+                },
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'The phone number is required',
+                    },
+                },
+            },
+        },
+        plugins: {
+            trigger: new FormValidation.plugins.Trigger(),
+            submitButton: new FormValidation.plugins.SubmitButton(),
+            bootstrap5: new FormValidation.plugins.Bootstrap5(),
+            icon: new FormValidation.plugins.Icon({
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh',
+            }),
+            internationalTelephoneInput: new FormValidation.plugins.InternationalTelephoneInput({
+                field: 'phone,otherPhone',
+                message: 'The phone number is not valid',
+                utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.18/js/utils.js',
+            }),
+        },
+    }); */
 
     /* Validaciones */
     let errores = [{
@@ -243,11 +278,11 @@ window.addEventListener('load', () => {
                 }
                 break;
             case !regExPass.test(inputPass.value):
-                $('#passContainer').innerHTML = "La clave debe contener entre 8 y 12 caracteres, debe contener una mayúscula, una minúscula y un número"
+                $('#passContainer').innerHTML = "La clave debe contener entre 8 y 16 caracteres, debe contener letras y números"
                 inputPass.style.border = "2px solid red"
                 errores.forEach(e => {
                     if(e.id === 5 ){
-                        e.mensaje = "La clave debe contener entre 8 y 12 caracteres, debe contener una mayúscula, una minúscula y un número"
+                        e.mensaje = "La clave debe contener entre 8 y 16 caracteres, debe contener letras y números"
                         variable = false
                     }
                 });

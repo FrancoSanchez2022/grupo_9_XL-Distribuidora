@@ -36,6 +36,16 @@
     flex-direction: column;
     margin-bottom: 12.5px;
   }
+
+  .forgotPassword main .card .form-forgotPassword .container  label {
+    color: #aa0565b9;
+    background: linear-gradient(to bottom,
+        white,
+        #e7dbeeec);
+    padding: 2.5px 5px;
+    width: fit-content;
+    border-radius: 15%;
+  }
   
   .forgotPassword main .card button  {
     background-color: #4d4d4d;

@@ -15,8 +15,9 @@
   </head>
 
 <body class="dashboard hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
   <%- include('../partials/header') %>
-<div class="wrapper">
 
 <%- include('../partials/aside') %>
 
@@ -31,7 +32,6 @@
     <%- include('../partials/breadcrumbs',{ másSecciones:null,página: 'Admin'}) %>
   </nav>
   <!-- /.navbar -->
-
   
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -61,7 +61,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+                <h3>30</h3>
 
                 <p>Productos</p>
               </div>
@@ -76,7 +76,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+                <h3>53</h3>
 
                 <p>Usuarios registrados</p>
               </div>
@@ -276,12 +276,12 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- 
+  
+<!-- Footer -->
+<%- include('../partials/footer') %>
 </div>
 <!-- ./wrapper -->
 
-<!-- Footer -->
-<%- include('../partials/footer') %>
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>

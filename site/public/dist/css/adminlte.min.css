@@ -610,7 +610,7 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -7.5px;
+    margin-right: 0.5px;
     margin-left: -7.5px
 }
 
@@ -2220,68 +2220,6 @@ pre code {
     background-color: rgba(255, 255, 255, .075)
 }
 
-@media (max-width:575.98px) {
-    .table-responsive-sm {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch
-    }
-
-    .table-responsive-sm>.table-bordered {
-        border: 0
-    }
-}
-
-@media (max-width:767.98px) {
-    .table-responsive-md {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch
-    }
-
-    .table-responsive-md>.table-bordered {
-        border: 0
-    }
-}
-
-@media (max-width:991.98px) {
-    .table-responsive-lg {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch
-    }
-
-    .table-responsive-lg>.table-bordered {
-        border: 0
-    }
-}
-
-@media (max-width:1199.98px) {
-    .table-responsive-xl {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch
-    }
-
-    .table-responsive-xl>.table-bordered {
-        border: 0
-    }
-}
-
-.table-responsive {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch
-}
-
-.table-responsive>.table-bordered {
-    border: 0
-}
 
 .form-control {
     display: block;
@@ -12904,6 +12842,13 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
         margin-left: 250px;
         background-color: var(--profundidad2)
     }
+    body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) header,
+    body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header,
+    body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) footer{
+        transition: margin-left .3s ease-in-out;
+        margin-left: 250px;
+    }
+
 }
 
 @media (min-width:768px) and (prefers-reduced-motion:reduce) {
@@ -12967,16 +12912,22 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
 
     .sidebar-mini-md .content-wrapper,
     .sidebar-mini-md .main-footer,
-    .sidebar-mini-md .main-header {
+    .sidebar-mini-md .main-header,
+    .sidebar-mini-md footer,
+    .sidebar-mini-md header {
         margin-left: 4.6rem
     }
+
+    
 }
 
 @media (max-width:767.98px) {
 
     .sidebar-mini-md .content-wrapper,
     .sidebar-mini-md .main-footer,
-    .sidebar-mini-md .main-header {
+    .sidebar-mini-md .main-header,
+    .sidebar-mini-md footer,
+    .sidebar-mini-md header {
         margin-left: 0
     }
 }
@@ -12985,6 +12936,8 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
 
     .sidebar-mini-xs .content-wrapper,
     .sidebar-mini-xs .main-footer,
+    .sidebar-mini-xs header,
+    .sidebar-mini-xs footer,
     .sidebar-mini-xs .main-header {
         transition: margin-left .3s ease-in-out;
         margin-left: 250px
@@ -13013,6 +12966,7 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
 
     .sidebar-mini-xs .content-wrapper,
     .sidebar-mini-xs .main-footer,
+  
     .sidebar-mini-xs .main-header {
         margin-left: 4.6rem
     }
@@ -14754,7 +14708,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 .sidebar-hidden .content-wrapper,
 .sidebar-hidden .main-header,
 .sidebar-hidden.sidebar-mini.sidebar-collapse .content-wrapper,
-.sidebar-hidden.sidebar-mini.sidebar-collapse .main-header {
+.sidebar-hidden.sidebar-mini.sidebar-collapse .main-header,
+.sidebar-mini.sidebar-collapse header,.sidebar-mini.sidebar-collapse footer {
     margin-left: 0 !important
 }
 
@@ -14805,9 +14760,11 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
     .sidebar-mini.sidebar-collapse .content-wrapper,
     .sidebar-mini.sidebar-collapse .main-footer,
-    .sidebar-mini.sidebar-collapse .main-header {
+    .sidebar-mini.sidebar-collapse .main-header,
+    .sidebar-mini.sidebar-collapse header,.sidebar-mini.sidebar-collapse footer {
         margin-left: 4.6rem !important
     }
+
 
     .sidebar-mini.sidebar-collapse .nav-sidebar .nav-header {
         display: none
@@ -34481,14 +34438,6 @@ blockquote.quote-gray-dark h6 {
         width: 33.3333333%
     }
 
-    .table-responsive {
-        overflow: auto
-    }
-
-    .table-responsive>.table tr td,
-    .table-responsive>.table tr th {
-        white-space: normal !important
-    }
 }
 
 .text-bold,

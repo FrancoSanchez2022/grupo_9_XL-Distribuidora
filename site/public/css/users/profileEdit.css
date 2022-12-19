@@ -39,8 +39,8 @@
 } 
 
 .profileEdit main .card .img{
-  width: 45%;
-margin: auto
+  display: flex;
+  justify-content: center;
 }
 
 .profileEdit main .card {
@@ -56,7 +56,7 @@ margin: auto
   border-radius: 0.35rem;
   background: linear-gradient(
     to bottom,
-    #cfc4c4,
+    #f1dadae3,
     #aa0565b9);
   color: var(--black);
   padding: 1rem;
@@ -75,7 +75,15 @@ margin: auto
   flex-direction: column;
   margin-bottom: 12.5px;
 }
-
+.profileEdit main .card .form-profileEdit .container label {
+  color: #aa0565b9;
+  background: linear-gradient(to bottom,
+      white,
+      #aa056544);
+  padding: 2.5px 5px;
+  width: fit-content;
+  border-radius: 15%;
+}
 
 .profileEdit main .card button {
   background-color: #4d4d4d;

@@ -19,15 +19,15 @@ module.exports = {
                 nombreUsuario: null,
                 nombre: name,
                 apellido: lastname,
-                género: null,
+                genero: null,
                 email: email,
                 password: bcrypt.hashSync(pass, 12),
-                teléfono: phonenumber,
+                telefono: phonenumber,
                 pais: null,
                 estado_provincia: null,
                 ciudad: null,
                 calle: null,
-                códigoPostal: null,
+                codigoPostal: null,
                 rolId: 2,
                 imagen: "default-avatar.png"
             })
@@ -39,13 +39,13 @@ module.exports = {
                         nombre: usuario.nombre,
                         email: usuario.email,
                         apellido: usuario.apellido,
-                        género: usuario.género,
-                        teléfono: usuario.teléfono,
+                        genero: usuario.genero,
+                        telefono: usuario.telefono,
                         pais: usuario.pais,
                         estado_provincia: usuario.estado_provincia,
                         ciudad: usuario.ciudad,
                         calle: usuario.calle,
-                        códigoPostal: usuario.códigoPostal,
+                        codigoPostal: usuario.codigoPostal,
                         imagen: usuario.imagen,
                         rol: usuario.rolId
                     }
@@ -80,13 +80,13 @@ module.exports = {
                         nombre: usuario.nombre,
                         email: usuario.email,
                         apellido: usuario.apellido,
-                        género: usuario.género,
-                        teléfono: usuario.teléfono,
+                        genero: usuario.genero,
+                        telefono: usuario.telefono,
                         pais: usuario.pais,
                         estado_provincia: usuario.estado_provincia,
                         ciudad: usuario.ciudad,
                         calle: usuario.calle,
-                        códigoPostal: usuario.códigoPostal,
+                        codigoPostal: usuario.codigoPostal,
                         imagen: usuario.imagen,
                         rol: usuario.rolId
                     }
@@ -110,6 +110,8 @@ module.exports = {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
             return res.send(req.body)
+
+            
         } else {
             return res.render('users/forgotPass', {
                 errors: errors.mapped(),
@@ -205,10 +207,11 @@ module.exports = {
     },
     profileEdit2: (req, res) => {
 
-        req.session.destroy();
+        /* req.session.destroy();
         if (req.cookies.XL) {
             res.cookie('XL', '', { maxAge: -1 })
-        }
+        } */
+        console.log(req.body);
 
         if (req.fileValidationError) {
             let imagen = {
@@ -219,31 +222,41 @@ module.exports = {
         }
         let errors = validationResult(req)
         if (errors.isEmpty()) {
-            const { nombreUsuario, nombre, email, apellido, género, teléfono, pais, estado_provincia, ciudad, calle, códigoPostal } = req.body
-            db.Usuarios.update({
-                nombreUsuario: nombreUsuario,
-                nombre: nombre,
-                email: email,
-                apellido: apellido,
-                género: género,
-                teléfono: teléfono,
-                pais: pais,
-                estado_provincia: estado_provincia,
-                ciudad: ciudad,
-                calle: calle,
-                códigoPostal: códigoPostal,
-                imagen: req.file ? req.file.filename : imagen
-            }, {
+
+            db.Usuarios.findOne({
                 where: {
                     id: +req.params.id
                 }
             })
-                .then(data => {
-                    db.Usuarios.findOne({
+                .then(user => {
+                    user = user.dataValues
+                    console.log(user);
+
+                    const { nombreUsuario, nombre, email, apellido, genero, telefono, pais, estado_provincia, ciudad, calle, codigoPostal } = req.body
+                    db.Usuarios.update({
+                        nombreUsuario: nombreUsuario,
+                        nombre: nombre,
+                        email: email,
+                        apellido: apellido,
+                        genero: genero,
+                        telefono: telefono,
+                        pais: pais,
+                        estado_provincia: estado_provincia,
+                        ciudad: ciudad,
+                        calle: calle,
+                        codigoPostal: codigoPostal,
+                        imagen: req.file ? req.file.filename : user.imagen
+                    }, {
                         where: {
                             id: +req.params.id
                         }
-                    }) /* .then(user => {
+                    })
+                        .then(data => {
+                            db.Usuarios.findOne({
+                                where: {
+                                    id: +req.params.id
+                                }
+                            }) /* .then(user => {
                         if (req.file) {
                             let ruta = fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
                             if (ruta && req.file.filename !== user.imagen && user.imagen !== "default-avatar.png") {
@@ -257,20 +270,38 @@ module.exports = {
                                 }
                             })
                         }}) */
-                        .then(usuario => {
-                            usuario = usuario.dataValues
+                                .then(usuario => {
+                                    usuario = usuario.dataValues
 
-                            req.session.userLogin = {
-                                id: usuario.id,
-                                nombreUsuario: usuario.nombreUsuario,
-                                nombre: usuario.nombre,
-                                email: usuario.email,
-                                rol: usuario.rolId
-                            }
-                            res.cookie('XL', req.session.userLogin, { maxAge: 1000 * 60 * 60 * 24 })
-                            return res.redirect('/users/profile')
-                        });
+                                    console.log(req.session);
+                                console.log(req.cookies.XL);
+
+                                    req.session.userLogin = {
+                                        id: usuario.id,
+                                        nombreUsuario: usuario.nombreUsuario,
+                                        nombre: usuario.nombre,
+                                        email: usuario.email,
+                                        apellido: usuario.apellido,
+                                        genero: usuario.genero,
+                                        telefono: usuario.telefono,
+                                        pais: usuario.pais,
+                                        estado_provincia: usuario.estado_provincia,
+                                        ciudad: usuario.ciudad,
+                                        calle: usuario.calle,
+                                        codigoPostal: usuario.codigoPostal,
+                                        imagen: usuario.imagen,
+                                        rol: usuario.rolId
+                                    }
+                                    res.cookie('XL', req.session.userLogin, { maxAge: 1000 * 60 * 60 * 24 })
+                                    req.session.save((err) => {
+                                        req.session.reload((err) => {
+                                            return res.redirect('/users/profile')
+                                        });
+                                    });
+                                });
+                        })
                 })
+
                 .catch(err => res.send(err))
 
         } else {

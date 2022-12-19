@@ -24,30 +24,30 @@
                                     <%= locals.userLogin.nombre %>
                                         <%= locals.userLogin.apellido %>
                                 </h2>
-                                <!-- <button class="buttonsubmit" type="submit">Guardar</button> -->
                             </form>
                             <ul>
-                                <li>Nombre de Usuario: <%= locals.userLogin.nombreUsuario %>
+                                <li>Nombre de Usuario: <p><%= locals.userLogin.nombreUsuario %></p>
                                 </li>
-                                <li>Nombre: <%= locals.userLogin.nombre %>
+                                <li>Nombre: <p><%= locals.userLogin.nombre %></p>
                                 </li>
-                                <li>Apellido: <%= locals.userLogin.apellido %>
+                                <li>Apellido: <p><%= locals.userLogin.apellido %></p>
                                 </li>
-                                <li>Email: <%= locals.userLogin.email %>
+                                <li>Email: <p><%= locals.userLogin.email %></p>
                                 </li>
-                                <li>Género: <%= locals.userLogin.género %>
+                              
+                                <li>Género: <p><%=locals.userLogin.genero=='Male'?'Masculino':locals.userLogin.genero=='Female'?'Femenino':locals.userLogin.genero=='Non-binary'?'No binario':locals.userLogin.genero=='Otro'?'-':null%></p>
                                 </li>
-                                <li>Teléfono: <%= locals.userLogin.teléfono %>
+                                <li>Teléfono: <p><%= locals.userLogin.telefono %></p>
                                 </li>
-                                <li>País: <%= locals.userLogin.pais%>
+                                <li>País: <p><%= locals.userLogin.pais%></p>
                                 </li>
-                                <li>Estado: <%= locals.userLogin.estado_provincia %>
+                                <li>Estado/Provincia: <p><%= locals.userLogin.estado_provincia %></p>
                                 </li>
-                                <li>Ciudad: <%= locals.userLogin.ciudad %>
+                                <li>Ciudad: <p><%= locals.userLogin.ciudad %></p>
                                 </li>
-                                <li>Calle: <%= locals.userLogin.calle %>
+                                <li>Calle: <p><%= locals.userLogin.calle %></p>
                                 </li>
-                                <li>Código postal: <%= locals.userLogin.códigoPostal %>
+                                <li>Código postal: <p><%= locals.userLogin.codigoPostal %></p>
                                 </li>
                             </ul>
                             <h4><a href="/users/profileEdit">Editar datos</a></h4>
@@ -55,9 +55,9 @@
 
 
                         <section class="info-compras">
-                            <h3>Mis Compras</h3>
+                            <h2>Mis Compras</h2>
                             <div class="card">
-                                <p>¡Hacé tu primera compra!</p>
+                                <h3>¡Hacé tu primera compra!</h3>
                                 <h4><a href="/products/listProducts">VER PRODUCTOS</a></h4>
                             </div>
                         </section>

@@ -28,67 +28,55 @@
                             </div>
 
                             <div class="container">
-                                <label for="nombre  Usuario">username</label>
+                                <label for="nombre  Usuario">Nombre de Usuario</label>
                                 <input type="text" name="nombreUsuario" id="nombreUsuario"
                                     placeholder="Ingresa tu nombre de usuario"
                                     value="<%=locals.old && old.nombreUsuario ? old.nombreUsuario : locals.userLogin.nombreUsuario %>">
                             </div>
                             <div class="container">
-                                <label for="nombre">nombre</label>
+                                <label for="nombre">Nombre</label>
                                 <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"
                                     value="<%=locals.old && old.name ? old.name : locals.userLogin.nombre %>">
                             </div>
 
                             <div class="container">
-                                <label for="apellido">apellido</label>
+                                <label for="apellido">Apellido</label>
                                 <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"
                                     value="<%=locals.old && old.apellido ? old.apellido : locals.userLogin.apellido %>">
                             </div>
 
                             <div class="container">
-                                <label for="email">email</label>
+                                <label for="email">Email</label>
                                 <input type="email" name="email" id="email" placeholder="Ingresa tu email"
                                     value="<%=locals.userLogin.email%>" disabled>
                             </div>
-
-                            <div>
-                                <label for="genero">Editar Género</label>
-                                <!-- <input type="género" id="género" name="género" value="<%= locals.userLogin.género%> "> -->
-                                <section class="genre">
-                                    <article>
-                                        <input type="radio" name="género" id="F" value="F" <%=locals.old &&
-                                            old.género==='Female' ? "checked" : null%> >
-                                        <label for="F">Femenino</label>
-                                    </article>
-                                    <article>
-                                        <input type="radio" name="género" id="M" value="M" <%=locals.old &&
-                                            old.género==='Male' ? "checked" : null%>>
-                                        <label for="M">Masculino</label>
-                                    </article>
-                                    <article>
-                                        <input type="radio" name="género" id="NB" value="NB" <%=locals.old &&
-                                            old.género==='Non-binary' ? "checked" : null%> >
-                                        <label for="NB">Otro</label>
-                                    </article>
-                                </section>
+                            <div class="container">
+                                <label for="genero">Género</label>
+                                <select name="genero" id="genero">
+                                    <option value="" selected hidden >Selecciona una opción</option>
+                                    <option <%=locals.userLogin.genero ==='Male' ? "selected" : null%> value="Male" >Masculino</option>
+                                    <option <%=locals.userLogin.genero ==='Female' ? "selected" : null%> value="Female" >Femenino</option>
+                                    <option <%=locals.userLogin.genero ==='Non-binary' ? "selected" : null%> value="Non-binary">No binario</option>
+                                    <option <%=locals.userLogin.genero ==='-' ? "selected" : null%> value="-">Otro</option>
+                                </select>
                             </div>
 
                             <div class="container">
-                                <label for="teléfono">teléfono</label>
-                                <input type="text" name="teléfono" id="teléfono" placeholder="Ingresa tu teléfono"
-                                    value="<%=locals.old && old.teléfono ? old.teléfono : locals.userLogin.teléfono %>">
+                                <label for="telefono">Teléfono</label>
+                                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu teléfono"
+                                    value="<%=locals.old && old.telefono ? old.telefono : locals.userLogin.telefono %>">
                                 <div id="phoneContainer"></div>
                             </div>
 
                             <div class="container">
-                                <label for="pais">pais</label>
+                                <label for="pais">Pais</label>
                                 <input type="text" name="pais" id="pais" placeholder="Ingresa tu pais"
                                     value="<%=locals.old && old.pais ? old.pais : locals.userLogin.pais %>">
                                 <div id="paisContainer"></div>
                             </div>
 
                             <div class="container">
-                                <label for="provincia">estado_provincia</label>
+                                <label for="provincia">Estado/Provincia</label>
                                 <input type="text" name="estado_provincia" id="estado_provincia"
                                     placeholder="Ingresa tu estado o provincia"
                                     value="<%=locals.old && old.estado_provincia ? old.estado_provincia : locals.userLogin.estado_provincia %>">
@@ -96,24 +84,24 @@
                             </div>
 
                             <div class="container">
-                                <label for="ciudad">ciudad</label>
+                                <label for="ciudad">Ciudad</label>
                                 <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu ciudad"
                                     value="<%=locals.old && old.ciudad ? old.ciudad : locals.userLogin.ciudad %>">
                                 <div id="ciudadContainer"></div>
                             </div>
 
                             <div class="container">
-                                <label for="calle">calle</label>
+                                <label for="calle">Calle</label>
                                 <input type="text" name="calle" id="calle" placeholder="Ingresa tu calle"
                                     value="<%=locals.old && old.calle ? old.calle : locals.userLogin.calle %>">
                                 <div id="calleContainer"></div>
                             </div>
 
                             <div class="container">
-                                <label for="códigoPostal">códigoPostal</label>
-                                <input type="number" name="códigoPostal" id="códigoPostal" placeholder="códigoPostal"
-                                    value="<%=locals.old && old.códigoPostal ? old.códigoPostal : locals.userLogin.códigoPostal%>">
-                                <div id="códigoPostalContainer"></div>
+                                <label for="codigoPostal">Código Postal</label>
+                                <input type="number" name="codigoPostal" id="codigoPostal" placeholder="códigoPostal"
+                                    value="<%=locals.old && old.códigoPostal ? old.codigoPostal : locals.userLogin.codigoPostal%>">
+                                <div id="codigoPostalContainer"></div>
                             </div>
 
                             <div>
