@@ -1,16 +1,31 @@
-const { list, create, edit, store, update, destroy, history, crash, restore } = require('../controllers/adminController')
+const { list, create, store, edit, update, destroy, history, restore, crash, dashboard, userList, addUser, processAddUser, editUser, processEditUser, deleteUser } = require('../controllers/adminController')
 const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/multerProducts');
 const adminCheck = require('../middlewares/adminCheck');
+const uploadUsers = require('../middlewares/multerUsers')
 /* const productValidator = require('../validations/productsValidation') */
+const userCreateValidator = require('../validations/userCreateValidation')
 
-/* Admin Dashboard & users */
-router.get('/', adminCheck, function (req, res) { res.render('admin/index') });
-router.get('/users', adminCheck, function (req, res) { res.render('admin/userList') });
-router.get('/addUser', adminCheck, function (req, res) { res.render('admin/userCreate') });
-router.get('/modUser', adminCheck, function (req, res) { res.render('admin/userEdit') });
 
+/* Admin Dashboard */
+router.get('/', adminCheck, dashboard);
+
+/* Lista de usuarios */
+router.get('/users', adminCheck, userList);
+
+/* Creación de usuarios */
+router.get('/addUser', adminCheck, addUser);
+router.post('/addUser', uploadUsers.single('avatar'),/*  userCreateValidator,  */processAddUser);
+
+/* Edición de usuarios */
+router.get('/editUser/:id', adminCheck, editUser);
+router.put('/editUser/:id', uploadUsers.single('avatar'), processEditUser);
+
+/* Eliminar usuario */
+router.delete('/deleteUser/:id', adminCheck, deleteUser );
+
+/* Lista e historial de productos */
 router.get('/list', adminCheck, list);
 router.get('/history', adminCheck, history);
 

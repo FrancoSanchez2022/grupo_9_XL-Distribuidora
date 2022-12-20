@@ -111,7 +111,7 @@ module.exports = {
         if (errors.isEmpty()) {
             return res.send(req.body)
 
-            
+
         } else {
             return res.render('users/forgotPass', {
                 errors: errors.mapped(),
@@ -207,11 +207,7 @@ module.exports = {
     },
     profileEdit2: (req, res) => {
 
-        /* req.session.destroy();
-        if (req.cookies.XL) {
-            res.cookie('XL', '', { maxAge: -1 })
-        } */
-        console.log(req.body);
+        /* console.log(req.body); */
 
         if (req.fileValidationError) {
             let imagen = {
@@ -230,7 +226,7 @@ module.exports = {
             })
                 .then(user => {
                     user = user.dataValues
-                    console.log(user);
+                    /* console.log(user); */
 
                     const { nombreUsuario, nombre, email, apellido, genero, telefono, pais, estado_provincia, ciudad, calle, codigoPostal } = req.body
                     db.Usuarios.update({
@@ -273,8 +269,8 @@ module.exports = {
                                 .then(usuario => {
                                     usuario = usuario.dataValues
 
-                                    console.log(req.session);
-                                console.log(req.cookies.XL);
+                                    /* console.log(req.session);
+                                    console.log(req.cookies.XL); */
 
                                     req.session.userLogin = {
                                         id: usuario.id,
