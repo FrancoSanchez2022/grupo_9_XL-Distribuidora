@@ -14,10 +14,12 @@
 @import url('./users/recoverPass.css');
 @import url('./users/profile.css');
 @import url('./users/profileEdit.css');
-@import url('./pCreate.css');
+@import url('./admin/pCreate.css');
 @import url('./list.css');
 @import url('./listProduct.css');
 @import url('./404.css');
 @import url('./busqueda.css');
 @import url('./breadcrumbs.css');
-@import url('./dashboard.css');
+@import url('./admin/userCreate.css');
+@import url('./admin/userList.css');
+@import url('./admin/userEdit.css');

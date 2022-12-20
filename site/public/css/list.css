@@ -29,7 +29,7 @@
 }
 
 .list main a .crear{
-    width: 300px;
+    width: 185px;
     color: white;
     background: var(--colorButtonContacto);
     font-weight: 600;
@@ -43,4 +43,11 @@
     color: var(--colorHeader);
     font-weight: 500;
     text-decoration: none;
+}
+
+@media (min-width:768px) {
+.list main a .crear{
+    width: 300px;
+  
+}
 }

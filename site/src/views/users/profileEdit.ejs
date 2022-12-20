@@ -6,8 +6,7 @@
     <body class="profileEdit">
         <%- include('../partials/header') %>
             <main>
-                <%- include('../partials/breadcrumbs',{ másSecciones: '<a href="/users/profile">Perfil</a>'
-                    ,página: 'Edición de Perfil' }) %>
+                <%- include('../partials/breadcrumbs',{ másSecciones: '<a href="/users/profile">Perfil</a>',página: 'Edición de Perfil' }) %>
                     <h1>Edición de Perfil</h1>
 
                     <section class="card">
@@ -30,47 +29,51 @@
                             <div class="container">
                                 <label for="nombre  Usuario">Nombre de Usuario</label>
                                 <input type="text" name="nombreUsuario" id="nombreUsuario"
-                                    placeholder="Ingresa tu nombre de usuario"
+                                    placeholder="Nombre de usuario"
                                     value="<%=locals.old && old.nombreUsuario ? old.nombreUsuario : locals.userLogin.nombreUsuario %>">
                             </div>
                             <div class="container">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"
-                                    value="<%=locals.old && old.name ? old.name : locals.userLogin.nombre %>">
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre"
+                                    value="<%=locals.old && old.nombre ? old.nombre : locals.userLogin.nombre %>">
                             </div>
 
                             <div class="container">
                                 <label for="apellido">Apellido</label>
-                                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"
+                                <input type="text" name="apellido" id="apellido" placeholder="Apellido"
                                     value="<%=locals.old && old.apellido ? old.apellido : locals.userLogin.apellido %>">
                             </div>
 
                             <div class="container">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="email" placeholder="Ingresa tu email"
+                                <input type="email" name="email" id="email" placeholder="Email"
                                     value="<%=locals.userLogin.email%>" disabled>
                             </div>
                             <div class="container">
                                 <label for="genero">Género</label>
                                 <select name="genero" id="genero">
-                                    <option value="" selected hidden >Selecciona una opción</option>
-                                    <option <%=locals.userLogin.genero ==='Male' ? "selected" : null%> value="Male" >Masculino</option>
-                                    <option <%=locals.userLogin.genero ==='Female' ? "selected" : null%> value="Female" >Femenino</option>
-                                    <option <%=locals.userLogin.genero ==='Non-binary' ? "selected" : null%> value="Non-binary">No binario</option>
-                                    <option <%=locals.userLogin.genero ==='-' ? "selected" : null%> value="-">Otro</option>
+                                    <option value="" selected hidden>Selecciona una opción</option>
+                                    <option <%=locals.userLogin.genero==='Male' ? "selected" : null%> value="Male"
+                                        >Masculino</option>
+                                    <option <%=locals.userLogin.genero==='Female' ? "selected" : null%> value="Female"
+                                        >Femenino</option>
+                                    <option <%=locals.userLogin.genero==='Non-binary' ? "selected" : null%>
+                                        value="Non-binary">No binario</option>
+                                    <option <%=locals.userLogin.genero==='-' ? "selected" : null%> value="-">Otro
+                                    </option>
                                 </select>
                             </div>
 
                             <div class="container">
                                 <label for="telefono">Teléfono</label>
-                                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu teléfono"
+                                <input type="text" name="telefono" id="telefono" placeholder="Teléfono"
                                     value="<%=locals.old && old.telefono ? old.telefono : locals.userLogin.telefono %>">
                                 <div id="phoneContainer"></div>
                             </div>
 
                             <div class="container">
                                 <label for="pais">Pais</label>
-                                <input type="text" name="pais" id="pais" placeholder="Ingresa tu pais"
+                                <input type="text" name="pais" id="pais" placeholder="Pais"
                                     value="<%=locals.old && old.pais ? old.pais : locals.userLogin.pais %>">
                                 <div id="paisContainer"></div>
                             </div>
@@ -78,41 +81,44 @@
                             <div class="container">
                                 <label for="provincia">Estado/Provincia</label>
                                 <input type="text" name="estado_provincia" id="estado_provincia"
-                                    placeholder="Ingresa tu estado o provincia"
+                                    placeholder="Estado o provincia"
                                     value="<%=locals.old && old.estado_provincia ? old.estado_provincia : locals.userLogin.estado_provincia %>">
                                 <div id="estado_provinciaContainer"></div>
                             </div>
 
                             <div class="container">
                                 <label for="ciudad">Ciudad</label>
-                                <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu ciudad"
+                                <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad"
                                     value="<%=locals.old && old.ciudad ? old.ciudad : locals.userLogin.ciudad %>">
                                 <div id="ciudadContainer"></div>
                             </div>
 
                             <div class="container">
                                 <label for="calle">Calle</label>
-                                <input type="text" name="calle" id="calle" placeholder="Ingresa tu calle"
+                                <input type="text" name="calle" id="calle" placeholder="Calle"
                                     value="<%=locals.old && old.calle ? old.calle : locals.userLogin.calle %>">
                                 <div id="calleContainer"></div>
                             </div>
 
                             <div class="container">
                                 <label for="codigoPostal">Código Postal</label>
-                                <input type="number" name="codigoPostal" id="codigoPostal" placeholder="códigoPostal"
+                                <input type="number" name="codigoPostal" id="codigoPostal" placeholder="Código Postal"
                                     value="<%=locals.old && old.códigoPostal ? old.codigoPostal : locals.userLogin.codigoPostal%>">
                                 <div id="codigoPostalContainer"></div>
                             </div>
 
                             <div>
-
-                                <button type="submit" class="enviar">Enviar</button>
-
+                                <div class="enviar-cancelar">
+                                    <button type="submit" class="enviar">Enviar</button>
+                                    <a href="/admin/users" class="button-cancelar">
+                                        Cancelar
+                                    </a>
+                                </div>
                         </form>
                     </section>
             </main>
             <%- include('../partials/footer') %>
-            <script src="/javascripts/images.js"></script>
+                <script src="/javascripts/images.js"></script>
     </body>
 
 

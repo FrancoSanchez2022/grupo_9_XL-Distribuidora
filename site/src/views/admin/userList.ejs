@@ -5,8 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap/css/bootstrap-theme.min.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
   <!-- Theme style -->
   <link rel="stylesheet" href="/dist/css/adminlte.min.css">
@@ -16,7 +17,7 @@
 
 </head>
 
-<body class="dashboard hold-transition sidebar-mini layout-fixed">
+<body class="userList hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
     
     <%- include('../partials/header') %>
@@ -39,161 +40,69 @@
         <div class="content-wrapper">
           <!-- Main content -->
           <section class="content">
-            <h1>Listado de Usuarios</h1>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <div class="table-responsive">
-            <table class="table table-striped center">
-              <thead>
-                <tr>
-                  <th><input type="checkbox" id="action-toggle"></th>
-                  <th>#</th>
-                  <th>Nombre</th>
-                  <th>Apellido</th>
-                  <th>Email</th>
-                  <th>Teléfono</th>
-                  <th>Fecha de nacimiento</th>
-                  <th>Ver foto</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>1</td>
-                  <td>Jaime</td>
-                  <td>Ibañez</td>
-                  <td>jaime.ibanez@gmail.com</td>
-                  <td>011-152155155</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>2</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>3</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>4</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>5</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>6</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>7</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>8</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>9</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>10</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-                <tr>
-                  <td><input class="action-select" name="_selected_action" value="1" type="checkbox"></td>
-                  <td>11</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                  <td>15/12/2015</td>
-                  <td>Link</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <button type="button" class="btn btn-danger btn-right" data-toggle="modal" data-target="#ConfirmDeleteModal">Eliminar usuarios seleccionados</button>
-        </div>
-      </div>
-    </div>
+            <main>
+              <h1>Listado de usuarios</h1>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Imagen</th>
+                      <th scope="col">Rol</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Teléfono</th>
+                      <th scope="col">Género</th>
+                      <th scope="col">Pais</th>
+                      <th scope="col">Estado/Provincia</th>
+                      <th scope="col">Ciudad</th>
+                      <th scope="col">Cód.Postal</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% usuarios.forEach(usuario => { %>
+                    <tr>
+                      <th scope="row"><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.id %></a></th>
+                      <td><a href="/admin/editUser/<%= usuario.id %>">
+                        <img
+                          class="usuario"
+                          id="imgMain"
+                          src="/img/users/<%= usuario.imagen %>"
+                          alt="Imagen principal"
+                        /></a>
+                      </td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.rolId==1 ? 'Admin' : 'Usuario'%></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.nombre %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.apellido %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.email %></a></td>
+                      <td><a href="/admin/editUser<%= usuario.id %>"><%= usuario.telefono %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.genero %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.pais %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.estado_provincia %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.ciudad %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.codigoPostal %></a></td>
+                      <td>
+                        <div class="edit">
+                            <a href="/admin/editUser/<%= usuario.id%>">
+                              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                          </a>
 
-    <!-- Modal -->
-    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Eliminar usuario</h4>
-          </div>
-          <div class="modal-body">
-            ¿Estás seguro que deseas eliminar el usuario?
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-danger ">Eliminar</button>
-          </div>
-        </div>
-      </div>
-    </div>
+                          <form action="deleteUser/<%= usuario.id%>?_method=DELETE" method="post">
+                            <button type="submit" class="btn btn-danger">
+                              <i class="fas fa-trash-alt"></i>
+                            </button>
+                      
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                    <% }) %>
+                  </tbody>
+                </table>
+              </div>
+            </main>
   </section>
   <!-- /.content -->
 </div>
@@ -203,14 +112,14 @@
 <%- include('../partials/footer') %>
 </div>
 <!-- ./wrapper -->
-
+<!-- visualizar imagenes -->
+<script src="/javascripts/images.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- vista de carga -->
 <script src="/dist/js/adminlte.js"></script>
-
 </body>
 
 </html>

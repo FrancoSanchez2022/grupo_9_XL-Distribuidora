@@ -16,9 +16,9 @@
 
 </head>
 
-<body class="dashboard hold-transition sidebar-mini layout-fixed">
+<body class="userCreate hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
-    
+
     <%- include('../partials/header') %>
 
       <%- include('../partials/aside') %>
@@ -31,89 +31,123 @@
               <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
           </ul>
-          <%- include('../partials/breadcrumbs',{ másSecciones:'<a href="/admin">Admin</a>',página: 'Añadir Usuario'}) %>
+          <%- include('../partials/breadcrumbs',{ másSecciones:'<a href="/admin">Admin</a>',página: 'Añadir Usuario'})%>
         </nav>
-       <!-- /.navbar -->
+        <!-- /.navbar -->
 
-         <!-- Content Wrapper. Contains page content -->
+        <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
           <!-- Main content -->
           <section class="content">
-            <h1>Añadir Usuario Nuevo</h1>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <form class="form-horizontal">
-            <div class="form-group">
-              <label for="inputNombre" class="col-sm-2 control-label">Nombre</label>
-              <div class="col-sm-10">
-                <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre del usuario">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputApellido" class="col-sm-2 control-label">Apellido</label>
-              <div class="col-sm-10">
-                <input type="apellido" class="form-control" id="inputApellido" placeholder="Apellido del usuario">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email del usuario">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputContraseña" class="col-sm-2 control-label">Contraseña</label>
-              <div class="col-sm-10">
-                <input type="contraseña" class="form-control" id="inputContraseña" placeholder="Contraseña del usuario">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputFoto" class="col-sm-2 control-label">Foto</label>
-              <div class="col-sm-10">
-                <input type="apellido" class="form-control" id="inputFoto" placeholder="Foto del usuario">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputTelefono" class="col-sm-2 control-label">Teléfono</label>
-              <div class="col-sm-10">
-                <input type="telefono" class="form-control" id="inputTelefono" placeholder="Teléfono del usuario">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputFechaNac" class="col-sm-2 control-label">Fecha de nacimiento</label>
-              <div class="col-sm-10">
-                <input type="fechanac" class="form-control" id="inputFechaNac"
-                  placeholder="Fecha de nacimiento del usuario">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-success">Agregar</button>
-                <button type="submit" class="btn btn-defaylt">Cancelar</button>
-              </div>
-            </div>
-          </form>
+            <main>
+              <h1>Añadir Usuario Nuevo</h1>
+
+              <section class="card">
+
+                <form class="form-userCreate" action="/admin/addUser" method="POST" id="formulario" enctype="multipart/form-data">
+                  <label class="foto" for="avatar">Foto (opcional)</label>
+                  <div class="img">
+                    <div id="preview" class="styleImage">
+                    </div>
+                    <label class="selectImg" for="user-img">
+                      <img id="img-preview" src="/img/users/default-avatar.png" alt="">
+                    </label>
+                    <div class="labelinput">
+                      <input id="user-img" type="file" name="avatar" id="avatar">
+                    </div>
+                    <small id="imagenContainer">
+                      <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                    </small>
+                  </div>
+                  <div class="container">
+                    <label for="rol">Rol</label>
+                    <select class="form-control" name="rol" id="rol">
+                      <option value="" selected hidden>Selecciona una opción</option>
+                      <option value="1">Admin</option>
+                      <option value="0">Usuario</option>
+                    </select>
+                    <small id="rolContainer">
+                      <%= locals.errors && errors.rol ? errors.rol.msg : null %>
+                    </small>
+                  </div>
+                  <div class="container">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"
+                      value="<%= locals.old && old.name ? old.name : null %>">
+                    <small id="nameContainer">
+                      <%= locals.errors && errors.name ? errors.name.msg : null %>
+                    </small>
+                  </div>
+
+                  <div class="container">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"
+                      value="<%= locals.old && old.lastname ? old.lastname : null %>">
+                    <small id="lastnameContainer">
+                      <%= locals.errors && errors.lastname ? errors.lastname.msg : null %>
+                    </small>
+                  </div>
+
+                  <div class="container">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Ingresa tu email"
+                      value="<%= locals.old && old.email ? old.email : null %>">
+                    <small id="emailContainer">
+                      <%= locals.errors && errors.email ? errors.email.msg : null %>
+                    </small>
+                  </div>
+                  <div class="container">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu teléfono"
+                      value="<%= locals.old && old.phonenumber ? old.phonenumber : null %>">
+                    <small id="phonenumberContainer">
+                      <%= locals.errors && errors.phonenumber ? errors.phonenumber.msg : null %>
+                    </small>
+                  </div>
+                  <div class="container">
+                    <label for="pass">Clave</label>
+                    <div class="password">
+                      <input type="password" name="pass" id="pass" placeholder="Password">
+                      <i class="fas fa-eye-slash" id="eye-pass"></i>
+                    </div>
+                    <small id="passContainer">
+                      <%= locals.errors && errors.pass ? errors.pass.msg : null %>
+                    </small>
+                  </div>
+                  <div class="container">
+                    <label for="pass2">Repetir Clave</label>
+                    <div class="password">
+                      <input type="password" name="pass2" id="pass2" placeholder="Password">
+                      <i class="fas fa-eye-slash" id="eye-pass2"></i>
+                    </div>
+                    <small id="passContainer2">
+                      <%= locals.errors && errors.pass2 ? errors.pass2.msg : null %>
+                    </small>
+                  </div>
+                  <div>
+                    <button type="submit" class="enviar">Crear usuario</button>
+                </form>
+              </section>
+            </main>     
+          </section>
+          <!-- /.content -->
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- /.content -->
-</div>
- <!-- /.content-wrapper --> 
- 
-<!-- Footer  -->
-<%- include('../partials/footer') %>
-</div>
-<!-- ./wrapper -->
+        <!-- /.content-wrapper -->
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- vista de carga -->
-<script src="/dist/js/adminlte.js"></script>
+        <!-- Footer  -->
+        <%- include('../partials/footer') %>
+  </div>
+  <!-- ./wrapper -->
 
+  <script src="/javascripts/users/eyePass.js"></script>
+  <!-- Visualizar imagenes -->
+  <script src="/javascripts/images.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- vista de carga -->
+  <script src="/dist/js/adminlte.js"></script>
 </body>
 
 </html>
