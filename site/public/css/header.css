@@ -117,12 +117,15 @@ header .burger nav ul li:hover {
     border: 2px solid var(--colorProfundidad);
     background-color: var(--colorHeader)
 }
+header .burger nav ul li:hover a{
+    color: var(--colorProfundidad);
+}
 header .burger nav ul .desloguear form button{
     background: none;
     border: none;
     color: var(--colorHeader);
 }
-header .burger nav ul .desloguear form button:hover{
+header .burger nav ul .desloguear form:hover button{
     color: var(--colorProfundidad);
     background-color: var(--colorHeader)
     
@@ -140,9 +143,9 @@ header .burger nav a {
     text-decoration: none;
 }
 
-header .burger nav a:hover {
+/* header .burger nav a:hover {
     color: var(--colorProfundidad);
-}
+} */
 
 @media (min-width:375px) {
     header {
@@ -328,6 +331,7 @@ header .burger nav a:hover {
     header .burger input:checked~nav {
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
     }
 
     header .burger label {
