@@ -258,6 +258,15 @@ header .cart-container .cart-puy a{
     border-radius: 4px;
 }
 
+header ul .menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background: white;
+}
+
+
+
 @media (min-width:375px) {
     header {
         position: relative;

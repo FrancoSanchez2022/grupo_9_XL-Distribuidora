@@ -16,12 +16,6 @@
         <input type="checkbox" name="burger" id="burger" checked>
         <label for="burger"><i class="fas fa-bars"></i></label>
         <nav>
-            <ul class="menu">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/products/listProducts">Nuestros Productos</a></li>
-                <li><a href="/#somos">Quienes Somos</a></li>
-                <li><a href="/#contacto">Contacto</a></li>
-            </ul>
             <ul class="user">
                 <% if (locals.userLogin && locals.userLogin.rol=== 1 ) { %>
                     <li><a href="/admin">Admin</a></li>
@@ -42,6 +36,12 @@
             </ul>
         </nav>
     </div>
+    <ul class="menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/products/listProducts">Nuestros Productos</a></li>
+        <li><a href="/#somos">Quienes Somos</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+    </ul>
     <div class="cart-container"></div>
 
     <!--<div class="carrito"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></div>-->
