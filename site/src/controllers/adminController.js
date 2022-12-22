@@ -339,27 +339,32 @@ module.exports = {
     processAddUser: (req, res) => {
         let errors = validationResult(req)
 
-        console.log(req.body)
+        if (req.fileValidationError){
+            let imagen = {
+                param: 'avatar',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
         if (errors.isEmpty()) {
             let { rol, name, lastname, email, pass, phonenumber } = req.body
             db.Usuarios.create({
+                rolId: +rol,
                 nombreUsuario: null,
                 nombre: name,
                 apellido: lastname,
                 genero: null,
                 email: email,
-                password: pass,
                 telefono: phonenumber,
+                password: pass,
                 pais: null,
                 estado_provincia: null,
                 ciudad: null,
                 calle: null,
                 codigoPostal: null,
-                rolId: +rol,
                 imagen: req.file ? req.file.filename : "default-avatar.png"
             })
                 .then(usuarioNuevo => {
-
                     return res.redirect('/admin/users')
                 })
                 .catch(errores => res.send(errores))
@@ -368,7 +373,7 @@ module.exports = {
                 errors: errors.mapped(),
                 old: req.body
             })
-        }
+        }  
     },
     editUser: (req, res) => {
         let idParams = +req.params.id
@@ -390,10 +395,87 @@ module.exports = {
         .catch(error => res.send(error))
     },
     processEditUser: (req, res) => {
+   /* console.log(req.body); */
 
-      
-     
-    },
+   if (req.fileValidationError) {
+    let imagen = {
+        param: 'avatar',
+        msg: req.fileValidationError,
+    }
+    errors.errors.push(imagen)
+}
+let errors = validationResult(req)
+if (errors.isEmpty()) {
+
+    db.Usuarios.findOne({
+        where: {
+            id: +req.params.id
+        }
+    })
+        .then(user => {
+            user = user.dataValues
+            /* console.log(user); */
+
+            const { nombreUsuario, nombre, email, apellido, genero, telefono, pais, estado_provincia, ciudad, calle, codigoPostal } = req.body
+            db.Usuarios.update({
+                nombreUsuario: nombreUsuario,
+                nombre: nombre,
+                email: email,
+                apellido: apellido,
+                genero: genero,
+                telefono: telefono,
+                pais: pais,
+                estado_provincia: estado_provincia,
+                ciudad: ciudad,
+                calle: calle,
+                codigoPostal: codigoPostal,
+                imagen: req.file ? req.file.filename : user.imagen
+            }, {
+                where: {
+                    id: +req.params.id
+                }
+            })
+                .then(data => {
+                    db.Usuarios.findOne({
+                        where: {
+                            id: +req.params.id
+                        }
+                    }) /* .then(user => {
+                if (req.file) {
+                    let ruta = fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                    if (ruta && req.file.filename !== user.imagen && user.imagen !== "default-avatar.png") {
+                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'users', user.imagen))
+                    }
+                    db.Usuarios.update({
+                        imagen: req.file ? req.file.filename : user.imagen
+                    }, {
+                        where: {
+                            id: +req.params.id
+                        }
+                    })
+                }}) */
+                        .then(usuario => {
+                            usuario = usuario.dataValues
+
+                      
+                            req.session.save((err) => {
+                                req.session.reload((err) => {
+                                    return res.redirect('/users/profile')
+                                });
+                            });
+                        });
+                })
+        })
+
+        .catch(err => res.send(err))
+
+} else {
+    return res.render('users/profileEdit', {
+        errors: errors.mapped(),
+        old: req.body
+    })
+}
+},
     deleteUser: (req, res) => {
         let idParams = +req.params.id
         db.Usuarios.destroy({
