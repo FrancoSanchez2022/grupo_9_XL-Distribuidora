@@ -11,15 +11,15 @@
                 <section class="carrucelDestacados">
                     <h1 class="destacado">Productos Destacados</h1>
                     <% productos.forEach(producto => { %>
-                        <% if (producto.descuento >= 1 ) { %>
-                            <%- include('./partials/card',{
-                                id: producto.id,
-                                imagen: producto.imagenes[0].nombre,
-                                nombre: producto.nombre,
-                                descuento: producto.descuento,
-                                precio: producto.precio
-                            }) %>
-                        <% } %>
+                        
+                        <%- include('./partials/card',{
+                            id: producto.id,
+                            imagen: producto.imagenes[0].nombre,
+                            nombre: producto.nombre,
+                            descuento: producto.descuento,
+                            precio: producto.precio
+                        }) %>
+                        
                     <% }) %>
                 </section>
                 <section>

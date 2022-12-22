@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap core CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <%- include('../partials/head',{title:'XL - Admin'}) %>
+
+</head>
+
+<body class="userList hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    
+    <%- include('../partials/header') %>
+
+      <%- include('../partials/aside') %>
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+          <!-- Left navbar links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+          </ul>
+          <%- include('../partials/breadcrumbs',{ másSecciones:'<a href="/admin">Admin</a>',página: 'Listado de Usuarios'}) %>
+        </nav>
+       <!-- /.navbar -->
+
+         <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+          <!-- Main content -->
+          <section class="content">
+            <main>
+              <h1>Listado de usuarios</h1>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Imagen</th>
+                      <th scope="col">Rol</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Teléfono</th>
+                      <th scope="col">Género</th>
+                      <th scope="col">Pais</th>
+                      <th scope="col">Estado/Provincia</th>
+                      <th scope="col">Ciudad</th>
+                      <th scope="col">Cód.Postal</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% usuarios.forEach(usuario => { %>
+                    <tr>
+                      <th scope="row"><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.id %></a></th>
+                      <td><a href="/admin/editUser/<%= usuario.id %>">
+                        <img
+                          class="usuario"
+                          id="imgMain"
+                          src="/img/users/<%= usuario.imagen %>"
+                          alt="Imagen principal"
+                        /></a>
+                      </td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.rolId==1 ? 'Admin' : 'Usuario'%></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.nombre %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.apellido %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.email %></a></td>
+                      <td><a href="/admin/editUser<%= usuario.id %>"><%= usuario.telefono %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.genero %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.pais %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.estado_provincia %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.ciudad %></a></td>
+                      <td><a href="/admin/editUser/<%= usuario.id %>"><%= usuario.codigoPostal %></a></td>
+                      <td>
+                        <div class="edit">
+                            <a href="/admin/editUser/<%= usuario.id%>">
+                              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                          </a>
+
+                          <form action="deleteUser/<%= usuario.id%>?_method=DELETE" method="post">
+                            <button type="submit" class="btn btn-danger">
+                              <i class="fas fa-trash-alt"></i>
+                            </button>
+                      
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                    <% }) %>
+                  </tbody>
+                </table>
+              </div>
+            </main>
+  </section>
+  <!-- /.content -->
+</div>
+ <!-- /.content-wrapper --> 
+ 
+<!-- Footer  -->
+<%- include('../partials/footer') %>
+</div>
+<!-- ./wrapper -->
+<!-- visualizar imagenes -->
+<script src="/javascripts/images.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- vista de carga -->
+<script src="/dist/js/adminlte.js"></script>
+</body>
+
+</html>

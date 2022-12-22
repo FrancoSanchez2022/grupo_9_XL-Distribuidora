@@ -1,68 +1,53 @@
-.resetPassword {
+.forgotPassword {
 
     line-height: 1.5;
   }
   
-  .resetPassword main h1 {
+  .forgotPassword main h1 {
     text-align: center;
     font-weight: 500;
-    margin: 40px 20px 20px;
+    margin: 0px 20px 20px;
     font-size: 35px;
+    border-bottom: 1px solid #4d4d4d;
   }
 
-  .resetPassword main h5{
+  .forgotPassword main h5{
     text-align: center;
     font-weight: 420;
     font-size: 12px;
     margin: auto;
-  }
-  
-  .resetPassword main .breadcrumbs {
-    padding: 0.5rem;
-    border-top: 1px solid #4d4d4d;
-    font-size: 12px;
-    line-height: 20px;
-  }
-  
-  .resetPassword main .breadcrumbs ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .resetPassword main .breadcrumbs ul li {
-    display: inline-block;
-    color: var(--grisClaro);
-  }
-  
-  .resetPassword main .breadcrumbs ul li a {
-    color: var(--grisOscuro);
-    display: block;
-    text-decoration: none;
-  }
-  
-  .resetPassword main .breadcrumbs ul li a:hover {
-    text-decoration: underline;
-    color: var(--black);
-  }
-  
-  .resetPassword main .card {
+  }  
+ 
+  .forgotPassword main .card {
     border-radius: 0.5rem;
     border: 2px solid var(--grisClaro);
   margin-bottom: 15px;
    margin: 5%;
-   background-color: var(--white);
+   background: linear-gradient(
+    to bottom,
+    white,
+     #e7dbeeec);
    padding: 1rem;
    box-shadow: 0px 2.5px 10px 6px   #ff347491
   }
   
-  .resetPassword main .card .form-resetPassword .container{
+  .forgotPassword main .card .form-forgotPassword .container{
     display: flex;
     flex-direction: column;
     margin-bottom: 12.5px;
   }
+
+  .forgotPassword main .card .form-forgotPassword .container  label {
+    color: #aa0565b9;
+    background: linear-gradient(to bottom,
+        white,
+        #e7dbeeec);
+    padding: 2.5px 5px;
+    width: fit-content;
+    border-radius: 15%;
+  }
   
-  .resetPassword main .card button  {
+  .forgotPassword main .card button  {
     background-color: #4d4d4d;
       color: var(--white);
       font-size: 14px;
@@ -74,7 +59,7 @@
       align-items: center;
     }
     
-    .resetPassword main .card button:hover {
+    .forgotPassword main .card button:hover {
       background: linear-gradient(
         to bottom,
         #FFD6D6,
@@ -82,29 +67,29 @@
       color: var(--black)
     }
     
-    .resetPassword main .card button:active {
+    .forgotPassword main .card button:active {
       box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
     }
   
-  .resetPassword main .card .form-resetPassword .container small {
+  .forgotPassword main .card .form-forgotPassword .container small {
     margin-top: 5px;
     padding-left: 8px;
     font-size: 10.5px;
     color: rgb(148, 1, 1);
-    background-color: #f7e7d9ee;
+    background-color: #ffb6a496;
     width: 100%;
     border-radius: 2.5px;
     box-sizing: border-box;
   }
   
-  .resetPassword main .card .form-resetPassword .container input{
+  .forgotPassword main .card .form-forgotPassword .container input{
     padding: 6px;
     padding-bottom: 6px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
 
-  .resetPassword main .card .form-resetPassword .form-status {
+  .forgotPassword main .card .form-forgotPassword .form-status {
     border-color: #bce8f1;
     color: #31708f;
     background-color: #d9edf7;
@@ -117,13 +102,13 @@
   /* Tablet */
   @media (min-width:426px){ 
       
-    .resetPassword main h1 {
+    .forgotPassword main h1 {
       font-weight: 500;
       font-size: 45px;
     }
     
     
-    .resetPassword main .card {
+    .forgotPassword main .card {
     margin-bottom: 15px;
       margin: 5% 17.5%;
     }
@@ -133,25 +118,25 @@
     /* Desktop */
   @media (min-width:769px) {
   
-    .resetPassword main h1 {
+    .forgotPassword main h1 {
       font-weight: 500;
       font-size: 57.5px;
     }
 
-    .resetPassword main .card{
+    .forgotPassword main .card{
       box-shadow: 0px 5px 20px 12px   #ff347491
     }
 
-    .resetPassword main .card .form-resetPassword{
+    .forgotPassword main .card .form-forgotPassword{
       padding: 1.25rem;
     }
 
-    .resetPassword main .card .form-resetPassword .container input{
+    .forgotPassword main .card .form-forgotPassword .container input{
       padding: 10px 10px 8px;
       font-size: 16px ;
     }
   
-    .resetPassword main .card button  {
+    .forgotPassword main .card button  {
         padding: 6px 20px;
         font-size: 16px;
       }
@@ -159,7 +144,7 @@
   
     @media (min-width:1024px) {
       
-      .resetPassword main .card .form-resetPassword .container small {
+      .forgotPassword main .card .form-forgotPassword .container small {
         font-size: 12.5px;
       }
     }

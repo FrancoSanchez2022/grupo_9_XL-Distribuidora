@@ -5,8 +5,9 @@
 .login main h1 {
   text-align: center;
   font-weight: 500;
-  margin: 40px 20px 20px;
+  margin: 0px 20px 20px;
   font-size: 35px;
+  border-bottom: 1px solid #4d4d4d;
 }
 
 .login main h2 {
@@ -29,36 +30,6 @@
   font-weight: 320;
   font-size: 13px;
   margin: 7px 0px;
-}
-
-.login main .breadcrumbs {
-  padding: 0.5rem;
-  border-top: 1px solid #4d4d4d;
-  font-size: 12px;
-  line-height: 20px;
-}
-
-.login main .breadcrumbs ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.login main .breadcrumbs ul li {
-  display: inline-block;
-  color: var(--grisClaro);
-}
-
-.login main .breadcrumbs ul li a {
-  color: var(--grisOscuro);
-  display: block;
-  text-decoration: none;
-}
-
-.login main .breadcrumbs ul li a:hover {
-  text-decoration: underline;
-  color: var(--black);
-
 }
 
 .login main .card {
@@ -97,7 +68,7 @@
 
   font-size: 11.5px;
   text-decoration: none;
-  box-shadow: 0px 0.5px 3px 3px white;
+  box-shadow: 0px 0.5px 3px 3px white, #e3dbee70;
   border-radius: 5%;
 }
 
@@ -135,14 +106,30 @@
 
 .login main .card .form-login .card-body {
   padding: 1rem;
-  background-color: var(--white);
-}
+  background: linear-gradient(
+      to bottom,
+      white,
+       #e7dbeeec);
+      }
 
 .login main .card .form-login .card-body .container {
 
   display: flex;
   flex-direction: column;
   margin-bottom: 12.5px;
+}
+
+.login main .card .form-login .card-body .container  label {
+  color: #aa0565b9;
+  background: linear-gradient(to bottom,
+      white,
+      #e7dbeeec);
+  padding: 2.5px 5px;
+  width: fit-content;
+  border-radius: 15%;
+}
+.login main .card .form-login .card-body .container .recordarme label {
+  margin-left: 4px;
 }
 
 .login main .card .form-login .card-body .container .password {
@@ -188,7 +175,7 @@
   padding-left: 8px;
   font-size: 10.5px;
   color: rgb(148, 1, 1);
-  background-color: #f7e7d9ee;
+  background-color: #ffb6a496;
   width: 100%;
   border-radius: 2.5px;
   box-sizing: border-box;

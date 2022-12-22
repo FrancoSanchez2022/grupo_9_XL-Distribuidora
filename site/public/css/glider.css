@@ -13,7 +13,7 @@
 }
 .glider-track {
   transform: translateZ(0);
-  width: 100%;
+  width: width: 3264px;;
   margin: 0;
   padding: 0;
   display: flex;
@@ -120,6 +120,20 @@
 .glider-dot:focus,
 .glider-dot.active {
   background: var(--dorado);
+}
+@media (min-width: 1360px) {
+  .glider-contain {
+    width: 1360px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+@media (min-width: 1440px) {
+  .glider-contain {
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+  }
 }
 @media(max-width: 36em){
   .glider::-webkit-scrollbar {

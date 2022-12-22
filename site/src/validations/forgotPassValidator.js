@@ -1,4 +1,4 @@
-const { check, body } = require('express-validator')
+const { check } = require('express-validator')
 const db = require('../database/models')
 
 module.exports = [
@@ -7,7 +7,7 @@ module.exports = [
         .isEmail()
         .withMessage('Email invalido')
         .custom((value, { req }) => {
-            return db.Usuarios.findOne({ where: {email: req.body.email} })
+            return db.Usuarios.findOne({ where: { email: req.body.email } })
                 .then(user => {
                     if ((!user)) {
                         return Promise.reject()

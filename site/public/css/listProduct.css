@@ -1,11 +1,6 @@
-.liProduct main .product-relacionado{
-    width: 95%;
-    margin: 15px auto;
-    padding: 15px;
-    background-color: var(--white);
-    border-radius: 0.5rem;
-    border: 2px solid var(--grisClaro);
-    box-shadow: 0px 1px 8px 4px #ff347491
+.liProduct h1{
+    text-align: center;
+    
 }
 .liProduct main .product-relacionado button {
     background-color: var(--colorButtonContacto);

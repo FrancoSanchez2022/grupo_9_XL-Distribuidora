@@ -6,59 +6,65 @@
     <body class="profile">
         <%- include('../partials/header') %>
             <main>
-                <h1>
-        <%= `${locals.userLogin.rol == 1 ? 'Admin' : 'Usuario'} ${locals.userLogin.nombre}` %>
-                </h1>
-                <%- include('../partials/breadcrumbs',{página:'Perfil'}) %>
-                    <form class="form-cambiar-img" action="/users/profile?_method=PUT" method="post"
-                        enctype="multipart/form-data">
-                        <div class="img">
-                            <label class="selectImg" for="product-img">
+                <%- include('../partials/breadcrumbs',{másSecciones:null,página:'Perfil'}) %>
+                    <h1>
+                        <%= `${locals.userLogin.rol==1 ? 'Admin' : 'Usuario' } ${locals.userLogin.nombre}` %>
+                    </h1>
+                    <div class="info">
+                        <section class="info-user card img">
+                            <form class="form-cambiar-img" action="/users/profile?_method=PUT" method="post"
+                                enctype="multipart/form-data">
+                                <label class="selectImg" for="user-img">
                                     <img id="img-preview" src="/img/users/<%= locals.userLogin.imagen%>" alt="">
-                            </label>
-                            <div class="labelinput">
-                                <input id="product-img" type="file" name="avatar" placeholder="Imagen de perfil" </div>
+                                </label>
+                                <div class="labelinput">
+                                    <input id="user-img" type="file" name="avatar" placeholder="Imagen de perfil">
+                                </div>
+                                <h2>
+                                    <%= locals.userLogin.nombre %>
+                                        <%= locals.userLogin.apellido %>
+                                </h2>
+                            </form>
+                            <ul>
+                                <li>Nombre de Usuario: <p><%= locals.userLogin.nombreUsuario %></p>
+                                </li>
+                                <li>Nombre: <p><%= locals.userLogin.nombre %></p>
+                                </li>
+                                <li>Apellido: <p><%= locals.userLogin.apellido %></p>
+                                </li>
+                                <li>Email: <p><%= locals.userLogin.email %></p>
+                                </li>
+                              
+                                <li>Género: <p><%=locals.userLogin.genero=='Male'?'Masculino':locals.userLogin.genero=='Female'?'Femenino':locals.userLogin.genero=='Non-binary'?'No binario':locals.userLogin.genero=='Otro'?'-':null%></p>
+                                </li>
+                                <li>Teléfono: <p><%= locals.userLogin.telefono %></p>
+                                </li>
+                                <li>País: <p><%= locals.userLogin.pais%></p>
+                                </li>
+                                <li>Estado/Provincia: <p><%= locals.userLogin.estado_provincia %></p>
+                                </li>
+                                <li>Ciudad: <p><%= locals.userLogin.ciudad %></p>
+                                </li>
+                                <li>Calle: <p><%= locals.userLogin.calle %></p>
+                                </li>
+                                <li>Código postal: <p><%= locals.userLogin.codigoPostal %></p>
+                                </li>
+                            </ul>
+                            <h4><a href="/users/profileEdit">Editar datos</a></h4>
+                        </section>
+
+
+                        <section class="info-compras">
+                            <h2>Mis Compras</h2>
+                            <div class="card">
+                                <h3>¡Hacé tu primer compra!</h3>
+                                <h4><a href="/products/listProducts">VER PRODUCTOS</a></h4>
                             </div>
-                            <button class="buttonsubmit" type="submit">Guardar</button>
-                    </form>
-                    <form action="/users/logout?_method=DELETE" method="post">
-                        <button type="submit">Cerrar Sesión</button>
-                    </form>
-                    <h3>Mis Datos</h3>
-                    <section class="card">
-                        <ul>
-                            <li>Nombre de Usuario: <%= locals.userLogin.nombreUsuario %>
-                            </li>
-                            <li>Nombre: <%= locals.userLogin.nombre %>
-                            </li>
-                            <li>Apellido: <%= locals.userLogin.apellido %>
-                            </li>
-                            <li>Email: <%= locals.userLogin.email %>
-                            </li>
-                            <li>Género: <%= locals.userLogin.género %>
-                            </li>
-                            <li>Teléfono: <%= locals.userLogin.teléfono %>
-                            </li>
-                            <li>País: <%= locals.userLogin.pais%>
-                            </li>
-                            <li>Estádo: <%= locals.userLogin.estado_provincia %>
-                            </li>
-                            <li>Ciudad: <%= locals.userLogin.ciudad %>
-                            </li>
-                            <li>Calle: <%= locals.userLogin.calle %>
-                            </li>
-                            <li>Código postal: <%= locals.userLogin.códigoPostal %>
-                            </li>
-                        </ul>
-                    </section>
-                    <h3>Mis Compras</h3>
-                    <section class="card">
-                        <p>¡Hacé tu primera compra!</p>
-                        <h4><a href="/products/listProducts">VER PRODUCTOS</a></h4>
-                    </section>
+                        </section>
+                    </div>
             </main>
             <%- include('../partials/footer') %>
+            <script src="/javascripts/images.js"></script>
     </body>
-    <script src="/javascripts/images.js"></script>
 
 </html>

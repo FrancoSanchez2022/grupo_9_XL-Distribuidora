@@ -1,0 +1,80 @@
+.content .crea{
+    background-color: white;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 62px;
+}
+.content .crea form .container .conjunto{
+    display: flex;
+    justify-content: space-around;
+}
+.content .crea form .container .conjunto .img-producto .img-product .contenedor{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.content .crea form .container .row .form-floating label{
+    display: flex;
+    justify-content: center;
+}
+.content .crea form .container .row .form-floating .form-control{
+    resize: none;
+}
+.content .crea form .boton{
+    display: flex;
+    justify-content: center;
+}
+.content .crea form .boton .botoncito{
+    background-color: #FF3474B9;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    color: white;
+}
+.content .crea form .boton .botoncito:hover{
+    background-color:  white;
+    border: 1px solid #FF3474B9;
+    padding: 15px;
+    border-radius: 25px;
+    color: #FF3474B9;
+}
+
+
+.productCreate main{
+    margin: 50px;
+}
+.productCreate h1{
+    text-align: center;
+}
+.productCreate .row{
+    width: 100%;
+    justify-content: center;
+}
+.productCreate .col-4{
+    width: 250px;
+}
+.productCreate .col-5{
+    width: 50%
+}
+
+.productCreate small {
+    margin-top: 5px;
+    padding-left: 8px;
+    font-size: 10.5px;
+    color: rgb(148, 1, 1);
+    background-color: #ffb6a496;
+    width: 100%;
+    border-radius: 2.5px;
+    box-sizing: border-box;
+}
+
+.productCreate .create{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 60px;
+    padding: 33px;
+}

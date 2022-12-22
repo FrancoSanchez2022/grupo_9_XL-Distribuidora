@@ -5,10 +5,16 @@
 .profile main h1 {
     text-align: center;
     font-weight: 500;
-    margin: 40px 20px 20px;
+    margin: 0px 20px 20px;
     font-size: 35px;
+    border-bottom: 1px solid #4d4d4d;
 }
 
+.profile main h2 {
+    font-weight: 440;
+  font-size: 22.5px;
+    margin: 0px 0px 10px;
+}
 .profile main h3 {
     font-weight: 430;
     font-size: 18px;
@@ -20,15 +26,14 @@
     font-weight: 420;
     font-size: 16px;
     margin: auto;
-
 }
 
 .profile main p {
-    text-align: center;
     font-weight: 320;
     font-size: 13px;
-    margin: 7px 0px;
-}
+    margin: 2.5px 
+  }
+  
 
 .profile main .breadcrumbs {
     padding: 0.5rem;
@@ -64,10 +69,12 @@
     border-radius: 0.5rem;
     border: 2px solid var(--grisClaro);
     margin-bottom: 15px;
-    margin: 5%;
     padding: 0.5rem;
-    box-shadow: 0px 2px 10px 6px   #ff347491;
-    background-color: var(--gray);
+    background: linear-gradient(
+        to bottom,
+        #f1dada,
+        #aa0565b9);
+        font-family: cursive;
 }
 
 .profile main .card ul {
@@ -81,8 +88,122 @@
     
 }
 
+.profile main form{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile main .info-compras .card{
+    margin: 0px 30px 30px;
+}
+
+.profile main .img .selectImg{
+    display: flex;
+    justify-content: center;
+
+}
+
 .profile main .img .selectImg img{
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
 }
+
+.profile main .img{
+
+    width: 400px;
+    margin: auto;
+}
+
+.profile main .info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile main .info-user h2{
+    color: black;
+    text-align: center;
+    border-bottom: 1px solid black
+}
+
+.profile main .info-user{
+    width: 30%;
+    margin: 5px 30px;
+}
+.profile main .info-user p{ 
+    color: white;
+}
+
+.profile main .info-user ul li{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile main .info-compras{
+    width: 60%;
+}
+
+.profile main section h2, .profile main section h3{
+    text-align: center;
+}
+
+.profile main .info-compras a {
+  color: var(--black);
+  background-color: var(--white);
+  font-size: 11.5px;
+  text-decoration: none;
+  box-shadow:  0px 0.5px 3px 3px white;
+  border-radius: 15%;
+}
+
+.profile main .info-compras a:hover {
+  color: var(--white);
+  background-color: var(--black);
+  box-shadow:  0px 0.5px 3px 3px black;
+border-radius: 15%;
+}
+
+.profile main .info-user a {
+    background-color: #4d4d4d;
+    color: var(--white);
+    border: 1px solid var(--black);
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 4px 2px;
+  }
+  
+  .profile main .info-user a:hover {
+    background: linear-gradient(to bottom,
+        #FFD6D6,
+        #FF3474B9);
+    color: var(--black)
+  }
+  
+  .profile main .info-user a:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  }
+
+.profile main .card button {
+    background-color: #4d4d4d;
+    color: var(--white);
+    border-radius: 4px;
+    border: 1px solid var(--black);
+    font-size: 14.5px;
+  }
+  
+  .profile main .card button:hover {
+    background: linear-gradient(
+      to bottom,
+      #FFD6D6,
+      #FF3474B9);
+    color: var(--black)
+  }
+  
+  .profile main .card button:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  }

@@ -28,15 +28,15 @@ module.exports = (sequelize, DataTypes) => {
     nombreUsuario: DataTypes.STRING,
     nombre: DataTypes.STRING,
     apellido: DataTypes.STRING,
-    género: DataTypes.STRING,
+    genero: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     pais: DataTypes.STRING,
     estado_provincia: DataTypes.STRING,
     ciudad: DataTypes.STRING,
     calle: DataTypes.STRING,
-    códigoPostal: DataTypes.INTEGER,
-    teléfono: DataTypes.STRING,
+    codigoPostal: DataTypes.INTEGER,
+    telefono: DataTypes.STRING,
     imagen: DataTypes.STRING,
     rolId: DataTypes.INTEGER
 

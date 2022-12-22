@@ -1,0 +1,56 @@
+.userList .usuario{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+} 
+
+
+
+
+.userList main h1{
+    display: flex;
+    justify-content: center;
+}
+
+
+.userList main .table-responsive{
+    text-transform: capitalize;
+    background: var(--white);
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0px 2px 10px 6px   #fa2bbcad; 
+    border-radius: 0.5rem;
+  border: 2px solid var(--grisClaro);
+}
+.userList main .table-responsive thead{
+    color: white;
+    background: linear-gradient(
+        to bottom,
+        #a760a3e3,
+        #aa0565b9);
+        border: 2px solid var(--grisClaro);
+}
+.userList main .table-responsive thead th{
+text-align: center;
+}
+
+.userList main .btnHeader{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.userList main a .btn:hover{
+    background-color: white;
+    color: green
+}
+.userList main .btn:hover{
+    background-color: white;
+    color: red
+}
+
+.userList main .table-responsive tbody td a{
+    color: var(--colorHeader);
+    font-weight: 500;
+    text-decoration: none;
+}

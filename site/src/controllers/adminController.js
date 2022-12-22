@@ -1,7 +1,9 @@
 const fs = require('fs')
 const path = require('path')
-let db = require('../database/models')
+const bcrypt = require('bcryptjs')
+const db = require('../database/models')
 const { validationResult } = require('express-validator');
+const users = require('../data/users.json')
 
 module.exports = {
     list: (req, res) => {
@@ -164,13 +166,13 @@ module.exports = {
                         })
                             .then(data => {
                                 let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'productos', dato))
-                                    if (ruta(producto.imagenes[0].nombre) && (producto.imagenes[0].nombre !== "default-image.png")) {
-                                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'productos', producto.imagenes[0].nombre))
-                                    }
-                                    return res.redirect('/admin/list')
-                                })
-                                .catch(error => res.send(error))
-                            } else {
+                                if (ruta(producto.imagenes[0].nombre) && (producto.imagenes[0].nombre !== "default-image.png")) {
+                                    fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'productos', producto.imagenes[0].nombre))
+                                }
+                                return res.redirect('/admin/list')
+                            })
+                            .catch(error => res.send(error))
+                    } else {
                         return res.redirect('/admin/list')
                     }
                 })
@@ -311,4 +313,96 @@ module.exports = {
                 res.send(errores)
             })
     },
+
+    dashboard: (req, res) => {
+        res.render('admin/index')
+    },
+    userList: (req, res) => {
+        let usuarios = db.Usuarios.findAll({
+            include: [{ all: true }]
+        })
+        Promise.all([usuarios])
+            .then(([usuarios]) => {
+
+
+                return res.render('admin/userList', {
+                    usuarios
+                })
+
+            })
+            .catch(error => res.send(error))
+
+    },
+    addUser: (req, res) => {
+        res.render('admin/userCreate')
+    },
+    processAddUser: (req, res) => {
+        let errors = validationResult(req)
+
+        console.log(req.body)
+        if (errors.isEmpty()) {
+            let { rol, name, lastname, email, pass, phonenumber } = req.body
+            db.Usuarios.create({
+                nombreUsuario: null,
+                nombre: name,
+                apellido: lastname,
+                genero: null,
+                email: email,
+                password: pass,
+                telefono: phonenumber,
+                pais: null,
+                estado_provincia: null,
+                ciudad: null,
+                calle: null,
+                codigoPostal: null,
+                rolId: +rol,
+                imagen: req.file ? req.file.filename : "default-avatar.png"
+            })
+                .then(usuarioNuevo => {
+
+                    return res.redirect('/admin/users')
+                })
+                .catch(errores => res.send(errores))
+        } else {
+            return res.render('admin/userCreate', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
+    },
+    editUser: (req, res) => {
+        let idParams = +req.params.id
+
+        let usuario = db.Usuarios.findOne({
+            where: {
+                id: idParams
+            },
+            include: [{
+                all: true
+            }]
+        })
+        Promise.all([usuario])
+        .then(([usuario]) => {
+            return res.render('admin/userEdit', {
+                usuario
+            })
+        })
+        .catch(error => res.send(error))
+    },
+    processEditUser: (req, res) => {
+
+      
+     
+    },
+    deleteUser: (req, res) => {
+        let idParams = +req.params.id
+        db.Usuarios.destroy({
+            where: {
+                id: idParams
+            }
+        })        
+        return res.redirect('/admin/users')
+    }
 }
+
+
