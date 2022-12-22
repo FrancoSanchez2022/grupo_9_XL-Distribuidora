@@ -11,6 +11,7 @@
                             <img src="/img/productos/<%= producto.imagenes[0].nombre %>" alt="Imagen producto">
                         </div>
                         <span class="descripcion"><%= producto.descripcion %>
+                            <p class="subprecio">$ <%= producto.precio %>
                         <button class="subcarrito" onclick="addItem('<%= producto.id %>')">Agregar al carrito</button>
                         </span>
                     </div>
