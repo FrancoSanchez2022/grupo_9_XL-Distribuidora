@@ -6,8 +6,8 @@
         <div class="form-search">
             <form class="formulario" action="/busqueda" method="get">
                 <input type="text" name="search" id="search" class="barraDeBusqueda" maxlength="100"
-                    placeholder="busca tu producto aca">
-                <button type="submit" class="lupa"></a><i class="fas fa-search"></i></button>
+                    placeholder="Busca tu producto">
+                <button type="submit" class="lupa"><i class="fas fa-search"></i></button>
             </form>
         </div>
     </div>
@@ -16,19 +16,13 @@
         <input type="checkbox" name="burger" id="burger" checked>
         <label for="burger"><i class="fas fa-bars"></i></label>
         <nav>
-            <ul class="menu">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/products/listProducts">Nuestros Productos</a></li>
-                <li><a href="/#somos">Quienes Somos</a></li>
-                <li><a href="/#contacto">Contacto</a></li>
-            </ul>
             <ul class="user">
                 <% if (locals.userLogin && locals.userLogin.rol=== 1 ) { %>
                     <li><a href="/admin">Admin</a></li>
                     <% } %>
                         <% if (locals.userLogin) { %>
                             <li><a href="/users/profile">¡Hola <%= locals.userLogin.nombre %>! </a></li>
-                            <li class="carritoli"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li id="cart-btn" class="cart-btn"><!--<a href="/products/cart">--><i class="fas fa-shopping-cart"></i><!--</a>--></li>
                             <li class="desloguear">
                                 <form action="/users/logout?_method=DELETE" method="post">
                                     <button type="submit"><i class="fas fa-sign-out-alt"></i></button>
@@ -39,9 +33,16 @@
                                 <li><a href="/users/register">Registro</a></li>
                             <% } %>
 
-                   
             </ul>
         </nav>
     </div>
-    <div class="carrito"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></div>
+    <ul class="menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/products/listProducts">Nuestros Productos</a></li>
+        <li><a href="/#somos">Quienes Somos</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+    </ul>
+    <div class="cart-container"></div>
+
+    <!--<div class="carrito"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></div>-->
 </header>
