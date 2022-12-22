@@ -85,6 +85,11 @@
   border-radius: 15%;
 }
 
+.profileEdit main .card .form-profileEdit .container #phone {
+  width: 100%;
+  padding-left: 52px;
+}
+
 .profileEdit main .card button {
   background-color: #4d4d4d;
   color: var(--white);
@@ -105,11 +110,6 @@
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
 
-
-.profileEdit main .card .form-profileEdit .enviar-cancelar {
-  padding-right: 7.5px;
-  padding-left: 7.5px;
-}
 
 .profileEdit main .card .form-profileEdit .enviar-cancelar .button-cancelar {
   background-color: #4d4d4d;
@@ -157,11 +157,57 @@
 
 @media (max-width:426px) {
 
-  .userEdit main .card button {
+  .profileEdit main .card button {
       margin-bottom: 10px;
   }
 
-  .userEdit main .card .form-userEdit .enviar-cancelar .button-cancelar {
+  .profileEdit main .card .form-profileEdit .enviar-cancelar .button-cancelar {
       margin: 0;
   }
+}
+
+
+/* Desktop */
+@media (min-width:769px) {
+
+  .profileEdit main h1 {
+    font-weight: 500;
+    font-size: 57.5px;
+  }
+
+  .profileEdit main h2 {
+    font-weight: 400;
+    font-size: 27.5px;
+  }
+
+  .profileEdit main p {
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .profileEdit main .card {
+    box-shadow: 0px 4px 20px 12px #ff347491
+  }
+
+  .profileEdit main .card .form-profileEdit .enviar-cancelar button {
+    padding: 5.5px 10px;
+  }
+
+  .profileEdit main .card .form-profileEdit .container input {
+    padding: 10px 10px 8px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media (min-width:1024px) {
+
+  .profileEdit main .card .form-profileEdit .container small {
+    font-size: 12.5px;
+  }
+
+  .profileEdit main .card .form-profileEdit button, .profileEdit main .card .form-profileEdit .enviar-cancelar .button-cancelar {
+    padding: 6px 12px;
+  }
+
 }

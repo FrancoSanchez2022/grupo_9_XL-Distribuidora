@@ -4,6 +4,8 @@ const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const db = require('../database/models')
 const { devNull } = require('os')
+const nodemailer = require('nodemailer')
+const jwt = require('jsonwebtoken')
 
 module.exports = {
     register: (req, res) => {
@@ -109,9 +111,55 @@ module.exports = {
     processForgotPass: (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
-            return res.send(req.body)
-
-
+    
+    
+            const user = db.Usuarios.findOne({
+                where: { email: req.body.email }
+            })
+            if (!user) {
+                return res.status(403).send({
+                    message: 'No existe ese email'
+                })
+            }
+    
+            const token = jwt.sign({ id: user.id }, 'resetPassToken', { expiresIn: '1h' });
+            db.Usuarios.update({
+                tokenResetPassword: token}, {
+                    where: {
+                        id: +req.params.email
+                    }
+            });
+    
+            const transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user: `${process.env.EMAIL_PASS}`,
+                    pass: `${process.env.EMAIL_ADDRESS}`,
+                }
+            });
+            const emailPort = process.env.EMAIL_PORT || 3000;
+    
+            const mailOptions = {
+                from: "xl.distribuidora.arg@gmail.com",
+                to: `${user.email}`,
+                subject: 'Enlace para recuperar su cuenta de XL-Distribuidora',
+                text: `${emailPort}/recoverPassword/${user.id}/${token}`,
+            };
+    
+            transporter.sendEmail(mailOptions, (err, res) => {
+                if (err) {
+                    console.error('Ha ocurrido un error:', err);
+                } else {
+                    console.log('Respuesta:', res);
+                    res.status(200).json('El email para la recuperación ha sido enviado');
+                }
+            })
+       /*  } catch (error) {
+            res.status(500).send({
+                message: 'Ha ocurrido un error', error
+            })
+        } */
+    
         } else {
             return res.render('users/forgotPass', {
                 errors: errors.mapped(),
@@ -208,6 +256,7 @@ module.exports = {
     profileEdit2: (req, res) => {
 
         /* console.log(req.body); */
+        let errors = validationResult(req)
 
         if (req.fileValidationError) {
             let imagen = {
@@ -216,7 +265,6 @@ module.exports = {
             }
             errors.errors.push(imagen)
         }
-        let errors = validationResult(req)
         if (errors.isEmpty()) {
 
             db.Usuarios.findOne({
@@ -297,9 +345,7 @@ module.exports = {
                                 });
                         })
                 })
-
                 .catch(err => res.send(err))
-
         } else {
             return res.render('users/profileEdit', {
                 errors: errors.mapped(),

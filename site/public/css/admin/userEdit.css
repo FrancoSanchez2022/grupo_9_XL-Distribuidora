@@ -33,16 +33,19 @@
 
 }
 
+.userEdit main .card .img .selectImg{
+    margin: auto;
+}
 .userEdit main .card .img .selectImg img {
     height: 170px;
     width: 170px;
     border-radius: 50%;
 }
 
-.userEdit main .card .img {
+/* .userEdit main .card .img {
     display: flex;
     justify-content: center;
-}
+} */
 
 .userEdit main .card {
     border-radius: 0.5rem;
@@ -76,15 +79,10 @@
     margin-bottom: 12.5px;
 }
 
-.userEdit main .card .form-userEdit .container label {
-    color: #aa0565b9;
-    background: linear-gradient(to bottom,
-            white,
-            #aa056544);
-    padding: 2.5px 5px;
-    width: fit-content;
-    border-radius: 15%;
-}
+.userEdit main .card .form-userEdit .container #phone {
+    width: 100%;
+    padding-left: 52px;
+  }
 
 .userEdit main .card button {
     background-color: #4d4d4d;
@@ -165,3 +163,51 @@
         margin: 0;
     }
 }
+
+
+/* Desktop */
+@media (min-width:769px) {
+
+    .userEdit main h1 {
+      font-weight: 500;
+      font-size: 57.5px;
+    }
+  
+    .userEdit main h2 {
+      font-weight: 400;
+      font-size: 27.5px;
+    }
+  
+    .userEdit main p {
+      font-weight: 300;
+      font-size: 16px;
+    }
+  
+    .userEdit main .card {
+      box-shadow: 0px 4px 20px 12px #ff347491
+    }
+  
+    .userEdit main .card .form-userEdit .userEdit-button button {
+      padding: 5.5px 10px;
+    }
+  
+    .userEdit main .card .form-userEdit .container input {
+      padding: 10px 10px 8px;
+      font-size: 15px;
+    }
+
+  }
+
+/* Desktop */
+@media (min-width:1024px) {
+
+    .userEdit main .card .form-userEdit  .container small {
+      font-size: 12.5px;
+    }
+  
+    .userEdit main .card .form-userEdit  button, .userEdit main .card .form-userEdit .enviar-cancelar .button-cancelar {
+      padding: 6px 12px;
+    }
+  
+  
+  }
