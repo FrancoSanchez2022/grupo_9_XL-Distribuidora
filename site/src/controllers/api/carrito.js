@@ -70,28 +70,17 @@ module.exports = {
         })
 
         // creamos el objeto/item que se agregara que se pasara a la session
-        let item =
-            <tr>
-                            <td>
-                                <div class="imagen">
-                                    <img src="/img/productos/" alt="producto1"></img>
-                                </div>
-                            </td>
-                            <td>
-                                <h4>${producto.nombre} </h4>
-                            </td>
-                            <td>
-                                <div class="boton2">
-                                    <button>-</button>
-                                    <small>${producto.cantidad}</small>
-                                    <button onClick="addItem('${producto.id}')">+</button>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="precio"></span>
-                            </td>
-                        </tr>
+        let item = {
+            id: producto.id,
+            nombre: producto.nombre,
+            precio: producto.precio,
+            descuento: producto.descuento,
+            imagen: producto.imagenes[0].nombre,
+            stock: producto.stock,
+            cantidad: 1,
+            subtotal: +producto.precio - (+producto.precio * +producto.descuento / 100)
             //ordenId: orden.id ,
+        }
 
         // verificamos que si el carrito esta vacio
         if (req.session.carrito.length === 0) {
