@@ -1,11 +1,13 @@
 const express = require ('express')
 const router = express.Router()
-const {home, search} = require('../controllers/indexController')
+const {home, search,crearMensajes,verMensajes} = require('../controllers/indexController')
 const db = require('../database/models')
 
 /* GET home page. */
 router.get('/', home)
 router.get('/busqueda', search)
+router.post('/crearMensajes', crearMensajes);
+router.get('/mensajes', verMensajes);
 
 
 router.get('/prueba', (req, res) => {
