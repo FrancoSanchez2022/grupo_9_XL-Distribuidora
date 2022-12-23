@@ -8,3 +8,13 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.liProduct h1{
+    text-align: center;
+    
+}
+.liProduct section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -143,9 +143,129 @@ header .burger nav a {
     text-decoration: none;
 }
 
-/* header .burger nav a:hover {
+header .burger nav a:hover {
     color: var(--colorProfundidad);
-} */
+}
+header .cart-container {
+    position: absolute;
+    top:100%;
+    right: -100%;
+    width: 350px;
+    background: #ffffff;
+    padding: 0 1.5rem;
+    z-index: 999;
+}
+header .cart-container.active {
+    right: 16px;
+    top: 107px;
+}
+header .cart-container::before {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    content: "";
+    height: 0;
+    left: 88%;
+    position: absolute;
+    width: 0;
+    top: -8px;
+}
+header .cart-container h3.title {
+    text-align: center;
+    font-size: 14px;
+    margin: 15px 0 18px 0;
+    padding-bottom: 4px;
+    color: var(--colorButton);
+    font-weight: 700;
+    border-bottom: 5px solid var(--colorHeader);
+}
+
+header .cart-container .cart-item {
+    position: relative;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100px;
+    border-bottom: solid 1px gray;
+}
+header .cart-container .cart-item .fa-times{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(black);
+}
+header .cart-container .cart-item .fa-times:hover {
+    color: var(--colorProfundidad);
+}
+header .cart-container .cart-item img {
+    width: 95px;
+    object-fit: cover;
+    padding: 5px;
+}
+header .cart-container .cart-item .content {
+    width: 200px;
+}
+header .cart-container .cart-item .content h3 {
+    font-size: 14px;
+    color: black;
+    margin: 0;
+}
+header .cart-container .cart-item .content .price {
+    font-size: 18px;
+    color: var(--colorHeader);
+}
+header .cart-container .cart-item .añadir-elementos {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+header .cart-container .cart-item .añadir-elementos .restar,
+header .cart-container .cart-item .añadir-elementos .agregar {
+    background-color: var(--colorHeader);
+    font-size: 700;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+header .cart-container .cart-item .añadir-elementos span {
+    margin: 0 10px;
+}
+header .cart-container .cart-puy {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header .cart-container .cart-puy span {
+    font-size: 18px;
+}
+header .cart-container .cart-puy a{
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    margin: 15px 0 20px 0;
+    border-radius: 4px;
+}
+
+header ul .menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background: white;
+}
+
+
 
 @media (min-width:375px) {
     header {
@@ -378,7 +498,9 @@ header .burger nav a {
     header .burger nav ul li a {
         font-size: 13px;
     }
+    
 }
+
 
 @media (min-width:1080px) {
     header input {

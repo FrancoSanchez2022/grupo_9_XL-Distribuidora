@@ -6,12 +6,11 @@
         <div class="form-search">
             <form class="formulario" action="/busqueda" method="get">
                 <input type="text" name="search" id="search" class="barraDeBusqueda" maxlength="100"
-                    placeholder="busca tu producto aca">
-                <button type="submit" class="lupa"></a><i class="fas fa-search"></i></button>
+                    placeholder="Busca tu producto">
+                <button type="submit" class="lupa"><i class="fas fa-search"></i></button>
             </form>
         </div>
     </div>
-
     <div class="burger">
         <input type="checkbox" name="burger" id="burger" checked>
         <label for="burger"><i class="fas fa-bars"></i></label>
@@ -28,20 +27,21 @@
                     <% } %>
                         <% if (locals.userLogin) { %>
                             <li><a href="/users/profile">¡Hola <%= locals.userLogin.nombre %>! </a></li>
-                            <li class="carritoli"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></li>
                             <li class="desloguear">
                                 <form action="/users/logout?_method=DELETE" method="post">
                                     <button type="submit"><i class="fas fa-sign-out-alt"></i></button>
                                 </form>
                             </li>
+                            <li id="cart-btn" class="cart-btn"><!--<a href="/products/cart">--><i class="fas fa-shopping-cart"></i><!--</a>--></li>
                             <% } else { %>
                                 <li><a href="/users/login">Login</a></li>
                                 <li><a href="/users/register">Registro</a></li>
                             <% } %>
 
-                   
             </ul>
         </nav>
     </div>
-    <div class="carrito"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></div>
+    <div class="cart-container"></div>
+
+    <!--<div class="carrito"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></div>-->
 </header>

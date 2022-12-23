@@ -35,9 +35,9 @@
 }
 
 .detalle .mainDetalle .producto .precio{
-    font-size: 35px;
-    color: black;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* .detalle .mainDetalle .producto .bloqueDetalle .boton2{
@@ -48,12 +48,16 @@
 } */
 
 .detalle .mainDetalle .producto .descripcion{
-    display: block;
+    display: flex;
+    flex-direction: column;
     font-size: 22px;
     color: black;
     text-align: center;
 }
+.detalle .mainDetalle .producto .descripcion .subprecio{
+    font-size: 25px;
 
+}
 .detalle .mainDetalle .producto .sumar-carrito{
     text-align: center;
     margin-top: 10px;
@@ -75,13 +79,19 @@
     text-align: center;
     background-color: white;
     color: black;
+
 }
 
 .detalle .mainDetalle .producto .subcarrito{
-    font-size: 25px;
+    background-color: var(--colorButtonContacto);
+    color: white;
+    width: auto;
+    border: none;
+    margin: 0 auto 10px;
+    text-transform: uppercase;
     padding: 10px;
-    width: 80%;
-    margin: 30px;
+    display: inline-block;
+    margin-top: 10px;
 }
 .detalle .mainDetalle .relacionado .comprando{
     width: 100%;
@@ -134,6 +144,8 @@
     color: var(--colorHeader);
 }
 
+
+
 .detalle .mainDetalle .relacionado .cajaRelacionada article .subcarritos{
     font-size: 25px;
     padding: 10px;
@@ -142,6 +154,18 @@
     color: white;
     background-color: var(--marronClaro);
     border: none;
+}
+
+.detalle .mainDetalle .relacionado .cajaRelacionada article .subcarrito{
+    background-color: var(--colorButtonContacto);
+    color: white;
+    width: 200px;
+    border: none;
+    margin: 0 auto 10px;
+    text-transform: uppercase;
+    padding: 5px;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 @media (min-width:461px){
