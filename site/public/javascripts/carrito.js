@@ -193,10 +193,7 @@ const cargarVentanaCarrito = (data) => {
         
         cart.innerHTML = `
             <h3 class="title">Mi carrito</h3>
-<<<<<<< HEAD
-=======
             <p>Tenes que seleccionar un producto</p>
->>>>>>> f50c4e47a7d2e2a461cf43cd3dde79e65fc37657
         `
 
     }
