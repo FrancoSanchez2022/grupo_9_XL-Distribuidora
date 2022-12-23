@@ -95,8 +95,6 @@ const modifyItem = async (id) => {
 // Petición para vaciar todo el carrito -> al endpoint -> /api/carrito/empty -> DELETE
 const empty = async (id) => {
     try {
-        
-
 
     } catch (error) {
         console.log(error)
@@ -195,7 +193,10 @@ const cargarVentanaCarrito = (data) => {
         
         cart.innerHTML = `
             <h3 class="title">Mi carrito</h3>
-            <p>Mensaje bonito para el usuario, con link para ver producto</p>
+<<<<<<< HEAD
+=======
+            <p>Tenes que seleccionar un producto</p>
+>>>>>>> f50c4e47a7d2e2a461cf43cd3dde79e65fc37657
         `
 
     }

@@ -1,19 +1,6 @@
-[
+[ 
     {
         "id": 1,
-        "marca": "Otros",
-        "titulo": "Esencia de 50ml  ",
-        "categoriasId": 3,
-        "precio": 1500,
-        "descuento": 10,
-        "descripcion": "Escencia de 50ml fabricada artesanalmente por la distribuidora XL contiene una dulce fragancia aroma a vainilla.",
-        "stock": 10,
-        "imagenes": [
-            "XL1.jpeg"
-        ]
-    },
-    {
-        "id": 2,
         "marca": "Ariel",
         "titulo": "Jabon liquido Ariel 3l",
         "categoriasId": 7,
@@ -26,7 +13,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 2,
         "marca": "Magistral",
         "titulo": "Detergente liquido magistral",
         "categoriasId": 7,
@@ -39,7 +26,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": 3,
         "marca": "Cif",
         "titulo": "Detergente Cif BioActive",
         "categoriasId": 7,
@@ -52,7 +39,7 @@
         ]
     },
     {
-        "id": 5,
+        "id": 4,
         "marca": "Colgate",
         "titulo": "Cepillo de dientes para adultos 3x1",
         "categoriasId": 4,
@@ -65,7 +52,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": 5,
         "marca": "Higienol",
         "titulo": "Papel higienico higienol por 80m 4 unidades.",
         "categoriasId": 7,
@@ -78,7 +65,7 @@
         ]
     },
     {
-        "id": 7,
+        "id": 6,
         "marca": "Inoxy",
         "titulo": "Virulana",
         "categoriasId": 7,
@@ -91,7 +78,7 @@
         ]
     },
     {
-        "id": 8,
+        "id": 7,
         "marca": "Zorro3D",
         "titulo": "Jabon compacto clasico de 150g",
         "categoriasId": 7,
@@ -104,7 +91,7 @@
         ]
     },
     {
-        "id": 9,
+        "id": 8,
         "marca": "Raid",
         "titulo": "Insecticida en aerosol mata moscas y mosquitos",
         "categoriasId": 6,
@@ -117,7 +104,7 @@
         ]
     },
     {
-        "id": 10,
+        "id": 9,
         "marca": "Raid",
         "titulo": "Raid en tabletas",
         "categoriasId": 6,
@@ -130,7 +117,7 @@
         ]
     },
     {
-        "id": 11,
+        "id": 10,
         "marca": "Ayudin",
         "titulo": "Toallitas desinfectantes Ayudin",
         "categoriasId": 7,
@@ -143,7 +130,7 @@
         ]
     },
     {
-        "id": 12,
+        "id": 11,
         "marca": "Raid",
         "titulo": "Raid en aerosol mata cucarachas",
         "categoriasId": 6,
@@ -156,7 +143,7 @@
         ]
     },
     {
-        "id": 13,
+        "id": 12,
         "marca": "Off",
         "titulo": "Repelente contra mosquitos Off",
         "categoriasId": 8,
@@ -169,7 +156,7 @@
         ]
     },
     {
-        "id": 14,
+        "id": 13,
         "marca": "Raid",
         "titulo": "Raid en espiral 12 unidades",
         "categoriasId": 6,
@@ -182,7 +169,7 @@
         ]
     },
     {
-        "id": 15,
+        "id": 14,
         "marca": "MrMusculo",
         "titulo": "Repuesto MrMusculo antigrasa 450ml",
         "categoriasId": 2,
@@ -195,7 +182,7 @@
         ]
     },
     {
-        "id": 16,
+        "id": 15,
         "marca": "Lisoform",
         "titulo": "Lisoform desinfectante multisuperficies 500cc",
         "categoriasId": 2,
@@ -208,7 +195,7 @@
         ]
     },
     {
-        "id": 17,
+        "id": 16,
         "marca": "Ayudin",
         "titulo": "Limpiador desinfectante liquido",
         "categoriasId": 7,
@@ -221,7 +208,7 @@
         ]
     },
     {
-        "id": 18,
+        "id": 17,
         "marca": "Virulana",
         "titulo": "Mopa inteligente multiusos",
         "categoriasId": 7,
@@ -234,7 +221,7 @@
         ]
     },
     {
-        "id": 19,
+        "id": 18,
         "marca": "Ala",
         "titulo": "Jabon liquido Alamatic 3l",
         "categoriasId": 7,
@@ -247,7 +234,7 @@
         ]
     },
     {
-        "id": 20,
+        "id": 19,
         "marca": "LisoformZiploc",
         "titulo": "Combo Lisoform desifectante más bolsas ziploc",
         "categoriasId": "Otros",
@@ -260,7 +247,7 @@
         ]
     },
     {
-        "id": 21,
+        "id": 20,
         "marca": "Colgate",
         "titulo": "Colgate luminous white ",
         "categoriasId": 4,
@@ -273,7 +260,7 @@
         ]
     },
     {
-        "id": 22,
+        "id": 21,
         "marca": "Colgate",
         "titulo": "Enjuage bucal Colgate zero alcohol 250ml ",
         "categoriasId": 4,
@@ -286,7 +273,7 @@
         ]
     },
     {
-        "id": 23,
+        "id": 22,
         "marca": "Oral B",
         "titulo": "Cepillo de dientes 2x1 Oral B",
         "categoriasId": 4,
@@ -299,7 +286,7 @@
         ]
     },
     {
-        "id": 24,
+        "id": 23,
         "marca": "Listerine",
         "titulo": "Enjuage bucal Listerine Zero Alcohol",
         "categoriasId": 4,
@@ -312,7 +299,7 @@
         ]
     },
     {
-        "id": 25,
+        "id": 24,
         "marca": "Dove",
         "titulo": "Desodorante en aerosol Dove men care",
         "categoriasId": 3,
@@ -325,7 +312,7 @@
         ]
     },
     {
-        "id": 26,
+        "id": 25,
         "marca": "Rexona",
         "titulo": "Rexona motion sense",
         "categoriasId": 3,
@@ -338,7 +325,7 @@
         ]
     },
     {
-        "id": 27,
+        "id": 26,
         "marca": "Gilette",
         "titulo": "Espuma para piel sensible 322ml",
         "categoriasId": 5,
@@ -351,7 +338,7 @@
         ]
     },
     {
-        "id": 28,
+        "id": 27,
         "marca": "Axe",
         "titulo": "Desodorante en aerosol Axe ",
         "categoriasId": 5,
@@ -364,7 +351,7 @@
         ]
     },
     {
-        "id": 29,
+        "id": 28,
         "marca": "Asepxia",
         "titulo": "Jabon carbon detox compacto Asepxia",
         "categoriasId": 5,
@@ -377,7 +364,7 @@
         ]
     },
     {
-        "id": 30,
+        "id": 29,
         "marca": "Gilette",
         "titulo": "Maquina rasuradora prestobarba 3 sensitive   ",
         "categoriasId": 5,

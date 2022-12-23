@@ -18,9 +18,9 @@
 
     <body class="list hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
-         
-                <%- include('../partials/header') %>
-              
+
+            <%- include('../partials/header') %>
+
                 <%- include('../partials/aside') %>
 
                     <!-- Navbar -->
@@ -32,7 +32,7 @@
                                         class="fas fa-bars"></i></a>
                             </li>
                         </ul>
-                        <%- include('../partials/breadcrumbs',{ másSecciones:'<a href="/admin">Admin</a>',página:'Crear Producto'}) %>
+                        <%- include('../partials/breadcrumbs',{ másSecciones:'<a href="/admin">Admin</a>',página:'CrearProducto'}) %>
                     </nav>
                     <!-- /.navbar -->
 
@@ -225,7 +225,7 @@
                                                     <label for="floatingTextarea">Descripción</label>
                                                     <textarea class="form-control" name="Descripcion"
                                                         placeholder="Por favor inserte la descripcion del producto"
-                                                        id="floatingTextarea" ></textarea>
+                                                        id="floatingTextarea"></textarea>
                                                 </div>
                                                 <p class="span text-danger" id="descripcionError">
                                                     <% locals.errors && errors.descripcion ? errors.descripcion.msg :
@@ -246,21 +246,21 @@
                         <!-- /.content -->
                     </div>
                     <!-- /.content-wrapper -->
-                    
+
                     <!-- Footer -->
                     <%- include('../partials/footer') %>
-            </div>
-            <!-- ./wrapper -->
+        </div>
+        <!-- ./wrapper -->
 
-                <script src="/javascripts/images.js"></script>
-                <script src="/javascripts/productos/crear.js"></script>
+        <script src="/javascripts/images.js"></script>
+        <script src="/javascripts/productos/crear.js"></script>
 
-                <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-                <!-- Bootstrap 4 -->
-                <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-                <!-- vista de carga -->
-                <script src="/dist/js/adminlte.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- vista de carga -->
+        <script src="/dist/js/adminlte.js"></script>
 
     </body>
 

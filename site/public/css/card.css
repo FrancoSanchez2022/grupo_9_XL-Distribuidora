@@ -51,7 +51,7 @@
 }
 .cart section article .añadir-elementos .restar,
 .cart section article .añadir-elementos .agregar {
-    background-color: var(--Alfonzo);
+    background-color: var(--black);
     font-size: 700;
     color: white;
     border-radius: 50%;

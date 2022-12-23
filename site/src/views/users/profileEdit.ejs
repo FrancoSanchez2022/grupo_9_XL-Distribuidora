@@ -33,15 +33,15 @@
                                     value="<%=locals.old && old.nombreUsuario ? old.nombreUsuario : locals.userLogin.nombreUsuario %>">
                             </div>
                             <div class="container">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" name="nombre" id="nombre" placeholder="Nombre"
-                                    value="<%=locals.old && old.nombre ? old.nombre : locals.userLogin.nombre %>">
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" id="name" placeholder="Nombre"
+                                    value="<%=locals.old && old.name ? old.name : locals.userLogin.nombre %>">
                             </div>
 
                             <div class="container">
-                                <label for="apellido">Apellido</label>
-                                <input type="text" name="apellido" id="apellido" placeholder="Apellido"
-                                    value="<%=locals.old && old.apellido ? old.apellido : locals.userLogin.apellido %>">
+                                <label for="lastname">Apellido</label>
+                                <input type="text" name="lastname" id="lastname" placeholder="Apellido"
+                                    value="<%=locals.old && old.lastname ? old.lastname : locals.userLogin.apellido %>">
                             </div>
 
                             <div class="container">
@@ -65,9 +65,9 @@
                             </div>
 
                             <div class="container">
-                                <label for="telefono">Teléfono</label>
-                                <input type="text" name="telefono" id="telefono" placeholder="Teléfono"
-                                    value="<%=locals.old && old.telefono ? old.telefono : locals.userLogin.telefono %>">
+                                <label for="phone">Teléfono</label>
+                                <input type="text" name="phonenumber" id="phone" placeholder="Teléfono"
+                                    value="<%=locals.old && old.phonenumber ? old.phonenumber : locals.userLogin.telefono %>">
                                 <div id="phoneContainer"></div>
                             </div>
 
@@ -118,7 +118,12 @@
                     </section>
             </main>
             <%- include('../partials/footer') %>
-                <script src="/javascripts/images.js"></script>
+
+              <!-- Visualizar imagenes -->
+            <script src="/javascripts/images.js"></script>
+            <!-- Códigos de teléfonos -->
+            <script src="/javascripts/users/phone.js"></script>
+            <script src="/javascripts/carrito.js"></script>
     </body>
 
 

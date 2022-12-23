@@ -1,20 +1,22 @@
+
 <div class="products-card">
-    <a href="/products/detail/<%= id %>">
-      <div class="card-img">
-        <div
-          class="card-img-background"
-          style="background-image: url('/img/productos/<%=imagen%>')"
-        ></div>
+  <a href="/products/detail/<%= id %>">
+    <div class="card-img">
+      <div
+        class="card-img-background"
+        style="background-image: url('/img/productos/<%=imagen%>')"
+      ></div>
+    </div>
+  </a>
+    <div class="card-text-box">
+      <h3 class="card-name"><%= nombre %></h3>
+      <div class="card-value">
+        <p class="card-discount"><%= descuento > 0 ? `${descuento}%` : null %></p>
+        <p class="card-price">$<%= precio - (precio * descuento / 100)%></p>
+
       </div>
-    </a>
-      <div class="card-text-box">
-        <h3 class="card-name"><%= nombre %></h3>
-        <div class="card-value">
-          <p class="card-discount"><%= descuento %>%</p>
-          <p class="card-price">$<%= precio - (precio * descuento / 100)%></p>
-        </div>
-      </div>
-      <div class="card-button">
-          <button><a href="/products/detail/<%= id %>">Comprar producto</a></button>
-      </div>
-  </div>
+    </div>
+    <div class="card-button">
+        <button><a href="/products/detail/<%= id %>">Comprar producto</a></button>
+    </div>
+</div>

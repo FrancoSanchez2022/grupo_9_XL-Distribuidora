@@ -47,8 +47,8 @@
 
                 <form class="form-userEdit" action="/admin/editUser/<%= usuario.id %>?_method=PUT" method="post"
                   id="formulario" enctype="multipart/form-data">
-                  <label class="foto" for="avatar">Foto</label>
-                  <div class="img">
+                  <div class="container img">
+                    <label class="foto" for="avatar">Foto</label>
                     <div id="preview" class="styleImage">
                       <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                     </div>
@@ -85,20 +85,20 @@
                     </small>
                   </div>
                   <div class="container">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre"
-                      value="<%= locals.old && old.nombre ? old.nombre : usuario.nombre %>">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Nombre"
+                      value="<%= locals.old && old.name ? old.name : usuario.nombre %>">
                     <small id="nameContainer">
-                      <%= locals.errors && errors.nombre ? errors.nombre.msg : null %>
+                      <%= locals.errors && errors.name ? errors.name.msg : null %>
                     </small>
                   </div>
 
                   <div class="container">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Apellido"
-                      value="<%= locals.old && old.apellido ? old.apellido : usuario.apellido %>">
+                    <label for="lastname">Apellido</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Apellido"
+                      value="<%= locals.old && old.lastname ? old.lastname : usuario.apellido %>">
                     <small id="lastnameContainer">
-                      <%= locals.errors && errors.apellido ? errors.apellido.msg : null %>
+                      <%= locals.errors && errors.lastname ? errors.lastname.msg : null %>
                     </small>
                   </div>
 
@@ -124,11 +124,11 @@
                   </div>
 
                   <div class="container">
-                    <label for="telefono">Teléfono</label>
-                    <input type="text" name="telefono" id="telefono" placeholder="Teléfono"
-                      value="<%= locals.old && old.telefono ? old.telefono : usuario.telefono %>">
+                    <label for="phone">Teléfono</label>
+                    <input type="text" name="telefono" id="phone" placeholder="Teléfono"
+                      value="<%= locals.old && old.phonenumber ? old.phonenumber : usuario.telefono %>">
                     <small id="phonenumberContainer">
-                      <%= locals.errors && errors.telefono ? errors.telefono.msg : null %>
+                      <%= locals.errors && errors.phonenumber ? errors.phonenumber.msg : null %>
                     </small>
                   </div>
 
@@ -185,6 +185,11 @@
         <%- include('../partials/footer') %>
   </div>
   <!-- ./wrapper -->
+
+  <!-- Visualizar imagenes -->
+  <script src="/javascripts/images.js"></script>
+   <!-- Códigos de teléfonos -->
+  <script src="/javascripts/users/phone.js"></script>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
