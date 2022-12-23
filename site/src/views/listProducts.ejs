@@ -21,7 +21,7 @@
                             <p class="subprecio">
                                 $<%= productos[i].precio %>
                             </p>
-                            <button class="subcarritos">Agregar al carrito</button>
+                            <button class="subcarritos" onclick="addItem('<%= productos[i].id %>')">Agregar al carrito</button>
                             <% } %>
                         </article>
             </main>

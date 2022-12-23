@@ -195,7 +195,7 @@ const cargarVentanaCarrito = (data) => {
         
         cart.innerHTML = `
             <h3 class="title">Mi carrito</h3>
-            <p>Mensaje bonito para el usuario, con link para ver producto</p>
+            <p>Tenes que seleccionar un producto</p>
         `
 
     }

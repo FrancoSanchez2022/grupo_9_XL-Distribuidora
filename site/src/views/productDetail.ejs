@@ -33,7 +33,7 @@
                                     </h4>
                                     <p class="subprecio">$ <%= producto.precio %>
                                     </p>
-                                    <button class="subcarritos">Agregar al carrito</button>
+                                    <button class="subcarrito" onclick="addItem('<%= producto.id %>')">Agregar al carrito</button>
 
                                 </article>
                                 <% }) %>
