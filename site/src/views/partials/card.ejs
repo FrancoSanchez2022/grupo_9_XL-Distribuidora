@@ -10,7 +10,7 @@
       <div class="card-text-box">
         <h3 class="card-name"><%= nombre %></h3>
         <div class="card-value">
-          <p class="card-discount"><%= descuento %>%</p>
+          <p class="card-discount"><%= descuento > 0 ? `${descuento}%` : null %></p>
           <p class="card-price">$<%= precio - (precio * descuento / 100)%></p>
 
         </div>
