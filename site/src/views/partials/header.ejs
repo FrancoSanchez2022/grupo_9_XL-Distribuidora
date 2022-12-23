@@ -13,36 +13,40 @@
     </div>
 
     <div class="burger">
-        <input type="checkbox" name="burger" id="burger" checked>
-        <label for="burger"><i class="fas fa-bars"></i></label>
-        <nav>
-            <ul class="user">
-                <% if (locals.userLogin && locals.userLogin.rol=== 1 ) { %>
-                    <li><a href="/admin">Admin</a></li>
-                    <% } %>
-                        <% if (locals.userLogin) { %>
-                            <li><a href="/users/profile">¡Hola <%= locals.userLogin.nombre %>! </a></li>
-                            <li id="cart-btn" class="cart-btn"><!--<a href="/products/cart">--><i class="fas fa-shopping-cart"></i><!--</a>--></li>
-                            <li class="desloguear">
-                                <form action="/users/logout?_method=DELETE" method="post">
-                                    <button type="submit"><i class="fas fa-sign-out-alt"></i></button>
-                                </form>
-                            </li>
-                            <% } else { %>
-                                <li><a href="/users/login">Login</a></li>
-                                <li><a href="/users/register">Registro</a></li>
-                            <% } %>
-
-            </ul>
-        </nav>
+        <!--<input type="checkbox" name="burger" id="burger" checked>-->
+        <% if (locals.userLogin) { %>
+           <i id="cart-btn" class="fas fa-shopping-cart"></i>
+        <% } %>
+        <i id="user-btn" class="fas fa-user"></i>
     </div>
+
     <ul class="menu">
         <li><a href="/">Inicio</a></li>
-        <li><a href="/products/listProducts">Nuestros Productos</a></li>
+        <li><a href="/products/listProducts">Productos</a></li>
         <li><a href="/#somos">Quienes Somos</a></li>
         <li><a href="/#contacto">Contacto</a></li>
     </ul>
+
     <div class="cart-container"></div>
 
+    <nav class="user-container">
+        <ul class="user">
+            <% if (locals.userLogin) { %>
+                <li class="principal">¡Hola <%= locals.userLogin.nombre %>!</li>
+                <li><a href="/users/profile">Ir al perfil</a></li>
+                <% if (locals.userLogin && locals.userLogin.rol===1 ) { %>
+                    <li><a href="/admin">Administrador</a></li>
+                <% } %>
+                <li class="desloguear">
+                    <form action="/users/logout?_method=DELETE" method="post">
+                        <button type="submit">Cerrar sesión <i class="fas fa-sign-out-alt"></i></button>
+                    </form>
+                </li>
+            <% } else { %>
+                <li><a href="/users/login">Login</a></li>
+                <li><a href="/users/register">Registro</a></li>
+            <% } %>
+        </ul>
+    </nav>
     <!--<div class="carrito"><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a></div>-->
 </header>

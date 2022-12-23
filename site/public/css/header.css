@@ -1,11 +1,50 @@
+html {
+    overflow-x: hidden;
+  }
 header {
     position: relative;
-    padding: 12px;
+    /*padding: 12px;*/
     margin-bottom: 20px;
     background-color: var(--colorHeader);
     z-index: 1 !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 0 3px var(--black);
+
 }
 
+header ul.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+header li {
+    list-style: none;
+}
+header ul.menu li {
+    list-style: none;
+    width: 25%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    /*line-height: 40px;*/
+    padding: 10px 0;
+    font-size: 14px;
+    background-color: var(--colorProfundidad);
+    border-right: solid 1px var(--colorHeader);
+    
+}
+header ul.menu li:hover {
+  background-color: white;
+}
+header ul.menu li a {
+    display: block;
+}
+/*
 header input {
     display: flex;
     align-self: center;
@@ -14,39 +53,82 @@ header input {
     padding: 10px;
     margin: 5px;
     color: black;
+}*/
+header .top {
+    display: flex;
+    justify-content: space-between;
+}
+header .top img {
+    border: 2.5px solid var(--black);
+    border-radius: 20%;
+    background-color: white;
+    width: 90px;
+    margin: 5px 0;
+}
+header .top .form-search {
+    width: 80%;
+
 }
 
 header .top .form-search .formulario {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: end;
 }
 
-header .top .form-search button {
-    background-color: var(--colorHeader);
-    border: none
+header .top .form-search .formulario input {
+    width: 80%;
+    line-height: 30px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+header .top .form-search .formulario button {
+    /*background-color: var(--colorHeader);
+    border: none*/
+    background-color: var(--colorProfundidad);
+    border-radius: 2px;
+    border: none;
+
 }
 
 header .top .lupa i {
-    border: 1px solid black;
+    /*border: 1px solid black;
     border-radius: 50%;
     background-color: var(--colorProfundidad);
-    padding: 5px
+    padding: 5px*/
+    line-height: 29px;
+    border: none;
+    padding: 0 5px;
 }
 
 header .top {
     display: flex;
     align-items: center;
     background-color: var(--colorHeader);
-
+    width: 60%;
+    padding-left: 15px;
 }
 
-header img {
+header .burger {
+    padding-right: 20px;
+}
+header .burger i {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+/*
+header .top img {
     border: 2.5px solid var(--black);
     border-radius: 20%;
     background-color: white;
-    width: 78px;
-}
-
+    width: 70px;
+} 
+*/
+/*
 header .burger label {
     background-color: var(--colorProfundidad);
     position: absolute;
@@ -59,7 +141,7 @@ header .burger label {
     border-radius: 10px;
     display: inline-block;
 }
-
+*/
 header .carrito {
     display: none;
 }
@@ -95,14 +177,15 @@ header .burger nav ul {
     margin: 0;
 }
 
+/*
 header .burger .menu {
     background-color: var(--colorHeader);
 }
 
 header .burger .user {
     background-color: var(--colorHeader);
-}
-
+}*/
+/*
 header .burger nav ul li {
     margin: 10px 0;
     padding: 10px;
@@ -117,18 +200,20 @@ header .burger nav ul li:hover {
     border: 2px solid var(--colorProfundidad);
     background-color: var(--colorHeader)
 }
-header .burger nav ul li:hover a{
+
+header .burger nav ul li:hover a {
     color: var(--colorProfundidad);
 }
-header .burger nav ul .desloguear form button{
+
+header .burger nav ul .desloguear form button {
     background: none;
     border: none;
     color: var(--colorHeader);
 }
-header .burger nav ul .desloguear form:hover button{
+
+header .burger nav ul .desloguear form:hover button {
     color: var(--colorProfundidad);
     background-color: var(--colorHeader)
-    
 }
 
 
@@ -145,31 +230,35 @@ header .burger nav a {
 
 header .burger nav a:hover {
     color: var(--colorProfundidad);
-}
+}*/
+
 header .cart-container {
     position: absolute;
-    top:100%;
+    top: 100%;
     right: -100%;
     width: 350px;
     background: #ffffff;
     padding: 0 1.5rem;
     z-index: 999;
 }
+
 header .cart-container.active {
     right: 0;
     top: 100px;
 }
+
 header .cart-container::before {
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid white;
     content: "";
     height: 0;
-    left: 88%;
+    left: 80%;
     position: absolute;
     width: 0;
     top: -8px;
 }
+
 header .cart-container h3.title {
     text-align: center;
     font-size: 14px;
@@ -189,39 +278,47 @@ header .cart-container .cart-item {
     height: 100px;
     border-bottom: solid 1px gray;
 }
-header .cart-container .cart-item .fa-times{
+
+header .cart-container .cart-item .fa-times {
     position: absolute;
-    top:10px;
+    top: 10px;
     right: 10px;
     font-size: 20px;
     cursor: pointer;
     color: var(black);
 }
+
 header .cart-container .cart-item .fa-times:hover {
     color: var(--colorProfundidad);
 }
+
 header .cart-container .cart-item img {
     width: 95px;
     object-fit: cover;
     padding: 5px;
 }
+
 header .cart-container .cart-item .content {
     width: 200px;
 }
+
 header .cart-container .cart-item .content h3 {
     font-size: 14px;
     color: black;
     margin: 0;
 }
+
 header .cart-container .cart-item .content .price {
     font-size: 18px;
     color: var(--colorHeader);
 }
+
 header .cart-container .cart-item .añadir-elementos {
     display: flex;
     width: 50%;
     align-items: center;
 }
+
 header .cart-container .cart-item .añadir-elementos .restar,
 header .cart-container .cart-item .añadir-elementos .agregar {
     background-color: var(--colorHeader);
@@ -233,19 +330,23 @@ header .cart-container .cart-item .añadir-elementos .agregar {
     border: 1px solid white;
     cursor: pointer;
 }
+
 header .cart-container .cart-item .añadir-elementos span {
     margin: 0 10px;
 }
+
 header .cart-container .cart-puy {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 header .cart-container .cart-puy span {
     font-size: 18px;
 }
-header .cart-container .cart-puy a{
+
+header .cart-container .cart-puy a {
     width: 100%;
     text-align: center;
     height: 50px;
@@ -258,42 +359,102 @@ header .cart-container .cart-puy a{
     border-radius: 4px;
 }
 
+
+/* USER*/
+
+header .user-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 350px;
+    background: #ffffff;
+    padding: 0 1.5rem;
+    z-index: 999;
+}
+header .user-container.active {
+    right: 0;
+    top: 100px;
+}
+header .user-container::before {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    content: "";
+    height: 0;
+    left: 90%;
+    position: absolute;
+    width: 0;
+    top: -8px;
+}
+header .user-container ul li.principal {
+    border-bottom: 5px solid var(--colorHeader);
+    padding-bottom: 10px;
+}
+header .user-container ul li{
+    text-align: center;
+    font-size: 16px;
+    margin: 15px 0 18px 0;
+    padding-bottom: 4px;
+    color: var(--colorButton);
+    font-weight: 700;
+}
+
+header .user-container ul li button {
+    background-color: transparent;
+    border: none;
+}
+/*
 header ul .menu{
     display: flex;
     width: 100%;
     justify-content: space-around;
     background: white;
+}*/
+header .burger nav {
+    width: 100%;
+    display: block;
+    margin-top: 5px;
 }
-
-
-
+header .burger nav .user {
+    background-color: var(--colorHeader);
+    display: flex;
+    flex-direction: column;
+}
+header .burger nav {
+    width: 40%;
+    display: block;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 84px;
+}
 @media (min-width:375px) {
-    header {
+    /*header {
         position: relative;
         padding: 12px;
         margin-bottom: 20px;
         background-color: var(--colorHeader);
-    }
+    }*/
 
-    header input {
+    /* header input {
         display: flex;
         align-self: center;
         width: 45%;
-    }
+    }*/
 
-    header .top {
+    /*header .top {
         display: flex;
         align-items: center;
         background-color: var(--colorHeader);
 
-    }
+    }*/
 
-    header img {
+    /*header img {
         border: 2.5px solid var(--black);
         border-radius: 20%;
         background-color: white;
         width: 78px;
-    }
+    }*/
 
     header .burger label {
         background-color: var(--colorProfundidad);
@@ -339,21 +500,25 @@ header ul .menu{
         text-align: center;
 
     }
-
+    /*
     header .burger nav ul {
         display: flex;
         flex-direction: column;
         padding: 0;
         margin: 0;
-    }
+    }*/
 
     header .burger .menu {
         background-color: var(--colorHeader);
     }
-
+    /*
     header .burger .user {
         background-color: var(--colorHeader);
-    }
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 10px;
+
+    }*/
 
     header .burger nav ul li {
         margin: 10px 0;
@@ -372,12 +537,12 @@ header ul .menu{
 
 @media (min-width:426px) {
 
-    header {
+    /*header {
         position: relative;
         padding: 12px;
         margin-bottom: 20px;
         background-color: var(--colorHeader);
-    }
+    }*/
 
 
     header .carrito {
@@ -389,15 +554,15 @@ header ul .menu{
         border-radius: 5px;
     }
 
-    header .top img {
+    /*header .top img {
         border: 2.5px solid var(--black);
         display: flex;
         justify-content: center;
         background-color: white;
         border-radius: 25%;
 
-    }
-
+    }*/
+    /*
     header .burger nav {
         width: 40%;
         display: block;
@@ -405,33 +570,33 @@ header ul .menu{
         position: absolute;
         right: 10px;
         top: 84px;
-    }
+    }*/
 }
 
 @media (min-width:680px) {
-    header input {
+    /* header input {
         width: 80%;
-    }
+    }*/
 }
 
 
 @media (min-width:980px) {
-    header {
+    /*header {
         height: 150px;
         display: flex;
-        justify-content: space-between; /* error ancho de la página */
+        justify-content: space-between; /* error ancho de la página 
         align-items: center;
-    }
+    }*/
 
-    header input {
+    /*header input {
         display: flex;
         align-self: center;
         width: 157px;
-    }
-
+    }*/
+    /*
     header .top {
         width: 10%;
-    }
+    }*/
 
     header .top img {
         border: 2.5px solid var(--black);
@@ -444,9 +609,10 @@ header ul .menu{
         display: none;
     }
 
+    /*
     header .burger {
         width: 73%;
-    }
+    }*/
 
     header .burger input:checked~nav {
         display: flex;
@@ -463,7 +629,7 @@ header ul .menu{
         flex-wrap: nowrap;
         width: 95%;
         position: inherit;
-        margin-left: 35px;
+        /*margin-left: 35px;*/
     }
 
     header .burger nav ul {
@@ -477,11 +643,12 @@ header ul .menu{
 
     }
 
+    /*
     header .burger nav ul.user {
         flex-direction: row;
         justify-content: flex-end;
 
-    }
+    }*/
 
     header .burger nav ul li {
         list-style: none;
@@ -498,12 +665,12 @@ header ul .menu{
     header .burger nav ul li a {
         font-size: 13px;
     }
-    
+
 }
 
 
 @media (min-width:1080px) {
-    header input {
+    /*header input {
         display: flex;
         align-self: center;
         width: 44%;
@@ -511,7 +678,7 @@ header ul .menu{
         padding: 10px 100px;
         margin: 5px;
         color: black;
-    }
+    }*/
 
     header .burger nav {
         display: flex;
@@ -537,7 +704,7 @@ header ul .menu{
 }
 
 @media (min-width:1240px) {
-    header input {
+    /* header input {
         display: flex;
         align-self: center;
         width: 44%;
@@ -545,7 +712,7 @@ header ul .menu{
         padding: 10px 130px;
         margin: 5px;
         color: black;
-    }
+    }*/
 
     header .burger nav {
         display: flex;
@@ -571,7 +738,7 @@ header ul .menu{
 }
 
 @media (min-width:1440px) {
-    header input {
+    /*header input {
         display: flex;
         align-self: center;
         width: 44%;
@@ -579,7 +746,7 @@ header ul .menu{
         padding: 10px 100px;
         margin: 5px;
         color: black;
-    }
+    }*/
 
     header .burger nav {
         display: flex;
