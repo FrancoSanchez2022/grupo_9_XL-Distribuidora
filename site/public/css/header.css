@@ -156,8 +156,8 @@ header .cart-container {
     z-index: 999;
 }
 header .cart-container.active {
-    right: 0;
-    top: 100px;
+    right: 16px;
+    top: 107px;
 }
 header .cart-container::before {
     border-left: 8px solid transparent;
@@ -257,6 +257,15 @@ header .cart-container .cart-puy a{
     margin: 15px 0 20px 0;
     border-radius: 4px;
 }
+
+header ul .menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background: white;
+}
+
+
 
 @media (min-width:375px) {
     header {

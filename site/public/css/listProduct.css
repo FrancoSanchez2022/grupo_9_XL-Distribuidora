@@ -2,30 +2,19 @@
     text-align: center;
     
 }
-.liProduct main .product-relacionado button {
-    background-color: var(--colorButtonContacto);
-    color: white;
-    width: 200px;
-    border: none;
-    margin: 0 auto 10px;
-    text-transform: uppercase;
-    padding: 10px;
-    display: inline-block;
-    margin-top: 10px;   
+.liProduct section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.liProduct main .product-relacionado button:hover {
-    background: linear-gradient(to bottom,
-            #FFD6D6,
-            #FF3474B9);
-    color: var(--black)
+.liProduct h1{
+    text-align: center;
+    
 }
-.liProduct main .product-relacionado img{
-    width: 100%;
-}
-@media(min-width: 426px){
-    .liProduct main .product-relacionado{
-        width: 45%;
-        margin: 10px;
-
-    }
+.liProduct section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }

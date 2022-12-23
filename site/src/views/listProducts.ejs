@@ -7,25 +7,22 @@
             <main>
                 <%- include('./partials/breadcrumbs',{másSecciones:null,página:'Nuestros Productos'}) %>
                     <h1 class="TituloPrincipal">Conoce nuestros productos</h1>
-                    <article class="product-relacionado">
-                    <% for( let i=0; i < 26; i++ ) { %>
-                            <div class="contenedorRelacionado">
-                                <img src="/img/productos/<%= productos[i].imagenes[0].nombre %> " alt="">
-                            </div>
-                            <h4 class="subproductos">
-                                <%= productos[i].titulo %>
-                            </h4>
-                            <span class="subtitular">
-                                <%= productos[i].descripcion %>
-                            </span>
-                            <p class="subprecio">
-                                $<%= productos[i].precio %>
-                            </p>
-                            <button class="subcarritos">Agregar al carrito</button>
-                            <% } %>
-                        </article>
+                    <section>
+                        <% productos.forEach(producto => { %>
+                            
+                            <%- include('./partials/card',{
+                                id: producto.id,
+                                imagen: producto.imagenes[0].nombre,
+                                nombre: producto.nombre,
+                                descuento: producto.descuento,
+                                precio: producto.precio
+                            }) %>
+                            
+                        <% }) %>
+                    </section>
             </main>
             <%- include('./partials/footer') %>
+            <script src="/javascripts/carrito.js"></script>
     </body>
 
 </html>
