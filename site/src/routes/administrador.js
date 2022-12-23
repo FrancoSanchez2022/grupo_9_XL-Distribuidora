@@ -16,7 +16,7 @@ router.get('/users', adminCheck, userList);
 
 /* Creación de usuarios */
 router.get('/addUser', adminCheck, addUser);
-router.post('/addUser', uploadUsers.single('avatar'),/*  userCreateValidator,  */processAddUser);
+router.post('/addUser', uploadUsers.single('avatar'), userCreateValidator, processAddUser);
 
 /* Edición de usuarios */
 router.get('/editUser/:id', adminCheck, editUser);

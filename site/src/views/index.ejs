@@ -10,26 +10,35 @@
                 <div class="banner"><img src="img/XL-distribuidora.png" alt="perfume.png"></div>
                 <section class="carrucelDestacados">
                     <h1 class="destacado">Productos Destacados</h1>
-                    <% productos.forEach(producto => { %>
-                        
-                        <%- include('./partials/card',{
-                            id: producto.id,
-                            imagen: producto.imagenes[0].nombre,
-                            nombre: producto.nombre,
-                            descuento: producto.descuento,
-                            precio: producto.precio
-                        }) %>
-                        
-                    <% }) %>
+                    <div class="glider-contain-1">
+                        <div class="glider1">
+                            <% productos.forEach(producto=> { %>
+
+                                <%- include('./partials/card',{ id: producto.id, imagen: producto.imagenes[0].nombre,
+                                    nombre: producto.nombre, descuento: producto.descuento, precio: producto.precio })
+                                    %>
+
+                                    <% }) %>
+                        </div>
+                        <button aria-label="Previous" class="glider-prev1"><i class="fas fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next1"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+
                 </section>
                 <section>
                     <div class="infoempresa">
                         <article id="somos" class="info">
                             <h3 class="XL">NOSOTROS</h3>
                             <br>
-                            <p>Somos una empresa dedicada a la venta de productos quimicos químicos, artículos para limpieza y equipamientos para el cuidado del hogar para que su familia pueda sentirse segura de agentes patologicos y se sienta fresca,agradable para su comodidad.</p>
+                            <p>Somos una empresa dedicada a la venta de productos quimicos químicos, artículos para
+                                limpieza y equipamientos para el cuidado del hogar para que su familia pueda sentirse
+                                segura de agentes patologicos y se sienta fresca,agradable para su comodidad.</p>
                             <br>
-                            <p>Somos ampliamente reconocidos porque ofrecemos productos químicos que superan altos estándares de calidad. Asimismo, brindamos el asesoramiento correspondiente para cada producto y contamos con stock permanente en variedad de artículos y marcas con precios competitivos. Atendemos al público en general de manera personalizada y directa, para brindar soluciones a cualquier requerimiento.</p>
+                            <p>Somos ampliamente reconocidos porque ofrecemos productos químicos que superan altos
+                                estándares de calidad. Asimismo, brindamos el asesoramiento correspondiente para cada
+                                producto y contamos con stock permanente en variedad de artículos y marcas con precios
+                                competitivos. Atendemos al público en general de manera personalizada y directa, para
+                                brindar soluciones a cualquier requerimiento.</p>
                         </article>
                         <div class="video"><iframe src="https://www.youtube.com/embed/a4_qWzISsOc"
                                 title="Cómo hacer un perfume - Amazing Perfume Factory | How Perfume Is Made In Factory ➤#1 "
@@ -43,51 +52,51 @@
                 <section class="carrouselProductos">
                     <div class="glider-contain">
                         <div class="glider">
-                            <% productos.forEach(producto => { %>
-                                <% if (producto.descuento >= 1 ) { %>
-                                    <%- include('./partials/card',{
-                                        id: producto.id,
-                                        imagen: producto.imagenes[0].nombre,
-                                        nombre: producto.nombre,
-                                        descuento: producto.descuento,
-                                        precio: producto.precio
-                                    }) %>
-                                <% } %>
-                            <% }) %>
+                            <% productos.forEach(producto=> { %>
+                                <% if (producto.descuento>= 1 ) { %>
+                                    <%- include('./partials/card',{ id: producto.id, imagen:
+                                        producto.imagenes[0].nombre, nombre: producto.nombre, descuento:
+                                        producto.descuento, precio: producto.precio }) %>
+                                        <% } %>
+                                            <% }) %>
                         </div>
-                    <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
-                    <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
-                  </div>
-            </section>
+                        <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </section>
                 <section class="contacto" id="contacto">
                     <div class="contact">
                         <h1>Contacto</h1>
                         <form action="" method="get">
                             <div>
                                 <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
-                                <small>*Debe ingresar su nombre</small>
+                                <small id="contactName">Debe ingresar su nombre</small>
                             </div>
                             <div>
                                 <input type="email" name="email" id="email" placeholder="Ingresa tu email">
-                                <small>*Debe ingresar su email</small>
+                                <small id="contactEmail">Debe ingresar su email</small>
                             </div>
                             <div>
-                                <input type="number" name="telefono" placeholder="Ingresa tu numero de telefono">
-                                <small>*Debe ingresar su numero de teléfono</small>
+                                <input type="number" name="telefono" id="phone" placeholder="Ingresa tu numero de telefono">
+                                <small id="contactPhone">Debe ingresar su numero de teléfono</small>
                             </div>
                             <div>
-                                <textarea class="bottom" name="comentarios" id="comentarios" cols="30" rows="10"
+                                <textarea class="bottom" name="comentarios" id="coment" cols="30" rows="10"
                                     placeholder="Escribi tu consulta"></textarea>
+                                <small id="contactComent">Debe ingresar un comentario</small>
                             </div>
 
                             <button type="submit">Enviar</button>
                     </div>
                     <div class="envio"><img src="img/envioATodoElPais-removebg-preview.png" alt=""></div>
                 </section>
+                <script src="/javascripts/productos/contact.js"></script>
 
             </main>
             <%- include('./partials/footer') %>
+            <script src="/javascripts/glider.js"></script>
+            <script src="/javascripts/productos.js"></script>
+            <script src="/javascripts/carrito.js"></script>
     </body>
-
 
 </html>

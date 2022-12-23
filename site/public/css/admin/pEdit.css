@@ -1,0 +1,46 @@
+.contento .edita{
+    background-color: white;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 62px;
+}
+.contento .edita form .container .conjunto{
+    display: flex;
+    justify-content: space-around;
+}
+.contento .edita form .img-producto .img-product .contenedor{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.contento .edita form .container .row .form-floating label{
+    display: flex;
+    justify-content: center;
+}
+.contento .edita form .container .row .form-floating .form-control{
+    resize: none;
+}
+.contento .edita form .botton{
+    display: flex;
+    justify-content: center;
+}
+.contento .edita form .botton button{
+    background-color: #FF3474B9;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    color: white;
+    
+}
+.contento .edita form .botton button:hover{
+    background-color:  white;
+    border: 1px solid #FF3474B9;
+    padding: 15px;
+    border-radius: 25px;
+    color: #FF3474B9;
+}
+
+
+
+
+

@@ -44,9 +44,10 @@
 
               <section class="card">
 
-                <form class="form-userCreate" action="/admin/addUser" method="POST" id="formulario" enctype="multipart/form-data">
-                  <label class="foto" for="avatar">Foto (opcional)</label>
-                  <div class="img">
+                <form class="form-userCreate" action="/admin/addUser" method="POST" id="formulario"
+                  enctype="multipart/form-data">
+                  <div class="container img">
+                    <label class="foto" for="avatar">Foto (opcional)</label>
                     <div id="preview" class="styleImage">
                     </div>
                     <label class="selectImg" for="user-img">
@@ -63,16 +64,16 @@
                     <label for="rol">Rol</label>
                     <select class="form-control" name="rol" id="rol">
                       <option value="" selected hidden>Selecciona una opción</option>
-                      <option value="1">Admin</option>
-                      <option value="0">Usuario</option>
+                      <option <%= (locals.old && old.rol)== 1 ? "selected" : null %> value="1">Admin</option>
+                      <option <%= (locals.old && old.rol)!= 1 ? "selected" : null %> value="0">Usuario</option>
                     </select>
                     <small id="rolContainer">
                       <%= locals.errors && errors.rol ? errors.rol.msg : null %>
                     </small>
                   </div>
                   <div class="container">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Ingresa tu nombre"
                       value="<%= locals.old && old.name ? old.name : null %>">
                     <small id="nameContainer">
                       <%= locals.errors && errors.name ? errors.name.msg : null %>
@@ -80,8 +81,8 @@
                   </div>
 
                   <div class="container">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"
+                    <label for="lastname">Apellido</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Ingresa tu apellido"
                       value="<%= locals.old && old.lastname ? old.lastname : null %>">
                     <small id="lastnameContainer">
                       <%= locals.errors && errors.lastname ? errors.lastname.msg : null %>
@@ -97,8 +98,8 @@
                     </small>
                   </div>
                   <div class="container">
-                    <label for="telefono">Teléfono</label>
-                    <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu teléfono"
+                    <label for="phone">Teléfono</label>
+                    <input type="text" name="phonenumber" id="phone" placeholder="Ingresa tu teléfono"
                       value="<%= locals.old && old.phonenumber ? old.phonenumber : null %>">
                     <small id="phonenumberContainer">
                       <%= locals.errors && errors.phonenumber ? errors.phonenumber.msg : null %>
@@ -124,11 +125,12 @@
                       <%= locals.errors && errors.pass2 ? errors.pass2.msg : null %>
                     </small>
                   </div>
-                  <div>
+                  <div class="userCreate-button">
                     <button type="submit" class="enviar">Crear usuario</button>
+                  </div>
                 </form>
               </section>
-            </main>     
+            </main>
           </section>
           <!-- /.content -->
         </div>
@@ -139,9 +141,15 @@
   </div>
   <!-- ./wrapper -->
 
+  <!-- Validaciones front -->
+  <script src="/javascripts/users/userCreate.js"></script>
+  <!-- Códigos de teléfonos -->
+  <script src="/javascripts/users/phone.js"></script>
+  <!-- ver password en tipo text -->
   <script src="/javascripts/users/eyePass.js"></script>
   <!-- Visualizar imagenes -->
   <script src="/javascripts/images.js"></script>
+
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Bootstrap 4 -->

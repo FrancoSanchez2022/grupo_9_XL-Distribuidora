@@ -243,8 +243,8 @@ header .cart-container {
 }
 
 header .cart-container.active {
-    right: 0;
-    top: 100px;
+    right: 16px;
+    top: 107px;
 }
 
 header .cart-container::before {

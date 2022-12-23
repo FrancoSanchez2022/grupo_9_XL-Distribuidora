@@ -95,8 +95,6 @@ const modifyItem = async (id) => {
 // Petición para vaciar todo el carrito -> al endpoint -> /api/carrito/empty -> DELETE
 const empty = async (id) => {
     try {
-        
-
 
     } catch (error) {
         console.log(error)
