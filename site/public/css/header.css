@@ -181,7 +181,6 @@ header .burger nav ul {
 header .burger .menu {
     background-color: var(--colorHeader);
 }
-
 header .burger .user {
     background-color: var(--colorHeader);
 }*/
@@ -194,40 +193,32 @@ header .burger nav ul li {
     border-radius: 25px;
     background-color: var(--colorProfundidad);
 }
-
 header .burger nav ul li:hover {
     color: var(--colorProfundidad);
     border: 2px solid var(--colorProfundidad);
     background-color: var(--colorHeader)
 }
-
 header .burger nav ul li:hover a {
     color: var(--colorProfundidad);
 }
-
 header .burger nav ul .desloguear form button {
     background: none;
     border: none;
     color: var(--colorHeader);
 }
-
 header .burger nav ul .desloguear form:hover button {
     color: var(--colorProfundidad);
     background-color: var(--colorHeader)
 }
-
-
 header .burger nav ul .carritoli {
     display: none;
 }
-
 header .burger nav a {
     color: var(--colorHeader);
     text-transform: uppercase;
     font-size: 18px;
     text-decoration: none;
 }
-
 header .burger nav a:hover {
     color: var(--colorProfundidad);
 }*/
@@ -446,7 +437,6 @@ header .burger nav {
         display: flex;
         align-items: center;
         background-color: var(--colorHeader);
-
     }*/
 
     /*header img {
@@ -517,7 +507,6 @@ header .burger nav {
         flex-direction: row;
         justify-content: flex-end;
         padding-right: 10px;
-
     }*/
 
     header .burger nav ul li {
@@ -560,7 +549,6 @@ header .burger nav {
         justify-content: center;
         background-color: white;
         border-radius: 25%;
-
     }*/
     /*
     header .burger nav {
@@ -647,7 +635,6 @@ header .burger nav {
     header .burger nav ul.user {
         flex-direction: row;
         justify-content: flex-end;
-
     }*/
 
     header .burger nav ul li {
