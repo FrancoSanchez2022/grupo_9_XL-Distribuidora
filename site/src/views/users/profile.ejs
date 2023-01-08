@@ -57,15 +57,35 @@
                         <section class="info-compras">
                             <h2>Mis Compras</h2>
                             <div class="card">
-                                <h3>¡Hacé tu primer compra!</h3>
-                                <h4><a href="/products/listProducts">VER PRODUCTOS</a></h4>
+                                <h3>NO TIENES COMPRAS REGISTRADAS AÚN </h3 color: red>
+                                <h3>Mira algunos de nuestros productos y realiza tu primer compra!</h3>
+                                 <h2 >Productos recomendados en oferta:</h2>
+                                <section class="carrouselProductos">
+                                    <div class="glider-contain">
+                                        <div class="glider">
+                                            <% productos.forEach(producto=> { %>
+                                                <% if (producto.descuento>= 1 ) { %>
+                                                    <%- include('../partials/card',{ id: producto.id, imagen:
+                                                        producto.imagenes[0].nombre, nombre: producto.nombre, descuento:
+                                                        producto.descuento, precio: producto.precio }) %>
+                                                        <% } %>
+                                                            <% }) %>
+                                        </div>
+                                        <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                                        <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                                    </div>
+                                </section>
+                                <h4><a href="/products/listProducts">VER MÁS PRODUCTOS</a></h4>
                             </div>
                         </section>
                     </div>
             </main>
             <%- include('../partials/footer') %>
-            <script src="/javascripts/carrito.js"></script>
-            <script src="/javascripts/images.js"></script> <!--  junto con script de carrito -->
+            <script src="/javascripts/glider.js"></script>
+            <script src="/javascripts/productos.js"></script>
+
+            <!-- <script src="/javascripts/carrito.js"></script> -->
+            <!-- <script src="/javascripts/images.js"></script> --> <!--  junto con script de carrito -->
     </body>
 
 </html>

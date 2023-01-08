@@ -239,8 +239,20 @@ module.exports = {
         }
     },
     profile: (req, res) => {
-        return res.render('users/profile')
-    },
+        let aside = db.Asides.findAll()
+        let productos = db.Productos.findAll({
+            include: ['category', 'marca', 'imagenes']
+        })
+        Promise.all([productos, aside])
+            .then(([productos, aside]) => {
+                return res.render('users/profile',
+                    {
+                        aside,
+                        productos
+                    })
+            })
+            .catch(error => res.send(error))
+      },
 
 
     uploadProfileImage: (req, res) => {

@@ -114,7 +114,7 @@
     text-align: center;
 }
 
-.profile main .info-compras a {
+.profile main .info-compras h4 a {
   color: var(--black);
   background-color: var(--white);
   font-size: 11.5px;
@@ -123,7 +123,7 @@
   border-radius: 15%;
 }
 
-.profile main .info-compras a:hover {
+.profile main .info-compras h4 a:hover {
   color: var(--white);
   background-color: var(--black);
   box-shadow:  0px 0.5px 3px 3px black;
@@ -174,6 +174,40 @@ border-radius: 15%;
   .profile main .card button:active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
   }
+
+  .profile main .products-card .card-img .card-img-background {
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+  .profile main .products-card .card-button button{
+    background-color: #4d4d4d;
+    color: var(--white);
+    border-radius: 4px;
+    border: 1px solid var(--black);
+    font-size: 12.5px;
+    height: 30px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+}
+
+.profile main .glider-contain .glider-track{
+    width: 177px
+}
+.profile main .products-card .card-button button a{
+    font-size: 7px;
+}
+
+.profile main .products-card p{
+    font-size: 13px;
+}
+.profile main .products-card h3{
+    font-size: 16px;
+}
+
 
   @media (min-width:768px){
 
