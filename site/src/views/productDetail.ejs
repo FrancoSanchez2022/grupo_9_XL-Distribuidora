@@ -6,14 +6,18 @@
         <%- include('./partials/header') %>
             <main class="mainDetalle">
                 <%- include('./partials/breadcrumbs',{másSecciones:null,página:'Detalle de Producto'}) %>
-                    <section class="producto">
-                        <div class="imagen">
-                            <img src="/img/productos/<%= producto.imagenes[0].nombre %>" alt="Imagen producto">
-                        </div>
-                        <span class="descripcion"><%= producto.descripcion %>
-                            <p class="subprecio">$ <%= producto.precio %>
-                        <button class="subcarrito" onclick="addItem('<%= producto.id %>')">Agregar al carrito</button>
-                        </span>
+                    <section class="productito">
+                       <div class="producto">
+                            <div class="imagen">
+                             <img src="/img/productos/<%= producto.imagenes[0].nombre %>" alt="Imagen producto">
+                            </div>
+                            <div class="contenido">
+                                <h2 class="nombreD"><%= producto.nombre %> </h2>
+                                <span class="descripcionC"><%= producto.descripcion %></span>
+                                <p class="subprecioC">$ <%= producto.precio %> </p>
+                                <button class="subcarrito" onclick="addItem('<%= producto.id %>')">Agregar al carrito</button>
+                            </div>
+                       </div>
                     </div>
                 </section>
                 <section class="relacionado">

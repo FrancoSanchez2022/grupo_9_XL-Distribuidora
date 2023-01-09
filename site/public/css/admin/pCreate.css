@@ -17,8 +17,19 @@
     display: flex;
     justify-content: center;
 }
+
+.content .crea form .container .row .from-floating{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
 .content .crea form .container .row .form-floating .form-control{
+    width: 83%;
     resize: none;
+    margin-left: 5px;
 }
 .content .crea form .boton{
     display: flex;

@@ -6,7 +6,17 @@
     width: 90%;
     margin: 0 auto;
 }
+.detalle .mainDetalle .productito{
+    display: flex;
+    justify-content: center;
+}
 .detalle .mainDetalle .producto{
+    width: 70%;
+    display: flex;
+    margin: 30px;
+    padding: 10px;
+}
+.detalle .mainDetalle .productito .producto{
     background-color: white;
     border: 2px solid var(--grisClaro);
     border-radius: 0.5rem;
@@ -17,11 +27,29 @@
 .detalle .mainDetalle .producto .bloqueDetalle{
     text-align: center;
 }
-.detalle .mainDetalle .producto .imagen{
-    width: 80%;
-    margin: 0 auto;
+.detalle .mainDetalle .productito .producto .imagen{
+    width: 45%;
 }
-
+.detalle .mainDetalle .productito .producto .contenido{
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.detalle .mainDetalle .productito .producto .contenido .nombreD{
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+.detalle .mainDetalle .productito .producto .contenido .descripcionC{
+  margin-bottom: 10px;
+  text-align: center;
+}
+.detalle .mainDetalle .productito .producto .contenido .subprecioC{
+    margin-bottom: 25px;
+    font-size: 35px;
+}
 .detalle .mainDetalle .producto .imagen img{
     width: 100%;
     padding: 15px;
@@ -92,6 +120,7 @@
     padding: 10px;
     display: inline-block;
     margin-top: 10px;
+    border-radius: 5px;
 }
 .detalle .mainDetalle .relacionado .comprando{
     width: 100%;
@@ -166,6 +195,7 @@
     padding: 5px;
     display: inline-block;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 @media (min-width:461px){

@@ -39,13 +39,13 @@ const getCarrito = async () => {
 const addItem = async (id) => {
 
     try {
-        
+
         const response = await fetch(`/api/carrito/${id}`, {
-            method : 'POST'
+            method: 'POST'
         })
         const result = await response.json()
         console.log(result)
-        if(result.status === 200) {
+        if (result.status === 200) {
             cargarVentanaCarrito(result.data)
             cargarCarrito(result.data)
         }
@@ -108,7 +108,7 @@ const cargarCarrito = (data) => {
     let totalCarrito = 0
     data.forEach(producto => {
 
-        let item =`
+        let item = `
         <tr>
             <td>
                 <div class="imagen">
@@ -130,7 +130,7 @@ const cargarCarrito = (data) => {
                 <p id="precio-con-descuento" class="precio-principal">$  ${toThousand(Math.round(producto.precio - (producto.precio * producto.descuento / 100)))}</p>
             </td>
             <td>
-            <button class="eliminar-item" onClick="removeItem('${producto.id}')"><i class="fas fa-times"></i></button>
+            <button class="eliminar-item" style="background-color: var(--colorButtonContacto); color: white; border: none; padding: 10px; border-radius: 10px;" onClick="removeItem('${producto.id}')"><i class="fas fa-times"></i></button>
             </td>
         </tr>
         `
@@ -163,7 +163,7 @@ const cargarVentanaCarrito = (data) => {
         let totalCarrito = 0
 
         data.forEach(producto => {
-           
+
             let item = `
             <div class="cart-item">
                 <span class="fas fa-times" onClick="removeItem('${producto.id}')"></span>
@@ -190,7 +190,7 @@ const cargarVentanaCarrito = (data) => {
         </div>
         `
     } else {
-        
+
         cart.innerHTML = `
             <h3 class="title">Mi carrito</h3>
             <p>Tenes que seleccionar un producto</p>
